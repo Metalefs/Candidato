@@ -19,7 +19,7 @@ export class HeroComponent implements OnInit {
   Sobre:Collections.Sobre;
   InformacaoContato:Collections.InformacoesContato;
   currentUser: Collections.User;
-  
+  redes: string[];
   constructor(private SobreService: SobreService, 
     private InfoContatoService: InformacoesContatoService,
     private authenticationService: AuthenticationService,
