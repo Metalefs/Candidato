@@ -14,3 +14,9 @@ main{
   width: 100vw;
   overflow-x: hidden;
 }
+.main-container .content-container .content-area {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: initial;
+}

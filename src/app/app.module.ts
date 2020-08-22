@@ -6,6 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { MaterialModule } from 'src/app/shared/material.module';
 
+import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseService } from 'src/app/core/service/RouteReuseService';
+
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment'
@@ -13,6 +16,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor, ErrorInterceptor } from './core/interceptor/index';
 import { CountUpModule } from 'ngx-countup';
 import { ClarityModule } from '@clr/angular';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 
@@ -32,8 +37,6 @@ import { NavbarComponent } from 'src/app/layout/nav/navbar.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import {  } from './_helpers/_helper';
-import { RouteReuseStrategy } from '@angular/router';
-import { RouteReuseService } from 'src/app/core/service/RouteReuseService';
 
 @NgModule({
   declarations: [
@@ -47,16 +50,17 @@ import { RouteReuseService } from 'src/app/core/service/RouteReuseService';
     ContentLayoutComponent,
   ],
   imports: [
-    ClarityModule,
-    MaterialModule,
     BrowserModule,
-    CoreModule,
-    SharedModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    FontAwesomeModule,
+    ClarityModule,
+    MaterialModule,
+    CoreModule,
+    SharedModule,
     CountUpModule,
     NgxPageScrollCoreModule,
     NgxPageScrollModule,

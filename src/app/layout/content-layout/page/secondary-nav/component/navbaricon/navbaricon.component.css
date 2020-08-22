@@ -1,5 +1,5 @@
 a{
-    color:#ffff; 
+    color:darkgray; 
 }
 .nav-icon.tile:first-of-type{
     padding-left: 2rem;
@@ -23,4 +23,13 @@ navbaricon.nav-icon.tile:hover{
 .active{
     border-bottom: 1px yellow solid;
     transition: .5s ease-in;
+}
+.icon{
+    color:gray
+}
+.icon.is-red{
+    color: red;
+}
+.icon.is-red ~ p{
+    color: red;
 }

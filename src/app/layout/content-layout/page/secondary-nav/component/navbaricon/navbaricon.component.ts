@@ -16,6 +16,7 @@ export class NavbariconComponent implements OnInit {
   @Input()
   EstadoNav: EstadoNav;
 
+  pulse = false;
   constructor() { }
 
   ChangeToThis(){

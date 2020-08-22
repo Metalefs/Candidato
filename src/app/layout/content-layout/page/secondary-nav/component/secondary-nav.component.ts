@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
+import { OpcaoNavbar, OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { faRss } from '@fortawesome/free-solid-svg-icons';
 
 export class EstadoNav {
     pagina:string;
@@ -20,9 +22,9 @@ export class SecondaryNavComponent implements OnInit {
   
 
   Opcoes = [
-    new OpcaoNavbar("Home", "/", "Home"),
-    new OpcaoNavbar("Biografia", "/biografia", "Home"),
-    new OpcaoNavbar("Feed", "/feed", "Home"),
+    new OpcaoNavbarFA("Home", "/", faHome),
+    new OpcaoNavbarFA("Biografia", "/biografia", faIdCard),
+    new OpcaoNavbarFA("Feed", "/feed", faRss),
   ];
   
 

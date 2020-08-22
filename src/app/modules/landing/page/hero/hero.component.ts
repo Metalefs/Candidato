@@ -20,6 +20,8 @@ export class HeroComponent implements OnInit {
   InformacaoContato:Collections.InformacoesContato;
   currentUser: Collections.User;
   redes: string[];
+
+  candidato_img="url(/assets/imagens/fundos/inicio/President_Barack_Obama.jpg)";
   constructor(private SobreService: SobreService, 
     private InfoContatoService: InformacoesContatoService,
     private authenticationService: AuthenticationService,
