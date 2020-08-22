@@ -37,6 +37,7 @@ import { NavbarComponent } from 'src/app/layout/nav/navbar.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import {  } from './_helpers/_helper';
+import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {  } from './_helpers/_helper';
     FooterComponent,
     NavbarComponent,
     ContentLayoutComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,12 +6,14 @@ import { LandingPageComponent } from './page/landing-page.component';
 import { LandingPageRoutes } from './landing.routing';
 
 import { SharedModule } from 'src/app/shared/shared.module';
+import { RedesSociaisComponent } from './page/redes-sociais/redes-sociais.component';
 
 @NgModule({
   declarations: [
     ContatoComponent,
     HeroComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    RedesSociaisComponent
   ],
   imports: [
     SharedModule,

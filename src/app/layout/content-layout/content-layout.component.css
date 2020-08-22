@@ -20,3 +20,6 @@ main{
   -webkit-overflow-scrolling: touch;
   padding: initial;
 }
+.main-container {
+  height: initial;
+}

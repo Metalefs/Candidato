@@ -1,0 +1,13 @@
+<section class="sidenav-content">
+    <section class="nav-group">
+        <ul class="nav-list">
+            <li *ngFor="let opcao of Opcoes">
+                <div class="column">
+                    <div class="column border-white">
+                        <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Titulo]="opcao.Titulo" [Link]="opcao.Link" [Icon]="opcao.Icon"></navbaricon>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>

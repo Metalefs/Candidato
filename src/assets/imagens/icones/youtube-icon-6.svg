@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:i="&amp;ns_ai;"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="youtube-icon-6.svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 1000 1000;"
+   viewBox="0 0 1000 1000"
+   y="0px"
+   x="0px"
+   id="Layer_1"
+   version="1.1"><metadata
+   id="metadata29"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs27" /><sodipodi:namedview
+   inkscape:current-layer="Layer_1"
+   inkscape:window-maximized="1"
+   inkscape:window-y="-8"
+   inkscape:window-x="70"
+   inkscape:cy="552.70682"
+   inkscape:cx="449.77351"
+   inkscape:zoom="0.47234733"
+   showgrid="false"
+   id="namedview25"
+   inkscape:window-height="877"
+   inkscape:window-width="1362"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<style
+   id="style2"
+   type="text/css">
+	.st0{fill:#DA2724;stroke:#DA2724;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{opacity:0.3;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#DA2724;stroke:#DA2724;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<rect
+   y="0"
+   x="-6.3512583"
+   height="1003.4988"
+   width="1011.9672"
+   id="rect31"
+   style="fill:#da2724;stroke:none;stroke-width:14.933;fill-opacity:1" /><switch
+   inkscape:export-ydpi="72"
+   inkscape:export-xdpi="72"
+   id="switch22">
+	<foreignObject
+   height="1"
+   width="1"
+   y="0"
+   x="0"
+   requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+		
+	</foreignObject>
+	<g
+   id="g20"
+   i:extraneous="self">
+		<g
+   id="g18">
+			<path
+   id="path4"
+   d="M950,500c0,15.1-0.8,30.1-2.2,44.8c-21,212.8-190.2,382-403,403c-14.7,1.5-29.7,2.2-44.8,2.2     C251.5,950,50,748.5,50,500S251.5,50,500,50S950,251.5,950,500z"
+   class="st0" />
+			<path
+   id="path6"
+   d="M750,369V631c0,26.2-21.4,47.6-47.6,47.6H297.6c-26.2,0-47.6-21.4-47.6-47.6V419.5l98.1-98.1h354.3     C728.6,321.4,750,342.9,750,369z"
+   class="st1" />
+			<path
+   id="path8"
+   d="M947.8,544.8c-21,212.8-190.2,382-403,403L261.3,664.3L250,419.5V631c0,26.2,21.4,47.6,47.6,47.6h404.8     c26.2,0,47.6-21.4,47.6-47.6V369c0-26.2-21.4-47.6-47.6-47.6l37.1,15.1L947.8,544.8z"
+   class="st1" />
+			<g
+   id="g16">
+				<g
+   id="g12">
+					<path
+   id="path10"
+   d="M755.8,369c9,87.3,9,174.6,0,261.9c-2.8,26.1-27.4,49.1-53.4,50.7c-134.9,7.8-269.8,7.8-404.8,0       c-26-1.6-50.6-24.6-53.4-50.7c-9-87.3-9-174.6,0-261.9c2.8-26.1,27.4-49.1,53.4-50.7c134.9-7.8,269.8-7.8,404.8,0       C728.4,319.9,753,343,755.8,369z"
+   class="st2" />
+				</g>
+				<polygon
+   id="polygon14"
+   points="446.4,420.2 587.7,494 446.4,567.7     "
+   class="st3" />
+			</g>
+		</g>
+	</g>
+</switch>
+
+</svg>

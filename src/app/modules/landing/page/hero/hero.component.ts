@@ -1,6 +1,8 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 
 import { Collections } from 'src/app/data/schema/Collections';
+import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
 import { SobreService } from 'src/app/data/service/domain/SobreService';
 import { InformacoesContatoService } from 'src/app/data/service/domain/InformacoesContatoService';
 
@@ -19,14 +21,22 @@ export class HeroComponent implements OnInit {
   Sobre:Collections.Sobre;
   InformacaoContato:Collections.InformacoesContato;
   currentUser: Collections.User;
-  redes: string[];
+  redes: RedeSocial[] = [];
 
   candidato_img="url(/assets/imagens/fundos/inicio/President_Barack_Obama.jpg)";
+
   constructor(private SobreService: SobreService, 
     private InfoContatoService: InformacoesContatoService,
     private authenticationService: AuthenticationService,
 	) 
 	{ 
+    this.redes.push(
+      new RedeSocial(CaminhoLogo("twitter"),"twitter","/"),
+      new RedeSocial(CaminhoLogo("instagram"),"instagram","/"),
+      new RedeSocial(CaminhoLogo("whatsapp"),"whatsapp","/"),
+      new RedeSocial(CaminhoLogo("facebook"),"facebook","/"),
+      new RedeSocial(CaminhoLogo("youtube"),"youtube","/"),
+    );
 	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
 	}
 

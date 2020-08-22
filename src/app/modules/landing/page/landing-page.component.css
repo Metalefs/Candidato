@@ -1,20 +1,13 @@
-#main-hero{
-    /* background: url("src/assets/imagens/fundos/inicio/.jpg") no-repeat 80% fixed; */
-    background-size: cover;
-    width: 100vw;
-    margin: 0 auto;
-}
-
-.hero.is-medium .hero-body{
-    padding-top:5rem;
-}
-
 .bg-light-transparent{
     background: rgba(123, 123, 123, 0.5);
 }
 
 .bg-dark-transparent{
     background: rgba(123, 123, 123, 0.5);
+}
+
+.hero.is-medium .hero-body{
+    padding: 0em;
 }
 
 @media (min-width: 320px) and (max-width: 1023px) {
@@ -27,10 +20,7 @@
         background-size: cover;
         padding: 2px;
     }
-    
-    .hero.is-medium .hero-body{
-        padding: 1em;
-    }
+   
     .bg-dark-transparent{
         background: rgba(58, 58, 58, 0.36);
     }

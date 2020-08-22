@@ -20,9 +20,11 @@ export class NavbarComponent implements OnInit {
   Titulo: string;
   @Input()
   Logado: boolean;
+
   opened: boolean;
   returnUrl: string;
   Whatsapp:string = null;
+  Subtitulo:string = "Portifólio do Obama";
 
   async LerInfoContato(){
     this.InfoContatoService.Ler().subscribe(data=>{

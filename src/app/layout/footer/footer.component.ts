@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class FooterComponent {
-  AppName: string = "Candidato";
+  @Input()
+  AppName: string;
   currentYear = new Date().getUTCFullYear();
 }

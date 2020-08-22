@@ -1,0 +1,13 @@
+.bring-down_170{
+    position: relative;
+    margin: 0 auto;
+}
+.icones-redes{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+a{
+    width: 64px;
+}

@@ -1,10 +1,10 @@
-<div>
-    <header class="header-6">
+<clr-main-container>
+    <clr-header class="header-6">
         
         <navbar [Titulo]="title"></navbar>
         
-    </header>
-    <secondary-nav></secondary-nav>
+    </clr-header>
+    <secondary-nav class="is-hidden-desktop"></secondary-nav>
 
     <div class="content-container">
         <main class="content-area">
@@ -13,7 +13,11 @@
                 <app-footer></app-footer>
             </div>   
         </main>
-    </div>
 
+        <nav class="sidenav" [clr-nav-level]="2">
+            <app-side-nav></app-side-nav>
+        </nav>
+    </div>
+    
     <app-scroll-top></app-scroll-top>
-</div>
+</clr-main-container>
