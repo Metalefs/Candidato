@@ -1,0 +1,44 @@
+<div class="box">
+    <div class="px-3">
+
+        <mat-tab-group>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Informações de contato
+                </ng-template>
+                <app-editar-infocontato></app-editar-infocontato>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Sobre
+                </ng-template>
+                <app-editar-sobre></app-editar-sobre>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>thumb_up</mat-icon> Considerações
+                </ng-template>
+                <div class="card-body">
+                    <h1>Estado da aplicação: <span id="windowstatusfield"></span></h1>
+                    
+                    <div class="card" *ngFor="let servico of State">
+                        <div class="card-content">
+                            <p class="title is-4">{{servico.nome}}</p>
+                            <p class="subtitle is-6">
+                                <ng-container
+                                    *ngIf="servico.state; then ok; else fail">
+                                </ng-container>
+                                <ng-template #ok>Funcional</ng-template>
+                                <ng-template #fail>Erro</ng-template>
+                                <clr-icon [ngClass]="servico.state ? 'has-text-success' : 'has-text-danger'" [attr.shape]="servico.state ? 'check' : 'exclamation-circle'"></clr-icon>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+
+    </div>
+
+</div>

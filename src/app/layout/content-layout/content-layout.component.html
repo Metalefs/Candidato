@@ -1,0 +1,19 @@
+<clr-main-container>
+    <clr-header>
+        
+        <navbar [Titulo]="title"></navbar>
+        
+    </clr-header>
+    <div class="content-container">
+        <main class="content-area">
+            <div [@routeAnimations]="prepareRoute(outlet)" class="main">
+                <router-outlet #outlet="outlet"></router-outlet>
+            </div>   
+        </main>
+    </div>
+</clr-main-container>
+
+<secondary-nav></secondary-nav>
+<app-scroll-top></app-scroll-top>
+<app-footer></app-footer>
+

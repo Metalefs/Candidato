@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body{
+    background: #ccc;
+}
+@media (min-width: 320px) and (max-width: 1023px) {
+  
+    body{
+        overflow-x: hidden;
+    }
+    
+}
+
+.mat-typography h1{
+    font-family: var(--clr-h1-font-family, Metropolis, "Avenir Next", "Helvetica Neue", Arial, sans-serif);
+}
+

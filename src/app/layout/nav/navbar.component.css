@@ -1,0 +1,43 @@
+header{
+    height: 80px;
+    display: flex;
+}
+.m-number{
+    margin: 0 auto;
+    color: #ccc;
+    position: relative;
+    animation: gangorra 1s ease-out forwards;
+}
+.m-number:hover{
+    animation: gangorra 1s ease-in-out forwards;
+}
+@keyframes gangorra{
+    0%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    90%{
+        transform: rotate(-1deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.bg-transparent{
+    background: transparent;
+}
+@media screen and (max-width: 1023px){
+    .navbar-menu {
+        background-color: #ff8686;
+        box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+        padding: 0.5rem 0;
+    }
+}
+.navbar-item:hover{
+    background-color: transparent !important;
+}
+.absolute{
+    position: absolute;
+}
