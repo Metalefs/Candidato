@@ -1,6 +1,7 @@
 header{
     height: 80px;
     display: flex;
+    background:#0000;
 }
 .m-number{
     margin: 0 auto;
