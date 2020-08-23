@@ -1,13 +1,26 @@
 <div class="clr-row">
-    <div class="clr-col-lg-6 clr-col-12">
-        <a href="..." class="card clickable">
+    <div class="clr-col-12">
+        <a class=" clickable">
             <div class="card-img">
-                <img [src]="Candidato.Foto">
+                <figure class="mx-auto">
+                    <img class="candidato-img mx-auto" [src]="Candidato.Foto">
+                </figure>
             </div>
             <div class="card-block">
-                <p class="card-text">
-                    ...
-                </p>
+                <div class="card-text">
+                    <h1 class="title is-1 has-text-weight-semibold has-text-white has-text-centered">{{Candidato?.Nome}}</h1>
+                    <div class="tile mt-3 is-ancestor">
+                        <div class="tile is-parent is-12">
+                            <article class="tile is-child">
+                                <div class="content">
+                                    <a rel="noopener" target="_blank" class="mr-0">
+                                        <p class="mr-0 is-size-3 subtitle underline--magical is-light has-text-weight-medium has-text-warning has-text-centered">{{Candidato?.NumeroCampanha}}</p>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </a>
     </div>

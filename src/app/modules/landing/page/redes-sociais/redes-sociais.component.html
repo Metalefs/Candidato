@@ -1,10 +1,14 @@
-<div class="bring-down_170"  data-aos="fade-up">
-    <h6 class="has-text-centered has-text-white">Acesse:</h6>
-    <div class="icones-redes is-gapless is-centered">
-        <a class="btn btn-outline" *ngFor="let rede of redes" class="column mx-0 is-gapless">
-            <figure @fadeIn class="mx-0 image is-32x32">
-                <img class="is-rounded" src="{{rede.src}}">
-            </figure>
-        </a>
+<nav class="tabs is-boxed is-fullwidth">
+    <div class="container">
+        <div class="w-100" data-aos="fade-up">
+            <h6 class="has-text-centered has-text-white">Acesse:</h6>
+            <div class="icones-redes is-gapless is-centered">
+                <a class="btn btn-outline" *ngFor="let rede of redes" class="column mx-0 is-gapless">
+                    <figure @fadeIn class="mx-0 image is-32x32">
+                        <img class="is-rounded" src="{{rede.src}}">
+                    </figure>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
+</nav>

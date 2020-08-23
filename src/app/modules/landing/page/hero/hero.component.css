@@ -1,6 +1,7 @@
 .hero-bg{
     background-size: contain !important;
     margin: 0 auto;
+    background:#141828;
     background-repeat: no-repeat !important;
     background-size: 100% 0.2em;
     border-top-left-radius: 1rem;

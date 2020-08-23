@@ -4,11 +4,11 @@
   height: 70px;
   z-index: 1;
   place-items: center;
-  
 }
 li{
     width: 71px;
 }
+
 @media (min-width: 320px ) and (max-width: 1023px) {
     
     .fix-bottom-on-mobile{

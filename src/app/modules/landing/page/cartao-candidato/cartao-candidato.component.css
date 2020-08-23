@@ -1,0 +1,9 @@
+.candidato-img{
+    height: 200px;
+    width: 200px;
+    border: 10px solid #2e344d;
+    border-radius: 50%;
+}
+figure{
+    width: 200px;
+}

@@ -8,27 +8,45 @@
   }
 }
 .header.header-1{
-  background: #333333;
+  background: #333;
 }
+
 .sidenav {
   min-width: 9.8rem;
   width: 12.5%;
   border-right: none;
 }
+
 .main-container .content-container .sidenav {
   background: #333333;
 }
+
 main{
   animation: fade-in ease-in-out .5s forwards;
   width: 100vw;
   overflow-x: hidden;
 }
+
 .main-container .content-container .content-area {
   flex: 1 1 auto;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding: initial;
 }
+
 .main-container {
   height: initial;
+}
+
+@media (min-width: 320px ) and (max-width: 1023px) {
+    
+  .header.header-1{
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    float: right;
+    background: transparent;
+    right: 0;
+  }
+  
 }
