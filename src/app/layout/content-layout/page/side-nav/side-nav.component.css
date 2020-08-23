@@ -6,7 +6,8 @@
     top: 20%;
     position: fixed;
     border-radius: 1rem;
-    width: 10rem;
+    width: 100%;
+    position: relative;
     min-width: 2.4rem;
     background-color: #fff;
     will-change: width;
