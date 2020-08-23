@@ -1,32 +1,60 @@
-
 a{
     color:darkgray; 
     text-decoration-line: none;
-    
     position: relative;
 }
-p:hover{
-    color:darkblue;
-}
-.nav-icon.tile:first-of-type{
-    padding-left: 2rem;
-}
 .nav-icon{
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    padding-left: 10px;
+    opacity: 1;
+    padding-right: 5px;
+    display: block;
+    margin-bottom: 3px;
+    text-align: left;
+    border-radius: 30px 0 0 30px;
+    padding: 10px 20px;
     width: 100%;
-    transition:.52s;
-    line-height: initial;
-    margin: initial;
+    margin-right: -15px;
+    transition-delay:.5s;
 }
-.border-white{
-    outline:1px solid #ccc;
-    outline-width: 0rem;
+.nav-icon.active:before, .nav-icon .active:after {
+    content: "";
+    position: absolute;
+    top: -24px;
+    right: 0px;
+    background: red;
+    height: 25px;
+    width: 25px;
+    background: url(/assets/imagens/curve.png);
+    display: block;
+    background-size: 100% 100%;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.nav-text{
+    font-size:14px;
+    text-transform: uppercase;
+    color:black;
 }
 .active{
-    border-bottom: 1px yellow solid;
-    transition: .5s ease-in;
+    color: #333;
+    background: #fff;
+    background-color: var(--clr-vertical-nav-active-bg-color);
 }
 .icon{
-    color:gray
+    color:gray;
+    width: auto;
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
 }
 .icon.is-red{
     color: red;

@@ -1,4 +1,4 @@
-<a [ngClass]="EstadoNav.pagina == Opcao.Link? 'active' : ''"  (click)="ChangeToThis()" routerLink="/{{Opcao.Link}}" routerLinkActive="Active" class="py-3 pl-4 px-2 nav-icon media">
+<!-- <a [ngClass]="EstadoNav.pagina == Opcao.Link? 'active' : ''"  (click)="ChangeToThis()" routerLink="/{{Opcao.Link}}" routerLinkActive="Active" class="py-3 pl-4 px-2 nav-icon media">
     <p class="image pr-0 is-32x32">
         <a class="">
             <fa-icon [icon]="Opcao.Icon" size="lg" [pulse]="pulse" class="icon" [ngClass]="EstadoNav.pagina == Opcao.Link? 'is-red' : ''"></fa-icon>
@@ -9,4 +9,9 @@
         {{Opcao.Titulo}}
       </div>
     </div>
+</a> -->
+
+<a (click)="ChangeToThis()" pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="['inicio']" href="#{{Opcao.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav.pagina == Opcao?.Link? 'active' : ''" class="py-3 pl-4 px-2 nav-icon ">
+    <clr-icon [attr.shape]="Opcao.Icon" [ngClass]="EstadoNav.pagina == Opcao.Link? 'is-solid' : ''"  size="24"></clr-icon>
+    <span class="nav-text">{{Opcao.Titulo}}</span>
 </a>

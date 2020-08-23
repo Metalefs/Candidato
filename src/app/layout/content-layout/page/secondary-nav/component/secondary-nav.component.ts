@@ -22,10 +22,10 @@ export class SecondaryNavComponent implements OnInit {
   
 
   Opcoes = [
-    new OpcaoNavbarFA("Introdução", "/inicio", faHome),
-    new OpcaoNavbarFA("Projetos", "/projetos", faIdCard),
-    new OpcaoNavbarFA("Biografia", "/biografia", faIdCard),
-    new OpcaoNavbarFA("Feed", "/feed", faRss),
+    new OpcaoNavbar("Resumo", "inicio", "home"),
+    new OpcaoNavbar("Projetos", "projetos", "tasks"),
+    new OpcaoNavbar("Biografia", "biografia", "bookmark"),
+    new OpcaoNavbar("Feed", "feed", "hashtag"),
   ];
   
 

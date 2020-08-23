@@ -13,7 +13,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     SharedModule,
     BiografiaRoutes
   ],
-  exports: [],
+  exports: [BiografiaComponent],
   providers: []
 })
 export class BiografiaModule {}

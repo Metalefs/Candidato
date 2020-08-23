@@ -1,10 +1,9 @@
-<nav class="secondary-nav fix-bottom-on-mobile columns px-5 is-centered is-mobile">
+
+<nav class="secondary-nav fix-bottom-on-mobile columns px-5 is-centered is-mobile has-background-grey-light">
     <div class="columns is-variable is-8-desktop is-4-mobile is-mobile">
-        <div class="column" *ngFor="let opcao of Opcoes">
-            <div class="column border-white">
-                <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Opcao]="opcao"></navbaricon>
-            </div>
+        <div *ngFor="let opcao of Opcoes">
+            <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Opcao]="opcao"></navbaricon>
         </div>
         <div class="underbar"></div>
     </div>
-</nav>
+</nav> 

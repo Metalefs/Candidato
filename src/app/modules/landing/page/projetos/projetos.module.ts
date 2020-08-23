@@ -13,7 +13,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     SharedModule,
     ProjetosRoutes
   ],
-  exports: [],
+  exports: [ProjetosComponent],
   providers: []
 })
 export class ProjetosModule {}

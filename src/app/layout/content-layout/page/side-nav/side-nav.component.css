@@ -1,0 +1,21 @@
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: .9rem;
+    margin: 1px;
+    top: 20%;
+    position: fixed;
+    border-radius: 1rem;
+    width: 10rem;
+    min-width: 2.4rem;
+    background-color: #fff;
+    will-change: width;
+    transition: width .2s ease-in-out;
+}
+.aside-footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-self: flex-end;
+}

@@ -1,19 +1,14 @@
-<section class="sidenav-content">
-    <section class="nav-group">
+<section class="sidenav-content side-nav">
+    <section class="nav-group mb-6">
         <ul class="">
             <li *ngFor="let opcao of Opcoes">
                 <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Opcao]="opcao"></navbaricon>
             </li>
         </ul>
     </section>
+    <div class="aside-footer">
+        <ul class="list-unstyled list-inline">
+            
+        </ul>
+    </div>
 </section>
-<clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed" >
-    <a clrVerticalNavLink routerLink="{{opcao.Link}}" routerLinkActive="active" *ngFor="let opcao of Opcoes">
-        {{opcao.Titulo}}
-        <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Opcao]="opcao"></navbaricon>
-    </a>
-    <a clrVerticalNavLink>
-        <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
-        Credit
-    </a>
-</clr-vertical-nav>

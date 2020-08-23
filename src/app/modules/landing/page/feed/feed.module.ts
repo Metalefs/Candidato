@@ -13,7 +13,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     SharedModule,
     FeedRoutes
   ],
-  exports: [],
+  exports: [FeedComponent],
   providers: []
 })
 export class FeedModule {}

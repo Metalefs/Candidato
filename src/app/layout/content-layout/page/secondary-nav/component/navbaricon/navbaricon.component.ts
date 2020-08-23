@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EstadoNav } from '../secondary-nav.component';
 import { Router } from '@angular/router';
-import { OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
+import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 
 @Component({
   selector: 'navbaricon',
@@ -10,7 +10,7 @@ import { OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
 })
 export class NavbariconComponent implements OnInit {
   @Input()
-  Opcao: OpcaoNavbarFA;
+  Opcao: OpcaoNavbar;
 
   @Input()
   EstadoNav: EstadoNav;
@@ -28,6 +28,7 @@ export class NavbariconComponent implements OnInit {
   }
 
   ngOnInit(): void {
+      console.log(this.Opcao);
       if(this.router.url == this.Opcao.Link){
         this.ChangeToThis();
       }
