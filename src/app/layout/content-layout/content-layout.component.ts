@@ -30,12 +30,6 @@ export class ContentLayoutComponent implements OnInit {
   ) {
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
-
-  OpcoesNavBar = [
-    new OpcaoNavbar("Home", "/", "Home"),
-    new OpcaoNavbar("Biografia", "/biografia", "Home"),
-    new OpcaoNavbar("Feed", "/feed", "Home"),
-  ];
   
   ngOnInit(): void {
     // VARIABLES

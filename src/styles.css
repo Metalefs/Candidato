@@ -1,4 +1,4 @@
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;font-family: var(--clr-h1-font-family, Metropolis, "Avenir Next", "Helvetica Neue", Arial, sans-serif);}
 
 body{
     background: #ccc;
@@ -15,3 +15,6 @@ body{
     font-family: var(--clr-h1-font-family, Metropolis, "Avenir Next", "Helvetica Neue", Arial, sans-serif);
 }
 
+.bg-light-transparent{
+    background: rgba(123, 123, 123, 0.5) !important;
+}

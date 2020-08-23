@@ -4,7 +4,7 @@ import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 declare let gtag: Function;
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade, slider } from './animations';
-
+import AOS from 'aos';
 import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 import { Collections } from './data/schema/Collections';
 
@@ -47,6 +47,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
+    AOS.init();
     // VARIABLES
     const magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
 

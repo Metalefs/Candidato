@@ -2,7 +2,7 @@
     <div class="columns is-variable is-8-desktop is-4-mobile is-mobile">
         <div class="column" *ngFor="let opcao of Opcoes">
             <div class="column border-white">
-                <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Titulo]="opcao.Titulo" [Link]="opcao.Link" [Icon]="opcao.Icon"></navbaricon>
+                <navbaricon class="nav-icon tile" [EstadoNav]="EstadoNav" [Opcao]="opcao"></navbaricon>
             </div>
         </div>
         <div class="underbar"></div>

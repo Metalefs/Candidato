@@ -7,6 +7,9 @@ import { NoAuthGuard } from './core/guard/no-auth.guard';
 import { ContentLayoutComponent } from 'src/app/layout/content-layout/content-layout.component';
 
 import { LandingPageModule } from 'src/app/modules/landing/landing.module';
+import { FeedModule } from 'src/app/modules/feed/feed.module';
+import { BiografiaModule } from 'src/app/modules/biografia/biografia.module';
+import { ProjetosModule } from 'src/app/modules/projetos/projetos.module';
 import { GerenciamentoModule } from 'src/app/modules/gerenciamento/gerenciamento.module';
 
 //import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
@@ -16,7 +19,7 @@ const routes: Routes = [
     path: '', component: ContentLayoutComponent,
     data: {
       reuse: true
-      },
+    },
     canActivate: [NoAuthGuard], 
     children: [
       {
@@ -25,20 +28,31 @@ const routes: Routes = [
           import('src/app/modules/landing/landing.module').then(m => m.LandingPageModule)
         , data: { animation: 'isLeft', reuse: true }
       },
-
-      // {
-      //   path: '',
-      //   loadChildren: () =>
-      //     import('src/app/modules/tela2/tela2.module').then(m => m.tela2)
-      //     , data: { animation: '', reuse: true }
-      // },
+      {
+        path: '',
+        loadChildren: () =>
+          import('src/app/modules/biografia/biografia.module').then(m => m.BiografiaModule)
+          , data: { animation: '', reuse: true }
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('src/app/modules/projetos/projetos.module').then(m => m.ProjetosModule)
+          , data: { animation: '', reuse: true }
+      },
+      {
+        path: '',
+        loadChildren: () =>
+          import('src/app/modules/feed/feed.module').then(m => m.FeedModule)
+          , data: { animation: '', reuse: true }
+      },
 
       { 
         path: 'gerenciamento',
         canActivate: [AuthGuard],
         data: {
           reuse: true
-          },
+        },
         loadChildren: () =>
         import('src/app/modules/gerenciamento/gerenciamento.module').then(m => m.GerenciamentoModule)
       },

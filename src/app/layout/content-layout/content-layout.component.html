@@ -1,5 +1,5 @@
 <clr-main-container>
-    <clr-header class="header-6">
+    <clr-header class="header-4">
         
         <navbar [Titulo]="title"></navbar>
         
@@ -7,6 +7,7 @@
     <secondary-nav class="is-hidden-desktop"></secondary-nav>
 
     <div class="content-container">
+        <app-side-nav></app-side-nav>
         <main class="content-area">
             <div [@routeAnimations]="prepareRoute(outlet)" class="main">
                 <router-outlet #outlet="outlet"></router-outlet>
@@ -14,9 +15,8 @@
             </div>   
         </main>
 
-        <nav class="sidenav" [clr-nav-level]="2">
-            <app-side-nav></app-side-nav>
-        </nav>
+        <!-- <nav class="sidenav" [clr-nav-level]="2">
+        </nav> -->
     </div>
     
     <app-scroll-top></app-scroll-top>

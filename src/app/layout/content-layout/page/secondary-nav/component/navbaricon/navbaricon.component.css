@@ -1,18 +1,19 @@
+
 a{
     color:darkgray; 
+    text-decoration-line: none;
+    
+    position: relative;
+}
+p:hover{
+    color:darkblue;
 }
 .nav-icon.tile:first-of-type{
     padding-left: 2rem;
 }
-navbaricon.nav-icon.tile{
-    cursor: pointer;
-    position: relative;
-    transition: .25s;
-}
-navbaricon.nav-icon.tile:hover{
-    top: 1px;
-}
-.nav-icon-p{
+.nav-icon{
+    width: 100%;
+    transition:.52s;
     line-height: initial;
     margin: initial;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
 
 import { Collections } from 'src/app/data/schema/Collections';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { Candidato } from 'src/app/data/schema/domain/Candidato';
 import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
 import { SobreService } from 'src/app/data/service/domain/SobreService';
 import { InformacoesContatoService } from 'src/app/data/service/domain/InformacoesContatoService';
@@ -22,6 +23,23 @@ export class HeroComponent implements OnInit {
   InformacaoContato:Collections.InformacoesContato;
   currentUser: Collections.User;
   redes: RedeSocial[] = [];
+
+  Candidato: Candidato = new Candidato(
+    1,
+    "Romeu Zema",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "1337",
+    "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
+    true
+  );
 
   candidato_img="url(/assets/imagens/fundos/inicio/President_Barack_Obama.jpg)";
 
@@ -44,7 +62,6 @@ export class HeroComponent implements OnInit {
     
     this.SobreService.Ler().subscribe(data=>{
       this.Sobre = data[0];
-      localStorage.setItem("Sobre",JSON.stringify(this.Sobre))
     });
   }
 
@@ -52,8 +69,7 @@ export class HeroComponent implements OnInit {
    
     this.InfoContatoService.Ler().subscribe(data=>{
       this.InformacaoContato = data[0];
-      localStorage.setItem("InformacaoContato",JSON.stringify(this.InformacaoContato))
-	    this.loading = false;
+      this.loading = false;
     });
   }
 

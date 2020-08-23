@@ -7,13 +7,15 @@ import { LandingPageRoutes } from './landing.routing';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RedesSociaisComponent } from './page/redes-sociais/redes-sociais.component';
+import { CartaoCandidatoComponent } from './page/cartao-candidato/cartao-candidato.component';
 
 @NgModule({
   declarations: [
     ContatoComponent,
     HeroComponent,
     LandingPageComponent,
-    RedesSociaisComponent
+    RedesSociaisComponent,
+    CartaoCandidatoComponent
   ],
   imports: [
     SharedModule,
