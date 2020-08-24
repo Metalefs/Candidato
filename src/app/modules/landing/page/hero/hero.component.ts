@@ -26,7 +26,7 @@ export class HeroComponent implements OnInit {
 
   Candidato: Candidato = new Candidato(
     1,
-    "Romeu Zema",
+    "Nome candidato",
     "",
     "",
     "",
@@ -36,7 +36,7 @@ export class HeroComponent implements OnInit {
     "",
     "",
     "",
-    "1337",
+    "Numero campanha",
     "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
     true
   );
@@ -75,8 +75,8 @@ export class HeroComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    this.LerSobre();
-    this.LerInfoContato();
+    // this.LerSobre();
+    // this.LerInfoContato();
   }
 
 }

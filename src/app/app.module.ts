@@ -36,7 +36,7 @@ import { NavbarComponent } from 'src/app/layout/nav/navbar.component';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
-import {  } from './_helpers/_helper';
+import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav.component';
 
 @NgModule({
@@ -73,6 +73,7 @@ import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: Document },
+    { provide: NavStateService },
     {
       provide: RouteReuseStrategy,
       useClass: RouteReuseService

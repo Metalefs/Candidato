@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EstadoNav } from '../secondary-nav/component/secondary-nav.component';
+import { EstadoNav } from "../../../../data/schema/EstadoNav";
 import { OpcaoNavbarFA, OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 import { faHome, faIdCard, faRss } from '@fortawesome/free-solid-svg-icons';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
@@ -11,8 +11,9 @@ import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent implements OnInit {
-  EstadoNav = new EstadoNav();
+  EstadoNav:EstadoNav;
   collapsed=true;
+  
   redes:RedeSocial[] = [];
   
   constructor() { 

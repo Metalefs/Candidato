@@ -1,11 +1,6 @@
-<a (click)="ChangeToThis()" pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="['inicio']" href="#{{Opcao.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav.pagina == Opcao?.Link? 'active' : ''" routerLinkActive="Active" class="py-3 pl-4 px-2 nav-icon media">
+<a (click)="ChangeToThis()" pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="['inicio']" href="#{{Opcao?.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav?.is_active? 'active' : ''" routerLinkActive="Active" class="py-3 pl-4 px-2 nav-icon media">
     <span class="image pr-0 is-32x32">
-      <clr-icon [attr.shape]="Opcao.Icon" [ngClass]="EstadoNav.pagina == Opcao.Link? ' icon is-solid' : 'icon'"  size="24"></clr-icon>
-      {{Opcao.Titulo}}
+      <clr-icon [attr.shape]="Opcao?.Icon" [ngClass]="EstadoNav?.is_active ? ' icon is-solid' : 'icon'"  size="24"></clr-icon>
+      {{Opcao?.Titulo}}
     </span>
 </a>
-<!-- <div class="nav-icon">
-    <a (click)="ChangeToThis()" pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="['inicio']" href="#{{Opcao.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav.pagina == Opcao?.Link? 'active' : ''" class="py-3 pl-4 px-2 icon">
-        <span class="nav-text">{{Opcao.Titulo}}</span>
-    </a>
-</div> -->

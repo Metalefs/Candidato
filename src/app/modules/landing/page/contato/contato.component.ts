@@ -27,7 +27,7 @@ export class ContatoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.LerInformacoesContato();
+    //this.LerInformacoesContato();
   }
 
 }

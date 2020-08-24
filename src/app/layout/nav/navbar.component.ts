@@ -65,7 +65,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.LerInfoContato();
+    //this.LerInfoContato();
     this.opened = true;
     console.log(this.Titulo);
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';

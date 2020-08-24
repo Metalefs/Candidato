@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
     
-  title = "ElShadday Marmitex";
+  title = "Partido";
   
   desktop = "is-hidden-touch";
   mobile = "is-hidden-desktop";

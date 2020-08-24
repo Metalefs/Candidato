@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { EstadoNav } from '../secondary-nav.component';
+import { EstadoNav } from "../../../../../../data/schema/EstadoNav";
 import { Router } from '@angular/router';
-import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 
+import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
+import { NavStateService } from 'src/app/core/service/state/_NavStateService'
 @Component({
   selector: 'navbaricon',
   templateUrl: './navbaricon.component.html',
@@ -11,25 +12,43 @@ import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 export class NavbariconComponent implements OnInit {
   @Input()
   Opcao: OpcaoNavbar;
-
-  @Input()
-  EstadoNav: EstadoNav;
+  EstadoNav: EstadoNav = new EstadoNav("",false,false,false);
+  EstadoNavs: EstadoNav[] = [];
 
   pulse = false;
   constructor(
-    private router: Router,
+    private NavStateService:NavStateService,
+    private Router:Router
   ) {
-      console.log(this.router.url);
-      
+    
   }
 
   ChangeToThis(){
-    this.EstadoNav.pagina = this.Opcao.Link;
+    this.NavStateService.currentState.subscribe(y=>{
+     
+      y.forEach(x=>{
+        if(x.pagina != this.Opcao.Link){
+          x.is_active = false
+        }
+        else{
+          x.pagina = this.Opcao.Link;
+          x.is_active = true;
+          x.is_solid = true;
+          this.EstadoNav = x;
+        }
+      })
+      
+      this.NavStateService.update(y);
+
+    }) 
   }
 
   ngOnInit(): void {
-      console.log(this.Opcao);
-      if(this.router.url == this.Opcao.Link){
+      this.NavStateService.getNavState(this.Opcao.Link).then(x=>{
+        this.EstadoNav = x
+        console.log(this.EstadoNav)
+      });
+      if(this.Router.url == this.Opcao.Link){
         this.ChangeToThis();
       }
   }
