@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
   opened: boolean;
   returnUrl: string;
   Whatsapp:string = null;
-  Subtitulo:string = "Portifólio do Zema";
+  Subtitulo:string = "Portifólio do Nome Candidato";
 
   async LerInfoContato(){
     this.InfoContatoService.Ler().subscribe(data=>{

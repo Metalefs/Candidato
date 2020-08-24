@@ -1,28 +1,21 @@
 .hero-bg{
-    background-size: contain !important;
     margin: 0 auto;
-    background:#141828;
+    background:white;
     background-repeat: no-repeat !important;
     background-size: 100% 0.2em;
     border-top-left-radius: 1rem;
     background-origin: padding-box;
     background-position:top !important;
 }
+.hero-head{
+    background: url(/assets/imagens/fundos/inicio/green_field.jpg);
+    width: 100%;
+    background-size: cover;
+}
 .bg-light-transparent{
     background: rgba(123, 123, 123, 0.5) !important;
 }
-.underline--magical {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: 0 88%;
-    transition: background-size 0.25s ease-in;
-}
 
-.underline--magical:hover {
-    background-size: 100% 88%;
-}
-  
 .wp-svg{
     bottom: 14px;
     position: relative;
@@ -32,7 +25,15 @@
     .right-column{
         padding: inherit;
     }
-    
+    .hero-head{
+        background: none;
+        width: 100%;
+        background-size: cover;
+    }
+    .hero-bg{
+        margin: 0 auto;
+        background:#141828;
+    }
 }
 
 .txt-shadow{

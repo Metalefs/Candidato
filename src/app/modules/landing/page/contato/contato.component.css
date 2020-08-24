@@ -1,3 +1,37 @@
 .box{
     min-height: 152px;
 }
+a.downloadCV {
+    width: auto;
+    line-height: 47px;
+    padding: 0 20px;
+}
+a {
+    display: block;
+    border-radius: 30px;
+    background: #1c1f2f;
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    line-height: 52px;
+    color: #fff;
+    border: 1px solid #2e344d;
+}
+.about-desc-more {
+    padding: 30px 30px 10px;
+}
+.b-box {
+    background: #1c1f2f;
+    border-radius: 30px;
+    border: 1px solid #2e344d;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+.list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+}
+.list-inline-item {
+    display: inline-block;
+}

@@ -10,6 +10,18 @@ body{
     }
     
 }
+.underline--magical {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+
+.underline--magical:hover {
+    background-size: 100% 88%;
+}
+  
 .mat-typography h1{
     font-family: var(--clr-h1-font-family, Metropolis, "Avenir Next", "Helvetica Neue", Arial, sans-serif);
 }
@@ -36,3 +48,22 @@ body{
     border-radius: .15rem;
     border-radius: var(--clr-responsive-nav-hamburger-border-radius, 0.15rem);
   }
+  
+.about-desc-more {
+    padding: 30px 30px 10px;
+}
+.b-box {
+    background: #1c1f2f;
+    border-radius: 30px;
+    border: 1px solid #2e344d;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+.list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+}
+.list-inline-item {
+    display: inline-block;
+}

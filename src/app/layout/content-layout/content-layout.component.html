@@ -8,6 +8,9 @@
 
     <div class="content-container">
         
+        <nav class="sidenav" [clr-nav-level]="2">
+            <app-side-nav></app-side-nav>
+        </nav>
         <main class="content-area">
             <div [@routeAnimations]="prepareRoute(outlet)" class="main">
                 <router-outlet #outlet="outlet"></router-outlet>
@@ -15,9 +18,6 @@
             </div>   
         </main>
 
-        <nav class="sidenav" [clr-nav-level]="2">
-            <app-side-nav></app-side-nav>
-        </nav>
     </div>
     
     <app-scroll-top></app-scroll-top>

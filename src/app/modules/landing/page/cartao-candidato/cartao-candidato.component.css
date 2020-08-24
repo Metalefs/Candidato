@@ -1,8 +1,11 @@
 .candidato-img{
     height: 200px;
     width: 200px;
-    border: 10px solid #2e344d;
+    border: 1px solid #2e344d;
     border-radius: 50%;
+}
+a{
+    text-decoration-style: none;
 }
 figure{
     width: 200px;

@@ -13,7 +13,7 @@ import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
 export class SideNavComponent implements OnInit {
   EstadoNav:EstadoNav;
   collapsed=true;
-  
+
   redes:RedeSocial[] = [];
   
   constructor() { 
@@ -28,8 +28,8 @@ export class SideNavComponent implements OnInit {
   
   Opcoes = [
     new OpcaoNavbar("Resumo", "inicio", "home"),
-    new OpcaoNavbar("Projetos", "projetos", "tasks"),
     new OpcaoNavbar("Biografia", "biografia", "bookmark"),
+    new OpcaoNavbar("Projetos", "projetos", "tasks"),
     new OpcaoNavbar("Feed", "feed", "hashtag"),
   ];
   ngOnInit(): void {

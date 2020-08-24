@@ -46,7 +46,6 @@ export class NavbariconComponent implements OnInit {
   ngOnInit(): void {
       this.NavStateService.getNavState(this.Opcao.Link).then(x=>{
         this.EstadoNav = x
-        console.log(this.EstadoNav)
       });
       if(this.Router.url == this.Opcao.Link){
         this.ChangeToThis();
