@@ -50,20 +50,23 @@ export class NavStateService {
     }
     
     async getNavState(pagina:string): Promise<EstadoNav>{
+        let self = this;
         return new Promise(function(resolve,reject) {
-            this.EstadoNav.subscribe(x=>{
-                let o = x.find(obj => {
-                    return obj.pagina === pagina
-                });
-                resolve(o)
-            })  
+            if(self.EstadoNav != undefined) {
+                self.EstadoNav.subscribe(x=>{
+                    let o = x.find(obj => {
+                        return obj.pagina === pagina
+                    });
+                    resolve(o)
+                })  
+            }
         })
     }
 
     update(state : EstadoNav[]){
-        if(state == undefined){
+        if(state != undefined){
             console.log(state);
-            localStorage.setItem('EstadoNav', JSON.stringify(this.EstadoNav));
+            localStorage.setItem('EstadoNav', JSON.stringify(state));
         }
     }
 

@@ -1,5 +1,5 @@
 a{
-    color:darkgray; 
+    color:black; 
     text-decoration-line: none;
     position: relative;
 }
@@ -19,7 +19,7 @@ a{
     padding: 10px 20px;
     width: 100%;
     margin-right: -15px;
-    transition-delay:.5s;
+    transition:.5s !important;
 }
 .nav-icon.active:before, .nav-icon .active:after {
     content: "";
@@ -29,7 +29,7 @@ a{
     background: red;
     height: 25px;
     width: 25px;
-    transition-delay:.5s;
+    transition:.5s !important;
     background: url(/assets/imagens/curve.png);
     display: block;
     background-size: 100% 100%;
@@ -50,7 +50,6 @@ a{
     background-color: var(--clr-vertical-nav-active-bg-color);
 }
 .icon{
-    color:gray;
     width: auto;
     font-size: 20px;
     position: relative;

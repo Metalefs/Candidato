@@ -5,10 +5,10 @@
     background-size: 100% 0.2em;
     border-top-left-radius: 1rem;
     background-origin: padding-box;
+    background: url(/assets/imagens/fundos/inicio/green_field.jpg);
     background-position:top !important;
 }
 .hero-head{
-    background: url(/assets/imagens/fundos/inicio/green_field.jpg);
     width: 100%;
     background-size: cover;
 }
@@ -31,8 +31,8 @@
         background-size: cover;
     }
     .hero-bg{
-        margin: 0 auto;
-        background:#141828;
+        margin: 2rem auto;
+        /* background:#141828; */
     }
 }
 

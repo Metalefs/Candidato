@@ -12,7 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { FeedModule } from 'src/app/modules/landing/page/feed/feed.module';
 import { BiografiaModule } from 'src/app/modules/landing/page/biografia/biografia.module';
 import { ProjetosModule } from 'src/app/modules/landing/page/projetos/projetos.module';
-
+import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
 
 @NgModule({
   declarations: [
@@ -27,9 +27,11 @@ import { ProjetosModule } from 'src/app/modules/landing/page/projetos/projetos.m
     BiografiaModule,
     ProjetosModule,
     SharedModule,
+    NgxScrollspyModule.forRoot(),
     LandingPageRoutes
   ],
   exports: [ 
+    ContatoComponent,
     FeedModule,
     BiografiaModule,
     ProjetosModule

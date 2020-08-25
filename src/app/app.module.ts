@@ -20,6 +20,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
+import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -66,6 +67,7 @@ import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav
     CountUpModule,
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
+    NgxScrollspyModule.forRoot(),
     NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],

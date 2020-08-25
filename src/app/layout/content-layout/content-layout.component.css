@@ -25,13 +25,17 @@
 .sidenav {
   min-width: 9.8rem;
   width: 12.5%;
+  position: fixed;
+  z-index: 1;
   border-right: none;
 }
 
 .main-container .content-container .sidenav {
-  background: #333333;
+  background: #333;
 }
-
+.main-container .header-nav.clr-nav-level-1{
+  background: #333;
+}
 main{
   animation: fade-in ease-in-out .5s forwards;
   width: 100vw;
@@ -55,9 +59,7 @@ main{
     top: 0;
     position: fixed;
     z-index: 1;
-    float: right;
-    background: transparent;
-    right: 0;
+    width: 100%;
   }
   
 }

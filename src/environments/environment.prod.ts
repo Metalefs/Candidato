@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: 'https://{{ProjectDomain}}.com'
+  endpoint: 'http://appconectacandidato.azurewebsites.net'
 };
