@@ -636,17 +636,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .right-section {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-	padding: 0 40px 0 40px;
 	width: 50%;
-	height: 100%;
-  background: #FFFFFF;
-  z-index: 99;
-  overflow: hidden;
-  overflow-y: auto;
+    height: 100%;
+    background: #FFFFFF;
 }
 
 .intro {
@@ -1435,10 +1427,7 @@ label {
 
 	@media only screen and (max-width : 801px) {
 
-     .right-section{
-        position: relative;
-        width: 100%;
-    }
+     
 
 		.main-logo {
 			padding: 100px 0 0 0;
