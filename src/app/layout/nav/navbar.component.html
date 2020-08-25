@@ -1,12 +1,12 @@
 
 <div id="nav-menu">
-    <ul class="navigation" *ngFor="let pagina of paginas">
-      <li><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active" >{{pagina.Nome}}</a></li>
+    <ul class="navigation">
+      <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active" >{{pagina.Nome}}</a></li>
     </ul>
 
     <div class="nav-social">
-      <ul *ngFor="let rede of redesSociais">
-        <li><a href="#"><i [class]="rede.classe"></i></a></li>
+      <ul>
+        <li *ngFor="let rede of redesSociais"><a href="#"><i [class]="rede.classe"></i></a></li>
       </ul>
     </div>
 

@@ -4,57 +4,51 @@ import { throwError, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { routes } from 'src/app/data/schema/routes';
 import { retry, catchError } from 'rxjs/operators';
-import { Candidato } from 'src/app/data/schema/domain/Candidato';
+import { RowActionService } from '@clr/angular/data/datagrid/providers/row-action-service';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { StateService } from 'src/app/core/service/state/state.service';
 import { ServicoBase } from 'src/app/data/service/domain/ServicoBase';
+import { Projeto } from 'src/app/data/schema/domain/Projeto';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class CandidatoService extends ServicoBase{
+export class ProjetoService extends ServicoBase {
     constructor(protected http: HttpClient, protected AuthenticationService: AuthenticationService, protected StateService: StateService) {
 		super(http,StateService);
 	}
-
-    Ler(): Observable<Candidato[]> {
-        return this.http.get<Candidato[]>(environment.endpoint + routes.Candidato).pipe(
-            retry(3), // retry a failed request up to 3 times
-            catchError(this.handleError) // then handle the error
-        );
-    }
     
-    BuscarOuCriarCandidato(): Observable<Candidato[]> {
-        return this.http.get<Candidato[]>(environment.endpoint + routes.Candidato).pipe(
-            retry(3), // retry a failed request up to 3 times
-            catchError(this.handleError) // then handle the error
+    Ler(): Observable<Projeto[]> {
+        return this.http.get<Projeto[]>(environment.endpoint + routes.Projeto).pipe(
+            retry(3), 
+            catchError(this.handleError)
         );
     }
 	
-    Incluir(item: Candidato): Observable<any> {
-        return this.http.post<Candidato>(environment.endpoint + routes.Gerenciamento + routes.Sobre, item).pipe(
+	Incluir(item: Projeto): Observable<any> {
+        return this.http.post<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Projeto, {}).pipe(
             retry(3),
             catchError(this.handleError)
         );
     }
 
-    Editar(item: Candidato): any {
-        let payload = this.AuthenticationService.tokenize({Sobre:item});
+    Editar(item: Projeto): any {
+        let payload = this.AuthenticationService.tokenize({Projeto:item});
         console.log(payload);
-        return this.http.put<Candidato>(environment.endpoint + routes.Gerenciamento + routes.Sobre, 
+        return this.http.put<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Projeto,
             payload).pipe(
-            retry(3), // retry a failed request up to 3 times
-            catchError(this.handleError) // then handle the error
+            retry(3),
+            catchError(this.handleError)
         );
     }
 	
     Remover(id: string): Observable<any>{
-        return this.http.delete<Candidato>(environment.endpoint + routes.Gerenciamento + routes.Sobre).pipe(
+        return this.http.delete<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Projeto).pipe(
             retry(3),
             catchError(this.handleError)
         );
-    }
+    }	
 
     handleError(error) {
         let errorMessage = '';

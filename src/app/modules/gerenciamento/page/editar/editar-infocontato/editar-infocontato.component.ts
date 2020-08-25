@@ -73,7 +73,8 @@ export class EditarInfoContatoComponent implements OnInit {
         result[2].value,
         result[3].value,
         result[4].value,
-      )
+        result[4].value,
+        )
       InformacoesContato._id = id;
       this.api.Editar(InformacoesContato).subscribe(x=> this.AtualizarTabela());
     });

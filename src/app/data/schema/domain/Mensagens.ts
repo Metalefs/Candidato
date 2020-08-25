@@ -1,4 +1,7 @@
-export class Mensagens{
+import { Base } from "./domain_base";
+
+export class Mensagens implements Base {
+    Identificador:number;
     FraseDestaque:string;
     DescricaoCurta:string;
     Descricao:string;
@@ -7,6 +10,7 @@ export class Mensagens{
     ExperienciaDeTrabalho:string;
     ApresentacaoProjetos:string;
     constructor(
+        Identificador:number,
         FraseDestaque:string,
         DescricaoCurta:string,
         Descricao:string,
@@ -15,6 +19,7 @@ export class Mensagens{
         ExperienciaDeTrabalho:string,
         ApresentacaoProjetos:string
     ){
+        this.Identificador = Identificador;
         this.FraseDestaque = FraseDestaque;
         this.DescricaoCurta = DescricaoCurta;
         this.Descricao = Descricao;

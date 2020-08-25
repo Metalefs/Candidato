@@ -2,11 +2,15 @@ export let routes = {
 
     Seed:"/seed/",
 
+    Candidato:"/Candidato",
+    BuscarCriarCandidato:"/BuscarCriarCandidato",
+
     InfoContato:"/infoContato/",
     Feedback:"/feedback/",
     Sobre:"/sobre/",
     ExperienciaTrabalho:"/experienciaTrabalho",
-    Mensagens:"mensagens",
+    Mensagens:"/mensagens",
+    Projeto:"/projeto",
 
     Usuario: "/usuario/",
         DeletarConta:"/usuario/deletarConta/",

@@ -3,7 +3,7 @@ import { ExperienciaTrabalhoService} from 'src/app/data/service/domain/Experienc
 import { ExperienciaTrabalho} from 'src/app/data/schema/domain/ExperienciaTrabalho';
 
 @Component({
-  selector: 'app-sobre',
+  selector: 'sobre',
   templateUrl: './sobre.component.html',
   styleUrls: ['./sobre.component.css']
 })

@@ -1,7 +1,7 @@
 import { Base } from "./domain_base";
 
 export class Candidato implements Base {
-    Idenficador:number;
+    Identificador:number;
 	Nome:string;
 	DataNascimento:string;
 	Email:string;
@@ -14,8 +14,8 @@ export class Candidato implements Base {
     NumeroCampanha:string;
     Ativo:boolean;
 	Foto:string;
-	constructor($Idenficador: number, $Nome: string, $DataNascimento: string, $Email: string, $Telefone: string, $Twitter: string, $Facebook: string, $Instagram: string, $Youtube: string, $LinkedIn: string, $NumeroCampanha: string, $Foto:string, $Ativo: boolean) {
-		this.Idenficador = $Idenficador;
+	constructor($Identificador: number, $Nome: string, $DataNascimento: string, $Email: string, $Telefone: string, $Twitter: string, $Facebook: string, $Instagram: string, $Youtube: string, $LinkedIn: string, $NumeroCampanha: string, $Foto:string, $Ativo: boolean) {
+		this.Identificador = $Identificador;
 		this.Nome = $Nome;
 		this.DataNascimento = $DataNascimento;
 		this.Email = $Email;

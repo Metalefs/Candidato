@@ -11,6 +11,7 @@ import { AuthModule } from './component/auth/auth.module';
 import { DynamicFormModule } from './component/dynamic-form/dynamic-form.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountUpModule } from 'ngx-countup';
+import { MaterialModule } from './material.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +19,7 @@ import { CountUpModule } from 'ngx-countup';
     ReactiveFormsModule,
     CountUpModule,
     RouterModule,
+    MaterialModule,
     FontAwesomeModule,
     ClarityModule,
   ],
@@ -30,6 +32,7 @@ import { CountUpModule } from 'ngx-countup';
   exports: [
     CommonModule,
     ClarityModule,
+    MaterialModule,
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,

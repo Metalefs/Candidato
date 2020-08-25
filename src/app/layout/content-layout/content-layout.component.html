@@ -7,24 +7,25 @@
         </div>
     </div>
 
-    <navbar [Titulo]="title"></navbar>
+    <navbar></navbar>
 
     <div [@routeAnimations]="prepareRoute(outlet)" class="main">
-        <section class="split-home">
+        <section class="split-home columns">
 
-            <section class="left-section personal wow fadeIn" data-wow-delay="0.2s">
+            <section class="column left-section personal wow fadeIn" data-wow-delay="0.2s">
 
             </section>
-            <section class="right-section">
+            <section class="column right-section">
 
                 <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
-                    <ul *ngFor="let pagina of paginas">
-                        <li><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active" >{{pagina.Nome}}</a></li>
+                    <ul>
+                        <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active" >{{pagina.Nome}}</a></li>
                     </ul>
                 </div>
 
                 <router-outlet #outlet="outlet"></router-outlet>
                 <app-footer></app-footer>
+                <app-scroll-top></app-scroll-top>
 
             </section>
 
@@ -32,5 +33,3 @@
     </div>
 
 </div>
-
-<app-scroll-top></app-scroll-top>
