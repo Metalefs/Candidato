@@ -1,0 +1,38 @@
+.left-section{
+    background:black;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-top-left-radius: 1rem;
+    background-origin: padding-box;
+    background-position:top !important;
+}
+.right-section{
+    background:#141828;
+}
+.left{
+    float: left;
+}
+.partido-section{
+    position: absolute;
+    bottom:0;
+    right:0;
+    margin-left:2rem;
+    width:100%;
+}
+.partido-logo{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+.partido-text{
+    float: left;
+}
+@keyframes to-left{
+    0%{
+        margin-left:50%;
+    }
+
+    100%{
+        margin:0;
+    }
+}

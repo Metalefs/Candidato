@@ -26,7 +26,13 @@ export class ContentLayoutComponent implements OnInit {
 
   title = "Candidato";
   paginas: OpcaoNavbar[] = [];
-  
+  NavState:NavState = {open : false};
+  candidato_img="url(/assets/imagens/fundos/inicio/President_Barack_Obama.jpg)";
+
+  ToggleNav(){
+    this.NavState.open = this.NavState.open ? false : true;
+  }
+
   ngOnInit(): void {
     // VARIABLES
     const magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
@@ -62,10 +68,14 @@ export class ContentLayoutComponent implements OnInit {
     };
 
     applyGradient(gradientAPI, addBackgroundToUnderlines);
+   
   }
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
+}
+export interface NavState{
+  open:boolean
 }

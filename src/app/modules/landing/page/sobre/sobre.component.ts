@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienciaTrabalhoService} from 'src/app/data/service/domain/ExperienciaTrabalhoService';
 import { ExperienciaTrabalho} from 'src/app/data/schema/domain/ExperienciaTrabalho';
-
+import { MensagensService } from 'src/app/data/service/domain/MensagensService';
+import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 @Component({
   selector: 'sobre',
   templateUrl: './sobre.component.html',
@@ -10,7 +11,8 @@ import { ExperienciaTrabalho} from 'src/app/data/schema/domain/ExperienciaTrabal
 export class SobreComponent implements OnInit {
 
   ExperienciasTrabalho:ExperienciaTrabalho[] = [];
-  constructor(private ExperienciaTrabalhoService:ExperienciaTrabalhoService) { 
+  Mensagens:Mensagens;
+  constructor(private MensagensService: MensagensService, private ExperienciaTrabalhoService:ExperienciaTrabalhoService) { 
     ExperienciaTrabalhoService.Ler().subscribe(x=>this.ExperienciasTrabalho = x);
   }
 

@@ -10,4 +10,5 @@ export class FooterComponent {
   @Input()
   AppName: string;
   currentYear = new Date().getUTCFullYear();
+  NomeEmpresa = "Uncool";
 }

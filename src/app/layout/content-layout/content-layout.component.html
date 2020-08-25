@@ -1,25 +1,31 @@
 <div id="loading">
 </div>
 <div class="wrapper">
-    <div class="nav-trigger visible-xs visible-sm" role="button" title="sweet hamburger">
+    <div (click)="ToggleNav()" class="nav-trigger" [ngClass]="NavState.open? 'is-active': ''"  role="button" title="sweet hamburger">
         <div class="hamburger">
             <div class="icon"></div>
         </div>
     </div>
-
-    <navbar></navbar>
-
-    <div [@routeAnimations]="prepareRoute(outlet)" class="main">
+    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" > 
+        <navbar [NavState]="NavState"></navbar>
+    </div>
+    <div [@routeAnimations]="prepareRoute(outlet)" class="main" [ngClass]="NavState.open? 'is-active': ''" >
         <section class="split-home columns">
 
-            <section class="column left-section personal wow fadeIn" data-wow-delay="0.2s">
-
+            <section (click)="ToggleNav()" class="column left-section wow fadeIn" [style.background]="candidato_img" data-wow-delay="0.2s">
+                <figure class="partido-section">
+                    <div class="column is-5 has-text-left partido-text">
+                        <h1 class="title is-3 has-text-white">Candidato.Nome</h1>
+                        <h1 class="title is-3 has-text-warning">Candidato.Campanha</h1>=
+                    </div>
+                    <img width="200" class="partido-logo" src="assets/imagens/icones/partido.png">
+                </figure>
             </section>
             <section class="column right-section">
 
                 <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
                     <ul>
-                        <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active" >{{pagina.Nome}}</a></li>
+                        <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active">{{pagina.Nome}}</a></li>
                     </ul>
                 </div>
 

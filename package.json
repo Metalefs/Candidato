@@ -32,6 +32,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@types/jquery": "^3.5.1",
     "@uniprank/ngx-scrollspy": "^1.0.9",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "aos": "^2.3.4",

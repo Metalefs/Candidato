@@ -1,14 +1,13 @@
 
-<div id="nav-menu">
-    <ul class="navigation">
-      <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active" >{{pagina.Nome}}</a></li>
-    </ul>
 
-    <div class="nav-social">
-      <ul>
-        <li *ngFor="let rede of redesSociais"><a href="#"><i [class]="rede.classe"></i></a></li>
-      </ul>
-    </div>
+<ul class="navigation">
+  <li *ngFor="let pagina of paginas"><a (click)="ToggleNav()" [uniScrollItem]="pagina.Link"  pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="['inicio']" href="#{{pagina.Link}}" routerLinkActive="Active" >{{pagina.Titulo}}</a></li>
+</ul>
 
-    <p class="copyright-text">{{Copyright}}</p>
+<div class="nav-social">
+  <ul>
+    <li *ngFor="let rede of redesSociais"><a href="#"><i [class]="rede.classe"></i></a></li>
+  </ul>
 </div>
+
+<p class="copyright-text">{{Copyright}}</p>

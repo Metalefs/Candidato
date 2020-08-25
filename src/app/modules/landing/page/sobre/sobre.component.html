@@ -2,44 +2,28 @@
     <div class="col-md-12">
         <div class="about-intro">
             <h4 class="wow fadeInDown" data-wow-delay="0.4s">Sobre mim</h4>
-            <h1 class="wow fadeInDown" data-wow-delay="0.5s"> Many desktop publishing packages and web page editors now
-                use Lorem Ipsum as their default model
-                text. There's isn't much to know about me, I am busy 12/7. The rest is below and in my portfolio.
-            </h1>
+            <h1 class="wow fadeInDown" data-wow-delay="0.5s"> {{Mensagens?.Sobre}}</h1>
         </div>
         <div class="about-details">
-            <div class="work-list text-center wow fadeInDown" data-wow-delay="0.6s">
-                <div class="col-sm-4">
-                    <i class="ion-ios-compose-outline"></i>
-                    <p>
-                        I write code just like I drink coffee and I love em both.
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <i class="ion-ios-camera-outline"></i>
-                    <p>
-                        And I take photos, now and then & they look great.
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <i class="ion-ios-bookmarks-outline"></i>
-                    <p>
-                        Yes, I am a bookie, I mean who reads many books.
-                    </p>
+            <div class="box work-list text-center wow fadeInDown columns" data-wow-delay="0.6s">
+                <div class="column">{{Mensagens?.Descricao}}</div>
+                <div class="column is-3">
+                    <figure class="image has-ratio">
+                        <img class="is-rounded" src="">
+                    </figure>
                 </div>
             </div>
             <div class="experience wow fadeInDown" data-wow-delay="0.7s">
-                <h4>Work Experience</h4>
-                <h1> There are only a few companies I worked with because I get a chance to pick. That's the best
-                    thing when you are a coder. Great isn't it!
+                <h4>Experiências de trabalho</h4>
+                <h1> {{Mensagens?.ExperienciaDeTrabalho}}
                 </h1>
                 <ul>
                     <li *ngFor="let experiencia of ExperienciasTrabalho">
-                        <h3>{{experiencia.Cargo}} - {{experiencia.Local}}</h3>
+                        <h3>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h3>
                         <p>
-                            {{experiencia.Descricao}}
+                            {{experiencia?.Descricao}}
                         </p>
-                        <h6>{{experiencia.Inicio}} - {{experiencia.Fim}}</h6>
+                        <h6>{{experiencia?.Inicio}} - {{experiencia?.Fim}}</h6>
                     </li>
                 </ul>
             </div>

@@ -4,6 +4,7 @@ import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais';
 import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { NavState } from '../content-layout/content-layout.component';
 
 @Component({
   selector: 'navbar',
@@ -13,17 +14,21 @@ import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 export class NavbarComponent implements OnInit {
  
   constructor( private ServicoPaginas: ServicoPaginas, private ServicoRedesSociais: ServicoRedesSociais, ) { 
-     this.paginas = ServicoPaginas.GetAllPages();
-     this.redesSociais = ServicoRedesSociais.GetAllRedesSociais();
+    
   }
-
+  @Input()NavState:NavState;
   Subtitulo:string = "Portifólio do Nome Candidato";
   paginas: OpcaoNavbar[] = [];
   redesSociais: RedeSocial[] = [];
   Copyright:string = "";
- 
+  
+  ToggleNav(){
+    this.NavState.open = this.NavState.open ? false : true;
+  }
+
   ngOnInit(): void {
-    
+    this.paginas = this.ServicoPaginas.GetAllPages();
+    this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais();
   }
 
 }

@@ -58,9 +58,6 @@ export class InicioComponent implements OnInit {
     true
   );
 
-  candidato_img="url(/assets/imagens/fundos/inicio/President_Barack_Obama.jpg)";
-
-
   async LerSobre(){
     
     this.SobreService.Ler().subscribe(data=>{
