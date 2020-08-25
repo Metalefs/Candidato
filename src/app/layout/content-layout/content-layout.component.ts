@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { OverlayContainer } from '@angular/cdk/overlay';
-import { tap } from 'rxjs/operators';
 import { Router, RouterOutlet } from '@angular/router';
-
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade, slider } from 'src/app/animations';
 
+import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
-import { Collections } from 'src/app/data/schema/Collections';
 
 @Component({
   selector: 'content-layout',
@@ -19,17 +16,16 @@ import { Collections } from 'src/app/data/schema/Collections';
 })
 
 export class ContentLayoutComponent implements OnInit {
-  public theme = 'my-light-theme';
-  title = "Candidato";
-  overlayContainer: OverlayContainer;
-  currentUser: Collections.User;
 
   constructor(
-    private router: Router,
+    private ServicoPaginas: ServicoPaginas,
     private authenticationService: AuthenticationService
   ) {
-      this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.paginas = ServicoPaginas.GetAllPages();
   }
+
+  title = "Candidato";
+  paginas: OpcaoNavbar[] = [];
   
   ngOnInit(): void {
     // VARIABLES

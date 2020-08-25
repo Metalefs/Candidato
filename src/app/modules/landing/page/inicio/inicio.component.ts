@@ -11,23 +11,21 @@ import { AuthenticationService } from 'src/app/core/service/authentication/authe
 import { fade } from 'src/app/animations';
 
 @Component({
-  selector: 'hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
+  selector: 'inicio',
+  templateUrl: './inicio.component.html',
+  styleUrls: ['./inicio.component.css'],
   animations:[fade]
 })
 
-export class HeroComponent implements OnInit {
+export class InicioComponent implements OnInit {
   loading = false;
   Sobre:Collections.Sobre;
   InformacaoContato:Collections.InformacoesContato;
   currentUser: Collections.User;
-  redes: RedeSocial[] = [];
 
   Candidato: Candidato = new Candidato(
     1,
     "Nome candidato",
-    "",
     "",
     "",
     "",
@@ -48,13 +46,7 @@ export class HeroComponent implements OnInit {
     private authenticationService: AuthenticationService,
 	) 
 	{ 
-    this.redes.push(
-      new RedeSocial(CaminhoLogo("twitter"),"twitter","/"),
-      new RedeSocial(CaminhoLogo("instagram"),"instagram","/"),
-      new RedeSocial(CaminhoLogo("whatsapp"),"whatsapp","/"),
-      new RedeSocial(CaminhoLogo("facebook"),"facebook","/"),
-      new RedeSocial(CaminhoLogo("youtube"),"youtube","/"),
-    );
+    
 	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
 	}
 

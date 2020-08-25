@@ -1,19 +1,21 @@
 <div class="main pt-0">
+
     <div class="" uniScrollSpy="inicio" id="inicio">
         <hero></hero>
     </div>
+
     <div class="container" uniScrollSpy="biografia"  data-aos="fade-up" id="biografia">
-        <biografia></biografia>
+        <sobre></sobre>
     </div>
+
     <div class="container" uniScrollSpy="projetos"  data-aos="fade-up" id="projetos">
         <projetos></projetos>
     </div>
+
     <div class="container" uniScrollSpy="feed"  data-aos="fade-up" id="feed">
         <feed></feed>
     </div>
+
     <app-redes-sociais [redes]="redes"></app-redes-sociais>
+
 </div>
-<li class="fixed mx-0">
-    Active Section: [ <span [innerHtml]="(ActiveSection$ | async).id"></span>,
-    <span [innerHtml]="(ActiveSection$ | async).elementId"></span> ]
-</li>

@@ -14,16 +14,8 @@ export class SideNavComponent implements OnInit {
   EstadoNav:EstadoNav;
   collapsed=true;
 
-  redes:RedeSocial[] = [];
-  
   constructor() { 
-    this.redes.push(
-      new RedeSocial(CaminhoLogo("twitter"),"twitter","/"),
-      new RedeSocial(CaminhoLogo("instagram"),"instagram","/"),
-      new RedeSocial(CaminhoLogo("whatsapp"),"whatsapp","/"),
-      new RedeSocial(CaminhoLogo("facebook"),"facebook","/"),
-      new RedeSocial(CaminhoLogo("youtube"),"youtube","/"),
-    );
+    
   }
   
   Opcoes = [

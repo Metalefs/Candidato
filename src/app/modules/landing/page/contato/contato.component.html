@@ -1,58 +1,69 @@
-<section class="section">
-    
-    <div class="about-desc text-center mt-5">
-						
-        <div class="mt-4" data-aos="flip-right">
-            <h1 class="font-weight-light">Olá, sou Nome Candidato</h1>
-    
-            <h3 class="mt-4">Lorem &amp; ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-        </div>
-        <ul class="about-social mb-0 list-inline my-5" data-aos="flip-left">
-            <li class="list-inline-item">
-                <a href="#" class="downloadCV">
-                    <i class="fas fa-download"></i>
-                    <span>Baixar CV</span>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <fa-icon [attr.icon]="faTwitter"></fa-icon>
-            </li>
-            <li class="list-inline-item">
-                <fa-icon [attr.icon]="faInstagram"></fa-icon>
-            </li>
-        </ul> 
-    
-        <div class="about-desc-more text-left b-box"  data-aos="slide-up">
-            <div class="columns is-desktop">
-                <div class="column">
-                    <div class="about-desc-info">
-                        <b>De :</b>
-                        <span>Candidato.Cidade</span>
+<div class="contact-section">
+    <div class="col-md-12">
+        <h1 class="wow fadeInDown" data-wow-delay="0.5s">Contact me.</h1>
+        <p class="wow fadeInDown" data-wow-delay="0.6s">
+            I know you've come here to talk to me Just ask me and I'll reply <br class="hidden-xs"> with in 24 hours
+            unless it is weekend.
+        </p>
+        <div class="contact-form wow fadeInDown" data-wow-delay="0.7s">
+            <form id="contact-form">
+                <div class="messages"></div>
+                <div class="controls">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">Firstname *</label>
+                                <input id="form_name" type="text" name="name" class="form-control"
+                                    placeholder="Please enter your firstname *" required="required"
+                                    data-error="Firstname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Lastname *</label>
+                                <input id="form_lastname" type="text" name="surname" class="form-control"
+                                    placeholder="Please enter your lastname *" required="required"
+                                    data-error="Lastname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_email">Email *</label>
+                                <input id="form_email" type="email" name="email" class="form-control"
+                                    placeholder="Please enter your email *" required="required"
+                                    data-error="Valid email is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_phone">Phone</label>
+                                <input id="form_phone" type="tel" name="phone" class="form-control"
+                                    placeholder="Please enter your phone">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_message">Message *</label>
+                                <textarea id="form_message" name="message" class="form-control"
+                                    placeholder="Message for me *" rows="4" required="required"
+                                    data-error="Please,leave us a message."></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btn-send" value="Send message">
+                        </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="about-desc-info">
-                        <b>Idade :</b>
-                        <span>Candidato.Idade</span>
-                    </div>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column">
-                    <div class="about-desc-info">
-                        <b>Telefone :</b>
-                        <a href="tel:Candidato.Telefone">Candidato.Telefone</a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="about-desc-info">
-                        <b>Email :</b>
-                        <a href="mailto:hello@beingeorge.com">Candidato.Email</a>
-                    </div>
-                </div>
-                
-            </div>
+            </form>
         </div>
     </div>
-    
-</section>
+</div>

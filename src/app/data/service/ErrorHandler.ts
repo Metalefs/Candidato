@@ -1,5 +1,5 @@
-
-export funcion handleError(error) {
+import { throwError, Observable } from 'rxjs';
+export function handleError(error) {
 	let errorMessage = '';
 	if(error.error instanceof ErrorEvent) {
 		// Get client-side error

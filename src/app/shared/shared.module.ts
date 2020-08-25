@@ -7,7 +7,6 @@ import { FeedCardComponent } from './component/card/component/feed-card.componen
 import { FeedCardItemComponent } from './component/card/component/feed-card-item/feed-card-item.component';
 import { IconeWhatsappComponent } from './component/icone-whatsapp/icone-whatsapp.component';
 import { CountUpComponent } from './component/count-up/count-up.component';
-import { MaterialModule } from './material.module';
 import { AuthModule } from './component/auth/auth.module';
 import { DynamicFormModule } from './component/dynamic-form/dynamic-form.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,7 +20,6 @@ import { CountUpModule } from 'ngx-countup';
     RouterModule,
     FontAwesomeModule,
     ClarityModule,
-    MaterialModule
   ],
   declarations: [
     FeedCardComponent,
@@ -33,7 +31,6 @@ import { CountUpModule } from 'ngx-countup';
     CommonModule,
     ClarityModule,
     FontAwesomeModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
