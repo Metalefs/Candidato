@@ -28,6 +28,7 @@ export module Collections {
         Telefone:string;
         Email:string;
         HorarioAtendimento:string;
+        MensagemDeContato:string;
         Whatsapp:string;
         Instagram:string;
         static NomeID:string = "InformacoesContato";
@@ -35,12 +36,14 @@ export module Collections {
             Telefone:string,
             Email:string,
             HorarioAtendimento:string,
+            MensagemDeContato:string,
             Whatsapp:string,
             Instagram:string){
             super();
                 this.Telefone = Telefone;
                 this.Email = Email;
                 this.HorarioAtendimento = HorarioAtendimento;
+                this.MensagemDeContato = MensagemDeContato;
                 this.Whatsapp = Whatsapp;
                 this.Instagram = Instagram;
         }
@@ -82,16 +85,4 @@ export module Collections {
         }
         
     };
-    // export class Sessoes extends MongoDocument {
-    //     jwt:string;
-    //     idCliente:string;
-    //     static NomeID:string = "Sessoes";
-    //     constructor(
-    //     jwt:string,
-    //     idCliente:string){
-    //         super();
-    //         this.idCliente = idCliente;
-    //         this.jwt = jwt;
-    //     }
-    // };
 }

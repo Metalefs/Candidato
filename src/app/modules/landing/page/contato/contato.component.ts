@@ -20,9 +20,6 @@ export class ContatoComponent implements OnInit {
   constructor(public api: InformacoesContatoService) {  }
 
   LerInformacoesContato() {
-    if(localStorage.getItem("InformacaoContato"))
-      this.InformacoesContato = JSON.parse(localStorage.getItem("InformacaoContato"))
-    else
     this.api.Ler().subscribe(data=>{
       this.InformacoesContato = data[0];
       localStorage.setItem("InformacaoContato",JSON.stringify(this.InformacoesContato))

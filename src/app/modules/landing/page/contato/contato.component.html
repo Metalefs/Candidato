@@ -1,9 +1,8 @@
 <div class="contact-section">
     <div class="col-md-12">
-        <h1 class="wow fadeInDown" data-wow-delay="0.5s">Contact me.</h1>
+        <h1 class="wow fadeInDown" data-wow-delay="0.5s">Me contate</h1>
         <p class="wow fadeInDown" data-wow-delay="0.6s">
-            I know you've come here to talk to me Just ask me and I'll reply <br class="hidden-xs"> with in 24 hours
-            unless it is weekend.
+           {{InformacoesContato.MensagemDeContato}}
         </p>
         <div class="contact-form wow fadeInDown" data-wow-delay="0.7s">
             <form id="contact-form">
@@ -12,19 +11,19 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="form_name">Firstname *</label>
+                                <label for="form_name">Nome *</label>
                                 <input id="form_name" type="text" name="name" class="form-control"
-                                    placeholder="Please enter your firstname *" required="required"
-                                    data-error="Firstname is required.">
+                                    placeholder="Por favor, insira o seu nome *" required="required"
+                                    data-error="Nome é obrigatório.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="form_lastname">Lastname *</label>
+                                <label for="form_lastname">Sobrenome *</label>
                                 <input id="form_lastname" type="text" name="surname" class="form-control"
-                                    placeholder="Please enter your lastname *" required="required"
-                                    data-error="Lastname is required.">
+                                    placeholder="Por favor, insira o seu sobrenome *" required="required"
+                                    data-error="O sobrenome é obrigatório.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -34,16 +33,16 @@
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
                                 <input id="form_email" type="email" name="email" class="form-control"
-                                    placeholder="Please enter your email *" required="required"
-                                    data-error="Valid email is required.">
+                                    placeholder="Por favor, insira o seu e-mail *" required="required"
+                                    data-error="Insira um e-mail válido.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="form_phone">Phone</label>
+                                <label for="form_phone">Telefone</label>
                                 <input id="form_phone" type="tel" name="phone" class="form-control"
-                                    placeholder="Please enter your phone">
+                                    placeholder="Por favor, insira o seu telefone">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -51,15 +50,15 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="form_message">Message *</label>
+                                <label for="form_message">Mensagem *</label>
                                 <textarea id="form_message" name="message" class="form-control"
-                                    placeholder="Message for me *" rows="4" required="required"
-                                    data-error="Please,leave us a message."></textarea>
+                                    placeholder="Mensagem para mim *" rows="4" required="required"
+                                    data-error="Deixe sua mensagem."></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <input type="submit" class="btn btn-success btn-send" value="Send message">
+                            <input type="submit" class="btn btn-success btn-send" value="Enviar">
                         </div>
                     </div>
                 </div>
