@@ -1,41 +1,36 @@
-<div class="portfolio-split" data-aos="fade-down" >
-  
-    <div class="portfolio-intro">
-      <h1>{{Mensagens?.ApresentacaoProjetos}}</h1>
-    </div><!-- Portfolio Start -->
-
-    <div class="portfolio" data-aos="fade-up" >
-      <div class="container">
-        <div class="section-head">
-          <span>O QUE EU FAÇO</span>
-          <h2>Meus Projetos</h2>
+      <section class="section section-light section-work" id="work">
+        <div class="container">
+          <div class="section-head">
+            <h2>Meus trabalhos</h2>
+          </div>
+          <div class="mt-4">
+            <div class="columns">
+              <nav class="categories column is-12">
+                <ul class="portfolio-filter underline--magical portfolio-filter underline--magical list-unstyled list-inline mb-0 text-center filter">
+                  <li><a href="" class="active" data-filter="*">Todos</a></li>
+                  <li><a href="" data-filter=".BemEstarSocial"><b>Bem estar social</b></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="columns">
-        <nav class="categories column is-12">
-          <ul class="portfolio-filter underline--magical">
-            <li><a href="" class="active" data-filter="*">Todos</a></li>
-            <li><a href="" data-filter=".BemEstarSocial"><b>Bem estar social</b></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="">
-          <div class="columns portfolio-container text-center">
-
-            <!-- Person item -->
-            <div class="column is-6 custompadding  {{projeto.Categoria}}" *ngFor="let projeto of Projetos">
-              <a (click)="open(projeto.Identificador-1)" data-rel="lightcase" class="portfolio-item">
-                <img src="{{projeto.FotoSrc}}" alt="image" class="img-responsive" />
-                <div class="portfolio-overlay">
-                  <div class="overlay-items">
-                    <p>
-                      {{projeto.Nome}}
-                    </p>
+        <div class="container">
+          <div class="row mt-5 filter-container images-loaded shuffle" style="position: relative; height: 1079.64px; transition: height 250ms ease-out 0s;">
+           
+            <div class="portfolio-item col-sm-6 col-lg-6 shuffle-item filtered" data-groups="all slideshow" *ngFor="let projeto of Projetos">
+              <a (click)="open(projeto.Identificador-1)" data-rel="lightcase" class="portfolio-item portfolio-item--content">
+                <div class="portfolio-item--img b-box">
+                  <img src="{{projeto.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
+                </div>
+                <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
+                  <div class="portfolio-item--desc-in">
+                    <h3 class="mb-2 text-white">{{projeto.Nome}}</h3>
+                    <p class="text-white">{{projeto.Categoria}}</p>
                   </div>
                 </div>
               </a>
             </div>
-         
+    
           </div>
         </div>
-      </div>
+      </section>

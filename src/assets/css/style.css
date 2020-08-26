@@ -691,7 +691,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Poppins;
 	font-size: 42px;
 	font-weight: 600;
-	color: #404040;
 	letter-spacing: -2px;
 	line-height: 1.2;
 	margin: 0 0 15px 0;
@@ -735,7 +734,6 @@ h1, h2, h3, h4, h5, h6 {
 	border: 2px solid;
 	border-color: #001CFF;
 	padding: 10px 20px;
-	border-radius: 25px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	-webkit-transform: 0.5s;
@@ -972,9 +970,9 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-overlay {
  background: rgba(255, 255, 255, 0.80);
  position:absolute;
- top: 0;
+ bottom: 0;
  left: 5px;
- height: calc(100% - 10px);
+ height: calc(70% - 10px);
  width: calc(100% - 10px);
  opacity: 0;
  -webkit-transition: 0.5s;
