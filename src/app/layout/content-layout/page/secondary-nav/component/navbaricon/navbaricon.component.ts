@@ -45,7 +45,7 @@ export class NavbariconComponent implements OnInit {
 
   ngOnInit(): void {
     this.NavStateService.currentState.subscribe(item => {
-        if (item != null) {
+        if (item != undefined) {
             item.forEach(x=>{
                 if(x.pagina == this.Opcao.Link){
                   this.EstadoNav = x;

@@ -55,10 +55,10 @@ export class FeedbackService extends ServicoBase{
             // Get server-side error
             errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
         }
-        this.StateService.currentState.subscribe(x=>{
-			x.Funcional = false;
-			x.Mensagem  = errorMessage;
-		});
+        // this.StateService.currentState.subscribe(x=>{
+		// 	x.Funcional = false;
+		// 	x.Mensagem  = errorMessage;
+		// });
         return throwError(errorMessage);
     }
 }

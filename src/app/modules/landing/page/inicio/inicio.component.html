@@ -1,8 +1,14 @@
 <div class="intro">
-    <div class="intro-text">
-      <h4 class="wow fadeInDown" data-wow-delay="0.4s">{{Mensagens?.DescricaoCurta}}</h4>
-      <h1 class="wow fadeInDown" data-wow-delay=".5s">{{Candidato?.Nome}}</h1>
-      <p class="wow fadeInDown" data-wow-delay="0.6s">{{Mensagens?.Descricao}}</p>
-      <a href="portfolio.html" class="btn-contact wow fadeInDown" data-wow-delay=".6s">Veja meus projetos</a>
-    </div>
+  <div class="about-avatar mt-3">
+    <img src="assets/imagens/fundos/inicio/michele_obama.jpg" alt=""
+      class="img-fluid mx-auto d-block shadow-lg rounded-full">
   </div>
+  <div class="intro-text">
+    <h4 class="wow fadeInDown" data-wow-delay="0.4s">{{Mensagens?.DescricaoCurta}}</h4>
+    <h1 class="wow fadeInDown" data-wow-delay=".5s">{{Candidato?.Nome}}</h1>
+    <p class="wow fadeInDown" data-wow-delay="0.6s">{{Mensagens?.Descricao}}</p>
+    <a pageScroll pageScrollDuration="300" [routerLink]="['inicio']" href="#projetos"
+      routerLinkActive="Active" routerLinkActive="Active" class="btn-contact wow fadeInDown" data-wow-delay=".6s">Veja
+      meus projetos</a>
+  </div>
+</div>

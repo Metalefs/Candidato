@@ -1,4 +1,5 @@
 .left-section{
+    opacity: 0;
     background: black;
     box-shadow: 4px 0px 5px #615f5f85;
     background-repeat: no-repeat !important;
@@ -7,6 +8,7 @@
     position: fixed;
     background-origin: padding-box;
     background-position: top !important;
+    animation:to-left 2s ease-in-out forwards;
 }
 .right-section{
     position: relative;
@@ -17,6 +19,7 @@
     width: 50%;
     margin-left: 50%;
     max-height: 100vh;
+    animation:to-right 2s ease-in-out forwards;
 }
 @media only screen and (max-width : 801px) {
 
@@ -32,9 +35,7 @@
 .left{
     float: left;
 }
-.partido-section{
-    
-}
+
 .partido-logo{
     position: absolute;
     bottom: 10px;
@@ -52,10 +53,23 @@
 }
 @keyframes to-left{
     0%{
-        margin-left:50%;
+        transform: translateX(50vw);
+        opacity: 0;
     }
 
     100%{
-        margin:0;
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+@keyframes to-right{
+    0%{
+        transform: translateX(-50vw);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0vw);
+        opacity: 1;
     }
 }

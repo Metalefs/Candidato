@@ -25,13 +25,13 @@ export let slide = trigger('slideInOut', [
 
     group([
       query(':leave', [
-        animate('100ms ease-in-out', style({
-          transform: 'translateX(100vw)'
+        animate('1000ms ease-in-out', style({
+          transform: 'translateX(0vw)'
         }))
       ], { optional: true }),
       query(':enter', [
-        animate('100ms ease-in-out', style({
-          transform: 'translateX(0)'
+        animate('1000ms ease-in-out', style({
+          transform: 'translateX(100vw)'
         }))
       ], { optional: true })
     ])

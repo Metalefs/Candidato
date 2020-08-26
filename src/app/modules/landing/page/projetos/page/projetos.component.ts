@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MensagensService } from 'src/app/data/service/domain/MensagensService';
+import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 import { ProjetoService } from 'src/app/data/service/domain/ProjetoService';
 
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade } from 'src/app/animations';
-import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 import { Projeto } from 'src/app/data/schema/domain/Projeto';
+
 @Component({
   selector: 'projetos',
   templateUrl: './projetos.component.html',

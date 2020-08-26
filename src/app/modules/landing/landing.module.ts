@@ -12,6 +12,8 @@ import { FeedModule } from 'src/app/modules/landing/page/feed/feed.module';
 import { BiografiaModule } from 'src/app/modules/landing/page/biografia/biografia.module';
 import { ProjetosModule } from 'src/app/modules/landing/page/projetos/projetos.module';
 import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { SobreComponent } from './page/sobre/sobre.component';
 
 @NgModule({
@@ -27,6 +29,8 @@ import { SobreComponent } from './page/sobre/sobre.component';
     BiografiaModule,
     ProjetosModule,
     SharedModule,
+    NgxPageScrollCoreModule,
+    NgxPageScrollModule,
     NgxScrollspyModule.forRoot(),
     LandingPageRoutes
   ],

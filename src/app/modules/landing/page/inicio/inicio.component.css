@@ -1,7 +1,10 @@
 .intro-text h1{
     color: grey;
 }
-
+.about-avatar img {
+    height: 100px;
+    width: 100px;
+}
 @media (min-width: 320px) and (max-width: 1023px) {
   
     .right-column{

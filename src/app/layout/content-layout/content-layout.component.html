@@ -21,7 +21,7 @@
                     <img width="200" class="partido-logo" src="assets/imagens/icones/partido.png">
                 </figure>
             </section>
-            <section class="column right-section">
+            <section @fadeIn class="column right-section">
 
                 <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
                     <ul>
@@ -31,11 +31,11 @@
 
                 <router-outlet #outlet="outlet"></router-outlet>
                 <app-footer></app-footer>
-                <app-scroll-top></app-scroll-top>
-
+                
             </section>
-
+            
         </section>
     </div>
+    <app-scroll-top></app-scroll-top>
 
 </div>

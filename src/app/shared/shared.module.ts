@@ -12,6 +12,7 @@ import { DynamicFormModule } from './component/dynamic-form/dynamic-form.module'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountUpModule } from 'ngx-countup';
 import { MaterialModule } from './material.module';
+
 @NgModule({
   imports: [
     CommonModule,
