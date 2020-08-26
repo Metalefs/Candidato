@@ -32,19 +32,19 @@ const routes: Routes = [
         path: '',
         loadChildren: () =>
           import('src/app/modules/landing/page/biografia/biografia.module').then(m => m.BiografiaModule)
-          , data: { animation: '', reuse: true }
+          , data: { animation: 'isLeft', reuse: true }
       },
       {
         path: '',
         loadChildren: () =>
           import('src/app/modules/landing/page/projetos/projetos.module').then(m => m.ProjetosModule)
-          , data: { animation: '', reuse: true }
+          , data: { animation: 'isLeft', reuse: true }
       },
       {
         path: '',
         loadChildren: () =>
           import('src/app/modules/landing/page/feed/feed.module').then(m => m.FeedModule)
-          , data: { animation: '', reuse: true }
+          , data: { animation: 'isLeft', reuse: true }
       },
 
       { 

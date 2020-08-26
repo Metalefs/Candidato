@@ -21,13 +21,27 @@
     overflow:visible;
     animation:to-right 2s ease-in-out forwards;
 }
+.bar{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    height: 100px;
+    width: 100%;
+    background:#2d2c2c;
+}
 @media only screen and (max-width : 801px) {
 
     .right-section{
-       position: relative;
-       margin-left:0;
-       width: 100%;
+        margin-left: 0;
+        width: 100%;
+        border-top-right-radius: 2rem !important;
+        margin-top: -230px;
+        padding: 0;
+        z-index: 1;
    }
+    .main {
+        border-radius: 100px;
+    }
    .left-section{
        position: relative;
    }

@@ -9,18 +9,20 @@
     <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" > 
         <navbar [NavState]="NavState"></navbar>
     </div>
-    <div [@routeAnimations]="prepareRoute(outlet)" class="main" [ngClass]="NavState.open? 'is-active': ''" >
+    <div [ngClass]="NavState.open? 'is-active': ''" >
         <section class="split-home columns">
 
             <section (click)="ToggleNav()" class="column left-section wow fadeIn" [style.background]="candidato_bg" data-wow-delay="0.2s">
                 <figure class="partido-section">
-                    <div class="column is-7 has-text-left partido-text">
+                    <div class="column is-7 has-text-centered partido-text">
                         <h1 class="title is-3 has-text-white">{{Candidato.Nome}}</h1>
                         <h1 class="title is-3 has-text-warning">{{Candidato.NumeroCampanha}}</h1>
                     </div>
                     <img width="200" class="partido-logo" src="assets/imagens/icones/partido.png">
                 </figure>
+                <div class="bar"></div>
             </section>
+
             <section @fadeIn class="column right-section">
 
                 <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
@@ -29,7 +31,10 @@
                     </ul>
                 </div>
 
-                <router-outlet #outlet="outlet"></router-outlet>
+                <div [@routeAnimations]="prepareRoute(outlet)" class="main">
+                    <router-outlet #outlet="outlet"></router-outlet>
+                </div>
+
                 <app-footer></app-footer>
                 
             </section>

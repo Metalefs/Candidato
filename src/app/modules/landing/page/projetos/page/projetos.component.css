@@ -13,12 +13,12 @@
     position: absolute; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: transform 250ms ease-out 0s, opacity 250ms ease-out 0s;
 }
 .section-dark, .section-light .b-box {
-    background: #141828;
+    
 }
 .b-box {
-    background: #1c1f2f;
+    
     border-radius: 30px;
-    border: 1px solid #2e344d;
+    
 }
 .portfolio-item--img img {
     border-radius: 30px;

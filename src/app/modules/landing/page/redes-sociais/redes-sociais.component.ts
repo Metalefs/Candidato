@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 import { fade } from 'src/app/animations';
-
+import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais';
 @Component({
   selector: 'app-redes-sociais',
   templateUrl: './redes-sociais.component.html',
@@ -11,9 +11,11 @@ import { fade } from 'src/app/animations';
 export class RedesSociaisComponent implements OnInit {
   @Input()
   redes: RedeSocial[] = [];
-  constructor() { }
-
+  constructor(private ServicoRedesSociais:ServicoRedesSociais) {
+  }
+  
   ngOnInit(): void {
+    this.redes = this.ServicoRedesSociais.GetAllRedesSociais();
   }
 
 }

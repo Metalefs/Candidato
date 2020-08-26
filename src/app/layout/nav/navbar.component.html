@@ -5,8 +5,15 @@
 </ul>
 
 <div class="nav-social">
-  <ul>
-    <li *ngFor="let rede of redesSociais"><a href="#"><i [class]="rede.classe"></i></a></li>
+  <ul class="inline-list">
+    <li *ngFor="let rede of redesSociais">
+      <a href="#" title="{{rede.nome}}">
+        <figure @fadeIn class="mx-0 image is-32x32">
+          <img class="is-rounded" src="{{rede.src}}">
+        </figure>
+        <!-- <i [class]="rede.classe"></i> {{rede.nome}} -->
+      </a>
+    </li>
   </ul>
 </div>
 
