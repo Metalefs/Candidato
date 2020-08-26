@@ -15,11 +15,11 @@
     right: 0;
     top: 0;
     bottom: 0;
-    padding: 0 40px 0 40px;
     width: 50%;
     margin-left: 50%;
-    overflow:visible;
-    animation:to-right 2s ease-in-out forwards;
+    overflow: visible;
+    animation: to-right 2s ease-in-out forwards;
+    background: #eaeaea;
 }
 .bar{
     position: absolute;
