@@ -25,6 +25,20 @@ export class ProjetoService extends ServicoBase {
             catchError(this.handleError)
         );
     }
+
+    ObterTeste():Projeto[]{
+        return [
+            new Projeto(
+                1,
+                "Lagoa santa para todos",
+                "",
+                1,
+                "BemEstarSocial",
+                "assets/portfolio/1.jpg",
+                true
+            ),
+        ]
+    }
 	
 	Incluir(item: Projeto): Observable<any> {
         return this.http.post<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Projeto, {}).pipe(

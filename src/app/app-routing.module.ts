@@ -59,7 +59,7 @@ const routes: Routes = [
     ]
   },
   
-  { path: '**', redirectTo: 'inicio' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -4,6 +4,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import { faRss } from '@fortawesome/free-solid-svg-icons';
 import { EstadoNav } from '../../../../../data/schema/EstadoNav';
+import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 
 @Component({
   selector: 'secondary-nav',
@@ -13,8 +14,10 @@ import { EstadoNav } from '../../../../../data/schema/EstadoNav';
 export class SecondaryNavComponent implements OnInit {
   
   EstadoNav :EstadoNav;
-  constructor() {  }
-  
+  constructor( private ServicoPaginas: ServicoPaginas) { 
+    
+  }
+  paginas: OpcaoNavbar[] = [];
 
   Opcoes = [
     new OpcaoNavbar("Resumo", "inicio", "home"),
@@ -25,6 +28,7 @@ export class SecondaryNavComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.paginas = this.ServicoPaginas.GetAllPages();
   }
 
 }

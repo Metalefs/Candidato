@@ -13,7 +13,7 @@ import { Candidato } from 'src/app/data/schema/domain/Candidato';
   styleUrls: ['./content-layout.component.css'],
   animations: [
     slider,
-    slide
+    fade
  ]
 })
 
