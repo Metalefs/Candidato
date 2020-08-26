@@ -1,4 +1,4 @@
-<a (click)="ChangeToThis()" [uniScrollItem]="Opcao?.Link"  pageScroll [pageScrollOffset]="0" pageScrollDuration]="2300" [routerLink]="['inicio']" href="#{{Opcao?.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav?.is_active? 'active' : ''" routerLinkActive="Active" class="py-3 pl-4 px-2 nav-icon media">
+<a (click)="ChangeToThis()" [uniScrollItem]="Opcao?.Link"  pageScroll [pageScrollOffset]="0" [pageScrollDuration]="2300" [routerLink]="['inicio']" href="#{{Opcao?.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav?.is_active? 'active' : ''" class="py-3 pl-4 px-2 nav-icon media">
     <clr-icon [attr.shape]="Opcao?.Icon" [ngClass]="EstadoNav?.is_active ? ' icon is-solid' : 'icon'"  size="24"></clr-icon>
     {{Opcao?.Titulo}}
 </a>

@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
-import { fade, slider } from 'src/app/animations';
-
+import { fade, slider, slide } from 'src/app/animations';
+import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
+import { Candidato } from 'src/app/data/schema/domain/Candidato';
 
 @Component({
   selector: 'content-layout',
   templateUrl: './content-layout.component.html',
   styleUrls: ['./content-layout.component.css'],
   animations: [
-    slider
+    slider,
+    slide
  ]
 })
 
@@ -19,15 +21,19 @@ export class ContentLayoutComponent implements OnInit {
 
   constructor(
     private ServicoPaginas: ServicoPaginas,
+    private CandidatoService: CandidatoService,
     private authenticationService: AuthenticationService
   ) {
     this.paginas = ServicoPaginas.GetAllPages();
+    this.Candidato = CandidatoService.ObterTeste();
+    this.candidato_bg=`url(${this.Candidato.FotoCapa})`;
   }
-
+  candidato_bg:string;
+  Candidato:Candidato;
   title = "Candidato";
   paginas: OpcaoNavbar[] = [];
   NavState:NavState = {open : false};
-  candidato_img="url(/assets/imagens/fundos/inicio/President_Barack_Obama.jpg)";
+  
 
   ToggleNav(){
     this.NavState.open = this.NavState.open ? false : true;

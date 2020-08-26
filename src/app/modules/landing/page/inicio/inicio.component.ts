@@ -30,7 +30,7 @@ export class InicioComponent implements OnInit {
     private authenticationService: AuthenticationService,
 	) 
 	{ 
-    this.CandidatoService.BuscarOuCriarCandidato();
+    this.Candidato = this.CandidatoService.ObterTeste();
 	  this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
 	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
@@ -42,21 +42,7 @@ export class InicioComponent implements OnInit {
   Mensagens:Mensagens;
   currentUser: Collections.User;
 
-  Candidato: Candidato = new Candidato(
-    1,
-    "Nome candidato",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Numero campanha",
-    "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
-    true
-  );
+  Candidato: Candidato;
 
   async LerSobre(){
     

@@ -909,8 +909,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .portfolio-intro {
-	padding: 150px 0 0 0;
-	overflow: hidden;
+	width: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .portfolio-intro h4 {
@@ -929,10 +930,6 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
 	font-weight: 400;
 	color: #444444;
-}
-
-.portfolio {
-	padding: 50px 0 0 0;
 }
 
 .portfolio nav {

@@ -18,7 +18,7 @@
     padding: 0 40px 0 40px;
     width: 50%;
     margin-left: 50%;
-    max-height: 100vh;
+    overflow:visible;
     animation:to-right 2s ease-in-out forwards;
 }
 @media only screen and (max-width : 801px) {
@@ -54,10 +54,12 @@
 @keyframes to-left{
     0%{
         transform: translateX(50vw);
+        transform: rotateX(5deg);
         opacity: 0;
     }
 
     100%{
+        transform: rotateX(0deg);
         transform: translateX(0vw);
         opacity: 1;
     }

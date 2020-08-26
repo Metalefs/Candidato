@@ -24,6 +24,25 @@ export class CandidatoService extends ServicoBase{
             catchError(this.handleError) // then handle the error
         );
     }
+
+    ObterTeste(): Candidato{
+        return new Candidato(
+            1,
+            "Rogério César de Matos Avelar",
+            "24/06/1960",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "23",
+            "/assets/imagens/fundos/inicio/rogerio-avelar-23-capa.jpg",
+            "/assets/imagens/fundos/inicio/rogerio-avelar-23.jpg",
+            true
+          );
+    }
     
     BuscarOuCriarCandidato(): Observable<Candidato[]> {
         return this.http.get<Candidato[]>(environment.endpoint + routes.Candidato).pipe(
@@ -65,10 +84,10 @@ export class CandidatoService extends ServicoBase{
             // Get server-side error
             errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
         }
-        this.StateService.currentState.subscribe(x=>{
-			x.Funcional = false;
-			x.Mensagem  = errorMessage;
-		});
+        // this.StateService.currentState.subscribe(x=>{
+		// 	x.Funcional = false;
+		// 	x.Mensagem  = errorMessage;
+		// });
         return throwError(errorMessage);
     }
 }
