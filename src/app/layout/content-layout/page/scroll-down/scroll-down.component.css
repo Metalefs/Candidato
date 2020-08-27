@@ -1,0 +1,18 @@
+.scroll-to-home {
+    position: absolute;
+    bottom: 60px;
+    margin: 0 auto;
+    z-index: 100;
+    background: black;
+    color: white;
+    border:1px solid white;
+    transition: all .2s ease-in-out;
+}
+@media (min-width: 320px ) and (max-width: 1023px) {
+    
+    .scroll-to-home{
+        background: rgba(211, 211, 211, 0.856);
+        z-index: 2;
+    }
+    
+}

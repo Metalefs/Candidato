@@ -11,8 +11,12 @@
     </div>
     <div [ngClass]="NavState.open? 'is-active': ''" >
         <section class="split-home">
-
-            <section data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" [style.background]="candidato_bg" data-wow-delay="0.2s">
+            
+            <div data-aos="zoom-in-left" class="mx-auto flex-center app-scrolldown">
+                <app-scroll-down></app-scroll-down>
+            </div>
+            <canvas #canvasEl id="logo-canvas" class=""></canvas>
+            <section #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" [style.background]="candidato_bg" data-wow-delay="0.2s">
                 <ngx-typed-js [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
                     <span class="typing"></span>
                 </ngx-typed-js>

@@ -1,5 +1,12 @@
 .split-home{
-    background:indigo;
+    /* background:indigo; */
+    background:white;
+}
+#logo-canvas{
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    pointer-events: none;
 }
 .main {
     background: #f9f9f9;
@@ -20,7 +27,7 @@
     padding: 2rem;
     background-origin: padding-box;
     background-position: top !important;
-    animation: to-left 2s ease-in-out forwards;
+    animation: fade-in 5s ease-in-out forwards;
 }
 .typing{
     position: relative;
@@ -43,7 +50,7 @@
     border-radius: 50%;
 }
 .bar{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 70px;
@@ -53,6 +60,12 @@
 
 @media only screen and (max-width : 801px) {
 
+    #logo-canvas{
+        position: fixed;
+        z-index: 2;
+        width: 100vw;
+        height: 100vh;
+    }
     .right-section{
         margin-left: 0;
         width: 100%;
@@ -60,6 +73,16 @@
         border-radius: 100px;
         padding: 0;
         z-index: 1;
+   }
+   .typing{
+        color: white;
+        background: #111111;
+        font-weight: bold;
+        font-size: 1.5rem !important;
+        position: absolute;
+        margin: 19px 9px;
+        left: 0;
+        border-radius: 1.5rem;
    }
    .main{
        padding-left:initial
@@ -73,10 +96,6 @@
         padding-left: 17px;
         margin: 0;
    }
-   .partido-text{
-
-   }
-   
    .bar{
         top:0;
         bottom:initial;
@@ -102,7 +121,27 @@
 .left{
     float: left;
 }
+.typing{
+    color: white;
+    background: #111111;
+    font-weight: bold;
+    font-size: 2.25rem;
+    position: absolute;
+    margin: 19px 9px;
+    left: 0;
+}
+.app-scrolldown{
 
+}
+.flex-center{
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+}
 @keyframes to-left{
     0%{
         transform: translateX(50vw);
