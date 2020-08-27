@@ -23,7 +23,7 @@
     width: 40%;
     margin: 14px 20px;
     height: 97%;
-    border-radius: 10px;
+    border-top-right-radius: 48px;
     padding: 2rem;
     background-origin: padding-box;
     background-position: top !important;
@@ -105,6 +105,7 @@
    }
     .main {
         border-radius: 55px;
+        border-top-left-radius: 6px;
         background: #b4bee4;
         transition: 0.5s;
         color: white;
@@ -114,7 +115,7 @@
        width: 100%;
        margin: 0;
        height: 100%;
-       border-radius: 10px;
+       border-top-right-radius: 48px;
        padding: 0rem;
    }
 }

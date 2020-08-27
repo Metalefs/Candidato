@@ -28,7 +28,7 @@ export class CandidatoService extends ServicoBase{
     ObterTeste(): Candidato{
         return new Candidato(
             1,
-            "Rogério César de Matos Avelar",
+            "Barack Obama",
             "24/06/1960",
             "",
             "",
@@ -38,8 +38,8 @@ export class CandidatoService extends ServicoBase{
             "",
             "",
             "23",
-            "/assets/imagens/fundos/inicio/rogerio-avelar-23-capa.jpg",
-            "/assets/imagens/fundos/inicio/rogerio-avelar-23.jpg",
+            "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
+            "/assets/imagens/fundos/inicio/President_Barack_Obama-perfil.jpg",
             true
           );
     }
