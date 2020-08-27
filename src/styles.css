@@ -99,9 +99,12 @@
     }
   }
 .app-loading div.logo {
-    background: url(src/assets/imagens/icones/Conecta_Candidato.jpg) center center no-repeat; 
-    width: 100px;
+    background: url(src/assets/imagens/icones/Conecta_Candidato.jpg) center center no-repeat;
+    width: 89px;
     height: 100px;
+    margin: auto;
+    position: static;
+    /* margin: 12px; */
     border-radius: 50%;
 }
   

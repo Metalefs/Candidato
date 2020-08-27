@@ -15,7 +15,7 @@
 }
 .left-section{
     opacity: 0;
-    box-shadow: 4px 0px 5px #615f5f85;
+    box-shadow: 13px 10px 5px #00000047;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     position: fixed;
@@ -43,18 +43,30 @@
     animation: to-left 2s ease-in-out forwards;
 }
 .partido-text{
-    position: absolute;
-    background:#141828;;
-    padding:1rem;
+    position: RELATIVE;
+    background: #141828;
+    padding: 0.5REM;
     border-radius: 50%;
+    cursor: default;
+    width: max-content;
+}
+.partido-text:hover{
+   left:5px;
+   bottom:2px;
+}
+.floating2:hover{
+    left:5px;
+    bottom:2px;
 }
 .bar{
+    bottom: 50px;
+    z-index: 2;
+    margin-left: 1.5rem;
     position: fixed;
-    top: 0;
-    left: 0;
     height: 70px;
-    width: 40.25%;
-    z-index: 1;
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width : 801px) {
@@ -78,9 +90,6 @@
         background: #111111;
         font-weight: bold;
         font-size: 1.5rem !important;
-        position: absolute;
-        margin: 19px 9px;
-        left: 0;
         border-radius: 1.5rem;
    }
    .main{
@@ -88,19 +97,13 @@
    }
    .partido-logo{
         bottom: initial;
-        top: 10px;
-        left: 0;
-        right: initial;
-        position: fixed;
-        padding-left: 17px;
-        margin: 0;
+        position: absolute;
    }
    .bar{
-        top:0;
-        bottom:initial;
-        z-index: -1;
-        height: 70px;
-        width: 100%;
+        bottom: 190px;
+        width: 7%;
+        margin-left: 2rem;
+        position: absolute;
    }
     .main {
         border-radius: 55px;
@@ -166,4 +169,27 @@
         transform: translateX(0vw);
         opacity: 1;
     }
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating2{
+    animation-name: floating2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay:1s;
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); transform: rotate(0deg);}
+    65%  { transform: translate(0, 5px); }
+    to   { transform: translate(0, -0px); }    
+}
+@keyframes floating2 {
+    from { transform: translate(0,  0px); transform: rotate(0deg);}
+    65%  { transform: translate(0, 3px); }
+    to   { transform: translate(0, -0px);  }    
 }

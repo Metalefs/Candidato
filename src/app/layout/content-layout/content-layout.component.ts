@@ -44,6 +44,9 @@ export class ContentLayoutComponent implements OnInit {
   ngOnInit(): void {
        
   }
+  resetCursorPosition(){
+    
+  }
   ngAfterViewInit() {
     this.c = (this.canvasEl.nativeElement as HTMLCanvasElement).getContext('2d');
         
