@@ -1,43 +1,26 @@
-<div class="box section-about-wrap about">
-    <div class="">
-        <div class="section about-intro">
-            <div class="section-head">
-                <span>SOBRE</span>
-                <h2 class="wow fadeInDown" data-wow-delay="0.4s">
+<section class="section section-about in" id="about">
 
-                </h2>
-            </div>
-            <h1 class="wow fadeInDown" data-wow-delay="0.5s">Passionate designer & developer who loves simplicity in things and crafts beautiful user interfaces with love. {{Mensagens?.Sobre}}</h1>
-        </div>
-        <div class="about-details">
-            <div class="work-list text-center wow fadeInDown columns" data-wow-delay="0.6s">
-                <div class="column">{{Mensagens?.Descricao}}</div>
-                <div class="column is-3">
-                    <figure class="image has-ratio">
-                        <img class="is-rounded" src="">
-                    </figure>
+    <div class="section-about-wrap">
+
+        <div class="row justify-content-center align-items-center">
+            
+            <div class="col-md-7">
+                <div class="about-desc">
+                    <div class="about-desc-content">
+                        <span>Sobre</span>
+                        <p class="mt-4 font-weight-light">Passionate designer & developer who loves simplicity in things and crafts beautiful user interfaces with love. {{Mensagens?.Sobre}}</p>
+                    </div>
+                    <ul class="about-desc-social mt-4 list-unstyled list-inline">
+                        <li class="list-inline-item" *ngFor="let rede of redes"><a href="#"><i class="{{rede.class}}"></i></a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="experience wow fadeInDown" data-wow-delay="0.7s">
-                <h4>Experiências de trabalho</h4>
-                <h1> {{Mensagens?.ExperienciaDeTrabalho}}
-                </h1>
-                <ul>
-                    <li *ngFor="let experiencia of ExperienciasTrabalho">
-                        <h3>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h3>
-                        <p>
-                            {{experiencia?.Descricao}}
-                        </p>
-                        <h6>{{experiencia?.Inicio}} - {{experiencia?.Fim}}</h6>
-                    </li>
-                </ul>
+
+            <div class="col-md-5 d-none d-md-block">
+                <img class="img-fluid img-thumbnail is-hidden-touch" src="{{Candidato.FotoPerfil}}" alt="About Picture">
             </div>
-            <div class="cta">
-                <p>
-                    Candidato.MensagemContato
-                </p>
-                <a class="btn btn-contact" href="#">Contate-me</a>
-            </div>
+
         </div>
+
     </div>
-</div>
+</section>

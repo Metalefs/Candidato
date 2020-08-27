@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienciaTrabalhoService} from 'src/app/data/service/domain/ExperienciaTrabalhoService';
-import { ExperienciaTrabalho} from 'src/app/data/schema/domain/ExperienciaTrabalho';
-import { MensagensService } from 'src/app/data/service/domain/MensagensService';
-import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
+
+import { MensagensService,CandidatoService } from 'src/app/data/service/domain/index';
+import { Candidato, Mensagens, } from 'src/app/data/schema/domain/index';
+import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais'; 
+import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+
 @Component({
   selector: 'sobre',
   templateUrl: './sobre.component.html',
@@ -10,13 +12,21 @@ import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 })
 export class SobreComponent implements OnInit {
 
-  ExperienciasTrabalho:ExperienciaTrabalho[] = [];
   Mensagens:Mensagens;
-  constructor(private MensagensService: MensagensService, private ExperienciaTrabalhoService:ExperienciaTrabalhoService) { 
-    ExperienciaTrabalhoService.Ler().subscribe(x=>this.ExperienciasTrabalho = x);
+  redes: RedeSocial[] = [];
+  Candidato:Candidato;
+  
+  constructor(private MensagensService: MensagensService,
+     private CandidatoService:CandidatoService,
+     private ServicoRedesSociais:ServicoRedesSociais) { 
+       
   }
 
   ngOnInit(): void {
+    this.redes = this.ServicoRedesSociais.GetAllRedesSociais();
+    this.Candidato = this.CandidatoService.ObterTeste();
+   
+    //this.MensagensService.Ler().subscribe(x=>this.Mensagens = x);
   }
 
 }

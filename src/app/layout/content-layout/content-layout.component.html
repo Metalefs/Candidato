@@ -13,15 +13,19 @@
         <section class="split-home columns">
 
             <section (click)="ToggleNav()" class="column left-section wow fadeIn" [style.background]="candidato_bg" data-wow-delay="0.2s">
-                <figure class="partido-section">
-                    <div class="column is-7 has-text-centered partido-text">
-                        <h1 class="title is-3 has-text-white">{{Candidato.Nome}}</h1>
-                        <h1 class="title is-3 has-text-warning">{{Candidato.NumeroCampanha}}</h1>
-                    </div>
-                </figure>
+                <ngx-typed-js [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
+                    <span class="typing"></span>
+                </ngx-typed-js>
             </section>
             <div class="bar">
-                <img width="200" class="partido-logo" src="assets/imagens/icones/partido.png">
+                <figure class="partido-section">
+                    <div class="column is-7 has-text-centered">
+                        <img width="100" class="partido-logo rounded-full" src="assets/imagens/icones/Conecta_Candidato.jpg">
+                    </div>
+                    <div class="column">
+                        <h1 class="title is-3 partido-text has-text-warning">{{Candidato.NumeroCampanha}}</h1>
+                    </div>
+                </figure>
             </div>
 
             <section @fadeIn class="column right-section">

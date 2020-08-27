@@ -4,7 +4,7 @@ import { FeedComponent } from './page/feed.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'feed',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {

@@ -44,6 +44,7 @@
     "ngx-page-scroll": "^7.0.3",
     "ngx-page-scroll-core": "^7.0.3",
     "ngx-scrollspy": "github:uniprank/ngx-scrollspy",
+    "ngx-typed-js": "^2.0.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "typescript": "^3.9.7",

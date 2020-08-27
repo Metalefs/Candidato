@@ -18,9 +18,11 @@ import { CountUpModule } from 'ngx-countup';
 import { ClarityModule } from '@clr/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { LightboxModule } from 'ngx-lightbox';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
+import {NgxTypedJsModule} from 'ngx-typed-js';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,7 +41,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav.component';
-import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { LightboxModule } from 'ngx-lightbox';
     SharedModule,
     CountUpModule,
     LightboxModule,
+    NgxTypedJsModule,
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
     NgxScrollspyModule.forRoot(),

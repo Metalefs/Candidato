@@ -6,50 +6,48 @@
     background-size: cover !important;
     border-top-left-radius: 1rem;
     position: fixed;
+    width: 40%;
     background-origin: padding-box;
     background-position: top !important;
     animation:to-left 2s ease-in-out forwards;
+}
+.typing{
+    position: relative;
+    max-width: 92%;
 }
 .right-section{
     position: relative;
     right: 0;
     top: 0;
     bottom: 0;
-    width: 50%;
-    margin-left: 50%;
+    width: 60%;
+    margin-left: 40%;
     overflow: visible;
     animation: to-right 2s ease-in-out forwards;
-    background: #eaeaea;
 }
 .partido-logo{
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    margin: 1rem;
 }
 .partido-text{
     position: absolute;
-    bottom: 45px;
-    z-index: 1;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    background:white;
+    padding:1rem;
+    border-radius: 50%;
 }
 .bar{
     position: absolute;
-    bottom: 0;
-    z-index: -1;
-    height: 100px;
-    width: 100%;
-    background:#2d2c2c;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 40.25%;
+    z-index: 1;
+    background: var(--background-tertiary);
 }
+
 @media only screen and (max-width : 801px) {
 
     .right-section{
         margin-left: 0;
         width: 100%;
-        border-top-right-radius: 2rem !important;
         margin-top: -230px;
         border-radius: 100px;
         padding: 0;
@@ -67,18 +65,19 @@
    .partido-text{
 
    }
+   
    .bar{
         top:0;
         bottom:initial;
-        width: 100vw;
-        height: 90px;
-        position: fixed;
-        z-index: 1;
+        z-index: -1;
+        height: 70px;
+        width: 100%;
    }
     .main {
         border-radius: 100px;
     }
    .left-section{
+       width: 100%;
        position: relative;
    }
 }

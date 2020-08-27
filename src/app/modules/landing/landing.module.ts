@@ -15,6 +15,7 @@ import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { SobreComponent } from './page/sobre/sobre.component';
+import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experiencia-trabalho.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SobreComponent } from './page/sobre/sobre.component';
     InicioComponent,
     LandingPageComponent,
     RedesSociaisComponent,
-    SobreComponent
+    SobreComponent,
+    ExperienciaTrabalhoComponent
   ],
   imports: [
     FeedModule,

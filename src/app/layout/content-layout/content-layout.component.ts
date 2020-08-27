@@ -18,7 +18,7 @@ import { Candidato } from 'src/app/data/schema/domain/Candidato';
 })
 
 export class ContentLayoutComponent implements OnInit {
-
+  
   constructor(
     private ServicoPaginas: ServicoPaginas,
     private CandidatoService: CandidatoService,

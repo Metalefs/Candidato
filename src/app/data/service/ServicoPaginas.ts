@@ -14,10 +14,10 @@ export class ServicoPaginas{
 
     GetAllPages(): OpcaoNavbar[] {
       return [
-          new OpcaoNavbar("Inicio","inicio",""),
-          new OpcaoNavbar("Sobre","sobre",""),
-          new OpcaoNavbar("Projetos","projetos",""),
-          new OpcaoNavbar("Contato","contato","")
+          new OpcaoNavbar("Resumo","inicio",""),
+          new OpcaoNavbar("Quem é","sobre",""),
+          new OpcaoNavbar("Propostas","projetos",""),
+          new OpcaoNavbar("Entrar em Contato","contato","")
         ]
     }
 	

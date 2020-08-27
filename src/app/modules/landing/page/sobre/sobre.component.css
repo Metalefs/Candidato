@@ -1,0 +1,22 @@
+.section-about{
+    margin: 0 auto;
+    max-width: calc(1140px - 30px );
+    background: #fff;
+    margin-top: -200px;
+    z-index: 100;
+    position: relative;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 5px;
+    transition: 0.5s;
+    transform: translateY(20px);
+    padding: 0 !important;
+    max-width: 950px;
+}
+.section-about-wrap {
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 10px 10px 100px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
