@@ -10,9 +10,9 @@
         <navbar [NavState]="NavState"></navbar>
     </div>
     <div [ngClass]="NavState.open? 'is-active': ''" >
-        <section class="split-home columns">
+        <section class="split-home">
 
-            <section (click)="ToggleNav()" class="column left-section wow fadeIn" [style.background]="candidato_bg" data-wow-delay="0.2s">
+            <section data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" [style.background]="candidato_bg" data-wow-delay="0.2s">
                 <ngx-typed-js [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
                     <span class="typing"></span>
                 </ngx-typed-js>
@@ -28,7 +28,7 @@
                 </figure>
             </div>
 
-            <section @fadeIn class="column right-section">
+            <section @fadeIn class="right-section">
 
                 <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
                     <ul>

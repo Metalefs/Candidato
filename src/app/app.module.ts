@@ -41,6 +41,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav.component';
+import { ScrollDownComponent } from './layout/content-layout/page/scroll-down/scroll-down.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { SideNavComponent } from './layout/content-layout/page/side-nav/side-nav
     NavbarComponent,
     ContentLayoutComponent,
     SideNavComponent,
+    ScrollDownComponent,
   ],
   imports: [
     BrowserModule,
