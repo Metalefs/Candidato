@@ -1,36 +1,46 @@
-      <section class="section section-light section-work" id="work">
-        <div class="container">
-          <div class="section-head">
-            <h1>Nossos trabalhos</h1>
+<section class="section section-light section-work" id="work">
+  <div class="container">
+    <div class="section-head">
+      <h1>Nossos trabalhos</h1>
+    </div>
+    <div class="mt-4">
+      <div class="portfolio wow fadeInDown">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="categories">
+              <ul class="portfolio-filter">
+                <li><a href="" class="active" data-filter="*">Todos</a></li>
+                <li><a href="" [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li>
+              </ul>
+            </nav>
           </div>
-          <div class="mt-4">
-            <div class="columns">
-              <nav class="categories column is-12">
-                <ul class="portfolio-filter portfolio-filter list-unstyled list-inline mb-0 text-center filter">
-                  <li><a href="" class="active" data-filter="*">Todos</a></li>
-                  <li><a href="" data-filter=".{{categoria}}" *ngFor="let categoria of categorias"><b>{{categoria}}</b></a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row mt-5 filter-container images-loaded shuffle" style="position: relative; height: 1079.64px; transition: height 250ms ease-out 0s;">
-           
-            <div class="portfolio-item col-sm-6 col-lg-6 shuffle-item filtered" data-groups="all slideshow" *ngFor="let projeto of Projetos">
-              <a (click)="open(projeto.Identificador-1)" data-rel="lightcase" class="portfolio-item portfolio-item--content">
-                <div class="portfolio-item--img b-box">
-                  <img src="{{projeto.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
-                </div>
-                <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
-                  <div class="portfolio-item--desc-in">
-                    <h3 class="mb-2 text-white">{{projeto.Nome}}</h3>
-                    <p class="text-white">{{projeto.Categoria}}</p>
+          <div class="col-md-12">
+            <div class="row portfolio-container text-center">
+   
+
+               <!-- Person item -->
+               <div class="col-md-6 col-sm-6 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''" *ngFor="let projeto of Projetos">
+                <a (click)="open(projeto.Identificador-1)" data-rel="lightcase" class="portfolio-item--content">
+                  <div class="portfolio-item--img b-box">
+                    <img src="{{projeto.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
                   </div>
-                </div>
-              </a>
+                  <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
+                    <div class="portfolio-item--desc-in">
+                      <h3 class="mb-2 text-white">{{projeto.Nome}}</h3>
+                      <p class="text-white">{{projeto.Categoria}}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- Person item end -->
+
             </div>
-    
           </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+     

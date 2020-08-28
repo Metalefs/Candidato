@@ -17,6 +17,12 @@ import { LightboxEvent, LIGHTBOX_EVENT } from 'ngx-lightbox';
 })
 export class ProjetosComponent implements OnInit {
 
+  Projetos:Projeto[] = [];
+  categorias:Array<string> = [];
+  _albums:Array<Album> = [];
+  Mensagens:Mensagens;
+  sau = "Saúde";
+
   constructor(private MensagensService: MensagensService,
      private ProjetoService:ProjetoService, private Lightbox:Lightbox) {
 
@@ -35,6 +41,14 @@ export class ProjetosComponent implements OnInit {
             
     //       })
     // });
+    
+  }
+
+  open(index: number): void {
+    this.Lightbox.open(this._albums, index);
+  }
+
+  ngOnInit(): void {
     this.Projetos = this.ProjetoService.ObterTeste();
     this.Projetos.forEach(p=>{
 
@@ -50,18 +64,6 @@ export class ProjetosComponent implements OnInit {
 
     });
 	  this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
-  }
-  Projetos:Projeto[] = [];
-  categorias:Array<string> = [];
-  _albums:Array<Album> = [];
-  Mensagens:Mensagens;
-
-  open(index: number): void {
-
-    this.Lightbox.open(this._albums, index);
-  }
-  ngOnInit(): void {
-
   }
 
 }

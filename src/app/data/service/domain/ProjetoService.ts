@@ -42,7 +42,7 @@ export class ProjetoService extends ServicoBase {
                 "Patient Protection and Affordable Care Act",
                 "",
                 1,
-                "Saúde",
+                "Saúde sdsd",
                 "assets/imagens/fundos/inicio/green_field.jpg",
                 true
             ),
@@ -51,7 +51,7 @@ export class ProjetoService extends ServicoBase {
                 "Don't Ask, Don't Tell Repeal Act of 2010",
                 "",
                 1,
-                "Saúde",
+                "Segurança",
                 "assets/imagens/fundos/inicio/green_field.jpg",
                 true
             ),
