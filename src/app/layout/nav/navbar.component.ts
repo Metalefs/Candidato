@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   Subtitulo:string = "Portifólio do Nome Candidato";
   paginas: OpcaoNavbar[] = [];
   redesSociais: RedeSocial[] = [];
-  Copyright:string = "";
+  Copyright:string = "@Conecta Candidato";
   
   ToggleNav(){
     this.NavState.open = this.NavState.open ? false : true;
