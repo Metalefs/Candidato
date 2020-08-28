@@ -26,7 +26,7 @@ export class SobreComponent implements OnInit {
     this.redes = this.ServicoRedesSociais.GetAllRedesSociais();
     this.Candidato = this.CandidatoService.ObterTeste();
    
-    //this.MensagensService.Ler().subscribe(x=>this.Mensagens = x);
+    this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x=>this.Mensagens = x);
   }
 
 }

@@ -31,7 +31,7 @@ export class InicioComponent implements OnInit {
 	) 
 	{ 
     this.Candidato = this.CandidatoService.ObterTeste();
-	  this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
+    this.Mensagens = this.MensagensService.ObterTeste();   //this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
 	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
   

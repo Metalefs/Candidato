@@ -8,7 +8,7 @@
 <div class="nav-social">
   <ul class="inline-list">
     <li *ngFor="let rede of redesSociais">
-      <a href="#" title="{{rede.nome}}">
+      <a href="{{rede.link}}" target="_blank" rel="noopener" title="{{rede.nome}}">
         <figure @fadeIn class="mx-0 image is-32x32">
           <img class="is-rounded" src="{{rede.src}}">
         </figure>

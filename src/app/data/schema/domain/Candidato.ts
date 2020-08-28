@@ -6,11 +6,6 @@ export class Candidato implements Base {
 	DataNascimento:string;
 	Email:string;
 	Telefone:string;
-	Twitter:string;
-	Facebook:string;
-	Instagram:string;
-	Youtube:string;
-	LinkedIn:string;
     NumeroCampanha:string;
     Ativo:boolean;
 	FotoCapa:string;
@@ -21,11 +16,6 @@ export class Candidato implements Base {
 		this.DataNascimento = $DataNascimento;
 		this.Email = $Email;
 		this.Telefone = $Telefone;
-		this.Twitter = $Twitter;
-		this.Facebook = $Facebook;
-		this.Instagram = $Instagram;
-		this.Youtube = $Youtube;
-		this.LinkedIn = $LinkedIn;
 		this.NumeroCampanha = $NumeroCampanha;
 		this.FotoCapa = $FotoCapa;
 		this.FotoPerfil = $FotoPerfil;

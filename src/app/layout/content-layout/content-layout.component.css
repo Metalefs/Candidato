@@ -1,5 +1,4 @@
 .split-home{
-    /* background:indigo; */
     background:white;
 }
 #logo-canvas{
@@ -29,6 +28,9 @@
 .typing{
     position: relative;
     max-width: 92%;
+}
+#nav-menu{
+    width: 55%;
 }
 .right-section{
     position: relative;
@@ -83,7 +85,9 @@
     z-index: 2;
 }
 @media only screen and (max-width : 801px) {
-
+    #nav-menu{
+        width: max-content;
+    }
     #logo-canvas{
         position: absolute;
         z-index: 2;
@@ -125,7 +129,6 @@
         border-radius: 55px;
         border-top-left-radius: 6px;
         background: #3e3e3e;
-        transition: 0.5s;
         color: white;
     }
     .left-section{
@@ -139,6 +142,9 @@
    
 }
 
+.main .is-active{
+    transition:.51s all !important;
+}
 
 
 

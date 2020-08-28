@@ -49,7 +49,7 @@ export class ProjetosComponent implements OnInit {
         console.log(this._albums);
         
     });
-	  //this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
+	  this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
   }
   Projetos:Projeto[] = [];
   _albums:Array<Album> = [];

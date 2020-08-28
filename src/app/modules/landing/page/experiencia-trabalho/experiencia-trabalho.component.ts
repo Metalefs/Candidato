@@ -16,7 +16,8 @@ export class ExperienciaTrabalhoComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    //this.MensagensService.Ler().subscribe(x=>this.Mensagens = x);
+    this.Mensagens = this.MensagensService.ObterTeste()
+    //this.MensagensService.ObterTeste().subscribe(x=>this.Mensagens = x);
      //this.ExperienciaTrabalhoService.Ler().subscribe(x=>this.ExperienciasTrabalho = x);
   }
 
