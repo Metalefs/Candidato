@@ -1,5 +1,6 @@
 .portfolio-container{
-    overflow-x:scroll
+    overflow-x:scroll;
+    max-height: 70vh ;
 }
 .portifolio-filter{
     margin-top: -22px;
