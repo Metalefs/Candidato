@@ -43,7 +43,8 @@ import { MaterialModule } from './material.module';
     FeedCardComponent,
     FeedCardItemComponent, 
     IconeWhatsappComponent,
-    CountUpComponent
+    CountUpComponent,
+    CountUpModule,
   ]
 })
 export class SharedModule {

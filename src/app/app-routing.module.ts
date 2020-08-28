@@ -7,9 +7,10 @@ import { NoAuthGuard } from './core/guard/no-auth.guard';
 import { ContentLayoutComponent } from 'src/app/layout/content-layout/content-layout.component';
 
 import { LandingPageModule } from 'src/app/modules/landing/landing.module';
+import { ProjetosModule } from 'src/app/modules/projetos/projetos.module';
 import { FeedModule } from 'src/app/modules/landing/page/feed/feed.module';
 import { BiografiaModule } from 'src/app/modules/landing/page/biografia/biografia.module';
-import { ProjetosModule } from 'src/app/modules/landing/page/projetos/projetos.module';
+
 import { GerenciamentoModule } from 'src/app/modules/gerenciamento/gerenciamento.module';
 
 //import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
@@ -26,7 +27,7 @@ const routes: Routes = [
         path: '',
         loadChildren: () =>
           import('src/app/modules/landing/landing.module').then(m => m.LandingPageModule)
-        , data: { animation: 'isLeft', reuse: true }
+        , data: { animation: 'isLeft', reuse: true },
       },
       {
         path: '',
@@ -37,7 +38,7 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('src/app/modules/landing/page/projetos/projetos.module').then(m => m.ProjetosModule)
+          import('src/app/modules/projetos/projetos.module').then(m => m.ProjetosModule)
           , data: { animation: 'isLeft', reuse: true }
       },
       {
@@ -46,7 +47,6 @@ const routes: Routes = [
           import('src/app/modules/landing/page/feed/feed.module').then(m => m.FeedModule)
           , data: { animation: 'isLeft', reuse: true }
       },
-
       { 
         path: 'gerenciamento',
         canActivate: [AuthGuard],

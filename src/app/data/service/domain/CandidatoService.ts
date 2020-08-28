@@ -18,6 +18,23 @@ export class CandidatoService extends ServicoBase{
 		super(http,StateService);
 	}
 
+    CandidatosTeste:Candidato[] = [new Candidato(
+        1,
+        "Barack Obama",
+        "24/06/1960",
+        "barack.obama@whitehouse.com",
+        "555 - 555",
+        "twitter.com",
+        "",
+        "",
+        "",
+        "",
+        "23",
+        "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
+        "/assets/imagens/fundos/inicio/President_Barack_Obama-perfil.jpg",
+        true
+    )];
+
     Ler(): Observable<Candidato[]> {
         return this.http.get<Candidato[]>(environment.endpoint + routes.Candidato).pipe(
             retry(3), // retry a failed request up to 3 times
@@ -25,23 +42,12 @@ export class CandidatoService extends ServicoBase{
         );
     }
 
+    Filtrar(id:number):Candidato[]{
+        return this.CandidatosTeste.filter(x => x.Identificador == id);
+    }   
+
     ObterTeste(): Candidato{
-        return new Candidato(
-            1,
-            "Barack Obama",
-            "24/06/1960",
-            "barack.obama@whitehouse.com",
-            "555 - 555",
-            "twitter.com",
-            "",
-            "",
-            "",
-            "",
-            "23",
-            "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
-            "/assets/imagens/fundos/inicio/President_Barack_Obama-perfil.jpg",
-            true
-          );
+        return this.CandidatosTeste[0];
     }
     
     BuscarOuCriarCandidato(): Observable<Candidato[]> {

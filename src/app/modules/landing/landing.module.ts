@@ -10,13 +10,12 @@ import { RedesSociaisComponent } from './page/redes-sociais/redes-sociais.compon
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FeedModule } from 'src/app/modules/landing/page/feed/feed.module';
 import { BiografiaModule } from 'src/app/modules/landing/page/biografia/biografia.module';
-import { ProjetosModule } from 'src/app/modules/landing/page/projetos/projetos.module';
 import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { SobreComponent } from './page/sobre/sobre.component';
 import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experiencia-trabalho.component';
-
+import { ProjetosModule } from '../projetos/projetos.module';
 @NgModule({
   declarations: [
     ContatoComponent,
@@ -28,8 +27,8 @@ import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experi
   ],
   imports: [
     FeedModule,
-    BiografiaModule,
     ProjetosModule,
+    BiografiaModule,
     SharedModule,
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
@@ -40,7 +39,6 @@ import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experi
     ContatoComponent,
     FeedModule,
     BiografiaModule,
-    ProjetosModule
   ],
   providers: []
 })

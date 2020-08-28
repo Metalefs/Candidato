@@ -8,7 +8,9 @@ import { Lightbox } from 'ngx-lightbox';
 
 import { fade } from 'src/app/animations';
 import { Projeto } from 'src/app/data/schema/domain/Projeto';
+import { Album } from 'src/app/data/schema/Album';
 import { LightboxEvent, LIGHTBOX_EVENT } from 'ngx-lightbox';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'projetos',
@@ -21,10 +23,11 @@ export class ProjetosComponent implements OnInit {
   categorias:Array<string> = [];
   _albums:Array<Album> = [];
   Mensagens:Mensagens;
-  sau = "Saúde";
 
   constructor(private MensagensService: MensagensService,
-     private ProjetoService:ProjetoService, private Lightbox:Lightbox) {
+     private ProjetoService:ProjetoService, 
+     private Lightbox:Lightbox,
+     private Router:Router) {
 
 	  //   this.ProjetoService.Ler().subscribe(x => {
     //       this.Projetos = x;
@@ -44,8 +47,8 @@ export class ProjetosComponent implements OnInit {
     
   }
 
-  open(index: number): void {
-    this.Lightbox.open(this._albums, index);
+  navigateToProject(id: string): void {
+    this.Router.navigateByUrl(`/projeto/${id}`);
   }
 
   ngOnInit(): void {
@@ -66,9 +69,4 @@ export class ProjetosComponent implements OnInit {
 	  this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
   }
 
-}
-interface Album{
-    src: string;
-    caption: string;
-    thumb: string;
 }

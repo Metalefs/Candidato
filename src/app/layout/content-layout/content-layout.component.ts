@@ -39,11 +39,15 @@ export class ContentLayoutComponent implements OnInit {
   ToggleNav(){
     this.NavState.open = this.NavState.open ? false : true;
   }
+  CloseNav(){
+    if(this.NavState.open)
+    this.NavState.open = false;
+  }
 
   ngOnInit(): void {
        
   }
-  resetCursorPosition(){
+  resetTypingAanimation(){
     
   }
   ngAfterViewInit() {
@@ -135,7 +139,10 @@ export class ContentLayoutComponent implements OnInit {
         window.addEventListener('click', function () {
             colorArray.push(colorArray.shift());
             colors = colorArray[0];
-            circles.push(new Circle(mouse.x, mouse.y, 5, 5, 2, 5,c));
+            let vx = 5;
+            if(mouse.x > c.width - 1500)
+              vx *= -1;
+            circles.push(new Circle(mouse.x, mouse.y, vx, 5, 2, 5,c));
         });
 
         // ensure canvas is always full size of browser window
@@ -160,7 +167,7 @@ export class ContentLayoutComponent implements OnInit {
             for (let i = 0; i < circles.length; ++i) {
                 circles[i].update();
                 // remove the circle if it is transparent or too small
-                if (circles[i].alpha < 0 || circles[i].r < 3 || circles.length > 2) {
+                if (circles[i].alpha < 0 || circles[i].r < 3 || circles.length > 10 ) {
                     circles.splice(i, 1);
                 }
             }

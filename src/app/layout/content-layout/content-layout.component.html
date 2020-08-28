@@ -2,17 +2,21 @@
 </div>
 <app-scroll-down data-aos="zoom-in-left" class="mx-auto flex-center app-scrolldown"></app-scroll-down>
 <div class="wrapper" id="topo">
-    <div (click)="ToggleNav()" class="nav-trigger" [ngClass]="NavState.open? 'is-active': ''"  role="button" title="sweet hamburger">
+    <div (click)="ToggleNav()" class="nav-trigger"
+            [ngClass]="NavState.open? 'is-active': ''"
+            role="button" title="Menu">
+
         <div class="hamburger">
             <div class="icon"></div>
         </div>
+
     </div>
 
     <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" > 
         <navbar [NavState]="NavState"></navbar>
     </div>
 
-    <div [ngClass]="NavState.open? 'main is-active': ''" (hover)="ToggleNav()">
+    <div [ngClass]="NavState.open? 'main is-active': ''" (mouseover)="CloseNav()">
         <section class="split-home">
 
             <canvas #canvasEl id="logo-canvas" class=""></canvas>
@@ -21,7 +25,7 @@
                 margin: 0 20%;
                 position: absolute;
                 z-index: 3;
-                width: 100%;" [startDelay]="1000" (completed)="resetCursorPosition()" [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
+                width: 100%;" [startDelay]="1000" (click)="resetTypingAanimation()" [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
                     <span class="typing"></span>
                 </ngx-typed-js>
                 <div class="left-section-candidato" [style.background]="candidato_bg" ></div>

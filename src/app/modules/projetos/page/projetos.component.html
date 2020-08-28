@@ -1,4 +1,4 @@
-<section class="section section-light section-work" id="work">
+<section class="section section-light section-work" uniScrollSpy="projetos" id="work">
   <div class="container">
     <div class="section-head">
       <h1>Nossos trabalhos</h1>
@@ -9,18 +9,17 @@
           <div class="col-md-12">
             <nav class="categories">
               <ul class="portfolio-filter">
-                <li><a href="" class="active" data-filter="*">Todos</a></li>
-                <li><a href="" [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li>
+                <li><a class="active" data-filter="*">Todos</a></li>
+                <li><a [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li>
               </ul>
             </nav>
           </div>
           <div class="col-md-12">
             <div class="row portfolio-container text-center">
-   
 
                <!-- Person item -->
                <div class="col-md-6 col-sm-6 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''" *ngFor="let projeto of Projetos">
-                <a (click)="open(projeto.Identificador-1)" data-rel="lightcase" class="portfolio-item--content">
+                <a [routerLink]="['/projeto/'+projeto.Identificador]" class="portfolio-item--content">
                   <div class="portfolio-item--img b-box">
                     <img src="{{projeto.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
                   </div>

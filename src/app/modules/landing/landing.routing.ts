@@ -10,6 +10,7 @@ export const routes: Routes = [
   {
     path: 'inicio',
     component: LandingPageComponent
+    , data: { animation: 'isLeft', reuse: true }
   },
 ];
 

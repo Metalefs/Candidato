@@ -19,6 +19,49 @@ export class ProjetoService extends ServicoBase {
 		super(http,StateService);
 	}
     
+    ProjetosTeste : Projeto[] = [
+        new Projeto(
+            1,
+            "Health Care and Education Reconciliation Act",
+            "",
+            1,
+            "Saúde",
+            "assets/imagens/fundos/inicio/green_field.jpg",
+            true,
+            20
+        ),
+        new Projeto(
+            1,
+            "Patient Protection and Affordable Care Act",
+            "",
+            1,
+            "Saúde sdsd",
+            "assets/imagens/fundos/inicio/green_field.jpg",
+            true,
+            20
+        ),
+        new Projeto(
+            1,
+            "Don't Ask, Don't Tell Repeal Act of 2010",
+            "",
+            1,
+            "Segurança",
+            "assets/imagens/fundos/inicio/green_field.jpg",
+            true,
+            20
+        ),
+        new Projeto(
+            1,
+            "Obama care",
+            "",
+            1,
+            "Saúde",
+            "assets/imagens/fundos/inicio/green_field.jpg",
+            true,
+            20
+        ),
+    ];
+
     Ler(): Observable<Projeto[]> {
         return this.http.get<Projeto[]>(environment.endpoint + routes.Projeto).pipe(
             retry(3), 
@@ -26,45 +69,12 @@ export class ProjetoService extends ServicoBase {
         );
     }
 
+    Filtrar(id:number):Projeto[]{
+        return this.ProjetosTeste.filter(x => x.Identificador == id);
+    }
+
     ObterTeste():Projeto[]{
-        return [
-            new Projeto(
-                1,
-                "Health Care and Education Reconciliation Act",
-                "",
-                1,
-                "Saúde",
-                "assets/imagens/fundos/inicio/green_field.jpg",
-                true
-            ),
-            new Projeto(
-                1,
-                "Patient Protection and Affordable Care Act",
-                "",
-                1,
-                "Saúde sdsd",
-                "assets/imagens/fundos/inicio/green_field.jpg",
-                true
-            ),
-            new Projeto(
-                1,
-                "Don't Ask, Don't Tell Repeal Act of 2010",
-                "",
-                1,
-                "Segurança",
-                "assets/imagens/fundos/inicio/green_field.jpg",
-                true
-            ),
-            new Projeto(
-                1,
-                "Obama care",
-                "",
-                1,
-                "Saúde",
-                "assets/imagens/fundos/inicio/green_field.jpg",
-                true
-            ),
-        ]
+        return this.ProjetosTeste;
     }
 	
 	Incluir(item: Projeto): Observable<any> {
