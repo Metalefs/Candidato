@@ -1,0 +1,70 @@
+[debug] [2020-08-28T04:03:57.551Z] ----------------------------------------------------------------------
+[debug] [2020-08-28T04:03:57.553Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Home\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-08-28T04:03:57.553Z] CLI Version:   8.9.0
+[debug] [2020-08-28T04:03:57.553Z] Platform:      win32
+[debug] [2020-08-28T04:03:57.553Z] Node Version:  v12.18.2
+[debug] [2020-08-28T04:03:57.578Z] Time:          Fri Aug 28 2020 01:03:57 GMT-0300 (GMT-03:00)
+[debug] [2020-08-28T04:03:57.578Z] ----------------------------------------------------------------------
+[debug] [2020-08-28T04:03:57.578Z] 
+[debug] [2020-08-28T04:03:57.590Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-28T04:03:57.590Z] > authorizing via signed-in user
+[debug] [2020-08-28T04:03:57.590Z] [iam] checking project partido-62be3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-28T04:03:57.596Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-08-28T04:03:57.596Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-08-28T04:03:57.841Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 Aug 2020 04:03:58 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-28T04:03:57.850Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/partido-62be3:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-28T04:03:58.813Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 Aug 2020 04:03:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=761","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-28T04:03:58.814Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/partido-62be3  
+ 
+[debug] [2020-08-28T04:03:59.962Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 Aug 2020 04:04:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'partido-62be3'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-08-28T04:03:59.966Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/partido-62be3/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-08-28T04:04:01.704Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 Aug 2020 04:04:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[partido-62be3]: beginning deploy... 
+[info] i  hosting[partido-62be3]: found 101 files in ./dist/Candidato 
+[debug] [2020-08-28T04:04:01.943Z] [hosting] hash cache [ZGlzdFxDYW5kaWRhdG8] stored for 101 files
+[debug] [2020-08-28T04:04:01.943Z] [hosting][hash queue][FINAL] {"max":4,"min":0,"avg":0.8346761040751352,"active":0,"complete":101,"success":101,"errored":0,"retried":0,"total":101,"elapsed":9}
+[debug] [2020-08-28T04:04:01.944Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/partido-62be3/versions/c29f2a48bf9f1ade:populateFiles  
+ <request body omitted>
+[debug] [2020-08-28T04:04:03.269Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 Aug 2020 04:04:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-28T04:04:03.269Z] [hosting][populate queue][FINAL] {"max":1328,"min":1328,"avg":1328,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1328}
+[debug] [2020-08-28T04:04:03.269Z] [hosting] uploads queued: 0
+[debug] [2020-08-28T04:04:03.269Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1598587443269}
+[info] +  hosting[partido-62be3]: file upload complete 
+[debug] [2020-08-28T04:04:03.270Z] [hosting] deploy completed after 1565ms
+[debug] [2020-08-28T04:04:03.270Z] [
+  {
+    "config": {
+      "public": "./dist/Candidato",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "partido-62be3"
+    },
+    "site": "partido-62be3",
+    "version": "sites/partido-62be3/versions/c29f2a48bf9f1ade"
+  }
+]
+[info] i  hosting[partido-62be3]: finalizing version... 
+[debug] [2020-08-28T04:04:03.271Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/partido-62be3/versions/c29f2a48bf9f1ade?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2020-08-28T04:04:04.409Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 28 Aug 2020 04:04:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-28T04:04:04.410Z] [hosting] finalized version for partido-62be3: {"name":"sites/partido-62be3/versions/c29f2a48bf9f1ade","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2020-08-28T04:04:01.284668Z","createUser":{"email":"thejacksonpires@gmail.com"},"finalizeTime":"2020-08-28T04:04:04.655587Z","finalizeUser":{"email":"thejacksonpires@gmail.com"}}
+[info] +  hosting[partido-62be3]: version finalized 
+[info] i  hosting[partido-62be3]: releasing new version... 
+[debug] [2020-08-28T04:04:04.411Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/partido-62be3/releases?version_name=sites/partido-62be3/versions/c29f2a48bf9f1ade  
+ {"message":null}
