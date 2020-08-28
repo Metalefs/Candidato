@@ -10,6 +10,12 @@
     position: relative;
     margin-bottom: 30px;
 }
+.section-head{
+    margin-top:50px;
+}
+.section-head h2 {
+    padding: 0;
+}
 .shuffle-item{
     position: absolute; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: transform 250ms ease-out 0s, opacity 250ms ease-out 0s;
 }
