@@ -1,4 +1,6 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
     selector: 'app-scroll-top',
     templateUrl: './scroll-top.component.html',
@@ -6,8 +8,10 @@ import { Component, OnInit, Inject, HostListener } from '@angular/core';
 })
 export class ScrollTopComponent implements OnInit {
     windowScrolled: boolean;
+    angleUp = faAngleUp;
     constructor(private document: Document) {}
     @HostListener("window:scroll", [])
+
     onWindowScroll() {
         if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
             this.windowScrolled = true;

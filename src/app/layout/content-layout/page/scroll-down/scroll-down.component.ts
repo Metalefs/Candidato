@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-scroll-down',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScrollDownComponent implements OnInit {
 
+  angleDown = faAngleDoubleDown;
   constructor() { }
 
   ngOnInit(): void {

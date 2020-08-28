@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 110;
   width: 75%;
-  background-color: #F2F2F2;
+  background-color: #e6ecef;
 	background-size: cover;
 	overflow-y: auto;
   -webkit-transform: translateZ(0);
@@ -597,15 +597,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .left-section {
-		background-color: #ebebf9;
-		position: absolute;
     left: 0;
 		right: 0;
 		top: 0;
 		bottom: 0;
     width: 50%;
 		height: 100%;
-		overflow: hidden;
     z-index: 1;
 }
 

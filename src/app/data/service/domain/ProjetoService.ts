@@ -34,7 +34,7 @@ export class ProjetoService extends ServicoBase {
                 "",
                 1,
                 "BemEstarSocial",
-                "assets/portfolio/1.jpg",
+                "assets/imagens/fundos/inicio/green_field.jpg",
                 true
             ),
         ]
