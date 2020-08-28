@@ -49,6 +49,20 @@ export class NavStateService {
         return this.EstadoNav.value;
     }
     
+    async getActiveNav(): Promise<EstadoNav>{
+        let self = this;
+        return new Promise(function(resolve,reject) {
+            if(self.EstadoNav != undefined) {
+                self.EstadoNav.subscribe(x=>{
+                    x.forEach(y=>{
+                        if(y.is_active)
+                        resolve(y)
+                    })
+                })  
+            }
+        })
+    }
+
     async getNavState(pagina:string): Promise<EstadoNav>{
         let self = this;
         return new Promise(function(resolve,reject) {
@@ -65,7 +79,6 @@ export class NavStateService {
 
     update(state : EstadoNav[]){
         if(state != undefined){
-            console.log(state);
             localStorage.setItem('EstadoNav', JSON.stringify(state));
         }
     }

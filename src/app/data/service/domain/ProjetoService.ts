@@ -30,10 +30,37 @@ export class ProjetoService extends ServicoBase {
         return [
             new Projeto(
                 1,
-                "Lagoa santa para todos",
+                "Health Care and Education Reconciliation Act",
                 "",
                 1,
-                "BemEstarSocial",
+                "Saúde",
+                "assets/imagens/fundos/inicio/green_field.jpg",
+                true
+            ),
+            new Projeto(
+                1,
+                "Patient Protection and Affordable Care Act",
+                "",
+                1,
+                "Saúde",
+                "assets/imagens/fundos/inicio/green_field.jpg",
+                true
+            ),
+            new Projeto(
+                1,
+                "Don't Ask, Don't Tell Repeal Act of 2010",
+                "",
+                1,
+                "Saúde",
+                "assets/imagens/fundos/inicio/green_field.jpg",
+                true
+            ),
+            new Projeto(
+                1,
+                "Obama care",
+                "",
+                1,
+                "Saúde",
                 "assets/imagens/fundos/inicio/green_field.jpg",
                 true
             ),

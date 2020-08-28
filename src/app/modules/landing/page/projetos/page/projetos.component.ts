@@ -6,7 +6,6 @@ import { ProjetoService } from 'src/app/data/service/domain/ProjetoService';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { Lightbox } from 'ngx-lightbox';
 
-
 import { fade } from 'src/app/animations';
 import { Projeto } from 'src/app/data/schema/domain/Projeto';
 import { LightboxEvent, LIGHTBOX_EVENT } from 'ngx-lightbox';
@@ -39,21 +38,24 @@ export class ProjetosComponent implements OnInit {
     this.Projetos = this.ProjetoService.ObterTeste();
     this.Projetos.forEach(p=>{
 
-          const album = {
-            src: p.FotoSrc,
-            caption: p.Nome,
-            thumb: p.Descricao
-          };
-      
+        const album = {
+          src: p.FotoSrc,
+          caption: p.Nome,
+          thumb: p.Descricao
+        };
+        this.categorias.push(p.Categoria);
+        this.categorias = this.categorias.filter((v, i, a) => a.indexOf(v) === i);
+
         this._albums.push(album);
-        console.log(this._albums);
-        
+
     });
 	  this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
   }
   Projetos:Projeto[] = [];
+  categorias:Array<string> = [];
   _albums:Array<Album> = [];
   Mensagens:Mensagens;
+
   open(index: number): void {
 
     this.Lightbox.open(this._albums, index);

@@ -165,3 +165,14 @@ body {
   display: -ms-flexbox!important;
   display: flex!important;
 }
+
+@keyframes floating {
+  from { transform: translate(0,  0px); transform: rotate(0deg);}
+  65%  { transform: translate(0, 5px); }
+  to   { transform: translate(0, -0px); }    
+}
+@keyframes floating2 {
+  from { transform: translate(0,  0px); transform: rotate(0deg);}
+  65%  { transform: translate(0, 3px); }
+  to   { transform: translate(0, -0px);  }    
+}

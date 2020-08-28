@@ -25,6 +25,17 @@ export class ExperienciaTrabalhoService extends ServicoBase {
             catchError(this.handleError)
         );
     }
+
+    ObterTeste() : ExperienciaTrabalho{
+       return new ExperienciaTrabalho(
+            1,
+            "Rumo Soluções",
+            "Estágio desenvolvedor .NET",
+            "01/01/2019",
+            "01/01/2021",
+            "Atuei em manutenção de sistemas proprietários, desenvolvimento de aplicações com design digirido por testes."
+       ) ;
+    }
 	
 	Incluir(item: ExperienciaTrabalho): Observable<any> {
         return this.http.post<ExperienciaTrabalho>(environment.endpoint + routes.Gerenciamento + routes.ExperienciaTrabalho, {}).pipe(

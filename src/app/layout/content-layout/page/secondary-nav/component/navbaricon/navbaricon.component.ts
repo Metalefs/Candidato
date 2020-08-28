@@ -51,7 +51,6 @@ export class NavbariconComponent implements OnInit {
                   this.EstadoNav = x;
                 }
             })
-            console.info(`NAVSTATE`, item);
         }
     });
     this.NavStateService.getNavState(this.Opcao.Link).then(x=>{
