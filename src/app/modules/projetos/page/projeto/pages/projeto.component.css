@@ -17,19 +17,52 @@
     left: initial !important;
     /* margin-left: 60%; */
     padding: 10px;
-    color: #e6e6e6;
-    top: 225px;
+    color: var(--primary-default);
+    top: -35px;
     z-index: 2;
-    background: #6d6d6d96;
-    /* font-size: x-large; */
+    background: var(--background-default);
     border-radius: 38%;
     transition: 1s all;
     cursor: pointer;
 }
-.lke-btn .gostou{
-    position: absolute;
+.gostou{
     color:blue;
-    left: initial;
-    width: initial;
-    padding: 20px;
 }
+
+.portfolio-item--img img {
+    border-radius: 30px;
+    overflow: hidden;
+    display: block;
+}
+.portfolio-item--desc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.25);
+    border-left:5px solid;
+    border-left-color: var(--primary-default);
+    border-radius: 30px;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    -ms-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+}
+.portfolio-item--content:hover .portfolio-item--desc {
+    opacity: 1;
+    visibility: visible;
+}
+:host ::ng-deep .mat-ripple-element {
+    z-index:-1 !important;
+    max-width: 0;
+    display: none;
+  }
+.relative{
+    position: relative !important;
+} 

@@ -27,7 +27,7 @@ export class ProjetoService extends ServicoBase {
             "",
             1,
             "Saúde",
-            "assets/imagens/fundos/inicio/green_field.jpg",
+            "assets/imagens/icones/ConectaCandidato_fundoTransparente.png",
             true,
             20
         ),
@@ -38,7 +38,7 @@ export class ProjetoService extends ServicoBase {
             "",
             1,
             "Saúde sdsd",
-            "assets/imagens/fundos/inicio/green_field.jpg",
+            "assets/imagens/icones/ConectaCandidato_fundoTransparente.png",
             true,
             20
         ),
@@ -49,7 +49,7 @@ export class ProjetoService extends ServicoBase {
             "",
             1,
             "Segurança",
-            "assets/imagens/fundos/inicio/green_field.jpg",
+            "assets/imagens/icones/ConectaCandidato_fundoTransparente.png",
             true,
             20
         ),
@@ -60,7 +60,7 @@ export class ProjetoService extends ServicoBase {
             "",
             1,
             "Saúde",
-            "assets/imagens/fundos/inicio/green_field.jpg",
+            "assets/imagens/icones/ConectaCandidato_fundoTransparente.png",
             true,
             20
         ),
