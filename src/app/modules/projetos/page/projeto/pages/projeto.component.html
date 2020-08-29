@@ -30,11 +30,16 @@
                   </div>
                 </a>
               </div>
+              
+              <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+                <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
+              </div>
               <!-- Person item end -->
 
             </div>
           </div>
     </div>
+   
     <div class="col-md-12 nopadding">
       <div class="project-details">
         <div class="col-md-5">

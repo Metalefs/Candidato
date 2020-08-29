@@ -4,6 +4,7 @@ import { ProjetoService,CandidatoService } from 'src/app/data/service/domain';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Lightbox } from 'ngx-lightbox';
 import { Album } from 'src/app/data/schema/Album';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-projeto',
@@ -14,7 +15,8 @@ export class ProjetoComponent implements OnInit {
   _albums:Array<Album> = [];
   Projeto:Projeto;
   Candidato:Candidato;
-
+  faLike = faThumbsUp;
+  Gostou:boolean = false;
   constructor(
     private ProjetoService:ProjetoService,
     private CandidatoService:CandidatoService,
@@ -27,7 +29,13 @@ export class ProjetoComponent implements OnInit {
   open(index: number): void {
     this.Lightbox.open(this._albums, index);
   }
-
+  like(){
+    if(this.Gostou)
+      return;
+    this.Projeto.Likes++;
+    this.ProjetoService.Like(this.Projeto.Identificador);
+    this.Gostou = true;
+  }
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => { 
       let ProjetoId = parseInt(params.get('id')); 

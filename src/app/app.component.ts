@@ -2,12 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 declare let gtag: Function;
-
-import { ScrollSpyService } from '@uniprank/ngx-scrollspy';
-import { NavStateService } from 'src/app/core/service/state/_NavStateService';
-import { BehaviorSubject, Subscription, Subject } from 'rxjs';
-
-
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade, slider } from './animations';
 import AOS from 'aos';
@@ -26,17 +20,15 @@ import { Collections } from './data/schema/Collections';
 export class AppComponent implements OnInit, AfterViewInit {
   title = "";
   currentUser: Collections.User;
-  public ActiveSection$: BehaviorSubject<{ id?: string; elementId?: string; nativeElement?: HTMLElement }> = new BehaviorSubject({});
-  private _subscription: Subscription;
+  
   OpcoesNavBar = [
     new OpcaoNavbar("Inicio", "", "Home")
   ];
+
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
     
-    private _scrollSpyService: ScrollSpyService,
-    private NavStateService:NavStateService
   ) {
       // this.router.events.subscribe(event => {
          // if(event instanceof NavigationEnd){
@@ -49,7 +41,6 @@ export class AppComponent implements OnInit, AfterViewInit {
        // });
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
-  
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
@@ -104,44 +95,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     };
 
     // RESULT
-    applyGradient(gradientAPI, addBackgroundToUnderlines);this._scrollSpyService.setOffset('window', 50);
-    
-    this._subscription = this._scrollSpyService.observe('window').subscribe(item => {
-        if (item != null) {
-            const _nextSection = {
-                id: item.id,
-                elementId: item.scrollElementId
-            };
-            this.setActiveSection(_nextSection);
-            console.info(`ScrollSpyService: item:`, item);
-        }
-    });
-  }
-
-  ngOnDestroy() {
-    if (this._subscription) {
-        this._subscription.unsubscribe();
-    }
-  }
-
-  setActiveSection(section: any): void {
-    this.ActiveSection$.next(section);
-    this.NavStateService.currentState.subscribe(y=>{
-      console.log(y);
-      y.forEach(x=>{
-        if(x.pagina != section.id){
-          x.is_active = false;
-        }
-        else{
-          x.pagina = section.id;
-          x.is_active = true;
-          x.is_solid = true;
-          console.log(x)
-        }
-      })
-      this.NavStateService.update(y);
-      
-    }) 
+    applyGradient(gradientAPI, addBackgroundToUnderlines);
   }
 
   ngAfterViewInit(){

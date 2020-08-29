@@ -11,6 +11,7 @@ export let routes = {
     ExperienciaTrabalho:"/experienciaTrabalho",
     Mensagens:"/mensagens",
     Projeto:"/projeto",
+    Like:"/like",
 
     Usuario: "/usuario/",
         DeletarConta:"/usuario/deletarConta/",

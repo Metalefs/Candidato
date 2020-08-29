@@ -73,6 +73,13 @@ export class ProjetoService extends ServicoBase {
         );
     }
 
+    Like(id: number): Observable<Projeto[]> {
+        return this.http.post<Projeto[]>(environment.endpoint + routes.Like, {id:id}).pipe(
+            retry(3), 
+            catchError(this.handleError)
+        );
+    }
+
     Filtrar(id:number):Projeto[]{
         return this.ProjetosTeste.filter(x => x.Identificador == id);
     }

@@ -10,3 +10,26 @@
 .section-head h2 {
     padding: 0;
 }
+.lke-btn{
+    /* margin-bottom: -10px; */
+    position: absolute;
+    right: 10px;
+    left: initial !important;
+    /* margin-left: 60%; */
+    padding: 10px;
+    color: #e6e6e6;
+    top: 225px;
+    z-index: 2;
+    background: #6d6d6d96;
+    /* font-size: x-large; */
+    border-radius: 38%;
+    transition: 1s all;
+    cursor: pointer;
+}
+.lke-btn .gostou{
+    position: absolute;
+    color:blue;
+    left: initial;
+    width: initial;
+    padding: 20px;
+}
