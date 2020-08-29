@@ -16,6 +16,10 @@
 .section-head h2 {
     padding: 0;
 }
+.section {
+    padding: 0rem 1.5rem;
+    border-radius: 15px;
+}
 .shuffle-item{
     position: absolute; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: transform 250ms ease-out 0s, opacity 250ms ease-out 0s;
 }

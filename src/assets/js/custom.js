@@ -24,8 +24,8 @@ jQuery(function($) {
   ------- Isotope Init -------
   -----------------------------*/
 
+
   (function load_isotope(){
-    window.addEventListener('click',function(){
       var $container = $('.portfolio-container');
       $container.isotope({
         filter: '*',
@@ -45,7 +45,7 @@ jQuery(function($) {
         });
         return false;
       });
-    });
+      window.addEventListener('click', load_isotope,false);
+      window.addEventListener("touchend", load_isotope, false);
   })();
-
 });

@@ -8,6 +8,22 @@
     pointer-events: none;
     border-top-right-radius: 48px;
 }
+#mobile-logo-canvas{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    box-shadow: 13px 10px 5px #00000047;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: left !important;
+    border-top-right-radius: 48px;
+    margin: 0;
+    padding: 0rem;
+    position: fixed;
+    animation-name: fade-in;
+    top: 0;
+    z-index: 2;
+}
 .main {
     background: #f9f9f9;
     transition: 0.5s;
@@ -32,6 +48,7 @@
 #nav-menu{
     width: 59%;
     transition: all 0.5s;
+    font-family: Roboto,sans-serif;
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 .right-section{
@@ -67,7 +84,6 @@
     margin-left: 1.5rem;
     position: fixed;
     height: 70px;
-    width: 40%;
     display: flex;
     justify-content: center;
 }
@@ -93,12 +109,13 @@
     }
     #logo-canvas{
         position: absolute;
-        z-index: 2;
+        z-index: 5;
         width: 100vw;
         height: 100vh;
         margin: 0;
         padding:0;
     }
+    
     .right-section{
         margin-left: 0;
         width: 100%;
