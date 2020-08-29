@@ -24,6 +24,6 @@ a{
 }
 @media only screen and (max-width : 801px) {
     .icones-redes a figure img{
-        border-radius: 0;
+        
     }
 }
