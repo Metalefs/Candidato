@@ -21,42 +21,46 @@
         <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
         <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas>
         <section  #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" data-wow-delay="0.2s">
-            <ngx-typed-js data-aos="flip-up" style="top: 40%;
+            <!-- <ngx-typed-js data-aos="flip-up" style="top: 40%;
                 margin: 0 20%;
                 position: absolute;
                 z-index: 3;
                 width: 100%;" [startDelay]="1000" (click)="resetTypingAanimation()" [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
                     <span class="typing"></span>
-                </ngx-typed-js>
+                </ngx-typed-js> -->
                 <div class="left-section-candidato" [style.background]="candidato_bg" ></div>
             </section>
             
             <div class="bar">
                 <figure class="columns is-mobile partido-section floating" >
                     <div class="column"  data-aos="zoom-in-left">
-                        <h1 class="title is-3 partido-text has-text-warning">23</h1>
+                        <h1 class="title is-3 partido-text">23</h1>
                     </div>
-                    <div class="column floating2"  data-aos="zoom-in-right"><img width="50"
-                        src="assets/imagens/icones/Conecta_Candidato.jpg" class="partido-logo rounded-full"></div>
-                    </figure>
+                    <div class="column floating2"  data-aos="zoom-in-right">
+                        <img width="50"
+                        src="assets/imagens/icones/Conecta_Candidato.jpg" class="conecta-candidato-logo rounded-full">
+                    </div>
+                </figure>
+            </div>
+            <img width="50"
+            src="assets/imagens/icones/partido.png" class="partido-logo">
+            
+            <section data-aos="slide-up" class="right-section">
+                
+                <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
+                    <ul>
+                        <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active">{{pagina.Nome}}</a></li>
+                    </ul>
                 </div>
                 
-                <section data-aos="slide-up" class="right-section">
-                    
-                    <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
-                        <ul>
-                            <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active" routerLinkActive="Active">{{pagina.Nome}}</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div [@routeAnimations]="prepareRoute(outlet)" class="main">
-                        <router-outlet #outlet="outlet"></router-outlet>
-                    </div>
-                    
-                    <app-footer></app-footer>
-                    
-                </section>
-                <!-- <app-scroll-down data-aos="zoom-in-left" class="mx-auto flex-center app-scrolldown"></app-scroll-down> -->
+                <div [@routeAnimations]="prepareRoute(outlet)" class="main">
+                    <router-outlet #outlet="outlet"></router-outlet>
+                </div>
+                
+                <app-footer></app-footer>
+                
+            </section>
+            <!-- <app-scroll-down data-aos="zoom-in-left" class="mx-auto flex-center app-scrolldown"></app-scroll-down> -->
                 
             </section>
         </div>

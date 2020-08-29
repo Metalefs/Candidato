@@ -1,10 +1,12 @@
 .intro{
     padding-left:30px;
+    text-align: justify;
 }
 .about-avatar img {
     height: 100px;
     width: 100px;
-    border-bottom:8px solid red;
+    border-bottom:8px solid;
+    border-color:  var(--primary-default);
 }
 @media (min-width: 320px) and (max-width: 1023px) {
     .intro{

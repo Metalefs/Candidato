@@ -4,7 +4,7 @@
   height: 70px;
   z-index: 1;
   place-items: center;
-  background: white;
+  background: darkgrey;
 }
 li{
     width: 71px;
@@ -15,6 +15,7 @@ li{
         bottom: 0;
         top: initial;
         /* background: #8c8c8ccf; */
+        z-index: 5;
         position: fixed;
         width: 100%;
     }

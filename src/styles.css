@@ -14,7 +14,7 @@
   --background-tertiary: #5c7d99;
   --background-light: #ffffff;
 
-  --primary-default: #5dfdcb;
+  --primary-default: #7ab5ff;
   --primary-dark: #24b286;
   --primary-light: #b2ffe7;
 
@@ -34,13 +34,13 @@
   color: white;
   background: #000000;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 .typing2 {
   color: white;
   background: #000000;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 .section {
   padding: 3rem 1.5rem;
@@ -99,7 +99,7 @@
     }
   }
 .app-loading div.logo {
-    background: url(src/assets/imagens/icones/Conecta_Candidato.jpg) center center no-repeat;
+    background: url(src/assets/imagens/icones/ConectaCandidato_fundoTransparente.png) center center no-repeat;
     width: 89px;
     height: 100px;
     margin: auto;
@@ -110,6 +110,7 @@
   
 body {
   background: var(--background-default);
+  font-family: Roboto;
 }
 .fixed{
     position: fixed;

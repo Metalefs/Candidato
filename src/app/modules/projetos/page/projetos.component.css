@@ -1,7 +1,4 @@
-.portfolio-container{
-    overflow-x:scroll;
-    max-height: 70vh ;
-}
+
 .portifolio-filter{
     margin-top: -22px;
 }
@@ -44,10 +41,12 @@
     height: 100%;
     width: 100%;
     background: rgba(0,0,0,.5);
+    border-left:5px solid;
+    border-left-color: var(--primary-default);
     border-radius: 30px;
     text-align: center;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     -webkit-transition: all .3s ease-in-out 0s;
     -moz-transition: all .3s ease-in-out 0s;
     -ms-transition: all .3s ease-in-out 0s;

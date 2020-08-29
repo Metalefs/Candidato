@@ -15,7 +15,7 @@
     <div class="project-image">
         <div class="col-md-12">
             <div class="row portfolio-container text-center">
-
+              
                <!-- Person item -->
                <div class="col-md-6 col-sm-6 custompadding  brand" [ngClass]="Projeto?.Categoria? Projeto?.Categoria.replace(' ',''): ''">
                 <a (click)="open(0)" data-rel="lightcase" class="portfolio-item--content">
@@ -31,9 +31,7 @@
                 </a>
               </div>
               
-              <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-                <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
-              </div>
+          
               <!-- Person item end -->
 
             </div>
@@ -57,6 +55,9 @@
             Brute suavitate maiestatis qui in.
           </p>
         </div>
+      </div>
+      <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+        <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
       </div>
     </div>
     <div class="col-md-12">

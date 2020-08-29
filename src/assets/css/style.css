@@ -100,7 +100,7 @@ html * {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Poppins;
+  font-family: Roboto;
 }
 
 
@@ -157,13 +157,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .error-message {
 	color: #FF3333;
-	font-family: Poppins;
+	font-family: Roboto;
 	margin-top: 5px;
 }
 
 .success-message {
 	color:#009900;
-	font-family: Poppins;
+	font-family: Roboto;
 	margin-top: 5px;
 }
 
@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top-nav li {
-  font-family: Poppins;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
 	letter-spacing: 1px;
@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 110;
   width: 75%;
-  background-color: #e6ecef;
+  background-color: var(--background-default);
 	background-size: cover;
 	overflow-y: auto;
   -webkit-transform: translateZ(0);
@@ -422,12 +422,11 @@ h1, h2, h3, h4, h5, h6 {
   
   font-family: Roboto,sans-serif;
   font-size: 21px;
-  font-weight: 600;
   letter-spacing: 0px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: justify;
   line-height: 2;
-  padding-bottom: 1em;
+  padding: 1em;
   color: #222;
 	-webkit-transform: translateX(50px);
 	-moz-transform: translateX(50px);
@@ -609,7 +608,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .personal {
 	background-color: #F1F1F1;
-	background: url(../images/bg.jpg) no-repeat center center;
+	/* background: url(../images/bg.jpg) no-repeat center center; */
 	background-size: cover;
 }
 
@@ -634,7 +633,7 @@ h1, h2, h3, h4, h5, h6 {
 .section {
     padding: 100px 0;
     position: relative;
-    background-color: #fff;
+    background-color: var(--background-default);
 }
 .section-head {
     position: relative;
@@ -675,7 +674,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .intro .intro-text h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 600;
 	color: #A1A1A1;
@@ -686,7 +685,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro .intro-text h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 42px;
 	font-weight: 600;
 	letter-spacing: -2px;
@@ -695,7 +694,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro .intro-text p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -706,7 +705,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .intro .intro-text h3 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 600;
 	color: #434343;
@@ -725,12 +724,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Work Sans;
     font-size: 16px;
     font-weight: 600;
-	color: #3a9e62;
+	color: var(--primary-default);
 	display: inline-block;
 	width: 50%;
     border-radius: 1rem;
     text-transform: uppercase;
-    background: #31ff54;
+    background: var(--primary-default);
     border: 2px solid;
     border-color: #31ff54;
     padding: 10px 20px;
@@ -743,8 +742,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-contact:hover, .btn-contact:focus {
 	color: #ffffff;
-    background: #00ff35;
-    border-color: #04ff00;
+    background: var(--primary-default);
+    border-color: var(--primary-default);
     text-decoration: none;
 }
 
@@ -759,7 +758,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .about-intro h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -769,7 +768,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .about-intro h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 18px;
 	font-weight: 400;
 	color: #222222;
@@ -786,7 +785,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*
 .about-details p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 400;
 	color: #222222;
@@ -804,7 +803,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-details .work-list p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	text-align: center;
 	line-height: 1.4;
@@ -825,7 +824,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .experience h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -835,7 +834,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .experience h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 400;
 	color: #222222;
@@ -853,7 +852,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .experience h3 {
-  font-family: Poppins;
+  font-family: Roboto;
   font-size: 16px;
   font-weight: 600;
   color: #666666;
@@ -863,7 +862,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .experience p {
-  font-family: Poppins;
+  font-family: Roboto;
   font-size: 14px !important;
   font-weight: 300;
   color: #444444;
@@ -872,7 +871,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .experience h6 {
-  font-family: Poppins;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
   color: #A1A1A1;
@@ -886,7 +885,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .cta p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 21px;
 	font-weight: 600;
 	color: #454545;
@@ -895,7 +894,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about .btn-contact {
 	border: 2px solid;
-	border-color: #31ff54;
+	border-color: var(--primary-default);
 	padding: 4px 12px;
 	margin: 1em auto;
 }
@@ -914,7 +913,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-intro h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -924,7 +923,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-intro h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 20px;
 	line-height: 1.4;
 	font-weight: 400;
@@ -943,7 +942,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio .categories ul li a {
    display: inline;
-   font-family: Poppins;
+   font-family: Roboto;
    font-weight: 400;
    font-size: 14px;
    line-height: 2.5;
@@ -995,7 +994,7 @@ h1, h2, h3, h4, h5, h6 {
  margin-top: 1em;
  opacity: 0;
  font-size: 12px;
- font-family: Poppins;
+ font-family: Roboto;
  font-weight: 600;
  letter-spacing: 2px;
  color: #FFF;
@@ -1057,7 +1056,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-single .project-intro h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 24px;
 	font-weight: 600;
 	color: #606060;
@@ -1067,7 +1066,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-single .project-intro h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 18px;
 	font-weight: 400;
 	color: #606060;
@@ -1077,7 +1076,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-single .project-intro p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	line-height: 1.5;
 	font-weight: 400;
@@ -1089,7 +1088,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-details {
-	background: #eeeeee;
+	background: var(--background-default);
 	overflow: hidden;
 	padding: 30px 20px 30px 20px;
 }
@@ -1099,7 +1098,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-details ul li {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -1113,7 +1112,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-details h2 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 18px;
 	font-weight: 400;
 	color: #454545;
@@ -1121,7 +1120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-details p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -1151,7 +1150,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	top: 15%;
 	left: 30px;
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	line-height: 1;
 	color: #808080;
@@ -1169,7 +1168,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	top: 15%;
 	right: 30px;
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	line-height: 1;
 	color: #808080;
@@ -1216,16 +1215,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-section h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 28px;
 	font-weight: 600;
-	color: #90adff;
+	color: var(--primary-default);
 	line-height: 1.3;
 	margin-bottom: 20px;
 }
 
 .contact-section p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 300;
 	color: #A1A1A1;
@@ -1238,10 +1237,10 @@ h1, h2, h3, h4, h5, h6 {
 
 label {
 	display: block;
-  font-family: Poppins;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
-  color: #001CFF;
+  color: var(--primary-default);
 	text-align: left;
 }
 
@@ -1298,14 +1297,14 @@ label {
 }
 
 .btn-send {
-  font-family: Poppins;
+  font-family: Roboto;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 20px;
   border-radius: 0px;
   color: #FFFFFF;
-  background: #001CFF;
+  background: var(--primary-default);
 	border-color: #001CFF;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -1333,7 +1332,7 @@ label {
 }
 
 .footer-personal .footer-credits span {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	color: #111111;
 }
@@ -1355,7 +1354,7 @@ label {
 
 .footer ul li a {
 	display: inline;
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	padding-right: 20px;
@@ -1365,7 +1364,7 @@ label {
 
 .footer span {
 	display: inline;
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.5;
@@ -1402,7 +1401,7 @@ label {
 }
 
 .footer-social ul li a {
-	font-family: poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	color: #2d2dd2;

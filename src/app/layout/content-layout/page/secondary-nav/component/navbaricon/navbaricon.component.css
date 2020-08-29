@@ -21,7 +21,7 @@ a{
     margin-right: -15px;
     transition:.5s !important;
 }
-.nav-icon.active:before, .nav-icon .active:after {
+/* .nav-icon.active:before, .nav-icon .active:after {
     content: "";
     position: absolute;
     top: -24px;
@@ -38,7 +38,7 @@ a{
     -ms-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
-}
+} */
 .nav-text{
     font-size:14px;
     text-transform: uppercase;

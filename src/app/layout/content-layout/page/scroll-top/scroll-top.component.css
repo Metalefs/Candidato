@@ -24,7 +24,7 @@
         left: 15px;
         width: 35px;
         font-size: medium;
-        background: rgba(211, 211, 211, 0.856);
+        background: var( --background-default);
         z-index: 5;
     }
     

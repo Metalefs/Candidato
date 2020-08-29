@@ -20,10 +20,10 @@ export class CandidatoService extends ServicoBase{
 
     CandidatosTeste:Candidato[] = [new Candidato(
         1,
-        "Barack Obama",
+        "Seu nome",
         "24/06/1960",
-        "barack.obama@whitehouse.com",
-        "555 - 555",
+        "Seu e-mail",
+        "Seu telefone",
         "twitter.com",
         "",
         "",
