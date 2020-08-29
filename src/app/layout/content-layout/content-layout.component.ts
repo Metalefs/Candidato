@@ -5,7 +5,7 @@ import { fade, slider, slide } from 'src/app/animations';
 
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
-import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
+import { OpcaoNavbar, OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
 import { Candidato } from 'src/app/data/schema/domain/Candidato';
 
 @Component({
@@ -27,12 +27,14 @@ export class ContentLayoutComponent implements OnInit {
     this.paginas = ServicoPaginas.GetAllPages();
     this.Candidato = CandidatoService.ObterTeste();
     this.candidato_bg=`url(${this.Candidato.FotoCapa})`;
+    this.candidato_img=`${this.Candidato.FotoCapa}`;
   }
     
   candidato_bg:string;
+  candidato_img:string;
   Candidato:Candidato;
   title = "Candidato";
-  paginas: OpcaoNavbar[] = [];
+  paginas: OpcaoNavbarFA[] = [];
   NavState:NavState = {open : false};
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
@@ -158,10 +160,10 @@ export class ContentLayoutComponent implements OnInit {
         });
 
         // ensure canvas is always full size of browser window
-        // window.addEventListener('resize', function () {
-        //   (this.canvasEl.nativeElement as HTMLCanvasElement).width = innerWidth;
+        window.addEventListener('resize', function () {
+          c.width = innerWidth;
 
-        // });
+        });
         window.addEventListener("mousemove", (evt) => {
             mouse.x = evt.x;
             mouse.y = evt.y;

@@ -1,8 +1,96 @@
-.split-home{
+.split-home,.wrapper{
+    background: var(--foreground-secondary);
+    padding:0 2rem;
+}
+.main {
+    background: var(--background-default);
+    transition: 0.5s;
+    text-align: justify;
+    min-height: 100vh;
+    font-family: Roboto;
+}
+.left-section{
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    /* margin: 0 auto; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 20rem;
+    /* border-bottom: 2rem solid var(--primary-default); */
+    height: 400px;
+    background-origin: padding-box;
+    background-position: right !important;
+    animation: fade-in 5s ease-in-out forwards;
     background: var(--background-default);
 }
-#logo-canvas{
+.right-section{
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    min-height: 100vh;
+    width: 100%;
+    overflow: visible;
+    animation: to-left 2s ease-in-out forwards;
+   
+}
+.left-section-candidato{
+    width: 100%;
+    height: 30%;
+    border:0;
+    box-shadow: 5px 10px 5px #00000047;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: left !important;
+    /* border-top-right-radius: 48px; */
+    margin:0;
+    padding: 0rem;
     position: fixed;
+    animation-name: fade-in;
+    top: 0;
+    z-index: 2;
+}
+
+.floating2:hover{
+    left:5px;
+    bottom:2px;
+}
+.bar{
+    top: 304px;
+    z-index: 3;
+    width: 90%;
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.partido-text{
+    position: RELATIVE;
+    color: var(--background-default);
+    background: var(--primary-default);
+    padding: 0.5REM;
+    border-radius: 50%;
+    cursor: default;
+    width: max-content;
+}
+.partido-text:hover{
+   left:5px;
+   bottom:2px;
+}
+.partido-logo{
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    padding-right: 0px;
+    right: 0;
+}
+
+#logo-canvas{
+    /* position: fixed; */
+    position: absolute;
     z-index: 2;
     height: 100%;
     pointer-events: none;
@@ -19,30 +107,12 @@
     border-top-right-radius: 48px;
     margin: 0;
     padding: 0rem;
-    position: fixed;
+    position: absolute;
     animation-name: fade-in;
     top: 0;
     z-index: 2;
 }
-.main {
-    background: var(--background-default);
-    transition: 0.5s;
-    text-align: justify;
-    min-height: 100vh;
-    font-family: Roboto;
-}
-.left-section{
-    opacity: 0;
-    position: fixed;
-    width: 50%;
-    /* margin: 14px 15px; */
-    /* height: 97%; */
-    /* border-top-right-radius: 48px; */
-    /* padding: 2rem; */
-    background-origin: padding-box;
-    background-position: right !important;
-    animation: fade-in 5s ease-in-out forwards;
-}
+
 .typing{
     position: relative;
     max-width: 92%;
@@ -52,66 +122,6 @@
     transition: all 0.5s;
     font-family: Roboto,sans-serif;
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
-.right-section{
-    position: relative;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    min-height: 100vh;
-    width: 50%;
-    margin-left: 50%;
-    overflow: visible;
-    animation: to-left 2s ease-in-out forwards;
-}
-.partido-text{
-    position: RELATIVE;
-    color: var(--background-default);
-    background: var(--primary-default);
-    padding: 0.5REM;
-    border-radius: 50%;
-    cursor: default;
-    width: max-content;
-}
-.partido-text:hover{
-   left:5px;
-   bottom:2px;
-}
-.floating2:hover{
-    left:5px;
-    bottom:2px;
-}
-.bar{
-    bottom: 50px;
-    z-index: 2;
-    margin-left: 1.5rem;
-    position: fixed;
-    height: 70px;
-    display: flex;
-    justify-content: start;
-}
-.left-section-candidato{
-    width: 100%;
-    height: 100%;
-    border:0;
-    box-shadow: 5px 10px 5px #00000047;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: left !important;
-    /* border-top-right-radius: 48px; */
-    margin:0;
-    padding: 0rem;
-    position: fixed;
-    animation-name: fade-in;
-    top: 0;
-    z-index: 2;
-}
-.partido-logo{
-    z-index: 3;
-    position: relative;
-    width: 100%;
-    padding-right: 0px;
-    right: 0;
 }
 @media only screen and (max-width : 801px) {
     #nav-menu{
@@ -125,11 +135,31 @@
         margin: 0;
         padding:0;
     }
-    
+    .split-home,.wrapper{
+        padding:0;
+    }
+    .main {
+        border-radius: 5px;
+        border-bottom-right-radius:0 ;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 6px;
+        padding:0;
+        padding-left:initial;
+        background: var(--background-default);
+    }
+    .left-section{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        min-height: initial;
+        border:0;
+        border-top-right-radius: 48px;
+        padding: 0rem;
+    }
     .right-section{
         margin-left: 0;
         width: 100%;
-        margin-top: 406px;
+        /* margin-top: 406px; */
         border-radius: 100px;
         padding: 0;
         z-index: 2;
@@ -141,36 +171,17 @@
         font-size: 1.5rem !important;
         border-radius: 1.5rem;
    }
-   .main{
-       padding-left:initial
-   }
    .conecta-candidato-logo{
    }
    
    .bar{
         top: 346px;
-        margin: 0 2rem;
         position: absolute;
         display: flex;
         width: 90%;
         z-index: 3;
         justify-content: center;
    }
-    .main {
-        border-radius: 55px;
-        border-bottom-right-radius:0 ;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 6px;
-        background: var(--background-default);
-    }
-    .left-section{
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        border:0;
-        border-top-right-radius: 48px;
-        padding: 0rem;
-    }
     .app-scrolldown{
         display: flex;
         justify-content: center;

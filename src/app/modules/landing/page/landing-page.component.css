@@ -13,6 +13,9 @@
   .mat-ripple{
     z-index:50; 
   }
+  .mat-tab-group {
+    min-height: 200px;
+}
   :host ::ng-deep .mat-ripple-element {
     z-index:-1 !important;
     max-width: 0;

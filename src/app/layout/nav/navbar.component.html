@@ -1,6 +1,7 @@
 
 <ul class="navigation">
   <li *ngFor="let pagina of paginas">
+    <fa-icon [icon]="pagina.Icon"></fa-icon>
     <a (click)="ToggleNav()" 
       [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''"
       pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300"

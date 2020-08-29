@@ -10,20 +10,20 @@
     justify-content: center;
     background: var(--background-default);
     transition:.3s;
+    
+   padding:5px 0;
 }
 a{
     width: 64px;
 }
 .tabs.is-boxed a {
    transition:.3s;
-   padding:0;
+   padding:5px 0;
 }
 .tabs.is-boxed a:hover {
     bottom:1px;
     position: relative;
 }
 @media only screen and (max-width : 801px) {
-    .icones-redes a figure img{
-        border-radius: 0;
-    }
+    
 }
