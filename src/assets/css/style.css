@@ -1305,7 +1305,7 @@ label {
   border-radius: 0px;
   color: #FFFFFF;
   background: var(--primary-default);
-	border-color:  var(--primary-default);
+	border-color:var(--primary-default);
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
     transition: 0.5s;

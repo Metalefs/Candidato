@@ -17,7 +17,7 @@ export class SecondaryNavComponent implements OnInit {
   constructor( private ServicoPaginas: ServicoPaginas) { 
     
   }
-  paginas: OpcaoNavbar[] = [];
+  paginas: OpcaoNavbarFA[] = [];
 
   Opcoes = [
     new OpcaoNavbarFA("Resumo", "inicio", faHome),

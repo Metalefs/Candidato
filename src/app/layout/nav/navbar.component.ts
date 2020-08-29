@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais';
-import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
+import { OpcaoNavbar, OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 import { NavState } from '../content-layout/content-layout.component';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
   }
   @Input()NavState:NavState;
   Subtitulo:string = "Portifólio do Nome Candidato";
-  paginas: OpcaoNavbar[] = [];
+  paginas: OpcaoNavbarFA[] = [];
   redesSociais: RedeSocial[] = [];
   Copyright:string = "@Conecta Candidato";
   

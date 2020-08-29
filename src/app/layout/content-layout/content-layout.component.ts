@@ -5,7 +5,7 @@ import { fade, slider, slide } from 'src/app/animations';
 
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
-import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
+import { OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
 import { Candidato } from 'src/app/data/schema/domain/Candidato';
 
 @Component({
@@ -32,7 +32,7 @@ export class ContentLayoutComponent implements OnInit {
   candidato_bg:string;
   Candidato:Candidato;
   title = "Candidato";
-  paginas: OpcaoNavbar[] = [];
+  paginas: OpcaoNavbarFA[] = [];
   NavState:NavState = {open : false};
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
