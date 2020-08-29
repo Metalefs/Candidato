@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule  } from 'ngx-page-scroll';
 
 import { ContatoComponent } from './page/contato/contato.component';
 import { InicioComponent } from './page/inicio/inicio.component';
@@ -10,12 +13,10 @@ import { RedesSociaisComponent } from './page/redes-sociais/redes-sociais.compon
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FeedModule } from 'src/app/modules/landing/page/feed/feed.module';
 import { BiografiaModule } from 'src/app/modules/landing/page/biografia/biografia.module';
-import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { SobreComponent } from './page/sobre/sobre.component';
 import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experiencia-trabalho.component';
 import { ProjetosModule } from '../projetos/projetos.module';
+
 @NgModule({
   declarations: [
     ContatoComponent,

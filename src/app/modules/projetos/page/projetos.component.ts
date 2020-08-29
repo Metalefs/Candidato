@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./projetos.component.css']
 })
 export class ProjetosComponent implements OnInit {
-
+  private window: Window;
   Projetos:Projeto[] = [];
   categorias:Array<string> = [];
   _albums:Array<Album> = [];
@@ -65,8 +65,9 @@ export class ProjetosComponent implements OnInit {
 
         this._albums.push(album);
 
-    });
+    }); 
 	  this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
+   
   }
 
 }

@@ -46,6 +46,7 @@
     "ngx-scrollspy": "github:uniprank/ngx-scrollspy",
     "ngx-typed-js": "^2.0.2",
     "rxjs": "~6.5.5",
+    "save": "^2.4.0",
     "tslib": "^2.0.0",
     "typescript": "^3.9.7",
     "web-animations-js": "^2.3.2",

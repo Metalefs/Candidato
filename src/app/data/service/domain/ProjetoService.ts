@@ -24,6 +24,7 @@ export class ProjetoService extends ServicoBase {
             1,
             "Health Care and Education Reconciliation Act",
             "",
+            "",
             1,
             "Saúde",
             "assets/imagens/fundos/inicio/green_field.jpg",
@@ -31,8 +32,9 @@ export class ProjetoService extends ServicoBase {
             20
         ),
         new Projeto(
-            1,
+            2,
             "Patient Protection and Affordable Care Act",
+            "",
             "",
             1,
             "Saúde sdsd",
@@ -41,8 +43,9 @@ export class ProjetoService extends ServicoBase {
             20
         ),
         new Projeto(
-            1,
+            3,
             "Don't Ask, Don't Tell Repeal Act of 2010",
+            "",
             "",
             1,
             "Segurança",
@@ -51,8 +54,9 @@ export class ProjetoService extends ServicoBase {
             20
         ),
         new Projeto(
-            1,
+            4,
             "Obama care",
+            "",
             "",
             1,
             "Saúde",

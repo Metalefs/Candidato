@@ -2,6 +2,10 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade, slider, slide } from 'src/app/animations';
+import { ScrollSpyService } from '@uniprank/ngx-scrollspy';
+import { NavStateService } from 'src/app/core/service/state/_NavStateService';
+import { BehaviorSubject, Subscription, Subject } from 'rxjs';
+
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
@@ -21,12 +25,13 @@ export class ContentLayoutComponent implements OnInit {
   constructor(
     private ServicoPaginas: ServicoPaginas,
     private CandidatoService: CandidatoService,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
   ) {
     this.paginas = ServicoPaginas.GetAllPages();
     this.Candidato = CandidatoService.ObterTeste();
     this.candidato_bg=`url(${this.Candidato.FotoCapa})`;
   }
+    
   candidato_bg:string;
   Candidato:Candidato;
   title = "Candidato";
@@ -51,6 +56,14 @@ export class ContentLayoutComponent implements OnInit {
     
   }
   ngAfterViewInit() {
+    this.startCanvasAnimation();
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+
+  startCanvasAnimation(){
     this.c = (this.canvasEl.nativeElement as HTMLCanvasElement).getContext('2d');
         
     let x;
@@ -178,11 +191,7 @@ export class ContentLayoutComponent implements OnInit {
 
     };
     draw(this.c);
-  }
-  
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  }
+}
 
 }
 export interface NavState{

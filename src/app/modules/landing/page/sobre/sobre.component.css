@@ -1,22 +1,58 @@
 .section-about{
     margin: 0 auto;
-    max-width: calc(1140px - 30px );
-    background: #fff;
-    margin-top: -200px;
     z-index: 100;
     position: relative;
-    width: 95%;
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 5px;
     transition: 0.5s;
-    transform: translateY(20px);
     padding: 0 !important;
     max-width: 950px;
+    margin-bottom:-20px;
 }
 .section-about-wrap {
-    padding: 50px;
-    background-color: #fff;
+    padding: 2REM;
     box-shadow: 10px 10px 100px rgba(0,0,0,0.1);
-    border-radius: 5px;
+}
+.about-social a.downloadCV {
+    width: auto;
+    line-height: 47px;
+    padding: 0 10px;
+}
+@media (max-width: 768px){
+.about-social a.downloadCV {
+    line-height: 40px;
+    padding: 0 14px;
+}
+.section-about{
+    margin-bottom:20px;
+}
+}
+.about-social a {
+    display: block;
+    border-radius: 15px;
+    background: #62677e;
+    font-size: 20px;
+    line-height: 52px;
+    color: #fff;
+}
+@media (max-width: 768px){
+.about-social a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+}
+.about-desc-info {
+    padding-bottom: 20px;
+}
+.about-desc-info b {
+    padding-right: 10px;
+    font-size: 18px;
+}
+b, strong {
+    font-weight: 500;
+}
+.about-desc-info a, .about-desc-info span {
+    font-size: 16px;
+    color: var(--background-dark);
+    font-weight: 400;
 }

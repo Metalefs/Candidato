@@ -4,13 +4,13 @@ jQuery(function($) {
     "use strict";
 
 
-/* --------- Wow Init ------ */
+  /* --------- Wow Init ------ */
 
   new WOW().init();
 
 
 
-/*----- Preloader ----- */
+  /*----- Preloader ----- */
 
     $(window).load(function() {
   		setTimeout(function() {
@@ -20,39 +20,32 @@ jQuery(function($) {
     });
 
 
-/* ------ Lightcase ----- */
+  /*----------------------------
+  ------- Isotope Init -------
+  -----------------------------*/
 
-jQuery(document).ready(function($) {
-		$('a[data-rel^=lightcase]').lightcase();
-	});
+  (function load_isotope(){
+    window.addEventListener('click',function(){
+      var $container = $('.portfolio-container');
+      $container.isotope({
+        filter: '*',
+      });
 
+      $('.portfolio-filter a').on('click', function () {
+        $('.portfolio-filter .active').removeClass('active');
+        $(this).addClass('active');
 
-    /*----------------------------
-    ------- Isotope Init -------
-    -----------------------------*/
-
-    $( window ).load(function() {
-
-    var $container = $('.portfolio-container');
-    $container.isotope({
-    	filter: '*',
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 500,
+                animationEngine: "jquery"
+            }
+        });
+        return false;
+      });
     });
-
-    $('.portfolio-filter a').on('click', function () {
-    	$('.portfolio-filter .active').removeClass('active');
-    	$(this).addClass('active');
-
-    	var selector = $(this).attr('data-filter');
-    	$container.isotope({
-    			filter: selector,
-    			animationOptions: {
-    					duration: 500,
-    					animationEngine: "jquery"
-    			}
-    	});
-    	return false;
-    });
-
-    });
+  })();
 
 });

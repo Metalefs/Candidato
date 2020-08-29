@@ -1,26 +1,59 @@
-<section class="section section-about in" id="about">
+<section class="section section-about in" >
 
     <div class="section-about-wrap">
 
         <div class="row justify-content-center align-items-center">
-            
-            <div class="col-md-7">
-                <div class="about-desc">
-                    <div class="about-desc-content">
-                        <span>Sobre</span>
-                        <p class="mt-4 font-weight-light">Passionate designer & developer who loves simplicity in things and crafts beautiful user interfaces with love. {{Mensagens?.Sobre}}</p>
+            <div class="about-desc-more text-left b-box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-desc-info">
+                            <b>Nacionalidade :</b>
+                            <span>Americano</span>
+                        </div>
                     </div>
-                    <ul class="about-desc-social mt-4 list-unstyled list-inline">
-                        <li class="list-inline-item" *ngFor="let rede of redes"><a href="#"><i class="{{rede.class}}"></i></a></li>
-                    </ul>
+                    <div class="col-md-6">
+                        <div class="about-desc-info">
+                            <b>Idade :</b>
+                            <span>59 anos</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-desc-info">
+                            <b>Telefone :</b>
+                            <a href="tel:{{Candidato.Telefone}}">{{Candidato.Telefone}}</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-desc-info">
+                            <b>Email :</b>
+                            <a href="mailto:{{Candidato.Email}}">{{Candidato.Email}}</a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-
-            <div class="col-md-5 d-none d-md-block">
-                <img class="img-fluid img-thumbnail is-hidden-touch" src="{{Candidato.FotoPerfil}}" alt="About Picture">
+            <div class="about-desc  mt-5">
+                <ul class="about-social mb-0 list-inline my-5">
+                    <li class="list-inline-item">
+                        <a href="#" class="downloadCV">
+                            <fa-icon [icon]="FaDownload"></fa-icon>
+                            <span></span>
+                        </a>
+                    </li>
+                     <!--<li class="list-inline-item">
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#"><i class="fab fa-skype"></i></a>
+                    </li> -->
+                </ul> 
+    
+             
             </div>
 
         </div>
 
     </div>
 </section>
+
+      

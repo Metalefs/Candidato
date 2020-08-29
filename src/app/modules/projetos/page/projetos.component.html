@@ -1,3 +1,4 @@
+
 <section class="section section-light section-work" id="work">
   <div class="container">
     <div class="section-head">
@@ -18,10 +19,11 @@
             <div class="row portfolio-container text-center">
 
                <!-- Person item -->
-               <div class="col-md-6 col-sm-6 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''" *ngFor="let projeto of Projetos">
+              <div class="col-md-6 col-sm-6 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
+                *ngFor="let projeto of Projetos">
                 <a [routerLink]="['/projeto/'+projeto.Identificador]" class="portfolio-item--content">
                   <div class="portfolio-item--img b-box">
-                    <img src="{{projeto.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
+                    <img src="{{projeto.FotoSrc}}" class="img-fluid mx-auto" alt="work-img">
                   </div>
                   <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
                     <div class="portfolio-item--desc-in">
@@ -37,7 +39,7 @@
           </div>
         </div>
       </div>
-
+      
     </div>
   </div>
 </section>

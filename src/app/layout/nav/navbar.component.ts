@@ -36,7 +36,6 @@ export class NavbarComponent implements OnInit {
   
   setActiveSection(section: any): void {
     this.ActiveNav$.next(section);
-    
   }
 
   ToggleNav(){
@@ -48,7 +47,9 @@ export class NavbarComponent implements OnInit {
     this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais();
     
     setInterval(()=>{
-      this.NavStateService.getActiveNav().then(x=>this.paginaAtiva = x.pagina);
+      this.NavStateService.getActiveNav().then(x=>{
+        this.paginaAtiva = x.pagina;
+      });
     },1000)
     this._subscription = this.NavStateService.currentState.subscribe(item => {
       if (item != undefined) {

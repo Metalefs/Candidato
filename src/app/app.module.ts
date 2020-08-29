@@ -22,7 +22,7 @@ import { LightboxModule } from 'ngx-lightbox';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
-import {NgxTypedJsModule} from 'ngx-typed-js';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

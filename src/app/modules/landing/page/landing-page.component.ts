@@ -33,11 +33,11 @@ export class LandingPageComponent implements OnInit {
         }
         else{
           x.pagina = section.id;
+          console.log(x.pagina)
           x.is_active = true;
           x.is_solid = true;
         }
       })
-      
       this.NavStateService.update(y);
 
     }) 
