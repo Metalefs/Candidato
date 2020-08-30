@@ -24,6 +24,7 @@
   }
   .mat-tab-group {
     min-height: 200px;
+    margin-top: -75px;
 }
   :host ::ng-deep .mat-ripple-element {
     z-index:-1 !important;
@@ -33,10 +34,12 @@
   :host ::ng-deep .mat-tab-labels {
     display: flex;
     justify-content: center;
+    margin-top:-65;
     }
   :host ::ng-deep .mat-tab-label,.mat-ripple .mat-tab-label{
     max-width: 69px;
     padding:2rem !important;
+    background: white;
     color:var(--primary-default);
     font-size: 15px;
     text-align: center;

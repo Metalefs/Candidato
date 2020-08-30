@@ -60,7 +60,7 @@
     z-index: 3;
     margin-left: 1.5rem;
     font-size: xx-large;
-    background:rgba(0,0,0,.5);
+    /* background:rgba(0,0,0,.5); */
     position: fixed;
     font-family: Roboto;
     width: 92%;
@@ -152,7 +152,7 @@
         z-index: 2;
    }
    .typing-animation{
-        top: 280px;
+        top: 250px;
         bottom:initial;
    }
    .typing{
@@ -168,7 +168,7 @@
    }
    
    .bar{
-        top: 335px;
+        top: 308px;
         margin: 0 1rem;
         position: absolute;
         display: flex;
@@ -177,7 +177,7 @@
         justify-content: center;
    }
     .main {
-        border-radius: 55px;
+        /* border-radius: 55px; */
         border-bottom-right-radius:0 ;
         border-bottom-left-radius: 0;
         border-top-left-radius: 6px;
