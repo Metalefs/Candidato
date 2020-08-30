@@ -1,9 +1,7 @@
 
 <section class="section section-light section-work" id="work">
-  <div class="container">
-    <div class="section-head">
-      <h2>Propostas</h2>
-    </div>
+  <div class="">
+    <h1 class="title is-6 has-text-centered">PROPOSTAS</h1>
     <div class="mt-4">
       <div class="portfolio wow fadeInDown">
         <div class="row">
@@ -19,10 +17,10 @@
             <div class="row portfolio-container text-center">
 
                <!-- Person item -->
-              <div class="col-md-6 col-sm-6 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
+              <div class="col-md-12 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
                 *ngFor="let projeto of Projetos">
                 <a [routerLink]="['/projeto/'+projeto.Identificador]" class="portfolio-item--content">
-                  <div class="portfolio-item--img b-box">
+                  <div class="portfolio-item--img">
                     <img src="{{projeto.FotoSrc}}" class="img-fluid mx-auto" alt="work-img">
                   </div>
                   <div class="portfolio-item--desc d-flex justify-content-center align-items-center">

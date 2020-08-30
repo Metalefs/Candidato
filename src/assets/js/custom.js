@@ -46,6 +46,6 @@ jQuery(function($) {
         return false;
       });
       window.addEventListener('click', load_isotope,false);
-      window.addEventListener("touchend", load_isotope, false);
+      // window.addEventListener("touchend", load_isotope, false);
   })();
 });

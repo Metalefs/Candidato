@@ -4,22 +4,12 @@ a{
     position: relative;
 }
 .nav-icon{
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: large;
     position: relative;
     display: inline-block;
-    text-transform: uppercase;
-    padding-left: 10px;
     opacity: 1;
-    padding-right: 5px;
     display: block;
-    margin-bottom: 3px;
-    text-align: left;
-    border-radius: 30px 0 0 30px;
-    padding: 10px 20px;
-    width: 100%;
-    margin-right: -15px;
-    transition:.5s !important;
+    text-align: center;
 }
 /* .nav-icon.active:before, .nav-icon .active:after {
     content: "";
@@ -39,22 +29,10 @@ a{
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 } */
-.nav-text{
-    font-size:14px;
-    text-transform: uppercase;
-    color:black;
-}
 .active{
     color: #333;
     background: #fff;
-    background-color: var(--clr-vertical-nav-active-bg-color);
-}
-.icon{
-    width: auto;
-    font-size: 20px;
-    position: relative;
-    top: 3px;
-    margin-right: 10px;
+    color: var(--primary-default);
 }
 .icon.is-red{
     color: red;

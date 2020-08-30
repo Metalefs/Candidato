@@ -1,5 +1,6 @@
 .split-home{
     background: var(--background-default);
+    border-top: 20px solid black;
 }
 .main {
     background: var(--background-default);
@@ -84,6 +85,7 @@
 .partido-logo{
     z-index: 3;
     position: relative;
+    bottom:20px;
     width: 100%;
     padding-right: 0px;
     right: 0;
@@ -138,6 +140,19 @@
     #nav-menu{
         width: max-content;
     }
+    .split-home{
+        border-top: 0;
+    }
+    
+    .main {
+        /* border-radius: 55px; */
+        padding-left:initial;
+        border-bottom-right-radius:0 ;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 6px;
+        background: var(--background-default);
+    }
+
     #logo-canvas{
         position: absolute;
         z-index: 5;
@@ -150,13 +165,18 @@
     .right-section{
         margin-left: 0;
         width: 100%;
-        margin-top: 406px;
+        margin-top: 85%;
         border-radius: 100px;
         padding: 0;
         z-index: 2;
    }
+   
+
+    .conecta-candidato-logo{
+    }
+
    .typing-animation{
-        top: 250px;
+        top: 240px;
         bottom:initial;
    }
    .typing{
@@ -165,14 +185,8 @@
         font-size: 1.5rem !important;
         border-radius: 1.5rem;
    }
-   .main{
-       padding-left:initial
-   }
-   .conecta-candidato-logo{
-   }
-   
    .bar{
-        top: 308px;
+        top: 270px;
         margin: 0 1rem;
         position: absolute;
         display: flex;
@@ -180,13 +194,6 @@
         z-index: 3;
         justify-content: center;
    }
-    .main {
-        /* border-radius: 55px; */
-        border-bottom-right-radius:0 ;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 6px;
-        background: var(--background-default);
-    }
     .left-section{
         margin: 0;
         width: 100%;

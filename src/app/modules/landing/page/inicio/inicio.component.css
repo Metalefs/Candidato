@@ -1,6 +1,7 @@
 .intro{
     padding-left:30px;
-    /* text-align: justify; */
+    text-indent: 20px;
+    text-align: justify;
 }
 .about-avatar img {
     height: 100px;

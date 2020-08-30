@@ -1,5 +1,8 @@
-<a (click)="ChangeToThis()" [uniScrollItem]="Opcao?.Link"  pageScroll [pageScrollOffset]="0" [pageScrollDuration]="2300" [routerLink]="['inicio']" href="#{{Opcao?.Link}}" routerLinkActive="Active" [ngClass]="EstadoNav?.is_active? 'active' : ''" class="py-3 pl-4 px-2 nav-icon media">
-    <fa-icon [icon]="Opcao?.Icon" [ngClass]="EstadoNav?.is_active ? ' nav-icon is-solid' : 'nav-icon'"></fa-icon>
+<a (click)="ChangeToThis()" [uniScrollItem]="Opcao?.Link" 
     
+    [routerLink]="['inicio']" href="#{{Opcao?.Link}}" routerLinkActive="Active"
+    [ngClass]="EstadoNav?.is_active? 'active' : ''"
+     class="py-3 pl-4 px-2 nav-icon media">
+    <fa-icon [icon]="Opcao?.Icon" [ngClass]="EstadoNav?.is_active ? ' nav-icon is-solid' : 'nav-icon'" size="lg"></fa-icon>
     {{Opcao?.Titulo}}
 </a>

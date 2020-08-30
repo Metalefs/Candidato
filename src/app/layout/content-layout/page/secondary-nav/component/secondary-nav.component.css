@@ -1,23 +1,27 @@
 .secondary-nav{
-  width: 100vw;
+  width: 60vw;
   margin: 0;
-  height: 70px;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  padding: 0 1rem;
   z-index: 1;
-  place-items: center;
-  background: darkgrey;
+  background: var(--background-default);
 }
+
 li{
     width: 71px;
 }
 @media (min-width: 320px ) and (max-width: 1023px) {
     
     .fix-bottom-on-mobile{
-        bottom: 0;
-        top: initial;
-        /* background: #8c8c8ccf; */
-        z-index: 5;
-        position: fixed;
-        width: 100%;
+      top: initial;
+      bottom: initial;
+      right: initial;
+      bottom: 0;
+      padding:0;
+      z-index: 5;
+      width: 100%;
     }
     
 } 

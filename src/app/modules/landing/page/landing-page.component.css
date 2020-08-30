@@ -36,16 +36,23 @@
     max-width: 0;
     display: none;
   }
+  :host ::ng-deep .mat-tab-body {
+    width: 100%;
+  }
   :host ::ng-deep .mat-tab-labels {
     display: flex;
     justify-content: center;
-    }
+    padding:1rem;
+  }
   :host ::ng-deep .mat-tab-label,.mat-ripple .mat-tab-label{
+    min-width: 95px;
     max-width: 69px;
     padding:2rem !important;
     background: white;
+    font-family: Roboto;
+    line-height: 25px;
     color:var(--primary-default);
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     transition: .5s all ease-out;
     opacity: 1;

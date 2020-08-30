@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { throwError, Observable } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
-import { faHome, faInbox, faQuoteLeft, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faRss, faTasks, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faRProject } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -18,10 +18,10 @@ export class ServicoPaginas{
 
     GetAllPages(): OpcaoNavbarFA[] {
       return [
-          new OpcaoNavbarFA("Resumo","inicio",faHome),
-          new OpcaoNavbarFA("Quem é","sobre",faAddressCard),
-          new OpcaoNavbarFA("Propostas","projetos",faQuoteLeft),
-          new OpcaoNavbarFA("Entrar em Contato","contato",faInbox)
+          new OpcaoNavbarFA("Home","inicio",faHome),
+          new OpcaoNavbarFA("Biografia","sobre",faAddressCard),
+          new OpcaoNavbarFA("Propostas","projetos",faTasks),
+          new OpcaoNavbarFA("Feed","feed",faRss)
         ]
     }
 	

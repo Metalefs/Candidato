@@ -37,7 +37,7 @@ export class ProjetoService extends ServicoBase {
             "",
             "",
             1,
-            "Saúde sdsd",
+            "Bem estar",
             "assets/imagens/icones/ConectaCandidato_fundoTransparente.png",
             true,
             20

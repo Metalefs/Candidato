@@ -1,9 +1,8 @@
 
-<nav class="secondary-nav fix-bottom-on-mobile is-mobile">
+<nav class="secondary-nav fix-bottom-on-mobile">
     <ul class="columns is-mobile">
-        <li class="column" *ngFor="let opcao of paginas">
+        <div class="column" *ngFor="let opcao of paginas">
             <navbaricon class="nav-icon tile" [Opcao]="opcao"></navbaricon>
-            <div class="underbar"></div>
-        </li>
+        </div>
     </ul>
 </nav> 

@@ -668,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro {
-	padding-top: 50px;
+	padding-top: 30px;
 	text-align: center;
 }
 
@@ -1458,15 +1458,15 @@ label {
 		}
 
 		.intro {
-			padding-top: 50px;
+			padding-top: 30px;
 			text-align: center;
 		}
 
-     .left-section{
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-    }
+		.left-section{
+			position: relative;
+			width: 100%;
+			min-height: 100vh;
+		}
 
 
 		.intro .intro-text h1 {
@@ -1527,7 +1527,7 @@ label {
 	 }
 
 		.intro {
-			padding-top: 50px;
+			padding-top: 30px;
 		}
 
 		.intro .intro-text h1 {

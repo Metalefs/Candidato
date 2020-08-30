@@ -2,7 +2,7 @@
     ...
  </clr-modal>
 <div class="wrapper" id="topo">
-    <div (click)="ToggleNav()" class="nav-trigger" [ngClass]="NavState.open? 'is-active': ''" role="button"
+    <div (click)="ToggleNav()" class="nav-trigger is-hidden-touch" [ngClass]="NavState.open? 'is-active': ''" role="button"
         title="Menu">
 
         <div class="hamburger">
@@ -20,6 +20,8 @@
 
             <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
             <!-- <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas> -->
+            
+            
             <section @slideInOut #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()"
                 class="left-section wow fadeIn" data-wow-delay="0.2s">
                 <ngx-typed-js data-aos="flip-up" [startDelay]="1000" (click)="resetTypingAanimation()" [backSpeed]="1"
@@ -35,19 +37,18 @@
                         </div>
                         <div class="column " data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                             data-aos="zoom-in-right">
-                            <!-- <img width="50" src="assets/imagens/icones/Conecta_Candidato.jpg"
-                                class="conecta-candidato-logo rounded-full"> -->
+                            <img width="50" src="assets/imagens/icones/Conecta_Candidato.jpg"
+                                class="conecta-candidato-logo rounded-full is-hidden-touch">
                         </div>
                         <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
                             <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                                 data-aos="zoom-in-right">
                                     <img width="50" src="assets/imagens/icones/partido.png" class="partido-logo">
-                                </div>
+                            </div>
                         </a>
                     </figure>
                 </div>
             </section>
-
 
 
             <section data-aos="slide-up" class="right-section">
@@ -69,6 +70,7 @@
 
         </section>
     </div>
+    <secondary-nav class="is-hidden-desktop"></secondary-nav>
     <app-scroll-top></app-scroll-top>
 </div>
 
