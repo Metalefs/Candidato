@@ -6,6 +6,12 @@
     #inicio{
         /* color: white; */
     }
+  :host ::ng-deep .mat-tab-labels {
+    margin-top:-65;
+    }
+    .mat-tab-group {
+      margin-top: -75px;
+  }
 }
 .container {
     flex-grow: 1;
@@ -24,7 +30,6 @@
   }
   .mat-tab-group {
     min-height: 200px;
-    margin-top: -75px;
 }
   :host ::ng-deep .mat-ripple-element {
     z-index:-1 !important;
@@ -34,7 +39,6 @@
   :host ::ng-deep .mat-tab-labels {
     display: flex;
     justify-content: center;
-    margin-top:-65;
     }
   :host ::ng-deep .mat-tab-label,.mat-ripple .mat-tab-label{
     max-width: 69px;

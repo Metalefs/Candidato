@@ -40,7 +40,7 @@
     right: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,.25);
+    background: rgba(255,255,255,.85);
     border-left:5px solid;
     border-left-color: var(--primary-default);
     border-radius: 30px;
@@ -52,6 +52,10 @@
     -ms-transition: all .3s ease-in-out 0s;
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
+}
+.portfolio-item--desc-in{
+
+    font-weight: bolder !important;
 }
 .portfolio-item--content:hover .portfolio-item--desc {
     opacity: 1;
