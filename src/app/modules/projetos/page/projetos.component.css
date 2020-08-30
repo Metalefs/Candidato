@@ -40,8 +40,9 @@
     right: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,.5);
-    border-left:5px solid;
+    font-family: Poppins;
+    background:white;
+    border-left:10px solid;
     border-left-color: var(--primary-default);
     border-radius: 30px;
     text-align: center;
@@ -70,8 +71,8 @@
 .portfolio-item--desc-in h3 {
     font-size: 18px;
 }
-.text-white {
-    color: #fff!important;
+.text-black {
+    color: #0000!important;
 }
 .mb-2, .my-2 {
     margin-bottom: .5rem!important;

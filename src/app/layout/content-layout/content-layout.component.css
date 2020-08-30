@@ -34,7 +34,7 @@
     box-shadow: 13px 10px 5px #00000047;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-position: left !important;
+    background-position: center !important;
     border-top-right-radius: 48px;
     margin:0;
     padding: 0rem;
@@ -129,6 +129,9 @@
     animation-name: fade-in;
     top: 0;
     z-index: 2;
+}
+.z-top{
+    z-index: 8;
 }
 @media only screen and (max-width : 801px) {
     #nav-menu{

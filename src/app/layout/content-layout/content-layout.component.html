@@ -19,7 +19,7 @@
         <section class="split-home">
 
             <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
-            <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas>
+            <!-- <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas> -->
             <section @slideInOut #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()"
                 class="left-section wow fadeIn" data-wow-delay="0.2s">
                 <ngx-typed-js data-aos="flip-up" [startDelay]="1000" (click)="resetTypingAanimation()" [backSpeed]="1"
@@ -38,10 +38,12 @@
                             <!-- <img width="50" src="assets/imagens/icones/Conecta_Candidato.jpg"
                                 class="conecta-candidato-logo rounded-full"> -->
                         </div>
-                        <div class="column " data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
-                            data-aos="zoom-in-right">
-                            <img width="50" src="assets/imagens/icones/partido.png" class="partido-logo">
-                        </div>
+                        <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
+                            <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
+                                data-aos="zoom-in-right">
+                                    <img width="50" src="assets/imagens/icones/partido.png" class="partido-logo">
+                                </div>
+                        </a>
                     </figure>
                 </div>
             </section>
