@@ -42,6 +42,7 @@
     animation-name: fade-in;
     top: 0;
     z-index: 2;
+    animation: to-left 1s ease-in forwards;
 }
 .right-section{
     position: relative;

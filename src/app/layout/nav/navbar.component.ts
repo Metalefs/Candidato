@@ -38,8 +38,11 @@ export class NavbarComponent implements OnInit {
     this.ActiveNav$.next(section);
   }
 
-  ToggleNav(){
-    this.NavState.open = this.NavState.open ? false : true;
+  ToggleNav(delay:number){
+    setTimeout(()=>{
+      this.NavState.open = this.NavState.open ? false : true;
+
+    },delay);
   }
 
   ngOnInit(): void {

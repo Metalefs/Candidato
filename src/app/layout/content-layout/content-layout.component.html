@@ -20,7 +20,7 @@
         
         <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
         <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas>
-        <section  #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" data-wow-delay="0.2s">
+        <section @slideInOut #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" data-wow-delay="0.2s">
             <ngx-typed-js data-aos="flip-up" [startDelay]="1000" (click)="resetTypingAanimation()"
                 [backSpeed]="1" [typeSpeed]="70" 
                 [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation">

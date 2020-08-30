@@ -677,7 +677,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Roboto;
 	font-size: 14px;
 	font-weight: 600;
-	color: #A1A1A1;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	line-height: 1.2;
@@ -697,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 400;
-	color: #A1A1A1;
+	/* color: #A1A1A1; */
 	letter-spacing: 0px;
 	line-height: 1.5;
 	margin: 0 0 20px 0;

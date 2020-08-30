@@ -72,28 +72,31 @@ export class ContentLayoutComponent implements OnInit {
         // earth color scheme
         var earth = [
             'rgba(0, 38, 28, x)',
-            'rgba(4, 76, 41, x)',
-            'rgba(22, 127, 57, x)',
-            'rgba(69, 191, 85, x)',
-            'rgba(150, 237, 137, x)',
+            // 'rgba(4, 76, 41, x)',
+            // 'rgba(22, 127, 57, x)',
+            // 'rgba(69, 191, 85, x)',
+            // 'rgba(150, 237, 137, x)',
+            'rgba(255,255,255, x)'
         ];
 
         // fire color scheme
         var fire = [
             'rgba(242, 193, 102, x)',
-            'rgba(242, 134, 39, x)',
-            'rgba(217, 63, 7, x)',
-            'rgba(140, 29, 4, x)',
-            'rgba(65, 15, 4, x)',
+            // 'rgba(242, 134, 39, x)',
+            // 'rgba(217, 63, 7, x)',
+            // 'rgba(140, 29, 4, x)',
+            // 'rgba(65, 15, 4, x)',
+            'rgba(255,255,255, x)'
         ];
 
         // water color scheme
         var water = [
             'rgba(0, 48, 90, x)',
-            'rgba(0, 75, 141, x)',
-            'rgba(0, 116, 217, x)',
-            'rgba(65, 147, 217, x)',
-            'rgba(122, 186, 242, x)',
+            // 'rgba(0, 75, 141, x)',
+            // 'rgba(0, 116, 217, x)',
+            // 'rgba(65, 147, 217, x)',
+            // 'rgba(122, 186, 242, x)',
+            'rgba(255,255,255, x)'
         ];
 
         // collection of earth, fire and water

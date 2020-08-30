@@ -30,7 +30,10 @@
     max-width: 0;
     display: none;
   }
-
+  :host ::ng-deep .mat-tab-labels {
+    display: flex;
+    justify-content: center;
+    }
   :host ::ng-deep .mat-tab-label,.mat-ripple .mat-tab-label{
     max-width: 69px;
     padding:2rem !important;
