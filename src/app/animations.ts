@@ -56,14 +56,14 @@ function slideTo(direction) {
         [direction]: 0,
         width: '100%'
       })
-    ], optional),
+    ], { optional: true }),
     query(':enter', [
       style({ [direction]: '-100%'})
     ]),
     group([
       query(':leave', [
         animate('100ms ease-in', style({ [direction]: '100%'}))
-      ], optional),
+      ], { optional: true }),
       query(':enter', [
         animate('100ms ease-out', style({ [direction]: '0%'}))
       ])

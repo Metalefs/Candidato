@@ -8,7 +8,9 @@
   z-index: 1;
   background: var(--background-default);
 }
-
+.column{
+  padding:0;
+}
 li{
     width: 71px;
 }

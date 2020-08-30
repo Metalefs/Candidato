@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade, slider, slide } from 'src/app/animations';
-
+import AOS from 'aos';
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
@@ -49,7 +49,7 @@ export class ContentLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-       
+    // AOS.init();
   }
   resetTypingAanimation(){
     

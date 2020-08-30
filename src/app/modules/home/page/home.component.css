@@ -1,0 +1,9 @@
+:host ::ng-deep .right-section{
+    z-index: 0;
+}
+.right-section{
+    z-index: 0;
+}
+:host ::ng-deep .main, .split-home{
+    background:transparent;
+}

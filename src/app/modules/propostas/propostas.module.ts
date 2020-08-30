@@ -7,7 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ProjetosComponent } from './page/projetos.component';
 import { ProjetoComponent } from './page/projeto/pages/projeto.component';
-import { ProjetosRoutes } from './projetos.routing';
+import { PropostasRoutes } from './propostas.routing';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,9 @@ import { ProjetosRoutes } from './projetos.routing';
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
     NgxScrollspyModule.forRoot(),
-    ProjetosRoutes
+    PropostasRoutes
   ],
   exports: [ProjetosComponent],
   providers: []
 })
-export class ProjetosModule {}
+export class PropostasModule {}

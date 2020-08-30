@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 
 import { NavbariconComponent } from './component/navbaricon/navbaricon.component';
-import { SecondaryNavComponent } from './component/secondary-nav.component';
+import { SecondaryNavComponent } from './component/secondary-nav.component';;
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    NavbariconComponent,
-    SecondaryNavComponent
+    SecondaryNavComponent,
+    NavbariconComponent
   ],
   imports: [],
-  exports: [],
+  exports: [CommonModule,SecondaryNavComponent,NavbariconComponent],
   providers: []
 })
-export class FactoryStepsModule {}
+export class SecondaryNavModule {}
