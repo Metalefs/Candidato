@@ -4,10 +4,9 @@ a{
     position: relative;
 }
 .nav-icon{
+    opacity: 1;
     font-size: large;
     position: relative;
-    display: inline-block;
-    opacity: 1;
     display: block;
     text-align: center;
 }

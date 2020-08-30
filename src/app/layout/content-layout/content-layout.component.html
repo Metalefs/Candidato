@@ -1,6 +1,3 @@
-<clr-modal [(clrModalOpen)]="opened" [clrModalSize]="'xl'">
-    ...
- </clr-modal>
 <div class="wrapper" id="topo">
     <div (click)="ToggleNav()" class="nav-trigger is-hidden-touch" [ngClass]="NavState.open? 'is-active': ''" role="button"
         title="Menu">
@@ -11,7 +8,7 @@
 
     </div>
 
-    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''">
+    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
         <navbar [NavState]="NavState"></navbar>
     </div>
 

@@ -9,6 +9,9 @@ import { IconeWhatsappComponent } from './component/icone-whatsapp/icone-whatsap
 import { CountUpComponent } from './component/count-up/count-up.component';
 import { AuthModule } from './component/auth/auth.module';
 import { DynamicFormModule } from './component/dynamic-form/dynamic-form.module';
+import { ContatoComponent } from './component/contato/contato.component';
+import { RedesSociaisComponent } from './component/redes-sociais/redes-sociais.component';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountUpModule } from 'ngx-countup';
 import { MaterialModule } from './material.module';
@@ -28,7 +31,9 @@ import { MaterialModule } from './material.module';
     FeedCardComponent,
     FeedCardItemComponent,
     IconeWhatsappComponent,
-    CountUpComponent
+    CountUpComponent,
+    ContatoComponent,
+    RedesSociaisComponent
   ],
   exports: [
     CommonModule,
@@ -43,6 +48,8 @@ import { MaterialModule } from './material.module';
     FeedCardComponent,
     FeedCardItemComponent, 
     IconeWhatsappComponent,
+    ContatoComponent,
+    RedesSociaisComponent,
     CountUpComponent,
     CountUpModule,
   ]

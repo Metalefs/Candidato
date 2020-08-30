@@ -143,16 +143,6 @@
     .split-home{
         border-top: 0;
     }
-    
-    .main {
-        /* border-radius: 55px; */
-        padding-left:initial;
-        border-bottom-right-radius:0 ;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 6px;
-        background: var(--background-default);
-    }
-
     #logo-canvas{
         position: absolute;
         z-index: 5;
@@ -170,13 +160,8 @@
         padding: 0;
         z-index: 2;
    }
-   
-
-    .conecta-candidato-logo{
-    }
-
    .typing-animation{
-        top: 240px;
+        top: 200px;
         bottom:initial;
    }
    .typing{
@@ -185,8 +170,12 @@
         font-size: 1.5rem !important;
         border-radius: 1.5rem;
    }
+
+   .conecta-candidato-logo{
+   }
+   
    .bar{
-        top: 270px;
+        top: 230px;
         margin: 0 1rem;
         position: absolute;
         display: flex;
@@ -194,6 +183,15 @@
         z-index: 3;
         justify-content: center;
    }
+   
+    .main {
+        padding-left:initial;
+        /* border-radius: 55px; */
+        border-bottom-right-radius:0 ;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 6px;
+        background: var(--background-default);
+    }
     .left-section{
         margin: 0;
         width: 100%;

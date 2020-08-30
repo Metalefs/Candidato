@@ -13,9 +13,9 @@ export const routes: Routes = [
     component: ProjetoComponent
   },
   {
-    path: 'projetos',
+    path: 'propostas',
     component: ProjetosComponent
   },
 ];
 
-export const ProjetosRoutes = RouterModule.forChild(routes);
+export const PropostasRoutes = RouterModule.forChild(routes);

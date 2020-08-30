@@ -6,10 +6,10 @@ import { NoAuthGuard } from './core/guard/no-auth.guard';
 
 import { ContentLayoutComponent } from 'src/app/layout/content-layout/content-layout.component';
 
-import { LandingPageModule } from 'src/app/modules/landing/landing.module';
-import { ProjetosModule } from 'src/app/modules/projetos/projetos.module';
-import { FeedModule } from 'src/app/modules/landing/page/feed/feed.module';
-import { BiografiaModule } from 'src/app/modules/landing/page/biografia/biografia.module';
+import { HomeModule } from 'src/app/modules/home/home.module';
+import { PropostasModule } from 'src/app/modules/propostas/propostas.module';
+import { FeedModule } from 'src/app/modules/feed/feed.module';
+import { BiografiaModule } from 'src/app/modules/biografia/biografia.module';
 
 import { GerenciamentoModule } from 'src/app/modules/gerenciamento/gerenciamento.module';
 
@@ -26,25 +26,25 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('src/app/modules/landing/landing.module').then(m => m.LandingPageModule)
+          import('src/app/modules/home/home.module').then(m => m.HomeModule)
         , data: { animation: 'isLeft', reuse: true },
       },
       {
         path: '',
         loadChildren: () =>
-          import('src/app/modules/landing/page/biografia/biografia.module').then(m => m.BiografiaModule)
+          import('src/app/modules/biografia/biografia.module').then(m => m.BiografiaModule)
           , data: { animation: 'isLeft', reuse: true }
       },
       {
         path: '',
         loadChildren: () =>
-          import('src/app/modules/projetos/projetos.module').then(m => m.ProjetosModule)
+          import('src/app/modules/propostas/propostas.module').then(m => m.PropostasModule)
           , data: { animation: 'isLeft', reuse: true }
       },
       {
         path: '',
         loadChildren: () =>
-          import('src/app/modules/landing/page/feed/feed.module').then(m => m.FeedModule)
+          import('src/app/modules/feed/feed.module').then(m => m.FeedModule)
           , data: { animation: 'isLeft', reuse: true }
       },
       { 

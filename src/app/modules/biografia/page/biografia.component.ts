@@ -5,11 +5,11 @@ import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { BehaviorSubject, Subscription, Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: 'app-biograf',
+  templateUrl: './biografia.component.html',
+  styleUrls: ['./biografia.component.css']
 })
-export class LandingPageComponent implements OnInit {
+export class BiografiaComponent implements OnInit {
   public ActiveSection$: BehaviorSubject<{ id?: string; elementId?: string; nativeElement?: HTMLElement }> = new BehaviorSubject({});
   private _subscription: Subscription;
     

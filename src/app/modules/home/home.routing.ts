@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-import { FeedComponent } from './page/feed.component';
+import { HomeComponent } from './page/home.component';
 
 export const routes: Routes = [
   {
@@ -8,9 +8,9 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'feed',
-    component: FeedComponent
+    path: 'inicio',
+    component: HomeComponent,
   },
 ];
 
-export const FeedRoutes = RouterModule.forChild(routes);
+export const HomeRoutes = RouterModule.forChild(routes);
