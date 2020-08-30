@@ -191,6 +191,12 @@
         border-top-right-radius: 48px;
         padding: 0rem;
     }
+    
+.left-section-candidato{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
     .app-scrolldown{
         display: flex;
         justify-content: center;

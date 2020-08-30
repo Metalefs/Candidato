@@ -29,7 +29,7 @@ export class ContentLayoutComponent implements OnInit {
     this.Candidato = CandidatoService.ObterTeste();
     this.candidato_bg=`url(${this.Candidato.FotoCapa})`;
   }
-    
+  opened =true;
   candidato_bg:string;
   Candidato:Candidato;
   title = "Candidato";
@@ -55,7 +55,7 @@ export class ContentLayoutComponent implements OnInit {
     
   }
   ngAfterViewInit() {
-    this.canvasDot();
+    // this.canvasDot();
     this.startCanvasAnimation();
   }
 
