@@ -22,7 +22,7 @@ export class ProjetoService extends ServicoBase {
     ProjetosTeste : Projeto[] = [
         new Projeto(
             1,
-            "Health Care and Education Reconciliation Act",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "",
             "",
             1,
@@ -33,7 +33,7 @@ export class ProjetoService extends ServicoBase {
         ),
         new Projeto(
             2,
-            "Patient Protection and Affordable Care Act",
+            "Etiam eget ligula eu lectus lobortis condimentum",
             "",
             "",
             1,
@@ -44,7 +44,7 @@ export class ProjetoService extends ServicoBase {
         ),
         new Projeto(
             3,
-            "Don't Ask, Don't Tell Repeal Act of 2010",
+            "Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus",
             "",
             "",
             1,
@@ -55,7 +55,7 @@ export class ProjetoService extends ServicoBase {
         ),
         new Projeto(
             4,
-            "Obama care",
+            "Nam mattis, felis ut adipiscing",
             "",
             "",
             1,

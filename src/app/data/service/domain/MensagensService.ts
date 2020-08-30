@@ -30,8 +30,9 @@ export class MensagensService extends ServicoBase {
         return new Mensagens(
             1,
             'Yes, we can',
-            'Presidente dos Estados Unidos por dois mandatos (2009-2017)',
-            'Barack Hussein Obama II é um advogado e político norte-americano que serviu como o 44.º presidente dos Estados Unidos de 2009 a 2017, sendo o primeiro afro-americano a ocupar o cargo. ',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            // 'Barack Hussein Obama II é um advogado e político norte-americano que serviu como o 44.º presidente dos Estados Unidos de 2009 a 2017, sendo o primeiro afro-americano a ocupar o cargo. ',
+            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu. ',
             'Sobre',
             'Quer me fazer uma pergunta?',
             'Obama foi eleito para o segundo mandato em 6 de novembro de 2012, derrotando o concorrente republicano Mitt Romney com 65.9 milhões de votos populares e 332 votos eleitorais, citando seus objetivos para o segundo mandato em seu discurso de vitória.',
