@@ -21,13 +21,11 @@
         <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
         <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas>
         <section  #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()" class="left-section wow fadeIn" data-wow-delay="0.2s">
-            <!-- <ngx-typed-js data-aos="flip-up" style="top: 40%;
-                margin: 0 20%;
-                position: absolute;
-                z-index: 3;
-                width: 100%;" [startDelay]="1000" (click)="resetTypingAanimation()" [backSpeed]="1" [typeSpeed]="70" [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation is-hidden-desktop">
+            <ngx-typed-js data-aos="flip-up" [startDelay]="1000" (click)="resetTypingAanimation()"
+                [backSpeed]="1" [typeSpeed]="70" 
+                [strings]="['Conecta Candidato', Candidato.Nome]" class="typing-animation">
                     <span class="typing"></span>
-                </ngx-typed-js> -->
+                </ngx-typed-js>
                 <div class="left-section-candidato" [style.background]="candidato_bg" ></div>
             </section>
             

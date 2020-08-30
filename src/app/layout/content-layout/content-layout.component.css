@@ -54,12 +54,24 @@
     overflow: visible;
     animation: to-left 2s ease-in-out forwards;
 }
-.typing{
-    position: relative;
-    max-width: 92%;
+.typing-animation{
+    bottom: 100px;
+    z-index: 3;
+    margin-left: 1.5rem;
+    font-size: xx-large;
+    background:rgba(0,0,0,.5);
+    position: fixed;
+    font-family: Roboto;
+    width: 92%;
+    /* text-decoration-color: aquamarine; */
+    display: flex;
+    justify-content: start;
+}
+:host ::ng-deep .typed-cursor.typed-cursor--blink {
+    display: none !important;
 }
 .bar{
-    bottom: 50px;
+    bottom: 30px;
     z-index: 2;
     margin-left: 1.5rem;
     position: fixed;
@@ -138,9 +150,12 @@
         padding: 0;
         z-index: 2;
    }
+   .typing-animation{
+        top: 280px;
+        bottom:initial;
+   }
    .typing{
-        color: var(--primary-default);
-        background: var(--background-default);
+        color: white;
         font-weight: bold;
         font-size: 1.5rem !important;
         border-radius: 1.5rem;
@@ -152,8 +167,8 @@
    }
    
    .bar{
-        top: 346px;
-        margin: 0 2rem;
+        top: 335px;
+        margin: 0 1rem;
         position: absolute;
         display: flex;
         width: 90%;
@@ -198,14 +213,6 @@
 
 .left{
     float: left;
-}
-.typing{
-    color: white;
-    background: #111111;
-    font-weight: bold;
-    font-size: 2.25rem;
-    margin: 19px 9px;
-    left: 0;
 }
 .app-scrolldown{
     display: flex;

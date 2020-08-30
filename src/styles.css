@@ -14,7 +14,7 @@
   --background-tertiary: #5c7d99;
   --background-light: #ffffff;
 
-  --primary-default: #7ab5ff;
+  --primary-default: #037592;
   --primary-dark: #24b286;
   --primary-light: #b2ffe7;
 
@@ -32,15 +32,8 @@
 }
 .typing {
   color: white;
-  background: #000000;
   font-weight: bold;
-  font-size: 1rem;
-}
-.typing2 {
-  color: white;
-  background: #000000;
-  font-weight: bold;
-  font-size: 1rem;
+  font-size: xx-large;
 }
 .section {
   padding: 3rem 1.5rem;
@@ -54,10 +47,12 @@
     justify-content: center;
     height: 100%;
     width: 100vw;
+    background: white;
     margin: auto;
-  }
+    transition: .5s all;
+}
 
-  .app-loading .spinner {
+.app-loading .spinner {
     height: 200px;
     width: 200px;
     animation: rotate 2s linear infinite;
@@ -68,15 +63,26 @@
     left: 0;
     right: 0;
     margin: auto;
-  }
-
-  .app-loading .spinner .path {
+}
+  
+.app-loading .spinner .path {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
     animation: dash 1.5s ease-in-out infinite;
     stroke-linecap: round;
     stroke: #ddd;
-  }
+}
+.app-loading div.logo {
+      background: url(src/assets/imagens/icones/ConectaCandidato_fundoTransparente.png) center center no-repeat;
+      background-size: contain;
+      width:150px;
+      height:150px;
+      margin: auto;
+      position: static;
+      /* margin: 12px; */
+      border-radius: 50%;
+}
+    
 
   @keyframes rotate {
     100% {
@@ -98,16 +104,6 @@
       stroke-dashoffset: -124px;
     }
   }
-.app-loading div.logo {
-    background: url(src/assets/imagens/icones/ConectaCandidato_fundoTransparente.png) center center no-repeat;
-    width: 89px;
-    height: 100px;
-    margin: auto;
-    position: static;
-    /* margin: 12px; */
-    border-radius: 50%;
-}
-  
 body {
   background: var(--background-default);
   font-family: Roboto;
