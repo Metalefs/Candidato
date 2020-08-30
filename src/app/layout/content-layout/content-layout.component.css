@@ -91,7 +91,8 @@
 .partido-text{
     position: RELATIVE;
     color: var(--background-default);
-    background: var(--primary-default);
+    color: var(--cor-texto-partido);
+    /* background: var(--primary-default); */
     padding: 0.5REM;
     border-radius: 50%;
     cursor: default;
@@ -191,15 +192,16 @@
         width: 100%;
         height: 100%;
         border:0;
-        border-top-right-radius: 48px;
+        /* border-top-right-radius: 48px; */
         padding: 0rem;
     }
     
-.left-section-candidato{
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-}
+    .left-section-candidato{
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        border-top-right-radius: 0;
+    }
     .app-scrolldown{
         display: flex;
         justify-content: center;

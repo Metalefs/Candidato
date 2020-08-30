@@ -22,6 +22,8 @@
   --error-dark: #800600;
   --error-light: #ffcecc;
 
+
+  --cor-texto-partido:yellow;
   /* Shadows */
   --background-tertiary-shadow: 0 1px 3px 0 rgba(92, 125, 153, 0.5);
 }
