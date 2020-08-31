@@ -1,21 +1,29 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ProjetosComponent } from './page/projetos.component';
 import { ProjetoComponent } from './page/projeto/pages/projeto.component';
+import { Layouts } from 'src/app/app.component';
+import { NgModule } from '@angular/core';
 
-export const routes: Routes = [
+const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'propostas',
+  //   pathMatch: 'full'
+  // },
   {
-    path: '',
-    redirectTo: 'projetos',
-    pathMatch: 'full'
+    path: 'propostas',
+    component: ProjetosComponent,
+    data: { layout: Layouts.Main }
   },
   {
     path: 'projeto/:id',
-    component: ProjetoComponent
-  },
-  {
-    path: 'propostas',
-    component: ProjetosComponent
+    component: ProjetoComponent,
+    data: { layout: Layouts.Main }
   },
 ];
 
-export const PropostasRoutes = RouterModule.forChild(routes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class PropostasRoutingModule { }

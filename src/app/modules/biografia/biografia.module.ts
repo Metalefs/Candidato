@@ -5,7 +5,7 @@ import { NgxPageScrollModule  } from 'ngx-page-scroll';
 
 import { InicioComponent } from './page/inicio/inicio.component';
 import { BiografiaComponent } from './page/biografia.component';
-import { BiografiaRoutes } from './biografia.routing';
+import { BiografiaRoutingModule } from './biografia.routing';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SobreComponent } from './page/sobre/sobre.component';
@@ -20,10 +20,7 @@ import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experi
   ],
   imports: [
     SharedModule,
-    NgxPageScrollCoreModule,
-    NgxPageScrollModule,
-    NgxScrollspyModule.forRoot(),
-    BiografiaRoutes
+    BiografiaRoutingModule
   ],
   exports: [ 
   ],

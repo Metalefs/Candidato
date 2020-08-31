@@ -1,0 +1,142 @@
+
+.left-section{
+    opacity: 0;
+    position: fixed;
+    width: 40%;
+    /* margin: 14px 15px; */
+    /* height: 97%; */
+    border-top-right-radius: 48px;
+    /* padding: 2rem; */
+    background-origin: padding-box;
+    background-position: right !important;
+    animation: fade-in 5s ease-in-out forwards;
+}
+
+.left-section-candidato{
+    width: 100%;
+    height: 100%;
+    border:0;
+    box-shadow: 13px 10px 5px #00000047;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border-top-right-radius: 48px;
+    margin:0;
+    padding: 0rem;
+    position: fixed;
+    animation-name: fade-in;
+    top: 0;
+    z-index: 2;
+    animation: to-left 1s ease-in forwards;
+}
+
+.typing-animation{
+    bottom: 100px;
+    z-index: 3;
+    margin-left: 1.5rem;
+    font-size: xx-large;
+    /* background:rgba(0,0,0,.5); */
+    position: fixed;
+    font-family: Roboto;
+    width: 92%;
+    /* text-decoration-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+}
+:host ::ng-deep .typed-cursor.typed-cursor--blink {
+    display: none !important;
+}
+.bar{
+    bottom: 30px;
+    z-index: 2;
+    margin-left: 1.5rem;
+    position: fixed;
+    height: 70px;
+    width: 37%;
+    display: flex;
+    justify-content: flex-start;
+}
+.partido-logo{
+    z-index: 3;
+    position: relative;
+    bottom:20px;
+    width: 100%;
+    padding-right: 0px;
+    right: 0;
+}
+.partido-text{
+    position: RELATIVE;
+    color: var(--background-default);
+    color: var(--cor-texto-partido);
+    /* background: var(--primary-default); */
+    padding: 0.5REM;
+    border-radius: 50%;
+    cursor: default;
+    width: max-content;
+}
+.partido-text:hover{
+   left:5px;
+   bottom:2px;
+}
+.floating2:hover{
+    left:5px;
+    bottom:2px;
+}
+
+
+@media only screen and (max-width : 801px) {
+    
+    #logo-canvas{
+        position: absolute;
+        z-index: 5;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding:0;
+    }
+   .typing-animation{
+        top: 230px;
+        bottom:initial;
+   }
+   .typing{
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem !important;
+        border-radius: 1.5rem;
+   }
+
+   .conecta-candidato-logo{
+   }
+   
+   .bar{
+        top: 270px;
+        margin: 0 1rem;
+        position: absolute;
+        display: flex;
+        width: 90%;
+        z-index: 3;
+        justify-content: center;
+   }
+   
+    .left-section{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border:0;
+        /* border-top-right-radius: 48px; */
+        padding: 0rem;
+    }
+    
+    .left-section-candidato{
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        border-top-right-radius: 0;
+    }
+    .floating {  
+        animation: none;
+    }
+    .floating2{
+        animation: none;
+    }
+}

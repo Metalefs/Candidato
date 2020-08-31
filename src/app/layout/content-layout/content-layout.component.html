@@ -15,42 +15,9 @@
     <div [ngClass]="NavState.open? 'main is-active': ''" (mouseover)="CloseNav()">
         <section class="split-home">
 
-            <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
-            <!-- <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas> -->
-            
-            
-            <section @slideInOut #canvasContainer data-aos="zoom-in-left" (click)="ToggleNav()"
-                class="left-section wow fadeIn" data-wow-delay="0.2s">
-                <ngx-typed-js data-aos="flip-up" [startDelay]="1000" (click)="resetTypingAanimation()" [backSpeed]="1"
-                    [typeSpeed]="30" [strings]="[Candidato.Nome]" class="typing-animation">
-                    <span class="typing"></span>
-                </ngx-typed-js>
-                <div class="left-section-candidato" [style.background]="candidato_bg"></div>
-                <div class="bar">
-                    <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
-                        <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
-                            data-aos="zoom-in-left">
-                            <h1 class="title is-3 partido-text">{{Candidato.NumeroCampanha}}</h1>
-                        </div>
-                        <div class="column " data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
-                            data-aos="zoom-in-right">
-                            <img width="50" src="assets/imagens/icones/Conecta_Candidato.jpg"
-                                class="conecta-candidato-logo rounded-full is-hidden-touch">
-                        </div>
-                        <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
-                            <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
-                                data-aos="zoom-in-right">
-                                    <img width="50" src="assets/imagens/icones/partido.png" class="partido-logo">
-                            </div>
-                        </a>
-                    </figure>
-                </div>
-            </section>
-
-
             <section class="right-section" data-aos="slide-up">
 
-                <div class="top-nav hidden-xs hidden-sm wow fadeInDown" data-wow-delay="0.4s">
+                <div class="top-nav " data-wow-delay="0.4s">
                     <ul>
                         <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active"
                                 routerLinkActive="Active">{{pagina.Nome}}</a></li>

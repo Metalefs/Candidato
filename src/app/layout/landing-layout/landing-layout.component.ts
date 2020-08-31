@@ -10,7 +10,7 @@ import { Candidato } from 'src/app/data/schema/domain/Candidato';
 import { NavState } from '../content-layout/content-layout.component';
 
 @Component({
-  selector: 'app-landing-layout',
+  selector: 'landing-layout',
   templateUrl: './landing-layout.component.html',
   styleUrls: ['./landing-layout.component.css']
 })
@@ -41,10 +41,10 @@ export class LandingLayoutComponent implements OnInit {
   }
   CloseNav(){
     if(this.NavState.open)
-    this.NavState.open = false;
+      this.NavState.open = false;
   }
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    //return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   ngOnInit(): void {
        this.canvasDot();

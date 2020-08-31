@@ -15,36 +15,6 @@
     font-family: Roboto,sans-serif;
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
-.left-section{
-    opacity: 0;
-    position: fixed;
-    width: 40%;
-    /* margin: 14px 15px; */
-    /* height: 97%; */
-    border-top-right-radius: 48px;
-    /* padding: 2rem; */
-    background-origin: padding-box;
-    background-position: right !important;
-    animation: fade-in 5s ease-in-out forwards;
-}
-
-.left-section-candidato{
-    width: 100%;
-    height: 100%;
-    border:0;
-    box-shadow: 13px 10px 5px #00000047;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    border-top-right-radius: 48px;
-    margin:0;
-    padding: 0rem;
-    position: fixed;
-    animation-name: fade-in;
-    top: 0;
-    z-index: 2;
-    animation: to-left 1s ease-in forwards;
-}
 .right-section{
     position: relative;
     right: 0;
@@ -56,59 +26,6 @@
     overflow: visible;
     animation: to-left 2s ease-in-out forwards;
 }
-.typing-animation{
-    bottom: 100px;
-    z-index: 3;
-    margin-left: 1.5rem;
-    font-size: xx-large;
-    /* background:rgba(0,0,0,.5); */
-    position: fixed;
-    font-family: Roboto;
-    width: 92%;
-    /* text-decoration-color: aquamarine; */
-    display: flex;
-    justify-content: flex-start;
-}
-:host ::ng-deep .typed-cursor.typed-cursor--blink {
-    display: none !important;
-}
-.bar{
-    bottom: 30px;
-    z-index: 2;
-    margin-left: 1.5rem;
-    position: fixed;
-    height: 70px;
-    width: 37%;
-    display: flex;
-    justify-content: flex-start;
-}
-.partido-logo{
-    z-index: 3;
-    position: relative;
-    bottom:20px;
-    width: 100%;
-    padding-right: 0px;
-    right: 0;
-}
-.partido-text{
-    position: RELATIVE;
-    color: var(--background-default);
-    color: var(--cor-texto-partido);
-    /* background: var(--primary-default); */
-    padding: 0.5REM;
-    border-radius: 50%;
-    cursor: default;
-    width: max-content;
-}
-.partido-text:hover{
-   left:5px;
-   bottom:2px;
-}
-.floating2:hover{
-    left:5px;
-    bottom:2px;
-}
-
 
 #logo-canvas{
     position: fixed;
@@ -155,7 +72,7 @@
     .right-section{
         margin-left: 0;
         width: 100%;
-        margin-top: 85%;
+        /* margin-top: 85%; */
         border-radius: 100px;
         padding: 0;
         z-index: 2;
@@ -224,8 +141,6 @@
 .main .is-active{
     transition:.51s all !important;
 }
-
-
 
 
 .left{

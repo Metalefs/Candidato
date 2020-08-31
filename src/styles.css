@@ -9,7 +9,7 @@
   --foreground-quaternary: #f4faff;
   --foreground-light: #41474d;
 
-  --background-default: #ffffff;
+  --background-default: #f4faff;
   --background-secondary: #a3b9cc;
   --background-tertiary: #5c7d99;
   --background-light: #ffffff;
@@ -32,7 +32,7 @@
 .left-section{
   opacity: 0;
   position: fixed;
-  width: 40%;
+  /* width: 40%; */
   /* margin: 14px 15px; */
   /* height: 97%; */
   border-top-right-radius: 48px;
@@ -80,12 +80,13 @@
   min-height: 100vh;
   font-family: Roboto;
 }
+
 @media only screen and (max-width : 801px) {
 
   .right-section{
       margin-left: 0;
       width: 100%;
-      margin-top: 85%;
+      /* margin-top: 85%; */
       border-radius: 100px;
       padding: 0;
       z-index: 2;

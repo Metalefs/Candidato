@@ -4,7 +4,7 @@ import { EditarInfoContatoComponent } from './page/editar/editar-infocontato/edi
 import { EditarSobreComponent } from './page/editar/editar-sobre/editar-sobre.component';
 import { EditarComponent } from './page/editar/editar.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { GerenciamentoPageRoutes } from './gerenciamento.routing';
+import { GerenciamentoRoutingModule } from './gerenciamento.routing';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { GerenciamentoPageRoutes } from './gerenciamento.routing';
   ],
   imports: [
     SharedModule, 
-    GerenciamentoPageRoutes
+    GerenciamentoRoutingModule
   ],
   exports: [],
   providers: []

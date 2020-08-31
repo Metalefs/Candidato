@@ -18,10 +18,10 @@ export class ServicoPaginas{
 
     GetAllPages(): OpcaoNavbarFA[] {
       return [
-          new OpcaoNavbarFA("Home","inicio",faHome),
-          new OpcaoNavbarFA("Biografia","biografia",faAddressCard),
-          new OpcaoNavbarFA("Propostas","propostas",faTasks),
-          new OpcaoNavbarFA("Feed","feed",faRss)
+          new OpcaoNavbarFA("Home","/inicio",faHome),
+          new OpcaoNavbarFA("Biografia","/biografia",faAddressCard),
+          new OpcaoNavbarFA("Propostas","/propostas",faTasks),
+          new OpcaoNavbarFA("Feed","/feed",faRss)
         ]
     }
 	

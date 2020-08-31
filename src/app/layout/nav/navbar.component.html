@@ -1,10 +1,10 @@
-
+<!--   -->
 <ul class="navigation">
   <li *ngFor="let pagina of paginas">
     <fa-icon [icon]="pagina.Icon"></fa-icon>
     <a (click)="ToggleNav(300)" 
       [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''"
-      pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300" 
+      pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300"
       [routerLink]="[pagina.Link]" href="#{{pagina.Link}}" routerLinkActive="Active">
       {{pagina.Titulo}}
     </a>

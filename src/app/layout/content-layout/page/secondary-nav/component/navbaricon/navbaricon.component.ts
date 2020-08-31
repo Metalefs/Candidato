@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EstadoNav } from "../../../../../../data/schema/EstadoNav";
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService'
@@ -18,7 +18,8 @@ export class NavbariconComponent implements OnInit {
   pulse = false;
   constructor(
     private NavStateService:NavStateService,
-    private Router:Router
+    private Router:Router,
+    private ActivatedRoute:ActivatedRoute
   ) {
     
   }
@@ -56,6 +57,10 @@ export class NavbariconComponent implements OnInit {
     this.NavStateService.getNavState(this.Opcao.Link).then(x=>{
       this.EstadoNav = x
     });
+    if(this.Router.url == this.Opcao.Link ){
+      this.ChangeToThis();
+    }
+    console.log(this.Router.url, this.Opcao.Link, this.Router.url == this.Opcao.Link)
   }
 
 }

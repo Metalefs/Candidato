@@ -1,4 +1,15 @@
+    <div (click)="ToggleNav()" class="nav-trigger is-hidden-touch" [ngClass]="NavState.open? 'is-active': ''" role="button"
+            title="Menu">
 
+        <div class="hamburger">
+            <div class="icon"></div>
+        </div>
+
+    </div>
+
+    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
+        <navbar [NavState]="NavState"></navbar>
+    </div>
     <section>
 
         <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
@@ -10,7 +21,7 @@
                 class="typing-animation">
                 <span class="typing"></span>
             </ngx-typed-js>
-            <!-- <div class="left-section-candidato" [style.background]="candidato_bg"></div> -->
+            <div class="left-section-candidato" [style.background]="candidato_bg"></div>
             <div class="bar">
                 <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
                     <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
@@ -41,8 +52,8 @@
                             routerLinkActive="Active">{{pagina.Nome}}</a></li>
                 </ul>
             </div>
-
-            <div >
+<!-- [@routeAnimations]="prepareRoute(outlet)" -->
+            <div class="">
                 <router-outlet #outlet="outlet"></router-outlet>
             </div>
 

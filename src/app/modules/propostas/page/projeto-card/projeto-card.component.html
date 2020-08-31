@@ -1,0 +1,21 @@
+
+    <div class="card portfolio-item--desc mb-5">
+        <a [routerLink]="['/projeto/'+projeto.Identificador]" class="portfolio-item--content">
+            <div class="card-content">
+                <div class="subtitle">
+                    <div div class="portfolio-item--desc-in">
+                        <h3 class="mb-2 has-text-dark">{{projeto.Nome}}</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <footer class="card-footer">
+            <div class="card-footer-item">
+                <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+                    {{projeto?.Likes}} <fa-icon [icon]="faLike"></fa-icon> Gostei
+                </div>
+            </div>
+        </footer>
+    </div>
+
+

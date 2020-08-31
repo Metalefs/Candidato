@@ -9,20 +9,12 @@ import { MaterialModule } from 'src/app/shared/material.module';
 import { RouteReuseStrategy } from '@angular/router';
 import { RouteReuseService } from 'src/app/core/service/RouteReuseService';
 
-import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment'
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor, ErrorInterceptor } from './core/interceptor/index';
-import { CountUpModule } from 'ngx-countup';
 import { ClarityModule } from '@clr/angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-import { LightboxModule } from 'ngx-lightbox';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { NgxPageScrollModule  } from 'ngx-page-scroll';
-import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
-import { NgxTypedJsModule } from 'ngx-typed-js';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +24,6 @@ import { FeedbackComponent } from 'src/app/layout/content-layout/page//feedback/
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
-import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -51,14 +42,6 @@ import { LayoutModule } from './layout/layout.module';
     MaterialModule,
     CoreModule,
     SharedModule,
-    CountUpModule,
-    LayoutModule,
-    LightboxModule,
-    NgxTypedJsModule,
-    NgxPageScrollCoreModule,
-    NgxPageScrollModule,
-    NgxScrollspyModule.forRoot(),
-    NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [

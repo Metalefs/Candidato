@@ -3,14 +3,17 @@
    
 }
 @media only screen and (max-width : 801px) {
-    #inicio{
-        /* color: white; */
-    }
+  #inicio{
+      /* color: white; */
+  }
   :host ::ng-deep .mat-tab-labels {
     margin-top:-65;
     }
     .mat-tab-group {
       margin-top: -95px;
+    }
+    :host ::ng-deep .mat-tab-header {
+      margin-top: -19%;
     }
     .mat-tab-group {
       min-height: initial;
@@ -24,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 .mat-ripple-element{
     z-index:-1 !important;
@@ -32,7 +36,11 @@
     z-index:50; 
   }
   .mat-tab-group {
+    margin-top: 85%;
     min-height: 80vh;
+    width: 100vw;
+    background: white;
+    padding: 1rem;
 }
   :host ::ng-deep .mat-ripple-element {
     z-index:-1 !important;

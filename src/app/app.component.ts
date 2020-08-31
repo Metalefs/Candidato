@@ -1,12 +1,17 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { Router, Data, RoutesRecognized, RouterOutlet } from '@angular/router';
 declare let gtag: Function;
+
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade, slider } from './animations';
 import AOS from 'aos';
-import { OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 import { Collections } from './data/schema/Collections';
+
+export enum Layouts {
+  FooterOnly,
+  Main
+}
+
 
 @Component({
   selector: 'app-root',
@@ -18,12 +23,9 @@ import { Collections } from './data/schema/Collections';
 })
 
 export class AppComponent implements OnInit, AfterViewInit {
-  title = "";
   currentUser: Collections.User;
-  
-  OpcoesNavBar = [
-    new OpcaoNavbar("Inicio", "", "Home")
-  ];
+  Layouts = Layouts
+  layout: Layouts;
 
   constructor(
     private router: Router,
@@ -47,7 +49,20 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe((data) => {
+      if (data instanceof RoutesRecognized) {
+        this.layout = data.state.root.firstChild.data.layout;
+      }
+    });
     AOS.init();
+    this.ApplyUnderlineGradient();
+  }
+
+  ngAfterViewInit(){
+
+  }
+
+  ApplyUnderlineGradient(){
     // VARIABLES
     const magicalUnderlines = Array.from(document.querySelectorAll('.underline--magical'));
 
@@ -96,10 +111,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     // RESULT
     applyGradient(gradientAPI, addBackgroundToUnderlines);
-  }
-
-  ngAfterViewInit(){
-
   }
 
 }

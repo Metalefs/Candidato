@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ClarityModule } from '@clr/angular';
 
+import { LightboxModule } from 'ngx-lightbox';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule  } from 'ngx-page-scroll';
 import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 import { FeedCardComponent } from './component/card/component/feed-card.component';
 import { FeedCardItemComponent } from './component/card/component/feed-card-item/feed-card-item.component';
@@ -17,7 +19,7 @@ import { AuthModule } from './component/auth/auth.module';
 import { DynamicFormModule } from './component/dynamic-form/dynamic-form.module';
 import { ContatoComponent } from './component/contato/contato.component';
 import { RedesSociaisComponent } from './component/redes-sociais/redes-sociais.component';
-
+import { ExibicaoCandidatoComponent } from './component/exibicao-candidato/exibicao-candidato.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountUpModule } from 'ngx-countup';
 import { MaterialModule } from './material.module';
@@ -32,10 +34,12 @@ import { MaterialModule } from './material.module';
     MaterialModule,
     FontAwesomeModule,
     ClarityModule,
+    LightboxModule,
     NgxTypedJsModule,
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
     NgxScrollspyModule.forRoot(),
+    NgxMaskModule.forRoot(),
   ],
   declarations: [
     FeedCardComponent,
@@ -43,7 +47,8 @@ import { MaterialModule } from './material.module';
     IconeWhatsappComponent,
     CountUpComponent,
     ContatoComponent,
-    RedesSociaisComponent
+    RedesSociaisComponent,
+    ExibicaoCandidatoComponent,
   ],
   exports: [
     CommonModule,
@@ -64,8 +69,10 @@ import { MaterialModule } from './material.module';
     IconeWhatsappComponent,
     ContatoComponent,
     RedesSociaisComponent,
+    ExibicaoCandidatoComponent,
     CountUpComponent,
     CountUpModule,
+    LightboxModule
   ]
 })
 export class SharedModule {

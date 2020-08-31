@@ -19,17 +19,7 @@
                <!-- Person item -->
               <div class="col-md-12 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
                 *ngFor="let projeto of Projetos">
-                <a [routerLink]="['/projeto/'+projeto.Identificador]" class="portfolio-item--content">
-                  <div class="portfolio-item--img">
-                    <img src="{{projeto.FotoSrc}}" class="img-fluid mx-auto" alt="work-img">
-                  </div>
-                  <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
-                    <div class="portfolio-item--desc-in">
-                      <h3 class="mb-2 has-text-dark">{{projeto.Nome}}</h3>
-                      <p class="has-text-dark">{{projeto.Categoria}}</p>
-                    </div>
-                  </div>
-                </a>
+                  <app-projeto-card [projeto]="projeto"></app-projeto-card>
               </div>
               <!-- Person item end -->
 

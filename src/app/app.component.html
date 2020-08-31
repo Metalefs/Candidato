@@ -1,1 +1,5 @@
-<router-outlet #outlet="outlet"></router-outlet>
+<ng-container [ngSwitch]="layout">
+    <!-- Alternativerly use the main layout as the default switch case -->
+    <content-layout *ngSwitchCase="Layouts.Main"></content-layout>
+    <landing-layout *ngSwitchCase="Layouts.FooterOnly"></landing-layout>
+</ng-container>

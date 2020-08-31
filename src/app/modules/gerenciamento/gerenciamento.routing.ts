@@ -1,12 +1,17 @@
 import { Routes, RouterModule } from '@angular/router';
 import { EditarComponent } from './page/editar/editar.component';
+import { Layouts } from 'src/app/app.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'gerenciamento',
     component: EditarComponent,
-    pathMatch: 'full'
+    data: { layout: Layouts.Main }
   }
 ];
-
-export const GerenciamentoPageRoutes = RouterModule.forChild(routes);
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class GerenciamentoRoutingModule {}
