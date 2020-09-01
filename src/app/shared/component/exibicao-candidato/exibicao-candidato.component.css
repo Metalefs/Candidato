@@ -2,13 +2,10 @@
 .left-section{
     opacity: 0;
     position: fixed;
-    width: 40%;
-    /* margin: 14px 15px; */
-    /* height: 97%; */
+    width: 50%;
     border-top-right-radius: 48px;
-    /* padding: 2rem; */
-    background-origin: padding-box;
-    background-position: right !important;
+    background-origin: initial;
+    background-position: 100%!important;
     animation: fade-in 5s ease-in-out forwards;
 }
 
@@ -160,4 +157,28 @@
     .floating2{
         animation: none;
     }
+}
+
+#logo-canvas{
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    pointer-events: none;
+    border-top-right-radius: 48px;
+}
+#mobile-logo-canvas{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    box-shadow: 13px 10px 5px #00000047;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: left !important;
+    border-top-right-radius: 48px;
+    margin: 0;
+    padding: 0rem;
+    position: fixed;
+    animation-name: fade-in;
+    top: 0;
+    z-index: 2;
 }

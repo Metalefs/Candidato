@@ -24,7 +24,7 @@
     flex-grow: 1;
     margin: 0 auto;
     position: relative;
-    width: 100%;
+    width: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,8 +38,8 @@
   }
   .mat-tab-group {
     min-height: 40vh;
-    width: 100vw;
-    background: white;
+    width: 100%;
+    background: #fff;
     padding: 1rem;
 }
   :host ::ng-deep .mat-ripple-element {
