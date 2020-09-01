@@ -1,29 +1,31 @@
-<!--   -->
-<ul class="navigation">
-  <li *ngFor="let pagina of paginas">
-    <fa-icon [icon]="pagina.Icon"></fa-icon>
-    <a (click)="ToggleNav(300)" 
-      [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''"
-      pageScroll [pageScrollOffset]="0" [pageScrollDuration]="300"
-      [routerLink]="[pagina.Link]" href="#{{pagina.Link}}" routerLinkActive="Active">
-      {{pagina.Titulo}}
-    </a>
-  </li>
-</ul>
-<div class="section-head">
-  <h2></h2>
-</div>
-<div class="nav-social">
-  <ul class="inline-list">
-    <li *ngFor="let rede of redesSociais">
-      <a href="{{rede.link}}" target="_blank" rel="noopener" title="{{rede.nome}}">
-        <figure @fadeIn class="mx-0 image is-32x32">
-          <img class="is-rounded" src="{{rede.src}}">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <!-- navbar items, navbar burger... -->
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        <figure @fadeIn class="image px-3 py-3 nav-logo">
+           <img src="/assets/imagens/icones/ConectaCandidato_fundoTransparente.png" width="112" height="28" alt="Conecta Candidato">
         </figure>
-        <!-- <i [class]="rede.classe"></i>  -->
       </a>
-    </li>
-  </ul>
-</div>
-
-<p class="copyright-text">{{Copyright}}</p>
+      <a class="navbar-item" *ngFor="let rede of redesSociais"
+         href="{{rede.link}}" target="_blank" rel="noopener" title="{{rede.nome}}">
+          <!-- <figure @fadeIn class="mx-0 image is-32x32">
+            <img class="is-rounded" src="{{rede.src}}">
+          </figure> -->
+      </a>
+    </div>
+  
+    <div class="navbar-end">
+      <a class="navbar-item" *ngFor="let pagina of paginas"> 
+        <a  [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''" pageScroll
+          [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="[pagina.Link]" href="#{{pagina.Link}}"
+          routerLinkActive="Active">
+          {{pagina.Titulo}}
+        </a>
+      </a>
+    </div>
+  </div>
+  <p class="copyright-text">{{Copyright}}</p>
+</nav>

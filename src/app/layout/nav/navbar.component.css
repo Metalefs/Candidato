@@ -6,3 +6,11 @@
 .nav-active{
     background: var(--background-default);
 }
+.navbar{
+    height: 70px;
+    overflow: visible;
+}
+.nav-logo{
+    height: auto;
+    width: 83px;
+}

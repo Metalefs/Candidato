@@ -1,18 +1,18 @@
 <div class="wrapper" id="topo">
-    <div (click)="ToggleNav()" class="nav-trigger is-hidden-touch" [ngClass]="NavState.open? 'is-active': ''" role="button"
+    <!-- <div (click)="ToggleNav()" class="nav-trigger is-hidden-touch" [ngClass]="NavState.open? 'is-active': ''" role="button"
         title="Menu">
 
         <div class="hamburger">
             <div class="icon"></div>
         </div>
 
-    </div>
+    </div> -->
 
     <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
         <navbar [NavState]="NavState"></navbar>
     </div>
-
-    <div [ngClass]="NavState.open? 'main is-active': ''" (mouseover)="CloseNav()">
+    <!-- [ngClass]="NavState.open? 'main is-active': ''"  -->
+    <div >
         <section class="split-home">
 
             <section class="right-section" data-aos="slide-up">

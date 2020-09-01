@@ -382,13 +382,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ------ Nav Menu Styling -----*/
 
 #nav-menu {
-  position: fixed;
-  height: 100%;
+  /* position: fixed; */
+  /* height: 100%; */
   right: 0;
   top: 0;
   z-index: 110;
-  width: 75%;
-  background-color: var(--background-default);
+  /* width: 75%; */
+  /* background-color: var(--background-default); */
 	background-size: cover;
 	overflow-y: auto;
   -webkit-transform: translateZ(0);
@@ -405,11 +405,6 @@ h1, h2, h3, h4, h5, h6 {
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-
-#nav-menu .navigation {
-  margin-top: 150px;
-  margin-bottom: 20px;
-}
 
 
 #nav-menu li {
@@ -529,15 +524,15 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
 	-webkit-transition: .8s 0s;
-  -moz-transition: .8s 0s;
+    -moz-transition: .8s 0s;
     transition: .8s 0s;
 }
 
 #nav-menu .copyright-text {
   font-family: Work Sans;
   font-size: 12px;
-  font-weight: 200;
-	text-align: center;
+  font-weight: 200; 
+  text-align: center;
   letter-spacing: 1px;
   padding: 20px 20px;
 }
@@ -566,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (min-width: 768px) {
 
 	#nav-menu {
-	  width: 50%;
+	  /* width: 50%; */
 	}
 
   #nav-menu .navigation {
@@ -1423,11 +1418,6 @@ label {
 -----------------------------------------------------*/
 
 @media only screen and (min-width: 767px) {
-	.logo {
-	  position: absolute;
-	  top: 20px;
-	  left: 20px;
-	}
 
 	#ar-about .about-intro {
 		padding: 150px 50px 50px 50px;
