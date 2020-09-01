@@ -33,7 +33,7 @@
 .typing-animation{
     bottom: 100px;
     z-index: 3;
-    margin-left: 1.5rem;
+    margin-left: .5rem;
     font-size: xx-large;
     /* background:rgba(0,0,0,.5); */
     position: fixed;
@@ -47,9 +47,9 @@
     display: none !important;
 }
 .bar{
-    bottom: 130px;
+    bottom: 106px;
     z-index: 2;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
     position: fixed;
     height: 70px;
     width: 37%;
@@ -95,7 +95,7 @@
         padding:0;
     }
    .typing-animation{
-        top: 230px;
+        top: 250px;
         bottom:initial;
    }
    .typing{
@@ -109,13 +109,15 @@
    }
    
    .bar{
-        top: 270px;
-        margin: 0 1rem;
+        top: 0;
+        margin-top: 85%;
+        padding-bottom: 70px;
         position: absolute;
         display: flex;
-        width: 90%;
+        width: 100%;
         z-index: 3;
         justify-content: center;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(255,255,255,0) 100%);
    }
    
     .left-section{

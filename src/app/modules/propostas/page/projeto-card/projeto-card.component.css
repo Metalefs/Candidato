@@ -5,7 +5,6 @@
 }
 .portfolio-item--desc {
     position: relative;
-
     font-family: Poppins;
     border-left:5px solid;
     border-radius: 5px;
@@ -16,7 +15,18 @@
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
 }
-
+.lke-btn{
+    color: var(--primary-default);
+    background: var(--background-default);
+    transition: 21s all;
+    cursor: pointer;
+}
+.gostou{
+    color:blue;
+}
+.card-content {
+    padding: 0;
+}
 .card-footer-item {
     justify-content: flex-end;
     padding-right: 1rem;
@@ -29,7 +39,6 @@
 .portfolio-item--content {
     display: block;
     position: relative;
-    margin-bottom: 30px;
 }
 
 .mb-2 .has-text-dark  {

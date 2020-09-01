@@ -950,8 +950,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio .categories ul li a.active {
-   text-decoration: line-through;
-   color: #000000;
+	text-decoration: underline;
+    color: var(--primary-default);
 }
 
 .portfolio_filter {

@@ -9,6 +9,7 @@ a{
     position: relative;
     display: block;
     text-align: center;
+    transition: all .14s;
 }
 /* .nav-icon.active:before, .nav-icon .active:after {
     content: "";
@@ -28,7 +29,7 @@ a{
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 } */
-.active{
+.active, .Active{
     color: #333;
     background: #fff;
     color: var(--primary-default);

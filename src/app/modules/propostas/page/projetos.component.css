@@ -15,8 +15,8 @@
 .shuffle-item{
     position: absolute; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: transform 250ms ease-out 0s, opacity 250ms ease-out 0s;
 }
-.section-dark, .section-light .b-box {
-    
+.container-projeto{
+    width: 86%;
 }
 .list-inline-item:not(:last-child) {
     margin-right: .5rem;

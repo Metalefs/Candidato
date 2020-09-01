@@ -2,7 +2,7 @@
     z-index: 10;
    
 }
-@media only screen and (max-width : 801px) {
+@media only screen and (max-width : 1024px) {
   #inicio{
       /* color: white; */
   }
@@ -37,7 +37,7 @@
     z-index:50; 
   }
   .mat-tab-group {
-    min-height: 80vh;
+    min-height: 40vh;
     width: 100vw;
     background: white;
     padding: 1rem;

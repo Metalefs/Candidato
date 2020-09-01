@@ -1,13 +1,15 @@
 
 .informacao-candidato{
     position: absolute;
-    bottom: 200px;
-    margin:0 auto;
-    display:flex;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(255,255,255,0) 100%);
+    bottom: 74px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: -webkit-max-content;
     height: max-content;
     z-index: 5;
 }

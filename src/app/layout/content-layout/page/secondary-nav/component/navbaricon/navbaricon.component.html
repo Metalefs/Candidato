@@ -3,7 +3,7 @@
     [routerLink]="[Opcao?.Link]" href="#{{Opcao?.Link}}" routerLinkActive="Active"
     [ngClass]="EstadoNav?.is_active? 'active' : ''"
      class="py-3 pl-4 px-2 nav-icon media">
-    <fa-icon [icon]="Opcao?.Icon" [ngClass]="EstadoNav?.is_active ? ' nav-icon is-solid' : 'nav-icon'" size="lg"></fa-icon>
+    <fa-icon [icon]="Opcao?.Icon" [ngClass]="EstadoNav?.is_active ? ' nav-icon is-solid active' : 'nav-icon'" size="lg"></fa-icon>
     {{Opcao?.Titulo}}
 </a>
 <!--   -->

@@ -1,13 +1,7 @@
 .split-home{
     background: var(--background-default);
 }
-.main {
-    background: var(--background-default);
-    transition: 0.5s;
-    text-align: justify;
-    min-height: 100vh;
-    font-family: Roboto;
-}
+
 #nav-menu{
     width: 50%;
     transition: all 0.5s;

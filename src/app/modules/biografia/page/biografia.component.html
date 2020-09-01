@@ -33,15 +33,15 @@
                         
                     </div>
                 </mat-tab>
+                <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
             </mat-tab-group>
             
 
         </div>     
-        <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
     </div>
 </div>
 <div class="is-hidden-desktop">
-    <app-exibicao-candidato  [isBg] = "false"></app-exibicao-candidato>
+    <app-exibicao-candidato ></app-exibicao-candidato>
     <div class="container pt-6">
         <mat-tab-group>
             <mat-tab class="my-mat-tab">

@@ -1,73 +1,165 @@
-<section class="section-head pt-4">
-  <!-- <h1>Por {{Candidato?.Nome}}</h1> -->
-  <h2>Projeto {{Projeto?.Nome}}</h2>
-</section>
-<div class="project-single px-6">
-    <div class="project-intro">
-      <div class="col-md-10 nopadding">
-        <!-- <h1 class="wow fadeIn"  data-wow-delay=".3s">{{Projeto?.Nome}}</h1> -->
-        <h4 class="wow fadeIn"  data-wow-delay=".4s">Descrição breve.</h4>
-        <p class="wow fadeIn"  data-wow-delay=".5s">
-         {{Projeto?.Descricao}}
-        </p>
-      </div>
-    </div>
-    <div class="project-image">
-        <div class="col-md-12">
-            <div class="columns portfolio-container text-center">
-              
-               <!-- Person item -->
-               <div class="column custompadding relative brand" [ngClass]="Projeto?.Categoria? Projeto?.Categoria.replace(' ',''): ''">
-                <a (click)="open(0)" data-rel="lightcase" class="portfolio-item--content">
-                  <div class="portfolio-item--img b-box">
-                    <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
-                  </div>
-                  <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
-                    <div class="portfolio-item--desc-in">
-                      <h3 class="mb-2 text-white">{{Projeto?.Nome}}</h3>
-                      <p class="text-white">{{Projeto?.Categoria}}</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              
-          
-              <!-- Person item end -->
 
+<div class="columns is-mobile is-gapless is-hidden-touch">
+  <div class="column is-5">
+
+    <app-exibicao-candidato [isBg]="true"></app-exibicao-candidato>
+  </div>
+  <div class="column is-8">
+
+    <section class="section-head pt-4">
+      <!-- <h1>Por {{Candidato?.Nome}}</h1> -->
+      <h2>Projeto {{Projeto?.Nome}}</h2>
+    </section>
+    <div class="project-single px-6">
+        <div class="project-intro">
+          <div class="col-md-10 nopadding">
+            <!-- <h1 class="wow fadeIn"  data-wow-delay=".3s">{{Projeto?.Nome}}</h1> -->
+            <h4 class="wow fadeIn"  data-wow-delay=".4s">Descrição breve.</h4>
+            <p class="wow fadeIn"  data-wow-delay=".5s">
+             {{Projeto?.Descricao}}
+            </p>
+          </div>
+        </div>
+        <div class="project-image">
+            <div class="col-md-12">
+                <div class="columns portfolio-container text-center">
+                  
+                   <!-- Person item -->
+                   <div class="column custompadding relative brand" [ngClass]="Projeto?.Categoria? Projeto?.Categoria.replace(' ',''): ''">
+                    <a (click)="open(0)" data-rel="lightcase" class="portfolio-item--content">
+                      <div class="portfolio-item--img b-box">
+                        <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
+                      </div>
+                      <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
+                        <div class="portfolio-item--desc-in">
+                          <h3 class="mb-2 text-white">{{Projeto?.Nome}}</h3>
+                          <p class="text-white">{{Projeto?.Categoria}}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  
+              
+                  <!-- Person item end -->
+    
+                </div>
+              </div>
+        </div>
+       
+        <div class="col-md-12 nopadding">
+          <div class="project-details">
+            <div class="col-md-5">
+              <ul>
+                <li><span>Projeto:</span> {{Projeto?.Nome}}</li>
+                <!-- <li><span>Cliente:</span>Apple</li> -->
+                <li><span>Categoria:</span>{{Projeto?.Categoria}}</li>
+                <li><span>Data:</span>{{Projeto?.Data}}</li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <p>
+                Ea oratio voluptua postulant eam, sit eu tale molestiae,
+                verear latine concludaturque ex vel. Sed mutat etiam utroque te, vis at error eirmod numquam.
+                Brute suavitate maiestatis qui in.
+              </p>
+            </div>
+            <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+              <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
             </div>
           </div>
-    </div>
-   
-    <div class="col-md-12 nopadding">
-      <div class="project-details">
-        <div class="col-md-5">
-          <ul>
-            <li><span>Projeto:</span> {{Projeto?.Nome}}</li>
-            <!-- <li><span>Cliente:</span>Apple</li> -->
-            <li><span>Categoria:</span>{{Projeto?.Categoria}}</li>
-            <li><span>Data:</span>{{Projeto?.Data}}</li>
-          </ul>
         </div>
-        <div class="col-md-7">
-          <p>
-            Ea oratio voluptua postulant eam, sit eu tale molestiae,
-            verear latine concludaturque ex vel. Sed mutat etiam utroque te, vis at error eirmod numquam.
-            Brute suavitate maiestatis qui in.
+        <div class="col-md-12">
+          <div class="project-nav">
+            <div class="left-nav">
+              <a onclick="window.history.back()"><i class="ion-ios-arrow-left"></i><span>Anterior</span></a>
+            </div>
+            <div class="right-nav">
+              <a ><span>Próximo</span><i class="ion-ios-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+  </div>
+  <app-redes-sociais class="is-hidden-touch"></app-redes-sociais>
+</div>
+
+
+<div class="is-hidden-desktop">
+  <section class="section-head pt-4">
+    <!-- <h1>Por {{Candidato?.Nome}}</h1> -->
+    <h2>Projeto {{Projeto?.Nome}}</h2>
+  </section>
+  <div class="project-single px-6">
+      <div class="project-intro">
+        <div class="col-md-10 nopadding">
+          <!-- <h1 class="wow fadeIn"  data-wow-delay=".3s">{{Projeto?.Nome}}</h1> -->
+          <h4 class="wow fadeIn"  data-wow-delay=".4s">Descrição breve.</h4>
+          <p class="wow fadeIn"  data-wow-delay=".5s">
+           {{Projeto?.Descricao}}
           </p>
         </div>
-        <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-          <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
+      </div>
+      <div class="project-image">
+          <div class="col-md-12">
+              <div class="columns portfolio-container text-center">
+                
+                 <!-- Person item -->
+                 <div class="column custompadding relative brand" [ngClass]="Projeto?.Categoria? Projeto?.Categoria.replace(' ',''): ''">
+                  <a (click)="open(0)" data-rel="lightcase" class="portfolio-item--content">
+                    <div class="portfolio-item--img b-box">
+                      <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
+                    </div>
+                    <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
+                      <div class="portfolio-item--desc-in">
+                        <h3 class="mb-2 text-white">{{Projeto?.Nome}}</h3>
+                        <p class="text-white">{{Projeto?.Categoria}}</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                
+            
+                <!-- Person item end -->
+  
+              </div>
+            </div>
+      </div>
+     
+      <div class="col-md-12 nopadding">
+        <div class="project-details">
+          <div class="col-md-5">
+            <ul>
+              <li><span>Projeto:</span> {{Projeto?.Nome}}</li>
+              <!-- <li><span>Cliente:</span>Apple</li> -->
+              <li><span>Categoria:</span>{{Projeto?.Categoria}}</li>
+              <li><span>Data:</span>{{Projeto?.Data}}</li>
+            </ul>
+          </div>
+          <div class="col-md-7">
+            <p>
+              Ea oratio voluptua postulant eam, sit eu tale molestiae,
+              verear latine concludaturque ex vel. Sed mutat etiam utroque te, vis at error eirmod numquam.
+              Brute suavitate maiestatis qui in.
+            </p>
+          </div>
+          <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+            <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="project-nav">
+          <div class="left-nav">
+            <a onclick="window.history.back()"><i class="ion-ios-arrow-left"></i><span>Anterior</span></a>
+          </div>
+          <div class="right-nav">
+            <a ><span>Próximo</span><i class="ion-ios-arrow-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-12">
-      <div class="project-nav">
-        <div class="left-nav">
-          <a onclick="window.history.back()"><i class="ion-ios-arrow-left"></i><span>Anterior</span></a>
-        </div>
-        <div class="right-nav">
-          <a ><span>Próximo</span><i class="ion-ios-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+</div>

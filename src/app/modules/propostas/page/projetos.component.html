@@ -1,11 +1,57 @@
+<div class="columns is-mobile is-gapless is-hidden-touch">
+  <div class="column is-5">
 
-<section class="section section-light section-work pt-6" id="projetos">
+    <app-exibicao-candidato [isBg]="true"></app-exibicao-candidato>
+  </div>
+  <div class="column is-8">
+
+    <section class="section section-light section-work pt-6" id="projetos">
+      <div class="">
+        <h1 class="subtitle has-text-centered">PROPOSTAS</h1>
+        <div class="mt-4">
+          <div class="portfolio wow fadeInDown">
+            <div class="">
+              <div class="w-100">
+                <nav class="categories">
+                  <ul class="portfolio-filter">
+                    <li><a class="active" data-filter="*">Todos</a></li>
+                    <li><a [attr.data-filter]="'.'+categoria.replace(' ','')"
+                        *ngFor="let categoria of categorias">{{categoria}}</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="">
+                <div class="columns portfolio-container text-center">
+
+                  <!-- Person item -->
+                  <div class=" column is-full custompadding container-projeto"
+                    [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
+                    *ngFor="let projeto of Projetos">
+                    <app-projeto-card [projeto]="projeto"></app-projeto-card>
+                  </div>
+                  <!-- Person item end -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+  <app-redes-sociais class="is-hidden-touch"></app-redes-sociais>
+</div>
+
+<section class="section section-light section-work pt-6 is-hidden-desktop" id="projetos">
   <div class="">
-    <h1 class="title is-6 has-text-centered">PROPOSTAS</h1>
+    <h1 class="subtitle has-text-centered">PROPOSTAS</h1>
     <div class="mt-4">
       <div class="portfolio wow fadeInDown">
-        <div class="row">
-          <div class="col-md-12">
+        <div class="">
+          <div class="w-100">
             <nav class="categories">
               <ul class="portfolio-filter">
                 <li><a class="active" data-filter="*">Todos</a></li>
@@ -13,11 +59,11 @@
               </ul>
             </nav>
           </div>
-          <div class="col-md-12">
-            <div class="row portfolio-container text-center">
+          <div class=" w-100">
+            <div class=" portfolio-container text-center">
 
                <!-- Person item -->
-              <div class="col-md-12 custompadding  brand" [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
+              <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
                 *ngFor="let projeto of Projetos">
                   <app-projeto-card [projeto]="projeto"></app-projeto-card>
               </div>
