@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { Candidato } from 'src/app/data/schema/domain';
+import { CandidatoService } from 'src/app/data/service/domain';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  redes: RedeSocial[] = [];
+  Candidato:Candidato;
+  constructor(private CandidatoService:CandidatoService) {
+    this.Candidato = this.CandidatoService.ObterTeste();
+   }
 
   ngOnInit(): void {
   }

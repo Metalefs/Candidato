@@ -3,13 +3,12 @@ import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { Candidato } from 'src/app/data/schema/domain';
 
 @Component({
-  selector: 'app-exibicao-candidato',
-  templateUrl: './exibicao-candidato.component.html',
-  styleUrls: ['./exibicao-candidato.component.css']
+  selector: 'app-exibicao-candidato-full',
+  templateUrl: './exibicao-candidato-full.component.html',
+  styleUrls: ['./exibicao-candidato-full.component.css']
 })
-export class ExibicaoCandidatoComponent implements OnInit {
-  @Input()
-  isBg:boolean = false;
+export class ExibicaoCandidatoFullComponent implements OnInit {
+
   constructor( private CandidatoService: CandidatoService) { 
     this.Candidato = CandidatoService.ObterTeste();
     this.candidato_bg=`${this.Candidato.FotoCapa}`;

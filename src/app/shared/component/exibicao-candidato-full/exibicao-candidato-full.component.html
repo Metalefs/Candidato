@@ -1,43 +1,32 @@
-<canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
+<canvas #canvasEl id="logo-canvas" class="center-section is-hidden-touch"></canvas>
 <!-- <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas> -->
 
 
 <section @slideInOut #canvasContainer data-aos="zoom-in-left" 
-    class="left-section wow fadeIn" data-wow-delay="0.2s">
-    <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
+    class="center-section wow fadeIn" data-wow-delay="0.2s">
+    
+    <!-- <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
         [typeSpeed]="30" [strings]="[Candidato.Nome]" class="typing-animation">
         <span class="typing"></span>
-    </ngx-typed-js>
+    </ngx-typed-js> -->
 
 
-
-    
-    <ng-container *ngIf="isBg != undefined && isBg === true; then Background; else Imagem">
-    </ng-container>
-    
-    <ng-template #Background>
-        <div class="left-section-candidato" style="background:url({{candidato_bg}})" ></div>
-    </ng-template>
-    
-    <ng-template #Imagem>
-        <img class="left-section-candidato-img" src="{{candidato_bg}}" >
-    </ng-template>
-
+    <div class="center-section-candidato" style="background:url({{candidato_bg}})" ></div>
 
 
     <div class="bar">
         <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
-            <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
+            <!-- <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".center-section-candidato"
                 data-aos="zoom-in-left">
                 <h1 class="title is-3 partido-text">{{Candidato.NumeroCampanha}}</h1>
             </div>
-            <div class="column " data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
+            <div class="column " data-aos-offset="-200" data-aos-anchor-placement=".center-section-candidato"
                 data-aos="zoom-in-right">
                 <img width="50" src="assets/imagens/icones/Conecta_Candidato.jpg"
                     class="conecta-candidato-logo rounded-full is-hidden-touch">
-            </div>
+            </div> -->
             <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
-                <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
+                <div data-aos-offset="-200" data-aos-anchor-placement=".center-section-candidato"
                     data-aos="zoom-in-right">
                         <img width="50" src="assets/imagens/icones/partido.png" class="partido-logo">
                 </div>

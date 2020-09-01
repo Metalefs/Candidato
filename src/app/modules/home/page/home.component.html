@@ -1,1 +1,28 @@
-<app-exibicao-candidato></app-exibicao-candidato>
+<div class="is-hidden-desktop">
+    <app-exibicao-candidato-full></app-exibicao-candidato-full>
+    
+    <div class="container informacao-candidato">
+        <div >
+            <h1 class="title is-1 logo-campanha">Sua Logo</h1>
+        </div>
+        <div >
+            <h1 class="title is-1 numero-campanha">{{Candidato.NumeroCampanha}}</h1>
+        </div>
+        <app-redes-sociais></app-redes-sociais>
+    </div>
+
+</div>
+<div class="is-hidden-touch">
+    <app-exibicao-candidato-full></app-exibicao-candidato-full>
+    
+    <div class="container informacao-candidato-desktop">
+        <div >
+            <h1 class="title is-1 logo-campanha">Sua Logo</h1>
+        </div>
+        <div >
+            <h1 class="title is-1 numero-campanha">{{Candidato.NumeroCampanha}}</h1>
+        </div>
+        <app-redes-sociais></app-redes-sociais>
+    </div>
+
+</div>

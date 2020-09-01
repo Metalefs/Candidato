@@ -1,38 +1,75 @@
-<app-exibicao-candidato></app-exibicao-candidato>
+<div class="columns is-mobile is-gapless is-hidden-touch">
+    <div class="column is-5">
 
-<div class="container pt-6">
-    <mat-tab-group>
-        <mat-tab class="my-mat-tab">
-            <ng-template mat-tab-label class="my-mat-tab">
-                Quem <wbr> Sou
-            </ng-template>
+        <app-exibicao-candidato [isBg] = "true" ></app-exibicao-candidato>
+    </div>
+    <div class="column is-8">
+
+        <div class="container pt-6">
+            <mat-tab-group>
+                <mat-tab class="my-mat-tab">
+                    <ng-template mat-tab-label class="my-mat-tab">
+                        Quem <wbr> Sou
+                    </ng-template>
+                    
+                    <div class="container" data-aos="zoom-in-down" id="inicio">
+                        <inicio></inicio>    
+                    </div>
+                </mat-tab>
+                <mat-tab class="my-mat-tab">
+                    <ng-template mat-tab-label class="my-mat-tab">
+                        O que <wbr> penso
+                    </ng-template>
+                    
+                    <div class="" data-aos="zoom-in-down" id="sobre">
+                        <sobre></sobre>
+                    </div>
+                </mat-tab>
+                <mat-tab class="my-mat-tab">
+                    <ng-template mat-tab-label class="my-mat-tab">
+                        O que <wbr> realizei
+                    </ng-template>
+                    <div class="" data-aos="zoom-in-down">
+                        
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
             
-            <div class="container" data-aos="zoom-in-down" id="inicio">
-                <inicio></inicio>    
-            </div>
-        </mat-tab>
-        <mat-tab class="my-mat-tab">
-            <ng-template mat-tab-label class="my-mat-tab">
-                O que <wbr> penso
-            </ng-template>
-            
-            <div class="" data-aos="zoom-in-down" id="sobre">
-                <sobre></sobre>
-            </div>
-        </mat-tab>
-        <mat-tab class="my-mat-tab">
-            <ng-template mat-tab-label class="my-mat-tab">
-                O que <wbr> realizei
-            </ng-template>
-            <div class="" data-aos="zoom-in-down">
+
+        </div>     
+        <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
+    </div>
+</div>
+<div class="is-hidden-desktop">
+    <app-exibicao-candidato  [isBg] = "false"></app-exibicao-candidato>
+    <div class="container pt-6">
+        <mat-tab-group>
+            <mat-tab class="my-mat-tab">
+                <ng-template mat-tab-label class="my-mat-tab">
+                    Quem <wbr> Sou
+                </ng-template>
                 
-            </div>
-        </mat-tab>
-    </mat-tab-group>
-</div>     
-
-
-<app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
-
-
-
+                <div class="container" data-aos="zoom-in-down" id="inicio">
+                    <inicio></inicio>    
+                </div>
+            </mat-tab>
+            <mat-tab class="my-mat-tab">
+                <ng-template mat-tab-label class="my-mat-tab">
+                    O que <wbr> penso
+                </ng-template>
+                
+                <div class="" data-aos="zoom-in-down" id="sobre">
+                    <sobre></sobre>
+                </div>
+            </mat-tab>
+            <mat-tab class="my-mat-tab">
+                <ng-template mat-tab-label class="my-mat-tab">
+                    O que <wbr> realizei
+                </ng-template>
+                <div class="" data-aos="zoom-in-down">
+                    
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

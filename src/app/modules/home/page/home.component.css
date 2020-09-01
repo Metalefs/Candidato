@@ -1,9 +1,37 @@
-:host ::ng-deep .right-section{
-    z-index: 0;
+
+.informacao-candidato{
+    position: absolute;
+    bottom: 200px;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    z-index: 5;
 }
-.right-section{
-    z-index: 0;
+
+.informacao-candidato-desktop{
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    z-index: 5;
 }
-:host ::ng-deep .main, .split-home{
-    background:transparent;
+.logo-campanha{
+    color:var(--primary-default);
+    size:var(--logo-campanha-size);
+    margin:var(--logo-campanha-margin);
+}
+.numero-campanha{
+    color:var(--numero-campanha-color);
+    size:var(--numero-campanha-size);
+    margin:var(--numero-campanha-margin);
 }

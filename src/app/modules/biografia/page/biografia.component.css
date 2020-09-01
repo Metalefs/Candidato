@@ -11,7 +11,8 @@
     }
     .mat-tab-group {
       margin-top: -95px;
-    }
+      margin-top: 85%;
+  }
     :host ::ng-deep .mat-tab-header {
       margin-top: -19%;
     }
@@ -36,7 +37,6 @@
     z-index:50; 
   }
   .mat-tab-group {
-    margin-top: 85%;
     min-height: 80vh;
     width: 100vw;
     background: white;

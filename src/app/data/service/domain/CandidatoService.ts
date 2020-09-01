@@ -29,7 +29,7 @@ export class CandidatoService extends ServicoBase{
         "",
         "",
         "",
-        "23",
+        "0023",
         "/assets/imagens/fundos/inicio/President_Barack_Obama.jpg",
         "/assets/imagens/fundos/inicio/President_Barack_Obama-perfil.jpg",
         true

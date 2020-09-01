@@ -23,6 +23,7 @@ import { ExibicaoCandidatoComponent } from './component/exibicao-candidato/exibi
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountUpModule } from 'ngx-countup';
 import { MaterialModule } from './material.module';
+import { ExibicaoCandidatoFullComponent } from './component/exibicao-candidato-full/exibicao-candidato-full.component';
 
 @NgModule({
   imports: [
@@ -49,6 +50,7 @@ import { MaterialModule } from './material.module';
     ContatoComponent,
     RedesSociaisComponent,
     ExibicaoCandidatoComponent,
+    ExibicaoCandidatoFullComponent,
   ],
   exports: [
     CommonModule,
@@ -70,6 +72,7 @@ import { MaterialModule } from './material.module';
     ContatoComponent,
     RedesSociaisComponent,
     ExibicaoCandidatoComponent,
+    ExibicaoCandidatoFullComponent,
     CountUpComponent,
     CountUpModule,
     LightboxModule
