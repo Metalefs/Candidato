@@ -28,7 +28,7 @@
                    <div class="column custompadding relative brand" [ngClass]="Projeto?.Categoria? Projeto?.Categoria.replace(' ',''): ''">
                     <a (click)="open(0)" data-rel="lightcase" class="portfolio-item--content">
                       <div class="portfolio-item--img b-box">
-                        <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
+                        <!-- <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img"> -->
                       </div>
                       <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
                         <div class="portfolio-item--desc-in">
@@ -45,7 +45,9 @@
                 </div>
               </div>
         </div>
-       
+        <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+          <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
+        </div>
         <div class="col-md-12 nopadding">
           <div class="project-details">
             <div class="col-md-5">
@@ -63,18 +65,16 @@
                 Brute suavitate maiestatis qui in.
               </p>
             </div>
-            <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-              <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="project-nav">
-            <div class="left-nav">
-              <a onclick="window.history.back()"><i class="ion-ios-arrow-left"></i><span>Anterior</span></a>
-            </div>
-            <div class="right-nav">
-              <a ><span>Próximo</span><i class="ion-ios-arrow-right"></i></a>
+           
+            <div class="col-md-12">
+              <div class="project-nav">
+                <div class="left-nav">
+                  <a onclick="window.history.back()"><i class="ion-ios-arrow-left"></i><span>Anterior</span></a>
+                </div>
+                <div class="right-nav">
+                  <a ><span>Próximo</span><i class="ion-ios-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -83,7 +83,6 @@
 
 
   </div>
-  <app-redes-sociais class="is-hidden-touch"></app-redes-sociais>
 </div>
 
 
@@ -127,7 +126,9 @@
               </div>
             </div>
       </div>
-     
+      <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+        <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
+      </div>
       <div class="col-md-12 nopadding">
         <div class="project-details">
           <div class="col-md-5">
@@ -145,9 +146,7 @@
               Brute suavitate maiestatis qui in.
             </p>
           </div>
-          <div class="lke-btn rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-            <fa-icon [icon]="faLike"></fa-icon>{{Projeto?.Likes}}
-          </div>
+         
         </div>
       </div>
       <div class="col-md-12">

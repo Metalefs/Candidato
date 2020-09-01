@@ -25,7 +25,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
   ngOnInit(): void {
   }
   ngAfterViewInit() {
-    // this.canvasDot();
+    this.canvasDot();
     this.startCanvasAnimation();
   }
 

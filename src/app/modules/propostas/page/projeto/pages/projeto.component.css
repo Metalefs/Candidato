@@ -1,6 +1,7 @@
 .project-single{
     margin-top:1rem;
     padding-top:1rem;
+    margin-left: 10%;
 }
 .section-head{
     padding-top:1rem;
@@ -17,10 +18,9 @@
     /* margin-left: 60%; */
     padding: 10px;
     color: var(--primary-default);
-    top: -35px;
     z-index: 2;
     background: var(--background-default);
-    border-radius: 38%;
+    border-radius: 3%;
     transition: 1s all;
     cursor: pointer;
 }
@@ -28,7 +28,7 @@
     color:blue;
 }
 .portfolio-item--img img {
-    border-radius: 30px;
+    border-radius: 5px;
     overflow: hidden;
     display: block;
     
@@ -43,7 +43,7 @@
     background: rgba(255,255,255,.85);
     border-left:5px solid;
     border-left-color: var(--primary-default);
-    border-radius: 30px;
+    border-radius: 5px;
     text-align: center;
     opacity: 1;
     visibility: visible;
