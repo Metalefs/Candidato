@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar " role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <!-- navbar items, navbar burger... -->
   </div>
@@ -20,7 +20,7 @@
   
     <div class="navbar-end">
       <a class="navbar-item" *ngFor="let pagina of paginas"> 
-        <a  [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''" pageScroll
+        <a  [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''" pageScroll (click)="ChangeToThis(pagina.Link)"
           [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="[pagina.Link]" href="#{{pagina.Link}}"
           routerLinkActive="Active">
           {{pagina.Titulo}}

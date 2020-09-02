@@ -25,7 +25,8 @@ export class NavbarComponent implements OnInit {
   private _subscription: Subscription;
   paginaAtiva = "";
   constructor( private ServicoPaginas: ServicoPaginas, private ServicoRedesSociais: ServicoRedesSociais,
-    private NavStateService:NavStateService ) { 
+    private NavStateService:NavStateService,
+    private Router:Router ) { 
       
   }
   @Input()NavState:NavState;
@@ -36,6 +37,7 @@ export class NavbarComponent implements OnInit {
   
   setActiveSection(section: any): void {
     this.ActiveNav$.next(section);
+    console.log(section);
   }
 
   ToggleNav(delay:number){
@@ -44,14 +46,33 @@ export class NavbarComponent implements OnInit {
 
     },delay);
   }
+  ChangeToThis(page:string){
+    this.NavStateService.currentState.subscribe(y=>{
+     
+      y.forEach(x=>{
+        if(x.pagina != page){
+          x.is_active = false
+        }
+        else{
+          x.pagina = page;
+          x.is_active = true;
+          x.is_solid = true;
+        }
+      })
+      this.paginaAtiva = page;
+      
+      this.NavStateService.update(y);
 
+    }) 
+  }
   ngOnInit(): void {
     this.paginas = this.ServicoPaginas.GetAllPages();
     this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais();
-    
+    this.paginaAtiva = this.Router.url;
     setInterval(()=>{
       this.NavStateService.getActiveNav().then(x=>{
         this.paginaAtiva = x.pagina;
+        console.log(this.paginaAtiva);
       });
     },1000)
     this._subscription = this.NavStateService.currentState.subscribe(item => {

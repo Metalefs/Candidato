@@ -1,5 +1,8 @@
-<section id="intro" class="intro-block bg-color1 dark-bg cover-bg" data-selector="section"
-    style="padding-top: 150px;
+<section @fadeIn id="intro" class="intro-block px-3 bg-color1 dark-bg cover-bg" data-selector="section"
+    style="
+    background:url(assets/imagens/fundos/inicio/connections_banner_with_low_poly_design_2305.jpg);
+    background-position: right;
+    padding-top: 150px;
     padding-bottom: 150px;
     border-bottom: 0px none rgb(255, 255, 255);
     background-repeat: no-repeat;
@@ -12,15 +15,14 @@
             <div class="col-md-6" data-selector=".col-md-6">
                 <div class="logo">
                     <img alt="ConectaCandidato"
-                        src="https://blob.contato.io/machine-user-images/desenhando-img-3190021-20200821134124.png"
+                        src="assets/imagens/icones/ConectaCandidato_fundoTransparente.png"
                         height="120" data-selector="img" class=""
                         style="    width: 380px;
                         height: 200px;
                         border-radius: 1rem;
                         border-color: rgb(255, 255, 255);
                         border-style: none;
-                        border-width: 7px;
-                        background: #000000;">
+                        border-width: 7px;">
                 </div>
                 <div class="slogan" style="">
                     <h1 data-selector="h1" class=""><strong></strong>.<br><br>
@@ -32,16 +34,22 @@
                 </div>
                 <div style=""><a class="download-btn" href="#"
                         style="margin-right: 4px; padding-left: 60px; width: 180px; box-shadow: gold 0px 0px 1em;"
-                        data-selector="a.btn, a.download-btn, button.btn, a.goto"><i class="icon icon-apple"
-                            data-selector=".icon" style="margin-left: -6px;"></i>Disponível<b>App Store</b></a><a
+                        data-selector="a.btn, a.download-btn, button.btn, a.goto">
+                        <fa-icon [icon]="FaMobile" class="icon icon-apple"
+                             style="margin-left: -6px;"></fa-icon>
+                            Disponível<b>App Store</b></a><a
                         class="download-btn" href="#"
                         style="margin-right: 4px; padding-left: 60px; width: 180px; box-shadow: gold 0px 0px 1em;"
-                        data-selector="a.btn, a.download-btn, button.btn, a.goto"><i class="icon icon-android"
-                            data-selector=".icon" style="margin-left: -6px;"></i>Disponível <b>PlayStore</b></a><a
+                        data-selector="a.btn, a.download-btn, button.btn, a.goto">
+                        <fa-icon [icon]="FaMobile" class="icon icon-android"
+                             style="margin-left: -6px;"></fa-icon>
+                            Disponível <b>PlayStore</b></a><a
                         class="download-btn" href="#"
                         style="margin-right: 2px; padding-left: 60px; width: 180px; box-shadow: gold 0px 0px 1em;"
-                        data-selector="a.btn, a.download-btn, button.btn, a.goto"><i class="icon icon-screen-smartphone"
-                            data-selector=".icon" style="margin-left: -6px"></i><b>Este site</b></a></div>
+                        data-selector="a.btn, a.download-btn, button.btn, a.goto">
+                        <fa-icon [icon]="FaDesktop" class="icon icon-screen-smartphone"
+                             style="margin-left: -6px"></fa-icon>
+                            Disponível <b>Este site</b></a></div>
             </div>
         </div>
     </div>
