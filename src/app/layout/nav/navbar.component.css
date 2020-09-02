@@ -5,6 +5,7 @@
 }
 .nav-active{
     background: var(--background-default);
+    color:var(--primary-default);
 }
 .navbar{
     height: 70px;
