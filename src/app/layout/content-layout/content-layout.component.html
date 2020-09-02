@@ -24,7 +24,7 @@
                     </ul>
                 </div>
 
-                <div  class="main">
+                <div [@routeAnimations]="prepareRoute(outlet)" class="main">
                     <router-outlet #outlet="outlet"></router-outlet>
                 </div>
 

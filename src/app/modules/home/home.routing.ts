@@ -12,7 +12,7 @@ export const routes: Routes = [
   {
     path: 'inicio',
     component: HomeComponent,
-    data: { layout: Layouts.Main }
+    data: { layout: Layouts.Main, animation:'isLeft' }
   },
 ];
 

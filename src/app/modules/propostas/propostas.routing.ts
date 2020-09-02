@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'propostas',
     component: ProjetosComponent,
-    data: { layout: Layouts.Main }
+    data: { layout: Layouts.Main,animation:'isRight' }
   },
   {
     path: 'projeto/:id',
