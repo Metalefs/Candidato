@@ -11,6 +11,9 @@ import { ProjetoService } from 'src/app/data/service/domain';
 export class ProjetoCardComponent implements OnInit {
   @Input()
   projeto:Projeto;
+  @Input()
+  Delay:any;
+
   faLike = faThumbsUp;
   Gostou:boolean = false;
   constructor(private ProjetoService: ProjetoService) { }

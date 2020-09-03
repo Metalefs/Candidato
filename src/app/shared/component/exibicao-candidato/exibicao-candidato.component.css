@@ -163,7 +163,9 @@
         animation: none;
     }
 }
-
+.typing{
+    color: white;
+}
 #logo-canvas{
     position: fixed;
     z-index: 2;

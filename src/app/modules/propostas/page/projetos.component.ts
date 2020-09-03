@@ -23,7 +23,7 @@ export class ProjetosComponent implements OnInit {
   categorias:Array<string> = [];
   _albums:Array<Album> = [];
   Mensagens:Mensagens;
-
+  cards = 0;
   constructor(private MensagensService: MensagensService,
      private ProjetoService:ProjetoService, 
      private Lightbox:Lightbox,
@@ -45,6 +45,12 @@ export class ProjetosComponent implements OnInit {
     //       })
     // });
     
+  }
+
+  get_delay(){
+    
+    return this.cards++ * 500;
+
   }
 
   navigateToProject(id: string): void {

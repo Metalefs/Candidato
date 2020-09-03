@@ -12,7 +12,7 @@
   --numero-campanha-margin: 0 0 10px 0;
 
   
-  --primary-default: orangered;
+  --primary-default: blue;
   --primary-dark: #24b286;
   --primary-light: #b2ffe7;
 
@@ -112,7 +112,6 @@
   animation: typedjsBlink 0.7s infinite;
 }
 .typing {
-  color: white;
   text-shadow: 2px 2px 30px rgba(37, 35, 35, 0.99);
   font-weight: bold;
 }
@@ -196,6 +195,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: initial;
   /* font-family: "PT Sans", sans-serif; */
 }
 

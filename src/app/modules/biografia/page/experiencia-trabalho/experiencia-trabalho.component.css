@@ -92,6 +92,10 @@
   margin-bottom: 30px;
 	background: rgba(230, 230, 255, 0.5);
 	padding: 20px;
+	
+    border-left:5px solid;
+    border-radius: 5px;
+    border-left-color: var(--primary-default);
 }
 
 .about .experience h3 {
@@ -134,7 +138,11 @@
 	color: #454545;
 	text-align: left;
 }
-
+@media only screen and (max-width : 1024px) {
+	.about .experience ul {
+		padding: 0px 0 0 0;
+	  }
+}
 
 
 .btn-contact {

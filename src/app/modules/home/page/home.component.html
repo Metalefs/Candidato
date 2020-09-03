@@ -13,28 +13,23 @@
 
 </div>
 <div class="is-hidden-touch">
-    <app-exibicao-candidato-full></app-exibicao-candidato-full>
-    
-    <div class="informacao-candidato-desktop">
-        <div >
-            <h1 class="title is-1 logo-campanha">Sua Logo</h1>
-        </div>
-        <div >
-            <h1 class="title is-1 numero-campanha">{{Candidato.NumeroCampanha}}</h1>
-        </div>
-        
-        <app-redes-sociais></app-redes-sociais>
-    </div>
-</div>
+    <div class="hero is-fullheight">
 
-<div class="section-about-wrap">
-
-    <div class="row justify-content-center align-items-center">
-        
-    <!--<div class="col-md-5 d-none d-md-block">
-            <img class="img-fluid img-thumbnail" src="{{Candidato.FotoPerfil}}" alt="About Picture">
-        </div> -->
-        
+        <div class="hero-body" style="background:url({{Candidato.FotoPerfil}});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;">
+            <div class="informacao-candidato-desktop">
+                <div >
+                    <!-- <h1 class="title is-1 logo-campanha">Sua Logo</h1> -->
+                </div>
+                <div >
+                    <h1 class="title is-1 numero-campanha">{{Candidato.NumeroCampanha}}</h1>
+                </div>
+                <app-redes-sociais></app-redes-sociais>
+                
+            </div>
+        </div>
     </div>
 
 </div>
