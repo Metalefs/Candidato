@@ -82,8 +82,7 @@
 }
 .section-about-wrap {
     padding: 2REM 2rem 0rem 2rem;
-    box-shadow:  20px 20px 60px #d9d9d9, 
-             -20px -20px 60px #ffffff;
+    
 }
 .about-social a.downloadCV {
     width: auto;

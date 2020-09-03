@@ -29,7 +29,7 @@
     width: 107%;
     height: 100%;
     opacity: 0;
-    border-top-right-radius: 48px;
+    /* border-top-right-radius: 48px; */
     background-origin: padding-box;
     background-position: right !important;
     animation: fade-in 5s ease-in-out forwards;
@@ -43,7 +43,7 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: top !important;
-    border-top-right-radius: 48px;
+    /* border-top-right-radius: 48px; */
     margin: 0 auto;
     padding: 0rem;
     animation-name: fade-in;

@@ -34,7 +34,7 @@ export class BiografiaComponent implements OnInit {
   constructor(private _scrollSpyService: ScrollSpyService,
     private NavStateService:NavStateService,
     private CandidatoService:CandidatoService,
-    private IdealService:IdealService
+    private IdealService:IdealService,
     ) {
       this.Candidato = this.CandidatoService.ObterTeste();
       this.Ideais = this.IdealService.Filtrar(this.Candidato.Identificador);

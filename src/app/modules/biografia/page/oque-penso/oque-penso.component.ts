@@ -12,17 +12,14 @@ import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 })
 export class OquePensoComponent implements OnInit {
   FaDownload = faDownload;
-  redes: RedeSocial[] = [];
   
   @Input() Ideais:Ideal[];
   
   constructor(
      private ServicoRedesSociais:ServicoRedesSociais) { 
-       
-  }
-
-  ngOnInit(): void {
-    this.redes = this.ServicoRedesSociais.GetAllRedesSociais();
+    }
+    
+    ngOnInit(): void {
   }
 
 }
