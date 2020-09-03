@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ExperienciaTrabalhoService,MensagensService} from 'src/app/data/service/domain/index';
-import {ExperienciaTrabalho,Mensagens} from 'src/app/data/schema/domain/index';
+import {ExperienciaTrabalho,Mensagens,Candidato} from 'src/app/data/schema/domain/index';
 
 @Component({
-  selector: 'app-experiencia-trabalho',
+  selector: 'experiencia-trabalho',
   templateUrl: './experiencia-trabalho.component.html',
   styleUrls: ['./experiencia-trabalho.component.css']
 })
 export class ExperienciaTrabalhoComponent implements OnInit {
   ExperienciasTrabalho:ExperienciaTrabalho[] = [];
   Mensagens:Mensagens;
+  @Input() Candidato:Candidato;
   constructor(private ExperienciaTrabalhoService:ExperienciaTrabalhoService,
     private MensagensService:MensagensService) {
-
+      this.ExperienciasTrabalho = this.ExperienciaTrabalhoService.ObterTeste();
+      this.Mensagens = this.MensagensService.ObterTeste();
    }
 
   ngOnInit(): void {

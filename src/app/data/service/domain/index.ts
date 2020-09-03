@@ -5,6 +5,7 @@ import {InformacoesContatoService} from './InformacoesContatoService';
 import {MensagensService} from './MensagensService';
 import {ProjetoService} from './ProjetoService';
 import {SobreService} from './SobreService';
+import {IdealService} from './IdealService';
 
 export {
     CandidatoService,
@@ -12,6 +13,7 @@ export {
     FeedbackService,
     InformacoesContatoService,
     MensagensService,
+    IdealService,
     ProjetoService,
     SobreService
 }

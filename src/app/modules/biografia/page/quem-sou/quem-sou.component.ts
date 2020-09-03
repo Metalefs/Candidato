@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Input } from '@angular/core';
 
 import { Collections } from 'src/app/data/schema/Collections';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
@@ -14,13 +14,13 @@ import { fade } from 'src/app/animations';
 import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 
 @Component({
-  selector: 'inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css'],
+  selector: 'quem-sou',
+  templateUrl: './quem-sou.component.html',
+  styleUrls: ['./quem-sou.component.css'],
   animations:[fade]
 })
 
-export class InicioComponent implements OnInit {
+export class QuemSouComponent implements OnInit {
 
   
   constructor(private SobreService: SobreService, 
@@ -30,7 +30,6 @@ export class InicioComponent implements OnInit {
     private authenticationService: AuthenticationService,
 	) 
 	{ 
-    this.Candidato = this.CandidatoService.ObterTeste();
     this.Mensagens = this.MensagensService.ObterTeste();   //this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
 	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
@@ -42,7 +41,7 @@ export class InicioComponent implements OnInit {
   Mensagens:Mensagens;
   currentUser: Collections.User;
 
-  Candidato: Candidato;
+  @Input() Candidato: Candidato;
 
   async LerSobre(){
     

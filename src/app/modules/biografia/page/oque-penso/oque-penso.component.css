@@ -9,7 +9,8 @@
 }
 .section-about-wrap {
     padding: 2REM 2rem 0rem 2rem;
-    box-shadow: 10px 10px 100px rgba(0,0,0,0.1);
+    box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
 }
 .about-social a.downloadCV {
     width: auto;
@@ -55,4 +56,19 @@ b, strong {
     font-size: 16px;
     color: var(--background-dark);
     font-weight: 400;
+}
+
+.box{
+    box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
+             position: relative;
+             font-family: Roboto;
+             border-left:5px solid;
+             border-radius: 5px;
+             border-left-color: var(--primary-default);
+             -webkit-transition: all .3s ease-in-out 0s;
+             -moz-transition: all .3s ease-in-out 0s;
+             -ms-transition: all .3s ease-in-out 0s;
+             -o-transition: all .3s ease-in-out 0s;
+             transition: all .3s ease-in-out 0s;
 }

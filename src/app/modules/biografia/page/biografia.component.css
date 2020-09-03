@@ -61,19 +61,13 @@
   :host ::ng-deep .mat-tab-label:first-of-type{
     border-bottom-left-radius:20px;
     border-top-left-radius:20px;
-    box-shadow:  -10px 10px 60px #d9d9d9, 
-    10px -10px 60px #ffffff;
   }
   :host ::ng-deep .mat-tab-label:last-of-type{
     border-bottom-right-radius:20px;
     border-top-right-radius:20px;
-    box-shadow:  10px 10px 60px #d9d9d9, 
-    -10px -10px 60px #ffffff;
   }
   @media only screen and (max-width : 1024px) {
-    #inicio{
-      /* color: white; */
-    }
+
     :host ::ng-deep .mat-tab-labels {
       margin-top:-65;
     }

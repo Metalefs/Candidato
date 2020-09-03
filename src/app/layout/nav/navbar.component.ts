@@ -9,6 +9,8 @@ import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { fade } from 'src/app/animations';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { EstadoNav } from 'src/app/data/schema/EstadoNav';
+import { Candidato }        from 'src/app/data/schema/domain';
+import { CandidatoService } from 'src/app/data/service/domain';
 
 @Component({
   selector: 'navbar',
@@ -22,18 +24,21 @@ export class NavbarComponent implements OnInit {
     is_solid?: boolean,
     is_active?: boolean}> = new BehaviorSubject({});
 
+    @Input()NavState:NavState;
+    Subtitulo:string = "Portifólio do Nome Candidato";
+    paginas: OpcaoNavbarFA[] = [];
+    redesSociais: RedeSocial[] = [];
+    Copyright:string = "@Conecta Candidato";
+    Candidato:Candidato;
+
   private _subscription: Subscription;
   paginaAtiva = "";
   constructor( private ServicoPaginas: ServicoPaginas, private ServicoRedesSociais: ServicoRedesSociais,
     private NavStateService:NavStateService,
-    private Router:Router ) { 
-      
+    private Router:Router,
+    private CandidatoService:CandidatoService ) { 
+      this.Candidato = CandidatoService.ObterTeste();
   }
-  @Input()NavState:NavState;
-  Subtitulo:string = "Portifólio do Nome Candidato";
-  paginas: OpcaoNavbarFA[] = [];
-  redesSociais: RedeSocial[] = [];
-  Copyright:string = "@Conecta Candidato";
   
   setActiveSection(section: any): void {
     this.ActiveNav$.next(section);

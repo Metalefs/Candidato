@@ -13,7 +13,7 @@
                     </ng-template>
                     
                     <div class="container" data-aos="zoom-in-down" id="inicio">
-                        <inicio></inicio>    
+                        <quem-sou [Candidato]="Candidato"></quem-sou>    
                     </div>
                 </mat-tab>
                 <mat-tab class="my-mat-tab">
@@ -22,7 +22,7 @@
                     </ng-template>
                     
                     <div class="" data-aos="zoom-in-down" id="sobre">
-                        <sobre></sobre>
+                        <oque-penso [Ideais]="Ideais"></oque-penso>
                     </div>
                 </mat-tab>
                 <mat-tab class="my-mat-tab">
@@ -30,7 +30,7 @@
                         O que <wbr> realizei
                     </ng-template>
                     <div class="" data-aos="zoom-in-down">
-                        
+                        <experiencia-trabalho [Candidato]="Candidato"></experiencia-trabalho>
                     </div>
                 </mat-tab>
                 <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
@@ -50,7 +50,7 @@
                 </ng-template>
                 
                 <div class="container" data-aos="zoom-in-down" id="inicio">
-                    <inicio></inicio>    
+                    <quem-sou [Candidato]="Candidato"></quem-sou>    
                 </div>
             </mat-tab>
             <mat-tab class="my-mat-tab">
@@ -59,7 +59,7 @@
                 </ng-template>
                 
                 <div class="" data-aos="zoom-in-down" id="sobre">
-                    <sobre></sobre>
+                    <oque-penso [Ideais]="Ideais"></oque-penso>
                 </div>
             </mat-tab>
             <mat-tab class="my-mat-tab">
@@ -67,7 +67,7 @@
                     O que <wbr> realizei
                 </ng-template>
                 <div class="" data-aos="zoom-in-down">
-                    
+                    <experiencia-trabalho [Candidato]="Candidato"></experiencia-trabalho>
                 </div>
             </mat-tab>
         </mat-tab-group>

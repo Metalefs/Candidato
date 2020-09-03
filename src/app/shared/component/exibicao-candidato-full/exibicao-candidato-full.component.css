@@ -28,6 +28,7 @@
     position: fixed;
     width: 107%;
     height: 100%;
+    opacity: 0;
     border-top-right-radius: 48px;
     background-origin: padding-box;
     background-position: right !important;
@@ -63,6 +64,10 @@
     height: 69vh;
     width: 100%;
     content: '';
+  }
+
+  .partido-logo{
+    width: 110px;
   }
 @media only screen and (max-width : 801px) {
     .typing-animation{

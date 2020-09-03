@@ -1,20 +1,29 @@
-<div class="experience wow fadeInDown" data-wow-delay="0.7s">
-    <h4>Experiências de trabalho</h4>
-    <h1> {{Mensagens?.ExperienciaDeTrabalho}}
-    </h1>
-    <ul>
-        <li *ngFor="let experiencia of ExperienciasTrabalho">
-            <h3>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h3>
+
+<div class="about">
+    <div class="col-md-12">
+      <div class="about-details">
+
+          <div class="experience wow fadeInDown" data-wow-delay="0.7s">
+            <!-- <h4>Experiências de trabalho</h4>
+            <h1> {{Mensagens?.ExperienciaDeTrabalho}}</h1> -->
+            <ul>
+
+                <li *ngFor="let experiencia of ExperienciasTrabalho">
+                    <h3>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h3>
+                    <p>
+                        {{experiencia?.Descricao}}
+                    </p>
+                    <h6>{{experiencia?.Inicio}} - {{experiencia?.Fim}}</h6>
+                </li>
+
+            </ul>
+          </div>
+          <div class="cta">
             <p>
-                {{experiencia?.Descricao}}
+                {{Mensagens.ChamadaParaContato}}
             </p>
-            <h6>{{experiencia?.Inicio}} - {{experiencia?.Fim}}</h6>
-        </li>
-    </ul>
-</div>
-<div class="cta">
-    <p>
-        Candidato.MensagemContato
-    </p>
-    <a class="btn btn-contact" href="#">Contate-me</a>
-</div>
+            <a class="btn btn-contact" href="#">Contate-me</a>
+          </div>
+      </div>
+    </div>
+  </div>

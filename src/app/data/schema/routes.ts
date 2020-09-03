@@ -10,6 +10,7 @@ export let routes = {
     Sobre:"/sobre/",
     ExperienciaTrabalho:"/experienciaTrabalho",
     Mensagens:"/mensagens",
+    Ideal:"/Ideal",
     Projeto:"/projeto",
     Like:"/like",
 

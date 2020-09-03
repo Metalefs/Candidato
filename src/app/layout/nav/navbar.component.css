@@ -10,8 +10,54 @@
 .navbar{
     height: 70px;
     overflow: visible;
+    background-color: #0f161e;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-end     .navbar-item{
+    font-size: medium;
+    font-family: Poppins;
+    position: relative;
+    display: inline-block;
+    color: rgba(0,0,0,.7);
+    padding-left: 15px !important;
+    opacity: 0.9;
+    padding-right: 15px !important;
 }
 .nav-logo{
     height: auto;
-    width: 83px;
+    /* width: 83px; */
+    text-shadow: -10px 10px 30px rgba(0,0,0,.7);
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Roboto;
+    font-size: x-large;
+    font-weight: 400;
+}
+a.navbar-item:hover{
+    background: initial;
+    transform:translateY(1px);
+}
+@media (min-width: 992px){
+.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+}
+.navbar>.container, .navbar>.container-fluid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }

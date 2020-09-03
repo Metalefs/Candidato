@@ -8,7 +8,7 @@
 }
 .portfolio-item--desc {
     position: relative;
-    font-family: Poppins;
+    font-family: Roboto;
     border-left:5px solid;
     border-radius: 5px;
     border-left-color: var(--primary-default);
@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 .gostou{
-    color:blue;
+    transform:translateX(-5px);
 }
 .card-content {
     padding: 0;

@@ -2,6 +2,7 @@
     padding-left:30px;
     text-indent: 20px;
     text-align: justify;
+    font-family: Poppins;
 }
 .about-avatar img {
     height: 100px;
@@ -23,6 +24,5 @@
     }
     .hero-bg{
         margin: 2rem auto;
-        /* background:#141828; */
     }
 }

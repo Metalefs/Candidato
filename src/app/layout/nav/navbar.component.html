@@ -2,12 +2,13 @@
   <div class="navbar-brand">
     <!-- navbar items, navbar burger... -->
   </div>
-  <div class="navbar-menu">
+  <div class="navbar-menu container">
     <div class="navbar-start">
-      <a class="navbar-item" [routerLink]="['inicio']" href="#"
+      <a class="navbar-item underline--magical" [routerLink]="['inicio']" href="#"
         routerLinkActive="Active">
         <figure @fadeIn class="image px-3 py-3 nav-logo">
-           <img src="/assets/imagens/icones/ConectaCandidato_fundoTransparente.png" width="112" height="28" alt="Conecta Candidato">
+           <!-- <img src="/assets/imagens/icones/ConectaCandidato_fundoTransparente.png" width="112" height="28" alt="Conecta Candidato"> -->
+          {{Candidato.Nome}}
         </figure>
       </a>
       <a class="navbar-item" *ngFor="let rede of redesSociais"
@@ -18,7 +19,7 @@
       </a>
     </div>
   
-    <div class="navbar-end">
+    <div class="navbar-end pr-6">
       <a class="navbar-item" *ngFor="let pagina of paginas"
           [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''" pageScroll (click)="ChangeToThis(pagina.Link)"
           [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="[pagina.Link]" href="#{{pagina.Link}}"
@@ -28,5 +29,4 @@
       </a>
     </div>
   </div>
-  <p class="copyright-text">{{Copyright}}</p>
 </nav>

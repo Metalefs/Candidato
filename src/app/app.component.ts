@@ -105,7 +105,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     // apply single gradient to a callback function
     const applyGradient = async (url, callback) => {
       const data = await getData(url);
-      const gradient = buildGradient(data[randNumInRange(data.length)]);
+      const gradient = buildGradient(data[1]);
       callback(gradient);
     };
 

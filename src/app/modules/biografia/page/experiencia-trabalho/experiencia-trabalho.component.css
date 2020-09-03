@@ -1,0 +1,159 @@
+
+
+.about {
+	padding: 0px 0 0 0 !important;
+}
+
+.about .about-intro h4 {
+	font-family: Poppins;
+	font-size: 12px;
+	font-weight: 400;
+	color: #A1A1A1;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+}
+
+.about .about-intro h1 {
+	font-family: Poppins;
+	font-size: 18px;
+	font-weight: 400;
+	color: #222222;
+	line-height: 1.4;
+}
+
+.about img {
+	margin: 30px 0 30px 0;
+}
+
+.about-details {
+	overflow: hidden;
+}
+/*
+.about-details p {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	color: #222222;
+	line-height: 1.4;
+}*/
+
+.about-details .work-list {
+	padding: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.about-details .work-list i {
+	font-size: 42px;
+	text-align: center;
+}
+
+.about-details .work-list p {
+	font-family: Poppins;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.4;
+	margin: 20px 0 20px 0;
+}
+
+.about-details .col-sm-4 {
+	background: #e6e6ff;
+	padding: 20px 20px 20px 20px;
+}
+
+.about-details .col-sm-4:nth-child(2) {
+	background: #ffcccc;
+}
+
+
+.about .experience h4 {
+	font-family: Poppins;
+	font-size: 12px;
+	font-weight: 400;
+	color: #A1A1A1;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+}
+
+.about .experience h1 {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	color: #222222;
+	line-height: 1.4;
+}
+
+.about .experience ul {
+  padding: 50px 0 0 0;
+}
+
+.about .experience li {
+  margin-bottom: 30px;
+	background: rgba(230, 230, 255, 0.5);
+	padding: 20px;
+}
+
+.about .experience h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666;
+	text-align: left;
+  letter-spacing: 0px;
+  line-height: 1.2;
+}
+
+.about .experience p {
+  font-family: Poppins;
+  font-size: 14px !important;
+  font-weight: 300;
+  color: #444444;
+  margin: 20px 0 10px 0;
+	line-height: 1.4;
+}
+
+.about .experience h6 {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  color: #A1A1A1;
+	text-align: left;
+	margin: 20px 0 0 0 ;
+  letter-spacing: 1px;
+}
+
+.about .cta {
+	padding: 30px 0 30px 0;
+}
+
+.about .cta p {
+	font-family: Poppins;
+	font-size: 21px;
+	font-weight: 600;
+	color: #454545;
+	text-align: left;
+}
+
+
+
+.btn-contact {
+    padding: 4px 12px;
+    margin: 1em auto;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--background-default);
+    display: inline-block;
+    width: 50%;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    background: var(--primary-default);
+    border: 2px solid;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    -webkit-transform: 0.5s;
+    -moz-transform: 0.5s;
+    transition: 0.5s;
+}

@@ -12,7 +12,7 @@ export const routes: Routes = [
   {
     path: 'biografia',
     component: BiografiaComponent,
-    data: { layout: Layouts.Main }
+    data: { layout: Layouts.Main, animation:'isRight' }
   },
 ];
 

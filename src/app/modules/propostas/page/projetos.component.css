@@ -1,4 +1,3 @@
-
 .portifolio-filter{
     margin-top: -22px;
 }
@@ -16,7 +15,7 @@
     position: absolute; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: transform 250ms ease-out 0s, opacity 250ms ease-out 0s;
 }
 .projetos-desktop{
-    margin-left: 10%;
+    margin-left: 16%;
 }
 .container-projeto{
     min-width: 50%;
@@ -31,7 +30,6 @@
     border-color: #5493f7;
     color: #333;
 }
-
 .text-black {
     color: #0000!important;
 }

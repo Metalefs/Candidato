@@ -26,15 +26,33 @@ export class ExperienciaTrabalhoService extends ServicoBase {
         );
     }
 
-    ObterTeste() : ExperienciaTrabalho{
-       return new ExperienciaTrabalho(
-            1,
-            "Rumo Soluções",
-            "Estágio desenvolvedor .NET",
-            "01/01/2019",
-            "01/01/2021",
-            "Atuei em manutenção de sistemas proprietários, desenvolvimento de aplicações com design digirido por testes."
-       ) ;
+    ObterTeste() : ExperienciaTrabalho[]{
+       return [
+           new ExperienciaTrabalho(
+                1,
+                "MBL",
+                "Liderança",
+                "01/01/2016",
+                "Presente",
+                "Liderando o MBL, Gleisson apresentou e lutou por diversos projetos em Matozinhos, entre eles a aprovação do projeto que traria a Empresa italiana Fassa Bortolo a cidade gerando milhares de reais em investimentos. Também lutou pela aprovação do projeto que traria R$ 10 milhões em investimento a cidade com a construção do novo Fórum"
+            ),
+            new ExperienciaTrabalho(
+                1,
+                "MBL",
+                "Liderança",
+                "01/01/2017",
+                "Presente",
+                "Apresentou o projeto Anticorrupção inspirado em países como Alemanha e Estados Unidos para evitar superfaturamentos e atrasos em obras."
+            ),
+            new ExperienciaTrabalho(
+                1,
+                "MBL",
+                "Liderança",
+                "01/01/2019",
+                "Presente",
+                "Começou a coletar assinaturas para o Projeto Matozinhos Mais Por Menos que visa diminuir em 30% o salario dos vereadores e Prefeito em Matozinhos."
+            ),
+        ] ;
     }
 	
 	Incluir(item: ExperienciaTrabalho): Observable<any> {
