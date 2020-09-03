@@ -28,10 +28,10 @@
 }
 
 .typing-animation{
-    bottom: 100px;
+    bottom: 200px;
     z-index: 3;
     margin-left: .5rem;
-    font-size: xx-large;
+    font-size: 3rem !important;
     /* background:rgba(0,0,0,.5); */
     position: fixed;
     font-family: Roboto;
@@ -44,9 +44,8 @@
     display: none !important;
 }
 .bar{
-    bottom: 106px;
+    bottom: 150px;
     z-index: 2;
-    /* margin-left: 1.5rem; */
     position: fixed;
     height: 70px;
     width: 37%;
@@ -68,6 +67,7 @@
     /* background: var(--primary-default); */
     padding: 0.5REM;
     border-radius: 50%;
+    font-size: 3rem;
     cursor: default;
     width: max-content;
 }

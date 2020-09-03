@@ -14,8 +14,8 @@ jQuery(function($) {
 
     $(window).load(function() {
   		setTimeout(function() {
-        $('#loading').fadeOut('slow', function() {
-        });
+        // $('#loading').fadeOut('slow', function() {
+        // });
       }, 150);
     });
 

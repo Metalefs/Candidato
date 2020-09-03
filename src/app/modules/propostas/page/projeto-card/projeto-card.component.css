@@ -21,7 +21,7 @@
 .lke-btn{
     color: var(--primary-default);
     background: var(--background-default);
-    transition: 21s all;
+    transition: 1s all;
     cursor: pointer;
 }
 .gostou{

@@ -393,11 +393,11 @@ h1, h2, h3, h4, h5, h6 {
 	overflow-y: auto;
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
-	-webkit-transform: translateX(100%);
-	-moz-transform: translateX(100%);
-	-ms-transform: translateX(100%);
-	-o-transform: translateX(100%);
-	transform: translateX(100%);
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	-ms-transform: translateX(0%);
+	-o-transform: translateX(0%);
+	transform: translateX(0%);
   -webkit-transition: all .6s;
   -moz-transition: all .6s;
     transition: all .6s;
