@@ -27,10 +27,8 @@
     opacity: 0;
     position: fixed;
     width: 107%;
-    /* margin: 14px 15px; */
-    height: 97%;
+    height: 100%;
     border-top-right-radius: 48px;
-    /* padding: 2rem; */
     background-origin: padding-box;
     background-position: right !important;
     animation: fade-in 5s ease-in-out forwards;
@@ -38,16 +36,14 @@
 }
 
 .center-section-candidato{
-    /* position: fixed;  */
-    /* width: 57%; */
-    height: 765px;
-    border:0;
+    height: 100%;
+    border: 0;
     box-shadow: 13px 10px 5px #00000047;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: top !important;
     border-top-right-radius: 48px;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0rem;
     animation-name: fade-in;
     top: 0;
@@ -57,6 +53,7 @@
 
 .bar{
     padding: 1rem;
+    height: 25%;
 }
 .center-section-candidato::after {
     display: block;
@@ -109,6 +106,7 @@
         background-size: cover !important;
         background-position: top !important;
         position: fixed;
+        height: initial;
         width:100%;
         background: linear-gradient(#004092, #020202, transparent);
         box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8); 

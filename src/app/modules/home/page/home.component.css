@@ -36,7 +36,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 107%;
     height: -webkit-max-content;
     height: max-content;
     z-index: 5;
@@ -82,7 +82,8 @@
 }
 .section-about-wrap {
     padding: 2REM 2rem 0rem 2rem;
-    box-shadow: 10px 10px 100px rgba(0,0,0,0.1);
+    box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
 }
 .about-social a.downloadCV {
     width: auto;
@@ -90,13 +91,28 @@
     padding: 0 10px;
 }
 @media (max-width: 768px){
-.about-social a.downloadCV {
-    line-height: 40px;
-    padding: 0 14px;
-}
-.section-about{
-    margin-bottom:20px;
-}
+    .informacao-candidato {
+        position: absolute;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(255,255,255,0) 100%);
+        bottom: 61px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: -webkit-max-content;
+        height: max-content;
+        z-index: 5;
+    }
+
+    .about-social a.downloadCV {
+        line-height: 40px;
+        padding: 0 14px;
+    }
+    .section-about{
+        margin-bottom:20px;
+    }
 }
 .about-social a {
     display: block;
