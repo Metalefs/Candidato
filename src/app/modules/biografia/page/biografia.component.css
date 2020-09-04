@@ -22,9 +22,11 @@
   .mat-tab-group {
     min-height: 40vh;
     width: 100%;
+    position: absolute;
     overflow: scroll;
     max-height: 100vh;
     background: #fff;
+    top: 0;
     padding: 1rem;
 }
   :host ::ng-deep .mat-ripple-element {
@@ -85,6 +87,7 @@
       margin-top: 85%;
       overflow: visible;
       max-height: initial;
+      position: relative;
     }
     :host ::ng-deep .mat-tab-header {
       margin-top: -19%;

@@ -10,27 +10,31 @@
                 <div class="controls">
                     <div class="w-100">
                         <div class="column">
-                            <div class="form-group">
-                                <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" class="w-100 input"
+                            <div class="field">
+                                <label class="label" for="form_email">Email *</label>
+                                <div class="control">
+                                    <input id="form_email" type="email" name="email" class="w-100 input"
                                     placeholder="Por favor, insira o seu e-mail *" required="required"
                                     data-error="Insira um e-mail válido.">
+                                </div>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                     </div>
                     <div class="w-100">
-                        <div class="w-100">
-                            <div class="form-group">
-                                <label for="form_message">Mensagem *</label>
-                                <textarea id="form_message" name="message" class="w-100 textarea"
+                        <div class="column">
+                            <div class="field">
+                                <label class="label" for="form_message">Mensagem *</label>
+                                <div class="control">
+                                    <textarea id="form_message" name="message" class="w-100 textarea"
                                     placeholder="Mensagem para mim *" rows="4" required="required"
                                     data-error="Deixe sua mensagem."></textarea>
+                                </div>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="w-100">
-                            <input type="submit" class="btn is-success btn-send" value="Enviar">
+                            <input type="submit" class="button btn-send" value="Enviar">
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,8 @@
 .intro{
-    padding-left:30px;
+    margin:15px;
+}
+.intro-text{
+    font-family: Poppins;
 }
 .about-avatar img {
     height: 100px;

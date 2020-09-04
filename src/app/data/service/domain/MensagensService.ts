@@ -30,9 +30,9 @@ export class MensagensService extends ServicoBase {
         return new Mensagens(
             1,
             'Yes, we can',
-            'Quem sou?',
+            'Pré-candidato a vereador de Matozinhos',
             // 'Barack Hussein Obama II é um advogado e político norte-americano que serviu como o 44.º presidente dos Estados Unidos de 2009 a 2017, sendo o primeiro afro-americano a ocupar o cargo. ',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu. ',
+            'Militando pelas causas certas no país do errado. Mineiro, quase engenheiro e agora pré-candidato a vereador.',
             'Sobre',
             'Quer me fazer uma pergunta?',
             '',

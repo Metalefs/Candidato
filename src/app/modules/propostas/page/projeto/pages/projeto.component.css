@@ -83,3 +83,7 @@
 .relative{
     position: relative !important;
 } 
+
+.padding-left{
+    padding-left: 3% !important;
+}

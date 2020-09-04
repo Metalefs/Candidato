@@ -100,7 +100,7 @@ html * {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Roboto;
+  font-family: Poppins;
 }
 
 
@@ -381,7 +381,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------ Nav Menu Styling -----*/
 
-#nav-menu-vertical-vertical {
+#nav-menu-horizontal-vertical {
   /* position: fixed; */
   /* height: 100%; */
   right: 0;
@@ -407,11 +407,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-#nav-menu-vertical li {
+#nav-menu-horizontal li {
   padding-bottom: 1em;
 }
 
-#nav-menu-vertical li {
+#nav-menu-horizontal li {
   display: block;
   line-height: 2em;
   
@@ -431,14 +431,14 @@ h1, h2, h3, h4, h5, h6 {
     transition: .8s;
 }
 
-#nav-menu-vertical a {
+#nav-menu-horizontal a {
   position: relative;
   color: #fff;
 	text-decoration: none;
 }
 
 
-#nav-menu-vertical a:before {
+#nav-menu-horizontal a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -453,14 +453,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.2s ease-in-out 0s;
 }
 
-#nav-menu-vertical li:hover a::before {
+#nav-menu-horizontal li:hover a::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
 
-.no-touch #nav-menu-vertical a:hover {
+.no-touch #nav-menu-horizontal a:hover {
   color: #000;
 	text-decoration: none;
 }
@@ -505,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#nav-menu-vertical.is-active {
+#nav-menu-horizontal.is-active {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -519,7 +519,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#nav-menu-vertical.is-active li {
+#nav-menu-horizontal.is-active li {
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: .8s 0s;
 }
 
-#nav-menu-vertical .copyright-text {
+#nav-menu-horizontal .copyright-text {
   font-family: Work Sans;
   font-size: 12px;
   font-weight: 200; 
@@ -560,15 +560,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (min-width: 768px) {
 
-	#nav-menu-vertical {
+	#nav-menu-horizontal {
 	  /* width: 50%; */
 	}
 
-  #nav-menu-vertical .navigation {
+  #nav-menu-horizontal .navigation {
     margin-top: 150px;
   }
 
-	#nav-menu-vertical li {
+	#nav-menu-horizontal li {
 	  font-size: 24px;
 	  text-align: center;
 	  padding-left: 0em;
