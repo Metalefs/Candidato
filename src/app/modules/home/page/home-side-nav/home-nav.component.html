@@ -1,0 +1,42 @@
+<section class="sidenav-content side-nav">
+    <div class="columns px-3 ">
+        <div class="column">
+            <figure class="image has-ratio is-fullwidth">
+                <img class="cadidato-img" src="{{Candidato.FotoPerfil}}">
+                <a class="title is-5">@ {{Candidato.Nome}}</a>
+                        <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
+                            <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
+                                data-aos="zoom-in-right">
+                                    <img width="60" src="assets/imagens/icones/partido.png" class="partido-logo">
+                            </div>
+                        </a>
+            </figure>
+            
+            <div class="container informacao-candidato-desktop">
+                <div >
+                    <!-- <h1 class="title is-1 logo-campanha">Sua Logo</h1> -->
+                </div>
+                <div >
+                    <h1 class="title is-1 numero-campanha">{{Candidato.NumeroCampanha}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="container">
+                
+                <section class="nav-group mb-6">
+                    
+                    <div class="container">
+                        <a class="box option subtitle is-4" routerLink="{{pagina.Link}}" routerLinkActive="true"  (mouseover)="syncLevel(index)" *ngFor="let pagina of paginas; let i = index">
+                            
+                            <fa-icon [icon]="pagina.Icon" [spin]="isSyncAnimated" transform="rotate-{{i*20}}"></fa-icon> {{pagina.Titulo}}
+                            
+                        </a>
+                    </div>
+                    <app-redes-sociais></app-redes-sociais>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</section>

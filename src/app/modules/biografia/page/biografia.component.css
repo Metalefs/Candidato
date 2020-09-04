@@ -22,6 +22,8 @@
   .mat-tab-group {
     min-height: 40vh;
     width: 100%;
+    overflow: scroll;
+    max-height: 100vh;
     background: #fff;
     padding: 1rem;
 }
@@ -60,7 +62,7 @@
   }
   :host ::ng-deep .mat-tab-label:first-of-type{
     border-bottom-left-radius:20px;
-    border-top-left-radius:20px;
+    border-top-left-radius:0px;
   }
   :host ::ng-deep .mat-tab-label:last-of-type{
     border-bottom-right-radius:20px;
@@ -70,9 +72,19 @@
     :host ::ng-deep .mat-tab-labels {
       margin-top:-65;
     }
+    :host ::ng-deep .mat-tab-label:first-of-type{
+      border-bottom-left-radius:20px;
+      border-top-left-radius:20px;
+    }
+    :host ::ng-deep .mat-tab-label:last-of-type{
+      border-bottom-right-radius:20px;
+      border-top-right-radius:20px;
+    }
     .mat-tab-group {
       margin-top: -95px;
       margin-top: 85%;
+      overflow: visible;
+      max-height: initial;
     }
     :host ::ng-deep .mat-tab-header {
       margin-top: -19%;

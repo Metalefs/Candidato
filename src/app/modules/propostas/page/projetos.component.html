@@ -24,8 +24,8 @@
     
                    <!-- Person item -->
                   <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
-                    *ngFor="let projeto of Projetos">
-                    <app-projeto-card [projeto]="projeto" [Delay]="get_delay()"></app-projeto-card>
+                    *ngFor="let projeto of Projetos;let i = index">
+                    <app-projeto-card [projeto]="projeto" [Delay]="1000*i"></app-projeto-card>
                   </div>
                   <!-- Person item end -->
     
@@ -62,8 +62,8 @@
 
                <!-- Person item -->
               <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
-                *ngFor="let projeto of Projetos;">
-                  <app-projeto-card [projeto]="projeto" [Delay]="get_delay()"></app-projeto-card>
+                *ngFor="let projeto of Projetos;let i = index">
+                  <app-projeto-card [projeto]="projeto" [Delay]="800*i"></app-projeto-card>
               </div>
               <!-- Person item end -->
 

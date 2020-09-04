@@ -26,6 +26,11 @@
         /* background:#141828; */
     }
 }
+.hero{
+    background:var(--pri)
+}
+
+
 
 .informacao-candidato{
     position: absolute;
@@ -42,19 +47,6 @@
     z-index: 5;
 }
 
-.informacao-candidato-desktop{
-    position: absolute;
-    left: 5%;
-    bottom: 15%;
-    margin:auto;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: max-content;
-    z-index: 5;
-}
 .logo-campanha{
     color:var(--primary-default);
     size:var(--logo-campanha-size);
@@ -65,12 +57,6 @@
     size:var(--numero-campanha-size);
     margin:var(--numero-campanha-margin);
 }
-
-
-
-
-
-
 .section-about{
     margin: 0 auto;
     z-index: 100;
@@ -88,30 +74,6 @@
     width: auto;
     line-height: 47px;
     padding: 0 10px;
-}
-@media (max-width: 768px){
-    .informacao-candidato {
-        position: absolute;
-        background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(255,255,255,0) 100%);
-        bottom: 61px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: -webkit-max-content;
-        height: max-content;
-        z-index: 5;
-    }
-
-    .about-social a.downloadCV {
-        line-height: 40px;
-        padding: 0 14px;
-    }
-    .section-about{
-        margin-bottom:20px;
-    }
 }
 .about-social a {
     display: block;

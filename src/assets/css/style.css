@@ -714,14 +714,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Work Sans;
     font-size: 16px;
     font-weight: 600;
-	color: var(--primary-default);
 	display: inline-block;
 	width: 50%;
-    border-radius: 1rem;
-    text-transform: uppercase;
+    border-radius: .3rem;
+	text-transform: uppercase;
+	color: var(--background-default);
     background: var(--primary-default);
-    border: 2px solid;
-    border-color: #31ff54;
     padding: 10px 20px;
     margin-top: 40px;
     margin-bottom: 40px;

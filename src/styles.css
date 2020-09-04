@@ -12,7 +12,7 @@
   --numero-campanha-margin: 0 0 10px 0;
 
   
-  --primary-default: blue;
+  --primary-default: #006680;
   --primary-dark: #24b286;
   --primary-light: #b2ffe7;
 
@@ -44,7 +44,9 @@
 .no-y-scroll{
   overflow-y: hidden;
 }
-
+.blur{
+  filter: blur(10%);
+}
 .left-section-candidato{
   width: 100%;
   /* height: 100%; */
@@ -112,7 +114,7 @@
   animation: typedjsBlink 0.7s infinite;
 }
 .typing {
-  text-shadow: 2px 2px 30px rgba(37, 35, 35, 0.99);
+  text-shadow: 2px 2px 60px rgba(37, 35, 35, 0.99);
   font-weight: bold;
 }
 .section {

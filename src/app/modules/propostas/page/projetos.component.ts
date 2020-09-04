@@ -47,12 +47,6 @@ export class ProjetosComponent implements OnInit {
     
   }
 
-  get_delay(){
-    
-    return this.cards++ * 500;
-
-  }
-
   navigateToProject(id: string): void {
     this.Router.navigateByUrl(`/projeto/${id}`);
   }
