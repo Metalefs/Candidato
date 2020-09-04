@@ -4,7 +4,7 @@ import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais';
 import { OpcaoNavbar, OpcaoNavbarFA } from 'src/app/data/schema/OpcoesNavbar';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
-import { NavState } from '../content-layout/content-layout.component';
+import { NavState } from '../../content-layout/content-layout.component';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { fade } from 'src/app/animations';
 import { BehaviorSubject, Subscription } from 'rxjs';
@@ -13,12 +13,12 @@ import { Candidato }        from 'src/app/data/schema/domain';
 import { CandidatoService } from 'src/app/data/service/domain';
 
 @Component({
-  selector: 'navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  selector: 'vertical-nav',
+  templateUrl: './vertical-nav.component.html',
+  styleUrls: ['./vertical-nav.component.css'],
   animations:[fade]
 })
-export class NavbarComponent implements OnInit {
+export class VerticalNavComponent implements OnInit {
   public ActiveNav$: BehaviorSubject<{pagina?: string,
     has_badge?: boolean,
     is_solid?: boolean,

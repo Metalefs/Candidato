@@ -43,10 +43,16 @@
 figure.image{
     width: 60%;
     margin: auto;
+    transition: 1s all ease-in-out;
+}
+figure.image:hover{
+    width: 61%;
+}
+figure.image:active{
+    width: 100%;
 }
 .cadidato-img{
     margin: auto;
-    border-radius: 50%;
 }
 
 .option{
@@ -72,7 +78,7 @@ figure.image{
     align-items: center;
     height: 100vh;
     top: 1%;
-    width: 100%;
+    width: 95%;
     position: fixed;
     border-radius: 1rem;
     border-top-left-radius: 1rem;

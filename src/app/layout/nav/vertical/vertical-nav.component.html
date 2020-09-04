@@ -1,0 +1,27 @@
+<ul class="navigation">
+    <li *ngFor="let pagina of paginas">
+      <a (click)="ToggleNav()" 
+        [ngClass]="paginaAtiva == pagina.Link ? 'nav-active' : ''" pageScroll (click)="ChangeToThis(pagina.Link)"
+        [pageScrollOffset]="0" [pageScrollDuration]="300" [routerLink]="[pagina.Link]" href="#{{pagina.Link}}"
+        routerLinkActive="Active">
+        {{pagina.Titulo}}
+      </a>
+    </li>
+  </ul>
+  <div class="section-head">
+    <h2></h2>
+  </div>
+  <div class="nav-social">
+    <ul class="inline-list">
+      <li *ngFor="let rede of redesSociais">
+        <a href="{{rede.link}}" target="_blank" rel="noopener" title="{{rede.nome}}">
+          <figure @fadeIn class="mx-0 image is-32x32">
+            <img class="is-rounded" src="{{rede.src}}">
+          </figure>
+          <!-- <i [class]="rede.classe"></i>  -->
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p class="copyright-text">{{Copyright}}</p>

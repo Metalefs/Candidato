@@ -3,6 +3,31 @@
     text-indent: 20px;
     text-align: justify;
 }
+
+.fixed-right{
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 50%;
+    margin-left: 50%;
+    overflow: scroll;
+    animation: to-left 2s ease-in-out forwards;
+}
+.fixed-left{
+    position: fixed;
+    width: 50%;
+    /* margin: 14px 15px; */
+    /* height: 97%; */
+    border-top-right-radius: 48px;
+    /* padding: 2rem; */
+    background-origin: padding-box;
+    background-position: right !important;
+    animation: fade-in 5s ease-in-out forwards;
+}
+
 .about-avatar img {
     height: 100px;
     width: 100px;
@@ -41,7 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 107%;
+    width: 100%;
     height: -webkit-max-content;
     height: max-content;
     z-index: 5;

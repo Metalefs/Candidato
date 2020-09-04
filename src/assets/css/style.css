@@ -381,7 +381,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------ Nav Menu Styling -----*/
 
-#nav-menu {
+#nav-menu-vertical-vertical {
   /* position: fixed; */
   /* height: 100%; */
   right: 0;
@@ -407,11 +407,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-#nav-menu li {
+#nav-menu-vertical li {
   padding-bottom: 1em;
 }
 
-#nav-menu li {
+#nav-menu-vertical li {
   display: block;
   line-height: 2em;
   
@@ -431,14 +431,14 @@ h1, h2, h3, h4, h5, h6 {
     transition: .8s;
 }
 
-#nav-menu a {
+#nav-menu-vertical a {
   position: relative;
   color: #fff;
 	text-decoration: none;
 }
 
 
-#nav-menu a:before {
+#nav-menu-vertical a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -453,14 +453,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.2s ease-in-out 0s;
 }
 
-#nav-menu li:hover a::before {
+#nav-menu-vertical li:hover a::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
 
-.no-touch #nav-menu a:hover {
+.no-touch #nav-menu-vertical a:hover {
   color: #000;
 	text-decoration: none;
 }
@@ -505,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#nav-menu.is-active {
+#nav-menu-vertical.is-active {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -519,7 +519,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#nav-menu.is-active li {
+#nav-menu-vertical.is-active li {
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: .8s 0s;
 }
 
-#nav-menu .copyright-text {
+#nav-menu-vertical .copyright-text {
   font-family: Work Sans;
   font-size: 12px;
   font-weight: 200; 
@@ -560,15 +560,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (min-width: 768px) {
 
-	#nav-menu {
+	#nav-menu-vertical {
 	  /* width: 50%; */
 	}
 
-  #nav-menu .navigation {
+  #nav-menu-vertical .navigation {
     margin-top: 150px;
   }
 
-	#nav-menu li {
+	#nav-menu-vertical li {
 	  font-size: 24px;
 	  text-align: center;
 	  padding-left: 0em;
@@ -585,6 +585,304 @@ h1, h2, h3, h4, h5, h6 {
 /* --------------------------------------------------
 ------------ Hamburger and Navigation Ends ----------
 ----------------------------------------------------*/
+
+
+/* --------------------------------------------------
+---------- Hamburger and Navigation Starts ----------
+----------------------------------------------------*/
+
+
+.nav-trigger {
+	padding: 8px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	border-radius: 50px;
+	  background-color: #F2F2F1;
+	  z-index: 111;
+	transition: all 400ms ease-in;
+  }
+  
+  .is-active.nav-trigger {
+	background: #DDDDDD;
+  }
+  
+  .hamburger {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	transition: transform 500ms ease-in-out;
+  }
+  
+  .nav-trigger:active .hamburger {
+	transition: transform 50ms;
+	transform: scale(.95);
+  }
+  
+  .hamburger::before, .hamburger::after, .hamburger .icon {
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 2px;
+	  left: 2px;
+	background: #111111;
+	transform-origin: 100% 50%;
+	transition: all 100ms ease-in-out;
+  }
+  
+  .hamburger::before {
+	top: 5px;
+  }
+  .hamburger .icon {
+	  width: 21px;
+	top: 11px;
+	transform-origin: 50% 50%;
+  }
+  .hamburger::after {
+	top: 17px;
+  }
+  /*
+  .is-active .hamburger {
+	transform: rotateZ(-360deg);
+  }
+  .is-active .nav-trigger:active .hamburger {
+	transform: scale(.95) rotateZ(-360deg);
+  }
+  */
+  .is-active .hamburger::before,
+  .is-active .hamburger::after,
+  .is-active .hamburger .icon {
+	background: #111111;
+  }
+  
+  .is-active .hamburger::before {
+	transform: translate3d(-4px, -1px, 0) rotateZ(-45deg);
+  }
+  .is-active .hamburger .icon {
+	transform: rotateY(-90deg);
+	transition: transform 100ms, background-color 400ms ease-in-out;
+  }
+  .is-active .hamburger::after {
+	transform: translate3d(-4px, 2px, 0) rotateZ(45deg);
+  }
+  
+  /*-----------------------------------------------------
+  ----------- Hamburger Menu Styling Ends ---------------
+  ------------------------------------------------------*/
+  
+  /* ------ Nav Menu Styling -----*/
+  
+  #nav-menu {
+	position: fixed;
+	height: 100%;
+	right: 0;
+	top: 0;
+	z-index: 110;
+	width: 75%;
+	background-color: #e6ecef;
+	  background-size: cover;
+	  overflow-y: auto;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	  -webkit-transform: translateX(100%);
+	  -moz-transform: translateX(100%);
+	  -ms-transform: translateX(100%);
+	  -o-transform: translateX(100%);
+	  transform: translateX(100%);
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	  transition: all .6s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  }
+  
+  
+  #nav-menu .navigation {
+	margin-top: 150px;
+	margin-bottom: 20px;
+  }
+  
+  
+  #nav-menu li {
+	padding-bottom: 1em;
+  }
+  
+  #nav-menu li {
+	display: block;
+	line-height: 2em;
+	font-family: Poppins;
+	font-size: 21px;
+	font-weight: 600;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 2;
+	padding-bottom: 1em;
+	color: #222;
+	  -webkit-transform: translateX(50px);
+	  -moz-transform: translateX(50px);
+	  transform: translateX(50px);
+	  -webkit-transition: .8s;
+	-moz-transition: .8s;
+	  transition: .8s;
+  }
+  
+  #nav-menu a {
+	position: relative;
+	color: #111;
+	  text-decoration: none;
+  }
+  
+  
+  #nav-menu a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: -3px;
+	left: 0;
+	background-color: #072DEF;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	transition: all 0.2s ease-in-out 0s;
+  }
+  
+  #nav-menu li:hover a::before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+  }
+  
+  
+  .no-touch #nav-menu a:hover {
+	color: #000;
+	  text-decoration: none;
+  }
+  
+  
+  /* ----- Dimming Main Content When Navigation is Active -----*/
+  
+  .main::before {
+	  display: block;
+	  content: "";
+	  width: 100%;
+	  height: 0;
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	  background: rgba(0, 0, 0, 0.5) !important;
+	  opacity: 0;
+	  z-index: 100;
+	  -webkit-transform: translate3d(0, 0, 0);
+	  -moz-transform: translate3d(0, 0, 0);
+	  -ms-transform: translate3d(0, 0, 0);
+	  -o-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	  -webkit-backface-visibility: hidden;
+	  -moz-backface-visibility: hidden;
+	  -ms-backface-visibility: hidden;
+	  -o-backface-visibility: hidden;
+	  backface-visibility: hidden;
+	  -webkit-transition: opacity 0.5s ease, height 1ms 0.5s ease;
+	  -moz-transition: opacity 0.5s ease, height 1ms 0.5s ease;
+	  -o-transition: opacity 0.5s ease, height 1ms 0.5s ease;
+	  transition: opacity 0.5s ease, height 1ms 0.5s ease !important;
+  }
+  
+  .main.is-active.main::before{
+	  -webkit-transition: opacity 0.5s ease;
+	  -moz-transition: opacity 0.5s ease;
+	  -o-transition: opacity 0.5s ease;
+	  transition: opacity 0.5s ease;
+	  height: 100%;
+	  opacity: 1
+  }
+  
+  
+  #nav-menu.is-active {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	-webkit-overflow-scrolling: touch;
+  }
+  
+  
+  #nav-menu.is-active li {
+	  -webkit-transform: translateX(0px);
+	  -moz-transform: translateX(0px);
+	  transform: translateX(0px);
+	  -webkit-transition: .8s 0s;
+	-moz-transition: .8s 0s;
+	  transition: .8s 0s;
+  }
+  
+  #nav-menu .copyright-text {
+	font-family: Work Sans;
+	font-size: 12px;
+	font-weight: 200;
+	  text-align: center;
+	letter-spacing: 1px;
+	padding: 20px 20px;
+  }
+  
+  .nav-social ul {
+	padding: 0.5em;
+	list-style-type: none;
+	  text-align: center;
+  }
+  
+  .nav-social li {
+	display: inline !important;
+	padding-right: 0.5em !important;
+	  padding-left: 0.5em !important;
+  }
+  
+  .nav-social i, .nav-social a {
+	font-size: 21px;
+	color: #072DEF;
+  }
+  
+  .nav-social a:before {
+	display: none;
+  }
+  
+  @media only screen and (min-width: 768px) {
+  
+	  #nav-menu {
+		width: 50%;
+	  }
+  
+	#nav-menu .navigation {
+	  margin-top: 150px;
+	}
+  
+	  #nav-menu li {
+		font-size: 24px;
+		text-align: center;
+		padding-left: 0em;
+	  }
+  
+	.nav-social ul {
+	  padding: 0.4em;
+	}
+  }
+  
+  
+  
+  
+  /* --------------------------------------------------
+  ------------ Hamburger and Navigation Ends ----------
+  ----------------------------------------------------*/
+  
+
 
 /* --------------------------------------------------
 ------ Homepage Split Layout Styling Starts ---------

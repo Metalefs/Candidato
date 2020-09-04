@@ -12,17 +12,36 @@
     </div>
 
 </div>
-<div class="is-hidden-touch">
-    <div class="hero is-fullheight">
 
-        <home-side-nav></home-side-nav>
+
+<div class="is-hidden-touch">
+   
+    <div class="">
         
-        <div class="hero-body blur" style="
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;">
-           
+        <div class="fixed-left">
+            <app-exibicao-candidato-full></app-exibicao-candidato-full>
         </div>
+
+        <div class="fixed-right">
+            <div class="container" data-aos="zoom-in-down" uniScrollSpy="inicio" id="inicio">
+                <apresentacao-candidato></apresentacao-candidato>
+            </div>
+
+            <div class="container" data-aos="zoom-in-down" uniScrollSpy="sobre" id="sobre">
+                <app-biografia-preview></app-biografia-preview>
+            </div>
+
+            <div class="container" data-aos="zoom-in-down" uniScrollSpy="projetos" id="projetos">
+                <app-propostas-preview></app-propostas-preview>
+            </div>
+
+            <div class="" data-aos="fade-up" uniScrollSpy="contato"  id="contato">
+                <contato></contato>
+            </div>
+
+            <app-redes-sociais [redes]="redes"></app-redes-sociais>
+        </div>
+
     </div>
 
 </div>

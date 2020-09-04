@@ -7,9 +7,11 @@
         </div>
 
     </div>
-
-    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
+    <div id="nav-menu-horizontal" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
         <navbar [NavState]="NavState"></navbar>
+    </div>
+    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
+        <vertical-nav [NavState]="NavState"></vertical-nav>
     </div>
     <!-- [ngClass]="NavState.open? 'main is-active': ''"  -->
     <div [ngClass]="NavState.open? 'main is-active': ''">

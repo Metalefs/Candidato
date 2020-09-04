@@ -16,6 +16,8 @@
 }
 .projetos-desktop{
     margin-left: 16%;
+    max-height: 100vh;
+    overflow: scroll;
 }
 .container-projeto{
     min-width: 50%;

@@ -4,9 +4,20 @@ import { HomeComponent } from './page/home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeRoutingModule } from './home.routing';
 import { HomeSideNavComponent } from './page/home-side-nav/home-nav.component';
+import { BiografiaPreviewComponent } from './page/biografia-preview/biografia-preview.component';
+import { PropostasPreviewComponent } from './page/propostas-preview/propostas-preview.component';
+import { FeedPreviewComponent } from './page/feed-preview/feed-preview.component';
+import { ApresentacaoCandidatoComponent } from './page/apresentacao-candidato/apresentacao-candidato.component';
 
 @NgModule({
-  declarations: [HomeComponent,HomeSideNavComponent],
+  declarations: [
+    HomeComponent,
+    HomeSideNavComponent,
+    BiografiaPreviewComponent,
+    PropostasPreviewComponent,
+    FeedPreviewComponent,
+    ApresentacaoCandidatoComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,
