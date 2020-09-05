@@ -4,5 +4,5 @@
     justify-content: center;
 }
 .nav-active{
-    background:red;
+    background:var(--primary-default);
 }

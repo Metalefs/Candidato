@@ -42,15 +42,14 @@ export class VerticalNavComponent implements OnInit {
   
   setActiveSection(section: any): void {
     this.ActiveNav$.next(section);
-    console.log(section);
   }
 
   ToggleNav(delay:number){
     setTimeout(()=>{
       this.NavState.open = this.NavState.open ? false : true;
-
     },delay);
   }
+
   ChangeToThis(page:string){
     this.NavStateService.currentState.subscribe(y=>{
      
@@ -65,11 +64,11 @@ export class VerticalNavComponent implements OnInit {
         }
       })
       this.paginaAtiva = page;
-      
       this.NavStateService.update(y);
 
     }) 
   }
+
   ngOnInit(): void {
     this.paginas = this.ServicoPaginas.GetAllPages();
     this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais();
@@ -77,9 +76,9 @@ export class VerticalNavComponent implements OnInit {
     setInterval(()=>{
       this.NavStateService.getActiveNav().then(x=>{
         this.paginaAtiva = x.pagina;
-        console.log(this.paginaAtiva);
       });
     },1000)
+
     this._subscription = this.NavStateService.currentState.subscribe(item => {
       if (item != undefined) {
           item.forEach(x=>{
@@ -89,12 +88,12 @@ export class VerticalNavComponent implements OnInit {
           })
       }
     });
-}
-
-ngOnDestroy() {
-  if (this._subscription) {
-      this._subscription.unsubscribe();
   }
-}
+
+  ngOnDestroy() {
+    if (this._subscription) {
+        this._subscription.unsubscribe();
+    }
+  }
 
 }
