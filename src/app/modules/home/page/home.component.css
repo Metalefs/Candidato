@@ -4,6 +4,20 @@
     text-align: justify;
 }
 
+.container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.redes-sociais{
+    max-width: 50%;
+    margin-left: 50%;
+}
 .fixed-right{
     position: relative;
     right: 0;

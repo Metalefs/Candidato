@@ -381,13 +381,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------ Nav Menu Styling -----*/
 
-#nav-menu-horizontal-vertical {
+#nav-menu-horizontal {
   /* position: fixed; */
   /* height: 100%; */
   right: 0;
   top: 0;
   z-index: 110;
-  /* width: 75%; */
   /* background-color: var(--background-default); */
 	background-size: cover;
 	overflow-y: auto;

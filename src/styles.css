@@ -129,7 +129,7 @@
     justify-content: center;
     height: 100%;
     width: 100vw;
-    background: white;
+    background: #363636;
     margin: auto;
     transition: .5s all;
 }

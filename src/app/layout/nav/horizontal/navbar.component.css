@@ -3,20 +3,21 @@
     width: 100%;
     justify-content: center;
 }
+
+.navbar-item{
+    color: var(--foreground-default) !important;
+}
 .nav-active{
     /* background: #9e9e9e2e; */
-    color:var(--primary-default) !important;
+    background:var(--primary-default) !important;
+    color:var(--background-default) !important;
     opacity: 1;
     font-weight: bolder;
 }
 .navbar{
-    height: 70px;
+    height: auto;
     overflow: visible;
     background-color: var(--background-default);
-    box-shadow:0px 0px 20px rgba(0,0,0,.7)
-}
-.navbar-item{
-    color: var(--background-secondary) !important;
 }
 .navbar-brand {
     display: inline-block;

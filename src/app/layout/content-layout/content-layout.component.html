@@ -1,33 +1,35 @@
 <div class="wrapper" id="topo">
     <div (click)="ToggleNav()" class="nav-trigger is-hidden-touch" [ngClass]="NavState.open? 'is-active': ''" role="button"
         title="Menu">
-
+<!-- 
         <div class="hamburger">
             <div class="icon"></div>
-        </div>
+        </div> -->
 
     </div>
     <!-- <div id="nav-menu-horizontal" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
         <navbar [NavState]="NavState"></navbar>
     </div> -->
-    <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
+    <!-- <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
         <vertical-nav [NavState]="NavState"></vertical-nav>
-    </div>
+    </div> -->
     <!-- [ngClass]="NavState.open? 'main is-active': ''"  -->
     <div [ngClass]="NavState.open? 'main is-active': ''">
         <section class="split-home">
 
             <section class="right-section" data-aos="slide-up">
-
-                <div class="top-nav " data-wow-delay="0.4s">
+                <div class="top-nav ">
                     <ul>
                         <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active"
-                                routerLinkActive="Active">{{pagina.Nome}}</a></li>
-                    </ul>
-                </div>
-
+                            routerLinkActive="Active">{{pagina.Nome}}</a></li>
+                        </ul>
+                    </div>
+                    
                 <div [@routeAnimations]="prepareRoute(outlet)" class="main">
-                    <router-outlet #outlet="outlet"></router-outlet>
+                    <div id="nav-menu-horizontal" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">
+                        <navbar [NavState]="NavState"></navbar>
+                    </div>
+                    <router-outlet #outlet="outlet" ></router-outlet>
                 </div>
 
                 <app-footer></app-footer>

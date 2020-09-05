@@ -6,7 +6,7 @@ jQuery(function($) {
 
   /* --------- Wow Init ------ */
 
-  new WOW().init();
+  // new WOW().init();
 
 
 

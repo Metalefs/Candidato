@@ -14,16 +14,15 @@
 </div>
 
 
-<div class="is-hidden-touch">
-   
-    <div class="">
-        
-        <div class="fixed-left">
-            <app-exibicao-candidato-full></app-exibicao-candidato-full>
-        </div>
+<div class="columns is-mobile is-gapless is-hidden-touch">
+    <div class="column is-5">
 
-        <div class="fixed-right">
-            <div class="container" data-aos="zoom-in-down" uniScrollSpy="inicio" id="inicio">
+        <app-exibicao-candidato [isBg] = "true" ></app-exibicao-candidato>
+    </div>
+    <div class="column is-8">
+
+
+            <div class="container px-5" data-aos="zoom-in-down" uniScrollSpy="inicio" id="inicio">
                 <apresentacao-candidato></apresentacao-candidato>
             </div>
 
@@ -35,13 +34,5 @@
                 <app-propostas-preview></app-propostas-preview>
             </div>
 
-            <div class="" data-aos="fade-up" uniScrollSpy="contato"  id="contato">
-                <contato></contato>
-            </div>
-
-            <app-redes-sociais [redes]="redes"></app-redes-sociais>
-        </div>
-
     </div>
-
 </div>

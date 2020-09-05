@@ -1,21 +1,26 @@
 .portifolio-filter{
     margin-top: -22px;
 }
+.container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
 .section-head{
     margin-top:50px;
 }
 .section-head h2 {
     padding: 0;
 }
-.section {
-    padding: 0rem 1.5rem;
-    border-radius: 15px;
-}
 .shuffle-item{
     position: absolute; top: 0px; left: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: transform 250ms ease-out 0s, opacity 250ms ease-out 0s;
 }
 .projetos-desktop{
-    margin-left: 16%;
     max-height: 100vh;
     overflow: scroll;
 }

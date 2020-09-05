@@ -63,10 +63,10 @@ function slideTo(direction) {
     ]),
     group([
       query(':leave', [
-        animate('150ms ease-in', style({ [direction]: '100%'}))
+        animate('350ms ease-in', style({ [direction]: '100%'}))
       ], { optional: true }),
       query(':enter', [
-        animate('150ms ease-out', style({ [direction]: '0%'}))
+        animate('350ms ease-out', style({ [direction]: '0%'}))
       ])
     ]),
     // Normalize the page style... Might not be necessary

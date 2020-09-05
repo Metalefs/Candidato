@@ -3,40 +3,42 @@
 
     <app-exibicao-candidato [isBg]="true"></app-exibicao-candidato>
   </div>
-  <div class="column is-7">
-
-    <section class="section section-light section-work pt-6  projetos-desktop" id="projetos">
-      <div class="">
-        <h1 class="subtitle has-text-centered tem-cor-primaria">PROPOSTAS</h1>
-        <div class="mt-4">
-          <div class="portfolio wow fadeInDown">
-            <div class="">
-              <div class="w-100">
-                <nav class="categories">
-                  <ul class="portfolio-filter">
-                    <li><a class="active" data-filter="*">Todos</a></li>
-                    <li><a [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div class=" w-100">
-                <div class=" portfolio-container text-center">
-    
-                   <!-- Person item -->
-                  <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
-                    *ngFor="let projeto of Projetos;let i = index">
-                    <app-projeto-card [projeto]="projeto" [Delay]="1000*i"></app-projeto-card>
+  <div class="column is-8">
+    <div class="container">
+      <section class="section section-light section-work pt-6  projetos-desktop" id="projetos">
+        <div class="">
+          <h1 class="subtitle has-text-centered tem-cor-primaria">PROPOSTAS</h1>
+          <div class="mt-4">
+            <div class="portfolio wow fadeInDown">
+              <div class="">
+                <div class="w-100">
+                  <nav class="categories">
+                    <ul class="portfolio-filter">
+                      <li><a class="active" data-filter="*">Todos</a></li>
+                      <li><a [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class=" w-100">
+                  <div class=" portfolio-container text-center">
+      
+                     <!-- Person item -->
+                    <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
+                      *ngFor="let projeto of Projetos;let i = index">
+                      <app-projeto-card [projeto]="projeto" [Delay]="1000*i"></app-projeto-card>
+                    </div>
+                    <!-- Person item end -->
+      
                   </div>
-                  <!-- Person item end -->
-    
                 </div>
               </div>
             </div>
+            
           </div>
-          
         </div>
-      </div>
-    </section>
+      </section>
+
+    </div>
     
 
 
