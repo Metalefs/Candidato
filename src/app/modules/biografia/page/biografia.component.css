@@ -28,6 +28,7 @@
     background: #fff;
     top: 0;
     padding: 1rem;
+    margin-top: 70px;
 }
   :host ::ng-deep .mat-ripple-element {
     z-index:-1 !important;

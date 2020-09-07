@@ -4,7 +4,7 @@
 
     <app-exibicao-candidato [isBg]="true"></app-exibicao-candidato>
   </div>
-  <div class="column is-7 padding-left">
+  <div class="column is-7 padding-left inicio">
 
     <section class="section-head pt-4">
       <!-- <h1>Por {{Candidato?.Nome}}</h1> -->
@@ -28,7 +28,7 @@
                    <div class="column custompadding relative brand" [ngClass]="Projeto?.Categoria? Projeto?.Categoria.replace(' ',''): ''">
                     <a (click)="open(0)" data-rel="lightcase" class="portfolio-item--content">
                       <div class="portfolio-item--img b-box">
-                        <!-- <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img"> -->
+                        <img src="{{Projeto?.FotoSrc}}"  class="img-fluid mx-auto" alt="work-img">
                       </div>
                       <div class="portfolio-item--desc d-flex justify-content-center align-items-center">
                         <div class="portfolio-item--desc-in">

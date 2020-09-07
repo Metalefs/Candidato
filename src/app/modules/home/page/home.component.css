@@ -3,7 +3,9 @@
     text-indent: 20px;
     text-align: justify;
 }
-
+.column .is-8{
+    margin-top:140px;
+}
 .container {
     flex-grow: 1;
     margin: 0 auto;

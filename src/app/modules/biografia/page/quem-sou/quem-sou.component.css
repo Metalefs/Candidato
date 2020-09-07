@@ -4,6 +4,9 @@
     text-align: justify;
     font-family: Poppins;
 }
+.intro-text{
+    margin-bottom: 70px;
+}
 .about-avatar img {
     height: 100px;
     width: 100px;

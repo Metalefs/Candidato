@@ -382,12 +382,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ------ Nav Menu Styling -----*/
 
 #nav-menu-horizontal {
-  /* position: fixed; */
+  position: fixed;
   /* height: 100%; */
   right: 0;
   top: 0;
   z-index: 110;
-  /* background-color: var(--background-default); */
+  width: 50%;
+  background-color: var(--background-default);
 	background-size: cover;
 	overflow-y: auto;
   -webkit-transform: translateZ(0);
@@ -1587,7 +1588,7 @@ label {
 		}
 
 		.intro {
-			padding-top: 30px;
+			padding-top: 5px;
 			text-align: center;
 		}
 
@@ -1654,10 +1655,6 @@ label {
 		.right-section {
 			 padding: 0 20px 0 20px;
 	 }
-
-		.intro {
-			padding-top: 30px;
-		}
 
 		.intro .intro-text h1 {
 			font-size: 34px;

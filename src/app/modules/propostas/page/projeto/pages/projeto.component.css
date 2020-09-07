@@ -14,10 +14,13 @@
         margin-left: 0%;
     }
 }
+.inicio {
+    margin-top:80px !important;
+}
 .section-head{
     padding-top:1rem;
     color: gray;
-    max-width: 400px;
+    margin-left: 15% !important;
     position: relative;
     margin: auto;
 }
