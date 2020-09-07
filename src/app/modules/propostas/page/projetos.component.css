@@ -28,6 +28,10 @@
 .container-projeto{
     min-width: 50%;
 }
+.portfolio-container{
+    max-height: 80vh;
+    overflow: scroll; 
+}
 .list-inline-item:not(:last-child) {
     margin-right: .5rem;
 }

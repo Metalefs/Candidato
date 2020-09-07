@@ -41,8 +41,8 @@ export class CandidatoService extends ServicoBase{
         "",
         "",
         "0023",
-        "/assets/imagens/fundos/inicio/Gleisson-perfil.jpg",
         "/assets/imagens/fundos/inicio/Gleisson.jpg",
+        "/assets/imagens/fundos/inicio/Gleisson-perfil.jpg",
         true
     )];
 

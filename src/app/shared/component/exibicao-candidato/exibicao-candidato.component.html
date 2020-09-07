@@ -8,7 +8,7 @@
         [typeSpeed]="30" [strings]="[Candidato.Nome]" class="typing-animation">
         <span class="typing"></span>
     </ngx-typed-js>
-    
+
     <ng-container *ngIf="isBg != undefined && isBg === true; then Background; else Imagem">
     </ng-container>
     
@@ -27,12 +27,12 @@
                 data-aos="zoom-in-left">
                 <h1 class="title is-3 partido-text">{{Candidato.NumeroCampanha}}</h1>
             </div>
-            <div class="column is-hidden-desktop" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
+            <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                 data-aos="zoom-in-right">
                 <img width="50" src="assets/imagens/icones/Conecta_Candidato.jpg"
                     class="conecta-candidato-logo rounded-full is-hidden-touch">
             </div>
-            <a class="column z-top is-hidden-desktop" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
+            <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
                 <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                     data-aos="zoom-in-right">
                         <img width="60" src="assets/imagens/icones/partido.png" class="partido-logo">

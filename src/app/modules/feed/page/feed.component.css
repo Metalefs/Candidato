@@ -5,7 +5,15 @@
 	margin: 0 auto;
 	position: relative;
 } 
-
+#mobile-logo-canvas{
+	position: absolute;
+	z-index: 5;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding:0;
+	pointer-events: none;
+}
 #wrap {
 	overflow: hidden;
 }
@@ -47,9 +55,9 @@ header {
 	display: inline-block;
 	position: relative;
 	border-radius: 5px;
-	background: #000;
 	color: #fff;
 	overflow: hidden;
+	background: rgba(0,0,0,0.5);
 	text-align: left;
 	padding: 15px 25px 12px 75px;
 	font-size: 13px;

@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 110;
   width: 50%;
-  background-color: var(--background-default);
+  /* background-color: var(--background-default); */
 	background-size: cover;
 	overflow-y: auto;
   -webkit-transform: translateZ(0);
