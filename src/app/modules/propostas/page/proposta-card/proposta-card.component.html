@@ -1,0 +1,30 @@
+
+    <div class="card portfolio-item--desc mb-5">
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <div class="card-content">
+                    <div class="subtitle">
+                        <div div class="portfolio-item--desc-in">
+                            <h3 class="mb-2 has-text-dark has-text-weight-medium">
+                                <!-- <ngx-typed-js data-aos="flip-up" [startDelay]="Delay" [backSpeed]="1"
+                                    [typeSpeed]="3" [strings]="[projeto.Nome]" class="typing-animation">
+                                    <span class="typing"></span>
+                                </ngx-typed-js> -->
+                                {{Proposta?.Nome}}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{Proposta?.Descricao}}</p>
+        </mat-expansion-panel>
+        <footer class="card-footer">
+            <div class="card-footer-item">
+                <div class="rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+                    <span class="px-2 like-number">{{Proposta?.Likes}}</span> <span class="lke-btn has-text-weight-medium"> <fa-icon [icon]="faLike"></fa-icon> Gostei</span>
+                </div>
+            </div>
+        </footer>
+    </div>

@@ -2,13 +2,8 @@
 <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas>
 
 
-<section  #canvasContainer data-aos="zoom-in-left" 
-    class="left-section">
-    <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
-        [typeSpeed]="30" [strings]="[Candidato.Nome]" class="typing-animation">
-        <span class="typing"></span>
-    </ngx-typed-js>
-
+<section  #canvasContainer class="left-section">
+    
     <ng-container *ngIf="isBg != undefined && isBg === true; then Background; else Imagem">
     </ng-container>
     
@@ -23,9 +18,13 @@
     <div class="bar ">
        
         <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
+            <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
+                [typeSpeed]="30" [strings]="[Candidato?.nome]" class="typing-animation">
+                <span class="typing"></span>
+            </ngx-typed-js>
             <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                 data-aos="zoom-in-left">
-                <h1 class="title is-3 partido-text">{{Candidato.NumeroCampanha}}</h1>
+                <h1 class="title is-3 partido-text">{{Candidato?.numeroCampanha}}</h1>
             </div>
             <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                 data-aos="zoom-in-right">

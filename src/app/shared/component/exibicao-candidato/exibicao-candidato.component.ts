@@ -12,7 +12,8 @@ export class ExibicaoCandidatoComponent implements OnInit {
   isBg:boolean = false;
   constructor( private CandidatoService: CandidatoService) { 
     this.Candidato = CandidatoService.ObterTeste();
-    this.candidato_bg=`${this.Candidato.FotoCapa}`;
+    this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.jpg`;
+    // this.candidato_bg=`${this.Candidato.FotoCapa}`;
   }
   
   @ViewChild('canvasEl') canvasEl: ElementRef;

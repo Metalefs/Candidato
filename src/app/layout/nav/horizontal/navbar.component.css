@@ -30,7 +30,7 @@
 }
 .navbar-end     .navbar-item{
     font-size: medium;
-    font-family: Titillium Web;
+    font-family: Roboto;
     position: relative;
     display: inline-block;
     color: rgba(0,0,0,.7);
@@ -44,7 +44,7 @@
     font-style: italic;
     font-family: Roboto;
     font-size: x-large;
-    font-weight: 400;
+    font-weight: 500;
     
 }
 .navbar-start{

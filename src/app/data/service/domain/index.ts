@@ -1,19 +1,21 @@
 import {CandidatoService} from './CandidatoService';
-import {ExperienciaTrabalhoService} from './ExperienciaTrabalhoService';
+import {RealizacaoService} from './RealizacaoService';
 import {FeedbackService} from './FeedbackService';
 import {InformacoesContatoService} from './InformacoesContatoService';
 import {MensagensService} from './MensagensService';
 import {ProjetoService} from './ProjetoService';
+import {PropostaService} from './PropostaService';
 import {SobreService} from './SobreService';
-import {IdealService} from './IdealService';
+import {PensamentoService} from './PensamentoService';
 
 export {
     CandidatoService,
-    ExperienciaTrabalhoService,
+    PropostaService,
+    RealizacaoService,
     FeedbackService,
     InformacoesContatoService,
     MensagensService,
-    IdealService,
+    PensamentoService,
     ProjetoService,
     SobreService
 }

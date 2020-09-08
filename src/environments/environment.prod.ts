@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: 'http://appconectacandidato.azurewebsites.net'
+  endpoint: 'https://api.gleissonandrade.conectacandidato.com.br'
 };

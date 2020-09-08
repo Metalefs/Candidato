@@ -3,13 +3,12 @@
     <div class="col-md-12">
       <div class="about-details">
 
-          <div class="experience wow fadeInDown" data-wow-delay="0.7s">
-            <!-- <h4>Experiências de trabalho</h4>
-            <h1> {{Mensagens?.ExperienciaDeTrabalho}}</h1> -->
+          <div class="experience">
+            <p class="normal"> {{Candidato?.realizacao}}</p>
             <ul>
 
                 <li *ngFor="let experiencia of ExperienciasTrabalho">
-                    <h3>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h3>
+                    <h6>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h6>
                     <p>
                         {{experiencia?.Descricao}}
                     </p>

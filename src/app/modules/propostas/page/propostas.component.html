@@ -13,21 +13,19 @@
               <div class="">
                 <div class="w-100">
                   <nav class="categories">
-                    <ul class="portfolio-filter">
+                    <!-- <ul class="portfolio-filter">
                       <li><a class="active" data-filter="*">Todos</a></li>
                       <li><a [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li>
-                    </ul>
+                    </ul> -->
                   </nav>
                 </div>
                 <div class=" w-100">
-                  <div class=" portfolio-container text-center">
+                  <div class=" portfolio-container portfolio-container-desktop text-center">
       
-                     <!-- Person item -->
-                    <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
-                      *ngFor="let projeto of Projetos;let i = index">
-                      <app-projeto-card [projeto]="projeto" [Delay]="1000*i"></app-projeto-card>
+                    <div class=" w-100 custompadding " [ngClass]="proposta.Categoria? proposta.Categoria.replace(' ',''): ''"
+                      *ngFor="let proposta of Propostas;let i = index">
+                      <app-proposta-card [Proposta]="proposta" [Delay]="1000*i"></app-proposta-card>
                     </div>
-                    <!-- Person item end -->
       
                   </div>
                 </div>
@@ -62,12 +60,10 @@
           <div class=" w-100">
             <div class=" portfolio-container text-center">
 
-               <!-- Person item -->
-              <div class=" w-100 custompadding " [ngClass]="projeto.Categoria? projeto.Categoria.replace(' ',''): ''"
-                *ngFor="let projeto of Projetos;let i = index">
-                  <app-projeto-card [projeto]="projeto" [Delay]="800*i"></app-projeto-card>
+              <div class=" w-100 custompadding " [ngClass]="proposta.Categoria? proposta.Categoria.replace(' ',''): ''"
+                *ngFor="let proposta of Propostas;let i = index">
+                  <app-proposta-card [proposta]="proposta" [Delay]="800*i"></app-proposta-card>
               </div>
-              <!-- Person item end -->
 
             </div>
           </div>

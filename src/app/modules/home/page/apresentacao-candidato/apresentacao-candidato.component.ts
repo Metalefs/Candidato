@@ -1,10 +1,7 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Input } from '@angular/core';
 
 import { Collections } from 'src/app/data/schema/Collections';
-import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 import { Candidato } from 'src/app/data/schema/domain/Candidato';
-import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
-import { SobreService } from 'src/app/data/service/domain/SobreService';
 import { InformacoesContatoService } from 'src/app/data/service/domain/InformacoesContatoService';
 import { MensagensService } from 'src/app/data/service/domain/MensagensService';
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
@@ -23,16 +20,11 @@ import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 export class ApresentacaoCandidatoComponent implements OnInit {
 
   
-  constructor(private SobreService: SobreService, 
-    private InfoContatoService: InformacoesContatoService,
-    private CandidatoService: CandidatoService,
-    private MensagensService: MensagensService,
+  constructor(
     private authenticationService: AuthenticationService,
 	) 
 	{ 
-    this.Candidato = this.CandidatoService.ObterTeste();
-    this.Mensagens = this.MensagensService.ObterTeste();   //this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
-	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
   
   loading = false;
@@ -42,27 +34,11 @@ export class ApresentacaoCandidatoComponent implements OnInit {
   Mensagens:Mensagens;
   currentUser: Collections.User;
 
+  @Input()
   Candidato: Candidato;
-
-  async LerSobre(){
-    
-    this.SobreService.Ler().subscribe(data=>{
-      this.Sobre = data[0];
-    });
-  }
-
-  async LerInfoContato(){
-   
-    this.InfoContatoService.Ler().subscribe(data=>{
-      this.InformacaoContato = data[0];
-      this.loading = false;
-    });
-  }
 
   ngOnInit(): void {
     this.loading = true;
-    // this.LerSobre();
-    // this.LerInfoContato();
   }
 
 }

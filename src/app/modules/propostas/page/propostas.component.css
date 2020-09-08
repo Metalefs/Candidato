@@ -28,7 +28,7 @@
 .container-projeto{
     min-width: 50%;
 }
-.portfolio-container{
+.portfolio-container-desktop{
     max-height: 80vh;
     overflow: scroll; 
 }

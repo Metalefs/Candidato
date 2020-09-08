@@ -30,7 +30,8 @@ export class QuemSouComponent implements OnInit {
     private authenticationService: AuthenticationService,
 	) 
 	{ 
-    this.Mensagens = this.MensagensService.ObterTeste();   //this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
+    this.Mensagens = this.MensagensService.ObterTeste();  
+     //this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
 	  this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
   
@@ -43,25 +44,8 @@ export class QuemSouComponent implements OnInit {
 
   @Input() Candidato: Candidato;
 
-  async LerSobre(){
-    
-    this.SobreService.Ler().subscribe(data=>{
-      this.Sobre = data[0];
-    });
-  }
-
-  async LerInfoContato(){
-   
-    this.InfoContatoService.Ler().subscribe(data=>{
-      this.InformacaoContato = data[0];
-      this.loading = false;
-    });
-  }
-
   ngOnInit(): void {
     this.loading = true;
-    // this.LerSobre();
-    // this.LerInfoContato();
   }
 
 }

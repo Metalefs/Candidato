@@ -5,6 +5,9 @@
 	margin: 0 auto;
 	position: relative;
 } 
+.app-opts{
+	box-shadow: var(--primary-default) 0px 0px 1em;
+}
 #mobile-logo-canvas{
 	position: absolute;
 	z-index: 5;

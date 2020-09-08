@@ -3,9 +3,12 @@
 .about {
 	padding: 0px 0 0 0 !important;
 }
-
+.section-head{
+    padding: 0 2rem;
+    text-align: justify;
+}
 .about .about-intro h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -15,7 +18,7 @@
 }
 
 .about .about-intro h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 18px;
 	font-weight: 400;
 	color: #222222;
@@ -31,7 +34,7 @@
 }
 /*
 .about-details p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 400;
 	color: #222222;
@@ -49,7 +52,7 @@
 }
 
 .about-details .work-list p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 14px;
 	text-align: center;
 	line-height: 1.4;
@@ -67,7 +70,7 @@
 
 
 .about .experience h4 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 12px;
 	font-weight: 400;
 	color: #A1A1A1;
@@ -77,7 +80,7 @@
 }
 
 .about .experience h1 {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 400;
 	color: #222222;
@@ -99,7 +102,7 @@
 }
 
 .about .experience h3 {
-  font-family: Poppins;
+  font-family: Roboto;
   font-size: 16px;
   font-weight: 600;
   color: #666666;
@@ -108,8 +111,8 @@
   line-height: 1.2;
 }
 
-.about .experience p {
-  font-family: Poppins;
+.about .experience li p {
+  font-family: Roboto;
   font-size: 14px !important;
   font-weight: 300;
   color: #444444;
@@ -117,14 +120,18 @@
 	line-height: 1.4;
 }
 
-.about .experience h6 {
-  font-family: Poppins;
+.experience li p {
+  font-family: Roboto;
   font-size: 14px;
-  font-weight: 400;
-  color: #A1A1A1;
-	text-align: left;
-	margin: 20px 0 0 0 ;
-  letter-spacing: 1px;
+  text-indent: 20px;
+  /* letter-spacing: 1px; */
+}
+
+.normal {
+	font-family: Roboto;
+	font-size: initial;
+	text-indent: 20px;
+	/* letter-spacing: 1px; */
 }
 
 .about .cta {
@@ -132,7 +139,7 @@
 }
 
 .about .cta p {
-	font-family: Poppins;
+	font-family: Roboto;
 	font-size: 21px;
 	font-weight: 600;
 	color: #454545;

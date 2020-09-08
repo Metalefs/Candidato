@@ -2,15 +2,25 @@ import { Base } from "./domain_base";
 
 export class Proposta implements Base {
     Identificador:number;
-    Titulo:string;
-    Descricao:string;
+    Nome :string;
+    Introducao :string;
+    Descricao :string;
+    Data :string;
+    IdentificadorCandidato:number;
+    Categoria:string;
+    FotoSrc:string;
     Ativo:boolean;
-
-	constructor($Identificador: number, $Titulo: string, $Descricao: string, $Ativo: boolean) {
+    Likes:number;
+	constructor($Identificador: number,  $Nome :string, $Introducao :string, $Descricao : string, $IdentificadorCandidato: number, $Categoria:string, $FotoSrc:string, $Ativo: boolean, $Likes:number) {
 		this.Identificador = $Identificador;
-		this.Titulo = $Titulo;
-		this.Descricao = $Descricao;
+		this.Nome = $Nome;
+		this.Descricao  = $Descricao;
+		this.Introducao  = $Introducao;
+        this.IdentificadorCandidato = $IdentificadorCandidato;
+        this.Categoria = $Categoria;
+		this.FotoSrc = $FotoSrc;
 		this.Ativo = $Ativo;
+		this.Likes = $Likes;
 	}
     
 }

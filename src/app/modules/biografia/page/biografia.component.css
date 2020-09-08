@@ -1,6 +1,5 @@
 #inicio{
     z-index: 10;
-   
 }
 
 .container {
@@ -13,6 +12,7 @@
     align-items: center;
     padding: 0;
 }
+
 .mat-ripple-element{
     z-index:-1 !important;
   }
@@ -30,6 +30,10 @@
     padding: 1rem;
     margin-top: 70px;
 }
+:host ::ng-deep .mat-tab-body-wrapper {
+  padding-top: 20px;
+}
+
   :host ::ng-deep .mat-ripple-element {
     z-index:-1 !important;
     max-width: 0;
@@ -50,7 +54,6 @@
     background: white;
     font-family: Roboto;
     line-height: 25px;
-    
     color:var(--primary-default);
     font-size: 20px;
     text-align: center;
@@ -65,7 +68,7 @@
   }
   :host ::ng-deep .mat-tab-label:first-of-type{
     border-bottom-left-radius:20px;
-    border-top-left-radius:0px;
+    border-top-left-radius:20px;
   }
   :host ::ng-deep .mat-tab-label:last-of-type{
     border-bottom-right-radius:20px;

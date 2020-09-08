@@ -12,10 +12,14 @@ export class HomeComponent implements OnInit {
   redes: RedeSocial[] = [];
   Candidato:Candidato;
   constructor(private CandidatoService:CandidatoService) {
-    this.Candidato = this.CandidatoService.ObterTeste();
-   }
+   this.Candidato = CandidatoService.ObterTeste();
+  }
 
   ngOnInit(): void {
+    this.CandidatoService.Ler().subscribe(x=>{
+      this.Candidato = x;
+      console.log(x);
+    });
   }
 
 }

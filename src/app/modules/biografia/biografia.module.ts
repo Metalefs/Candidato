@@ -8,15 +8,15 @@ import { BiografiaComponent } from './page/biografia.component';
 import { BiografiaRoutingModule } from './biografia.routing';
 
 import { SharedModule } from 'src/app/shared/shared.module';
-import { OquePensoComponent } from './page/oque-penso/oque-penso.component';
-import { ExperienciaTrabalhoComponent } from './page/experiencia-trabalho/experiencia-trabalho.component';
+import { pensamentoComponent } from './page/oque-penso/oque-penso.component';
+import { RealizacaoComponent } from './page/experiencia-trabalho/experiencia-trabalho.component';
 
 @NgModule({
   declarations: [
-    OquePensoComponent,
+    pensamentoComponent,
     BiografiaComponent,
     QuemSouComponent,
-    ExperienciaTrabalhoComponent
+    RealizacaoComponent
   ],
   imports: [
     SharedModule,

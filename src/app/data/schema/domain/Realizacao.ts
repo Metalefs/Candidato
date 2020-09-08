@@ -1,6 +1,6 @@
 import { Base } from "./domain_base";
 
-export class ExperienciaTrabalho implements Base {
+export class Realizacao implements Base {
     Identificador:number;
     Local:string;
     Cargo:string;

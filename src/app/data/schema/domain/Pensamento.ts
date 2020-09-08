@@ -1,6 +1,6 @@
 import { Base } from "./domain_base";
 
-export class Ideal implements Base {
+export class Pensamento implements Base {
     Identificador:number;
     Titulo:string;
     Descricao:string;

@@ -6,8 +6,12 @@
     padding: 0 !important;
     margin-bottom:-20px;
 }
+.section-head{
+    padding: 0 2rem;
+    text-align: justify;
+}
 .section-about-wrap {
-    padding: 2REM 2rem 0rem 2rem;
+    padding: 2REM;
     box-shadow:  20px 20px 60px #d9d9d9, 
              -20px -20px 60px #ffffff;
 }

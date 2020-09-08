@@ -2,37 +2,37 @@ import { Base } from "./domain_base";
 
 export class Candidato implements Base {
     Identificador:number;
-	Nome:string;
-	QuemSou:string;
-	OquePenso:string;
-	OqueFiz:string;
+	nome:string;
+	biografia:string;
+	pensamento:string;
+	realizacao:string;
 	DataNascimento:string;
 	Email:string;
-	Telefone:string;
-    NumeroCampanha:string;
+	telefone:string;
+    numeroCampanha:string;
     Ativo:boolean;
 	FotoCapa:string;
 	FotoPerfil:string;
-	constructor($Identificador: number, $Nome: string,
-		$QuemSou:string,
-		$OquePenso:string,
-		$OqueFiz:string,
+	constructor($Identificador: number, $nome: string,
+		$biografia:string,
+		$pensamento:string,
+		$realizacao:string,
 		$DataNascimento: string, $Email: string,
-		$Telefone: string, $Twitter: string, 
+		$telefone: string, $Twitter: string, 
 		$Facebook: string, $Instagram: string, 
 		$Youtube: string, $LinkedIn: string, 
-		$NumeroCampanha: string, $FotoCapa:string, 
+		$numeroCampanha: string, $FotoCapa:string, 
 		$FotoPerfil:string, $Ativo: boolean
 	) {
 		this.Identificador = $Identificador;
-		this.Nome = $Nome;
+		this.nome = $nome;
 		this.DataNascimento = $DataNascimento;
-		this.QuemSou = $QuemSou;
-		this.OquePenso = $OquePenso;
-		this.OqueFiz = $OqueFiz;
+		this.biografia = $biografia;
+		this.pensamento = $pensamento;
+		this.realizacao = $realizacao;
 		this.Email = $Email;
-		this.Telefone = $Telefone;
-		this.NumeroCampanha = $NumeroCampanha;
+		this.telefone = $telefone;
+		this.numeroCampanha = $numeroCampanha;
 		this.FotoCapa = $FotoCapa;
 		this.FotoPerfil = $FotoPerfil;
 		this.Ativo = $Ativo;

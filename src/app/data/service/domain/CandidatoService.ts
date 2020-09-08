@@ -18,6 +18,8 @@ export class CandidatoService extends ServicoBase{
 		super(http,StateService);
 	}
 
+    IdCandidato = 1;
+
     CandidatosTeste:Candidato[] = [new Candidato(
         1,
         "Gleisson Andrade",
@@ -41,31 +43,27 @@ export class CandidatoService extends ServicoBase{
         "",
         "",
         "0023",
-        "/assets/imagens/fundos/inicio/Gleisson.jpg",
-        "/assets/imagens/fundos/inicio/Gleisson-perfil.jpg",
+        "/assets/imagens/fundos/inicio/Candidato.jpg",
+        "/assets/imagens/fundos/inicio/Candidato-perfil.jpg",
         true
     )];
 
-    Ler(): Observable<Candidato[]> {
-        return this.http.get<Candidato[]>(environment.endpoint + routes.Candidato).pipe(
+    Ler(): Observable<Candidato> {
+        return this.http.get<Candidato>(environment.endpoint + routes.Candidato).pipe(
             retry(3), // retry a failed request up to 3 times
             catchError(this.handleError) // then handle the error
         );
     }
 
-    Filtrar(id:number):Candidato[]{
-        return this.CandidatosTeste.filter(x => x.Identificador == id);
+    Filtrar(id:number):Observable<Candidato>{
+        return this.http.get<Candidato>(environment.endpoint + routes.Candidato + `/${id}`).pipe(
+            retry(3), // retry a failed request up to 3 times
+            catchError(this.handleError) // then handle the error
+        )
     }   
 
     ObterTeste(): Candidato{
         return this.CandidatosTeste[0];
-    }
-    
-    BuscarOuCriarCandidato(): Observable<Candidato[]> {
-        return this.http.get<Candidato[]>(environment.endpoint + routes.Candidato).pipe(
-            retry(3), // retry a failed request up to 3 times
-            catchError(this.handleError) // then handle the error
-        );
     }
 	
     Incluir(item: Candidato): Observable<any> {

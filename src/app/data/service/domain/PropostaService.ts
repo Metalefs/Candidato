@@ -4,23 +4,22 @@ import { throwError, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { routes } from 'src/app/data/schema/routes';
 import { retry, catchError } from 'rxjs/operators';
-import { RowActionService } from '@clr/angular/data/datagrid/providers/row-action-service';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { StateService } from 'src/app/core/service/state/state.service';
 import { ServicoBase } from 'src/app/data/service/domain/ServicoBase';
-import { Projeto } from 'src/app/data/schema/domain/Projeto';
+import { Proposta } from 'src/app/data/schema/domain/Proposta';
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class ProjetoService extends ServicoBase {
+export class PropostaService extends ServicoBase {
     constructor(protected http: HttpClient, protected AuthenticationService: AuthenticationService, protected StateService: StateService) {
 		super(http,StateService);
 	}
     
-    ProjetosTeste : Projeto[] = [
-        new Projeto(
+    ProjetosTeste : Proposta[] = [
+        new Proposta(
             1,
             "Seguro Anticorrupção.",
             "25 Ideias para mudar Matozinhos",
@@ -31,7 +30,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             2,
             "Incentivar O Uso De Espaços Públicos Pelas Empresas Privadas",
             "25 Ideias para mudar Matozinhos",
@@ -42,7 +41,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             3,
             "IPTU Verde",
             "25 Ideias para mudar Matozinhos",
@@ -53,7 +52,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             4,
             "Uso Do App Q-Zela",
             "25 Ideias para mudar Matozinhos",
@@ -64,7 +63,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             5,
             "Apoio Dos Moradores De Rua",
             "25 Ideias para mudar Matozinhos",
@@ -75,7 +74,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             6,
             "Apoio Aos App De Transporte",
             "25 Ideias para mudar Matozinhos",
@@ -86,7 +85,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             7,
             "Matozinhos Amiga Dos Bichos",
             "25 Ideias para mudar Matozinhos",
@@ -97,7 +96,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             8,
             "Mais Saúde Matozinhos",
             "25 Ideias para mudar Matozinhos",
@@ -108,7 +107,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             9,
             "Melhorando As Nossas Casas De Saúde Mental",
             "25 Ideias para mudar Matozinhos",
@@ -119,7 +118,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             10,
             "Vamos Correr?",
             "25 Ideias para mudar Matozinhos",
@@ -130,7 +129,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             11,
             "Direito A Creche",
             "25 Ideias para mudar Matozinhos",
@@ -141,7 +140,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             12,
             "Educação Integral",
             "25 Ideias para mudar Matozinhos",
@@ -152,18 +151,18 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             13,
             "Liberdade Econômica",
             "25 Ideias para mudar Matozinhos",
-            "Não dá para aceitar que o empresário em Matozinhos leve meses para conseguir abrir a sua empresa ou negócio, Matozinhos precisa de liberdade, por isso apresentarei o Projeto de liberdade econômica, menos burocracia e mais liberdade.",
+            "Não dá para aceitar que o empresário em Matozinhos leve meses para conseguir abrir a sua empresa ou negócio, Matozinhos precisa de liberdade, por isso apresentarei o Proposta de liberdade econômica, menos burocracia e mais liberdade.",
             1,
             "Saúde",
             "assets/imagens/icones/ConectaCandidato_fundoTransparente.png",
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             14,
             "Redução De Gastos",
             "25 Ideias para mudar Matozinhos",
@@ -174,7 +173,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             15,
             "Sai Pra Lá Inutilidade",
             "25 Ideias para mudar Matozinhos",
@@ -185,7 +184,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             16,
             "Orçamento Participativo",
             "25 Ideias para mudar Matozinhos",
@@ -196,7 +195,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             17,
             "Dinheiro Público Precisa Ser Respeitado",
             "25 Ideias para mudar Matozinhos",
@@ -207,7 +206,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             18,
             "Matozinhos Mais Segura",
             "25 Ideias para mudar Matozinhos",
@@ -218,7 +217,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             19,
             "Quanto Custa?",
             "25 Ideias para mudar Matozinhos",
@@ -229,7 +228,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             20,
             "Plano Diretor",
             "25 Ideias para mudar Matozinhos",
@@ -240,7 +239,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             21,
             "Fiscalização Das Normas Ambientais Para Garantir Sua Aplicabilidade.",
             "25 Ideias para mudar Matozinhos",
@@ -251,7 +250,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             22,
             "Defender A Implementação De Critérios De Produtividade No Serviço Público Municipal.",
             "25 Ideias para mudar Matozinhos",
@@ -262,7 +261,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             23,
             "Transparência",
             "25 Ideias para mudar Matozinhos",
@@ -273,7 +272,7 @@ export class ProjetoService extends ServicoBase {
             true,
             20
         ),
-        new Projeto(
+        new Proposta(
             24,
             "Fiscalizar E Interagir Com A Prefeitura.",
             "25 Ideias para mudar Matozinhos",
@@ -286,39 +285,39 @@ export class ProjetoService extends ServicoBase {
         ),
     ];
     
-    Ler(): Observable<Projeto[]> {
-        return this.http.get<Projeto[]>(environment.endpoint + routes.Projeto).pipe(
+    Ler(): Observable<Proposta[]> {
+        return this.http.get<Proposta[]>(environment.endpoint + routes.Proposta).pipe(
             retry(3), 
             catchError(this.handleError)
         );
     }
 
-    CurtirProposta(id: number): Observable<Projeto[]> {
-        return this.http.post<Projeto[]>(environment.endpoint + routes.CurtirProposta, {id:id}).pipe(
+    CurtirProposta(id: number): Observable<Proposta[]> {
+        return this.http.post<Proposta[]>(environment.endpoint + routes.CurtirProposta, {id:id}).pipe(
             retry(3), 
             catchError(this.handleError)
         );
     }
 
-    Filtrar(id:number):Projeto[]{
+    Filtrar(id:number):Proposta[]{
         return this.ProjetosTeste.filter(x => x.Identificador == id);
     }
 
-    ObterTeste():Projeto[]{
+    ObterTeste():Proposta[]{
         return this.ProjetosTeste;
     }
 	
-	Incluir(item: Projeto): Observable<any> {
-        return this.http.post<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Projeto, {}).pipe(
+	Incluir(item: Proposta): Observable<any> {
+        return this.http.post<Proposta>(environment.endpoint + routes.Gerenciamento + routes.Proposta, {}).pipe(
             retry(3),
             catchError(this.handleError)
         );
     }
 
-    Editar(item: Projeto): any {
-        let payload = this.AuthenticationService.tokenize({Projeto:item});
+    Editar(item: Proposta): any {
+        let payload = this.AuthenticationService.tokenize({Proposta:item});
         console.log(payload);
-        return this.http.put<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Proposta,
+        return this.http.put<Proposta>(environment.endpoint + routes.Gerenciamento + routes.Proposta,
             payload).pipe(
             retry(3),
             catchError(this.handleError)
@@ -326,7 +325,7 @@ export class ProjetoService extends ServicoBase {
     }
 	
     Remover(id: string): Observable<any>{
-        return this.http.delete<Projeto>(environment.endpoint + routes.Gerenciamento + routes.Proposta).pipe(
+        return this.http.delete<Proposta>(environment.endpoint + routes.Gerenciamento + routes.Proposta).pipe(
             retry(3),
             catchError(this.handleError)
         );

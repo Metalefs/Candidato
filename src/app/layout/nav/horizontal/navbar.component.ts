@@ -74,12 +74,12 @@ export class NavbarComponent implements OnInit {
     this.paginas = this.ServicoPaginas.GetAllPages();
     this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais();
     this.paginaAtiva = this.Router.url;
-    setInterval(()=>{
-      this.NavStateService.getActiveNav().then(x=>{
-        this.paginaAtiva = x.pagina;
-        console.log(this.paginaAtiva);
-      });
-    },1000)
+    // setInterval(()=>{
+    //   this.NavStateService.getActiveNav().then(x=>{
+    //     this.paginaAtiva = x.pagina;
+    //     console.log(this.paginaAtiva);
+    //   });
+    // },1000)
     this._subscription = this.NavStateService.currentState.subscribe(item => {
       if (item != undefined) {
           item.forEach(x=>{

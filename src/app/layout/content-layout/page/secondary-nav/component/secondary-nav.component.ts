@@ -17,15 +17,7 @@ export class SecondaryNavComponent implements OnInit {
   constructor( private ServicoPaginas: ServicoPaginas) { 
     
   }
-  paginas: OpcaoNavbarFA[] = [];
-
-  Opcoes = [
-    new OpcaoNavbarFA("Resumo", "inicio", faHome),
-    new OpcaoNavbarFA("Projetos", "projetos", faIdCard),
-    new OpcaoNavbarFA("Biografia", "biografia", faIdCard),
-    new OpcaoNavbarFA("Feed", "feed", faRss),
-  ];
-  
+  paginas: OpcaoNavbarFA[] = []; 
 
   ngOnInit(): void {
     this.paginas = this.ServicoPaginas.GetAllPages();

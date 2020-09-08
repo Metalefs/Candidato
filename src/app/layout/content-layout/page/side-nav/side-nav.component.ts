@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EstadoNav } from "../../../../data/schema/EstadoNav";
 import { OpcaoNavbarFA, OpcaoNavbar } from 'src/app/data/schema/OpcoesNavbar';
 import { faHome, faIdCard, faRss } from '@fortawesome/free-solid-svg-icons';
-import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { ServicoPaginas } from 'src/app/data/service/ServicoPaginas';
 import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
 
 @Component({
@@ -14,16 +14,11 @@ export class SideNavComponent implements OnInit {
   EstadoNav:EstadoNav;
   collapsed=true;
 
-  constructor() { 
-    
+  constructor( private ServicoPaginas: ServicoPaginas) { 
+    this.Opcoes = this.ServicoPaginas.GetAllPages();
   }
   
-  Opcoes = [
-    new OpcaoNavbar("Resumo", "inicio", "home"),
-    new OpcaoNavbar("Biografia", "biografia", "bookmark"),
-    new OpcaoNavbar("Projetos", "projetos", "tasks"),
-    new OpcaoNavbar("Feed", "feed", "hashtag"),
-  ];
+  Opcoes:OpcaoNavbarFA[];
   ngOnInit(): void {
   }
 

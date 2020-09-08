@@ -24,6 +24,9 @@
     transition: 1s all;
     cursor: pointer;
 }
+.like-number{
+    opacity: 0.5;
+}
 .gostou{
     transform:translateX(-5px);
 }
@@ -103,4 +106,10 @@ a:not([href]):not([tabindex]) {
     cursor: pointer;
     text-transform: capitalize;
     border-bottom: 4px solid transparent;
+}
+.hidden-content{
+    transition:all .5s ease-in;
+}
+.hidden-content .open{
+    display: block;
 }

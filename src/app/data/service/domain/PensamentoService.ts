@@ -4,7 +4,7 @@ import { throwError, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { routes } from 'src/app/data/schema/routes';
 import { retry, catchError } from 'rxjs/operators';
-import { Ideal } from 'src/app/data/schema/domain/Ideal';
+import { Pensamento } from 'src/app/data/schema/domain/Pensamento';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { StateService } from 'src/app/core/service/state/state.service';
 import { ServicoBase } from 'src/app/data/service/domain/ServicoBase';
@@ -13,34 +13,34 @@ import { ServicoBase } from 'src/app/data/service/domain/ServicoBase';
     providedIn: 'root'
 })
 
-export class IdealService extends ServicoBase{
+export class PensamentoService extends ServicoBase{
     constructor(protected http: HttpClient, protected AuthenticationService: AuthenticationService, protected StateService: StateService) {
 		super(http,StateService);
 	}
 
-    IdeaisTeste:Ideal[] = [
-        new Ideal(
+    IdeaisTeste:Pensamento[] = [
+        new Pensamento(
             1,
             "Liberdade econômica",
             "",
             true,
             1
         ),
-        new Ideal(
+        new Pensamento(
             1,
             "Liberdade de Expressão",
             "",
             true,
             1
         ),
-        new Ideal(
+        new Pensamento(
             1,
             "Anti-Corrupção",
             "",
             true,
             1
         ),
-        new Ideal(
+        new Pensamento(
             1,
             "Atração de investimentos para a cidade",
             "",
@@ -49,35 +49,35 @@ export class IdealService extends ServicoBase{
         ),
     ];
 
-    Ler(): Observable<Ideal[]> {
-        return this.http.get<Ideal[]>(environment.endpoint + routes.Ideal).pipe(
+    Ler(): Observable<Pensamento[]> {
+        return this.http.get<Pensamento[]>(environment.endpoint + routes.Pensamento).pipe(
             retry(3), // retry a failed request up to 3 times
             catchError(this.handleError) // then handle the error
         );
     }
 
-    Filtrar(id:number):Ideal[]{
+    Filtrar(id:number):Pensamento[]{
         return this.IdeaisTeste.filter(x => x.IdCandidato == id);
     }   
     
-    BuscarOuCriarCandidato(): Observable<Ideal[]> {
-        return this.http.get<Ideal[]>(environment.endpoint + routes.Ideal).pipe(
+    BuscarOuCriarCandidato(): Observable<Pensamento[]> {
+        return this.http.get<Pensamento[]>(environment.endpoint + routes.Pensamento).pipe(
             retry(3), // retry a failed request up to 3 times
             catchError(this.handleError) // then handle the error
         );
     }
 	
-    Incluir(item: Ideal): Observable<any> {
-        return this.http.post<Ideal>(environment.endpoint + routes.Gerenciamento + routes.Sobre, item).pipe(
+    Incluir(item: Pensamento): Observable<any> {
+        return this.http.post<Pensamento>(environment.endpoint + routes.Gerenciamento + routes.Sobre, item).pipe(
             retry(3),
             catchError(this.handleError)
         );
     }
 
-    Editar(item: Ideal): any {
+    Editar(item: Pensamento): any {
         let payload = this.AuthenticationService.tokenize({Sobre:item});
         console.log(payload);
-        return this.http.put<Ideal>(environment.endpoint + routes.Gerenciamento + routes.Sobre, 
+        return this.http.put<Pensamento>(environment.endpoint + routes.Gerenciamento + routes.Sobre, 
             payload).pipe(
             retry(3), // retry a failed request up to 3 times
             catchError(this.handleError) // then handle the error
@@ -85,7 +85,7 @@ export class IdealService extends ServicoBase{
     }
 	
     Remover(id: string): Observable<any>{
-        return this.http.delete<Ideal>(environment.endpoint + routes.Gerenciamento + routes.Sobre).pipe(
+        return this.http.delete<Pensamento>(environment.endpoint + routes.Gerenciamento + routes.Sobre).pipe(
             retry(3),
             catchError(this.handleError)
         );
