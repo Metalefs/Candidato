@@ -151,24 +151,3 @@
 	  }
 }
 
-
-.btn-contact {
-    padding: 4px 12px;
-    margin: 1em auto;
-    font-family: Work Sans;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--background-default);
-    display: inline-block;
-    width: 50%;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    background: var(--primary-default);
-    border: 2px solid;
-    padding: 10px 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    -webkit-transform: 0.5s;
-    -moz-transform: 0.5s;
-    transition: 0.5s;
-}

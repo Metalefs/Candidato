@@ -11,19 +11,19 @@
                                     [typeSpeed]="3" [strings]="[projeto.Nome]" class="typing-animation">
                                     <span class="typing"></span>
                                 </ngx-typed-js> -->
-                                {{Proposta?.Nome}}
+                                {{Proposta?.titulo}}
                             </h3>
                         </div>
                     </div>
                 </div>
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p>{{Proposta?.Descricao}}</p>
+            <p>{{Proposta?.descricao}}</p>
         </mat-expansion-panel>
         <footer class="card-footer">
             <div class="card-footer-item">
                 <div class="rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-                    <span class="px-2 like-number">{{Proposta?.Likes}}</span> <span class="lke-btn has-text-weight-medium"> <fa-icon [icon]="faLike"></fa-icon> Gostei</span>
+                    <span class="px-2 like-number">{{Proposta?.qtdCurtidas}}</span> <span class="lke-btn has-text-weight-medium"> <fa-icon [icon]="faLike"></fa-icon> Gostei</span>
                 </div>
             </div>
         </footer>

@@ -1,7 +1,7 @@
 import { Base } from "./domain_base";
 
 export class Mensagens implements Base {
-    Identificador:number;
+    identificador:number;
     FraseDestaque:string;
     DescricaoCurta:string;
     Descricao:string;
@@ -10,7 +10,7 @@ export class Mensagens implements Base {
     ExperienciaDeTrabalho:string;
     ApresentacaoProjetos:string;
     constructor(
-        Identificador:number,
+        identificador:number,
         FraseDestaque:string,
         DescricaoCurta:string,
         Descricao:string,
@@ -19,7 +19,7 @@ export class Mensagens implements Base {
         ExperienciaDeTrabalho:string,
         ApresentacaoProjetos:string
     ){
-        this.Identificador = Identificador;
+        this.identificador = identificador;
         this.FraseDestaque = FraseDestaque;
         this.DescricaoCurta = DescricaoCurta;
         this.Descricao = Descricao;

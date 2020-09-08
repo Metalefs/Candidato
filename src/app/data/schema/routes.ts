@@ -13,7 +13,7 @@ export let routes = {
     //Propostas
     Proposta:"/propostas",
     Projeto:"/projeto",
-    CurtirProposta: `/propostas/curtir`,
+    CurtirProposta: `/curtir`,
 
     //Template para gerenciamento e login
     InfoContato:"/infoContato/",

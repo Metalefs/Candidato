@@ -19,13 +19,17 @@ export class PropostaCardComponent implements OnInit {
   isOpen = false;
   faLike = faThumbsUp;
   Gostou:boolean = false;
-  constructor(private PropostaService: PropostaService) { }
+  constructor(private PropostaService: PropostaService) {
+
+   }
   like(){
     if(this.Gostou)
       return;
-    this.Proposta.Likes++;
-    this.PropostaService.CurtirProposta(this.Proposta.Identificador);
-    this.Gostou = true;
+    console.log(this.Proposta);
+    this.PropostaService.CurtirProposta(this.Proposta.identificador).subscribe(x=>{
+      this.Proposta.qtdCurtidas++;
+      this.Gostou = true;
+    });
   }
 
   ToggleProposta(){

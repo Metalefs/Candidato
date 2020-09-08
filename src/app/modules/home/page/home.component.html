@@ -1,5 +1,5 @@
 <div class="is-hidden-desktop no-y-scroll">
-    <app-exibicao-candidato-full></app-exibicao-candidato-full>
+    <app-exibicao-candidato-full [Candidato]="Candidato"></app-exibicao-candidato-full>
     
     <div class="informacao-candidato">
         <div >
@@ -8,17 +8,17 @@
         <div >
             <h1 class="title is-1 numero-campanha">{{Candidato?.numeroCampanha}}</h1>
         </div>
-        <app-redes-sociais></app-redes-sociais>
+        <app-redes-sociais [redes]="redes"></app-redes-sociais>
     </div>
 
 </div>
 
 
 <div class="columns is-mobile is-gapless is-hidden-touch">
-    <div class="column is-5">
-        <app-exibicao-candidato [isBg] = "true" ></app-exibicao-candidato>
+    <div class="column is-6">
+        <app-exibicao-candidato [Candidato]="Candidato" [isBg] = "true" ></app-exibicao-candidato>
     </div>
-    <div class="column is-8">
+    <div class="column is-6">
         <div class="container px-5" data-aos="zoom-in-down" uniScrollSpy="inicio" id="inicio">
             <apresentacao-candidato [Candidato]="Candidato"></apresentacao-candidato>
         </div>
@@ -30,6 +30,6 @@
         <div class="container" data-aos="zoom-in-down" uniScrollSpy="projetos" id="projetos">
             <app-propostas-preview></app-propostas-preview>
         </div>
+        <app-redes-sociais [redes]="redes"></app-redes-sociais>
     </div>
-    <app-redes-sociais></app-redes-sociais>
 </div>

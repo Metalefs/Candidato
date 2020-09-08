@@ -54,30 +54,6 @@
 	margin-right: 15px;
 }
 
-.btn-contact {
-	font-family: Work Sans;
-    font-size: 16px;
-    font-weight: 600;
-	display: inline-block;
-    border-radius: .3rem;
-	text-transform: uppercase;
-	color: var(--background-default);
-    background: var(--primary-default);
-    padding: 10px 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    -webkit-transform: 0.5s;
-    -moz-transform: 0.5s;
-    transition: 0.5s;
-}
-
-.btn-contact:hover, .btn-contact:focus {
-	color: #ffffff;
-    background: var(--primary-default);
-    border-color: var(--primary-default);
-    text-decoration: none;
-}
-
 @media (min-width: 320px) and (max-width: 1023px) {
     .intro{
         padding-left:0px;

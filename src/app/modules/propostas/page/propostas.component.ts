@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MensagensService } from 'src/app/data/service/domain/MensagensService';
 import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
-import { PropostaService } from 'src/app/data/service/domain/PropostaService';
+import { PropostaService,CandidatoService } from 'src/app/data/service/domain/';
 
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { Lightbox } from 'ngx-lightbox';
 
 import { fade } from 'src/app/animations';
-import { Proposta } from 'src/app/data/schema/domain/';
+import { Proposta,Candidato } from 'src/app/data/schema/domain/';
 import { Album } from 'src/app/data/schema/Album';
 import { LightboxEvent, LIGHTBOX_EVENT } from 'ngx-lightbox';
 import { Router } from '@angular/router';
@@ -24,26 +24,28 @@ export class PropostasComponent implements OnInit {
   _albums:Array<Album> = [];
   Mensagens:Mensagens;
   cards = 0;
+  Candidato:Candidato;
+
   constructor(private MensagensService: MensagensService,
+     private CandidatoService:CandidatoService,
      private PropostaService:PropostaService, 
      private Lightbox:Lightbox,
      private Router:Router) {
+	    this.PropostaService.Ler().subscribe(x => {
+          this.Propostas = x;
+          // x.forEach(p=>{
 
-	  //   this.PropostaService.Ler().subscribe(x => {
-    //       this.Propostas = x;
-    //       x.forEach(p=>{
-
-    //           const album = {
-    //             src: p.FotoSrc,
-    //             caption: p.Nome,
-    //             thumb: p.Descricao
-    //           };
+          //     const album = {
+          //       src: p.FotoSrc,
+          //       caption: p.Nome,
+          //       thumb: p.Descricao
+          //     };
           
-    //         this._albums.push(album);
-    //         console.log(this._albums);
+          //   this._albums.push(album);
+          //   console.log(this._albums);
             
-    //       })
-    // });
+          // })
+    });
     
   }
 
@@ -52,20 +54,24 @@ export class PropostasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.Propostas = this.PropostaService.ObterTeste();
-    this.Propostas.forEach(p=>{
+    this.PropostaService.Ler().subscribe(x => {
+      this.Propostas = x;
+      // x.forEach(p=>{
 
-        const album = {
-          src: p.FotoSrc,
-          caption: p.Nome,
-          thumb: p.Descricao
-        };
-        this.categorias.push(p.Categoria);
-        this.categorias = this.categorias.filter((v, i, a) => a.indexOf(v) === i);
-
-        this._albums.push(album);
-
-    }); 
+      //     const album = {
+      //       src: p.FotoSrc,
+      //       caption: p.Nome,
+      //       thumb: p.Descricao
+      //     };
+      
+      //   this._albums.push(album);
+      //   console.log(this._albums);
+        
+      // })
+    });
+    this.CandidatoService.Ler().subscribe(x=>{
+      this.Candidato = x;
+    });
 	  this.Mensagens = this.MensagensService.ObterTeste();//this.MensagensService.Ler().subscribe(x => this.Mensagens = x[0]);
    
   }

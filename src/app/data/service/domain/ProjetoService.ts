@@ -301,7 +301,7 @@ export class ProjetoService extends ServicoBase {
     }
 
     Filtrar(id:number):Projeto[]{
-        return this.ProjetosTeste.filter(x => x.Identificador == id);
+        return this.ProjetosTeste.filter(x => x.identificador == id);
     }
 
     ObterTeste():Projeto[]{

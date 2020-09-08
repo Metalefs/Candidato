@@ -292,15 +292,15 @@ export class PropostaService extends ServicoBase {
         );
     }
 
-    CurtirProposta(id: number): Observable<Proposta[]> {
-        return this.http.post<Proposta[]>(environment.endpoint + routes.CurtirProposta, {id:id}).pipe(
+    CurtirProposta(id: number): Observable<any> {
+        return this.http.post<any>(environment.endpoint + routes.Proposta + `/${id}` + routes.CurtirProposta, {}).pipe(
             retry(3), 
             catchError(this.handleError)
         );
     }
 
     Filtrar(id:number):Proposta[]{
-        return this.ProjetosTeste.filter(x => x.Identificador == id);
+        return this.ProjetosTeste.filter(x => x.identificador == id);
     }
 
     ObterTeste():Proposta[]{

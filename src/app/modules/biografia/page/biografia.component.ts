@@ -36,9 +36,7 @@ export class BiografiaComponent implements OnInit {
     private CandidatoService:CandidatoService,
     private PensamentoService:PensamentoService,
     ) {
-      this.CandidatoService.Ler().subscribe(x=>{
-        this.Candidato = x;
-      });
+     
       this.Ideais = this.PensamentoService.Filtrar(1);
   }
   
@@ -71,7 +69,9 @@ export class BiografiaComponent implements OnInit {
 
   ngOnInit():void{
     this._scrollSpyService.setOffset('window', 50);
-
+    this.CandidatoService.Ler().subscribe(x=>{
+      this.Candidato = x;
+    });
     this._scroll_subscription = this._scrollSpyService.observe('window').subscribe(item => {
         if (item != null) {
             const _nextSection = {

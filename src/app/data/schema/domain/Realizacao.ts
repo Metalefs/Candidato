@@ -1,21 +1,21 @@
 import { Base } from "./domain_base";
 
 export class Realizacao implements Base {
-    Identificador:number;
+    identificador:number;
     Local:string;
     Cargo:string;
     Inicio:string;
     Fim:string;
     Descricao:string;
     constructor(
-        Identificador:number,
+        identificador:number,
         Local:string,
         Cargo:string,
         Inicio:string,
         Fim:string,
         Descricao:string
     ){
-        this.Identificador = Identificador;
+        this.identificador = identificador;
         this.Local = Local;
         this.Cargo = Cargo;
         this.Inicio = Inicio;

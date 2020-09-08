@@ -11,7 +11,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
   isBg:boolean = false;
   constructor( private CandidatoService: CandidatoService) { 
-    this.Candidato = CandidatoService.ObterTeste();
+    // this.Candidato = CandidatoService.ObterTeste();
     this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.jpg`;
     // this.candidato_bg=`${this.Candidato.FotoCapa}`;
   }
@@ -21,6 +21,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
   @ViewChild('canvasContainer') container: ElementRef;
   private c: CanvasRenderingContext2D;
   candidato_bg:string;
+  @Input()
   Candidato:Candidato;
  
   ngOnInit(): void {

@@ -1,4 +1,4 @@
 export interface Base {
-    Identificador:number;
+    identificador:number;
 
 }

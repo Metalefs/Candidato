@@ -15,7 +15,8 @@ export class RedesSociaisComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.redes = this.ServicoRedesSociais.GetAllRedesSociais();
+    console.log(this.redes);
+    // this.ServicoRedesSociais.GetAllRedesSociais();
   }
 
 }
