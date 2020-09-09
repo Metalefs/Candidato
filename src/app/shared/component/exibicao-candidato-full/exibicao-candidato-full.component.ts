@@ -11,7 +11,7 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
 
   constructor( private CandidatoService: CandidatoService) { 
     // this.Candidato = CandidatoService.ObterTeste();
-    this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.jpg`;
+    this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.png`;
     // this.candidato_bg=`${this.Candidato.FotoCapa}`;
   }
   

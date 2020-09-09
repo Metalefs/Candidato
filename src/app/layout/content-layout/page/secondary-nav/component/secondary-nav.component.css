@@ -6,7 +6,7 @@
   position: fixed;
   padding: 0 1rem;
   z-index: 1;
-  background: var(--background-default);
+  background: white;
 }
 .column{
   padding:0;

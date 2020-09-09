@@ -28,7 +28,7 @@
     height: 100%;
     border-top-right-radius: 48px;
     background-origin: padding-box;
-    background-position: right !important;
+    background-position: center !important;
     z-index: 0;
 }
 
@@ -37,7 +37,7 @@
     box-shadow: 7px 7px 40px rgba(0,0,0,.28);
     background-repeat: no-repeat!important;
     background-size: cover!important;
-    background-position: top!important;
+    background-position: center!important;
     border-top-right-radius: 48px;
     margin: 0 auto;
     position: fixed;
@@ -88,7 +88,7 @@
         background-repeat: no-repeat !important;
         background-size: cover !important;
         height: auto;
-        background-position: top !important;
+        background-position: center !important;
         background: linear-gradient(#004092, #020202, transparent);
         box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8); 
         border-top-right-radius: 0;
@@ -96,7 +96,7 @@
     .center-section-candidato{
         background-repeat: no-repeat !important;
         background-size: cover !important;
-        background-position: top !important;
+        background-position: center !important;
         position: fixed;
         height: initial;
         width:100%;

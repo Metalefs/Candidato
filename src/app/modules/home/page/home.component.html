@@ -3,7 +3,11 @@
     
     <div class="informacao-candidato">
         <div >
-            <h1 class="title is-1 logo-campanha">Sua Logo</h1>
+            <h1 class="title is-1 logo-campanha">
+                <figure class="image">
+                    <img src="assets/imagens/icones/Gleisson_all_white.png" alt="">
+                </figure>
+            </h1>
         </div>
         <div >
             <h1 class="title is-1 numero-campanha">{{Candidato?.numeroCampanha}}</h1>
@@ -16,6 +20,11 @@
 
 <div class="columns is-mobile is-gapless is-hidden-touch">
     <div class="column is-6">
+        <h1 class="title is-1 logo-campanha">
+            <figure class="image">
+                <img src="assets/imagens/icones/Gleisson_all_white.png" alt="">
+            </figure>
+        </h1>
         <app-exibicao-candidato [Candidato]="Candidato" [isBg] = "true" ></app-exibicao-candidato>
     </div>
     <div class="column is-6">
