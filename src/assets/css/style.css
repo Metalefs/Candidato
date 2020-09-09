@@ -884,7 +884,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   
+  @media only screen and (min-width: 1024px) {
   
+		#nav-menu {
+			width: max-content;
+		}
+	}
   
   /* --------------------------------------------------
   ------------ Hamburger and Navigation Ends ----------
@@ -1533,8 +1538,6 @@ label {
 
 	@media only screen and (max-width : 801px) {
 
-     
-
 		.main-logo {
 			padding: 100px 0 0 0;
 			text-align: center;
@@ -1548,10 +1551,9 @@ label {
 		.left-section{
 			position: relative;
 			width: 100%;
-			min-height: 100vh;    
-			z-index: 2;
+			min-height: 100vh; 
+			z-index: initial;
 		}
-
 
 		.intro .intro-text h1 {
 			font-size: 42px;

@@ -1,6 +1,7 @@
 .intro{
     text-align: justify;
-    font-family: Roboto;
+	font-family: Roboto;
+	padding-top: 0 !important;
 }
 .intro-text{
     margin-bottom: 70px;

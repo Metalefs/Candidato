@@ -73,10 +73,11 @@
     border-bottom-right-radius:20px;
     border-top-right-radius:20px;
   }
-  @media only screen and (max-width : 1024px) {
-    :host ::ng-deep .mat-tab-labels {
-      margin-top:-65;
-    }
+  
+  @media only screen and (max-width : 801px) {
+    /* :host ::ng-deep .mat-tab-labels {
+      margin-top:-65px;
+    } */
     :host ::ng-deep .mat-tab-label:first-of-type{
       border-bottom-left-radius:20px;
       border-top-left-radius:20px;
@@ -86,7 +87,6 @@
       border-top-right-radius:20px;
     }
     .mat-tab-group {
-      margin-top: -95px;
       margin-top: 85%;
       overflow: visible;
       max-height: initial;
@@ -104,4 +104,10 @@
     :host ::ng-deep .mat-tab-label:last-of-type{
       box-shadow: none;
     }
+}
+
+@media only screen and (max-width : 1024px) {
+  :host ::ng-deep .mat-tab-header {
+    margin-top: 0%;
+  }
 }

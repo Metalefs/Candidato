@@ -6,6 +6,7 @@
     background-origin: initial;
     background-position: 100%!important;
     animation: fade-in 5s ease-in-out forwards;
+    z-index: 2;
 }
 
 .left-section-candidato{
@@ -122,6 +123,7 @@
         border:0;
         /* border-top-right-radius: 48px; */
         padding: 0rem;
+        z-index: initial;
     }
     .left-section-candidato-img{
         background-repeat: no-repeat !important;
@@ -164,7 +166,7 @@
 }
 #logo-canvas{
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
     pointer-events: none;
     border-top-right-radius: 48px;
