@@ -22,9 +22,11 @@ export class ApresentacaoCandidatoComponent implements OnInit {
   
   constructor(
     private authenticationService: AuthenticationService,
+    private MensagensService:MensagensService
 	) 
 	{ 
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.Mensagens=this.MensagensService.ObterTeste();
   }
   
   loading = false;

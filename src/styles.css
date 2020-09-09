@@ -24,7 +24,7 @@
   --foreground-light: #41474d;
 
   /* --background-default: #f4faff; */
-  --background-default: #dadada;
+  --background-default: #f4faff;
   --background-secondary: #a3b9cc;
   --background-tertiary: #5c7d99;
   --background-light: #ffffff;
@@ -154,7 +154,7 @@
     stroke: #ddd;
 }
 .app-loading div.logo {
-      background: url(src/assets/imagens/icones/ConectaCandidato_fundoTransparente.png) center center no-repeat;
+      background: url(src/assets/imagens/icones/Gleisson_all_white.png) center center no-repeat;
       background-size: contain;
       width:150px;
       height:150px;

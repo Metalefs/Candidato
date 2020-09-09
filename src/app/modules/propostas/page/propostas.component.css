@@ -30,7 +30,7 @@
 }
 .btn-sugestao{
     background: var(--primary-default);
-    color: var(--background-default);
+    color: white;
     font-size: medium;
     padding: .5rem;
     border-radius: 10px;

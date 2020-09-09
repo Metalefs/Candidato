@@ -939,7 +939,6 @@ h1, h2, h3, h4, h5, h6 {
 .section {
     padding: 100px 0;
     position: relative;
-    background-color: var(--background-default);
 }
 .section-head {
     position: relative;
