@@ -31,7 +31,7 @@ export class ContentLayoutComponent implements OnInit {
  
   title = "Candidato";
   paginas: OpcaoNavbarFA[] = [];
-  NavState:NavState = {open : false};
+  NavState:NavState = {open : true};
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
   @ViewChild('MobilecanvasEl') MobilecanvasEl: ElementRef;

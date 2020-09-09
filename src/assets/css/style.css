@@ -304,14 +304,16 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 20px;
   right: 20px;
-  border-radius: 50px;
-	background-color: #F2F2F1;
+  border-radius: 25px;
+  cursor: pointer;
+  /* border:1px dotted; */
+	/* border-color: var(--primary-default); */
 	z-index: 111;
   transition: all 400ms ease-in;
 }
 
 .is-active.nav-trigger {
-  background: #DDDDDD;
+	background-color: var(--primary-default);
 }
 
 .hamburger {
@@ -590,21 +592,6 @@ h1, h2, h3, h4, h5, h6 {
 ---------- Hamburger and Navigation Starts ----------
 ----------------------------------------------------*/
 
-
-.nav-trigger {
-	padding: 8px;
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	border-radius: 50px;
-	  background-color: #F2F2F1;
-	  z-index: 111;
-	transition: all 400ms ease-in;
-  }
-  
-  .is-active.nav-trigger {
-	background: #DDDDDD;
-  }
   
   .hamburger {
 	position: relative;
@@ -673,12 +660,11 @@ h1, h2, h3, h4, h5, h6 {
   
   #nav-menu {
 	position: fixed;
-	height: 100%;
 	right: 0;
 	top: 0;
 	z-index: 110;
 	width: 75%;
-	background-color: #e6ecef;
+	/* background-color: #e6ecef; */
 	  background-size: cover;
 	  overflow-y: auto;
 	-webkit-transform: translateZ(0);
@@ -822,7 +808,30 @@ h1, h2, h3, h4, h5, h6 {
 	-moz-transition: .8s 0s;
 	  transition: .8s 0s;
   }
+   
+  #nav-menu-horizontal.is-active {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	-webkit-overflow-scrolling: touch;
+  }
   
+  
+  #nav-menu-horizontal.is-active li {
+	  -webkit-transform: translateX(0px);
+	  -moz-transform: translateX(0px);
+	  transform: translateX(0px);
+	  -webkit-transition: .8s 0s;
+	-moz-transition: .8s 0s;
+	  transition: .8s 0s;
+  }
+
   #nav-menu .copyright-text {
 	font-family: Work Sans;
 	font-size: 12px;
@@ -895,6 +904,7 @@ h1, h2, h3, h4, h5, h6 {
 		bottom: 0;
     width: 50%;
 		height: 100%;
+		z-index: 2;
 }
 
 .personal {
@@ -1538,7 +1548,8 @@ label {
 		.left-section{
 			position: relative;
 			width: 100%;
-			min-height: 100vh;
+			min-height: 100vh;    
+			z-index: 2;
 		}
 
 

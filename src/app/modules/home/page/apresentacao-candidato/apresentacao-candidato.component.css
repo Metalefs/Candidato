@@ -16,6 +16,9 @@
     border-bottom:8px solid;
     border-color:  var(--primary-default);
 }
+.btn-contact{
+    background: var(--primary-default);
+}
 
 
 .intro .intro-text h4 {

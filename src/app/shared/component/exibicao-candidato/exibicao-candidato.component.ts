@@ -25,6 +25,9 @@ export class ExibicaoCandidatoComponent implements OnInit {
   Candidato:Candidato;
  
   ngOnInit(): void {
+    this.CandidatoService.Ler().subscribe(x=>{
+      this.Candidato=x;
+    })
   }
   ngAfterViewInit() {
     this.canvasDot();

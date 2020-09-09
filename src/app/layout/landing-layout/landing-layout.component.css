@@ -18,6 +18,7 @@
     background-origin: padding-box;
     background-position: right !important;
     animation: fade-in 5s ease-in-out forwards;
+    z-index: 2;
 }
 
 .left-section-candidato{
@@ -193,6 +194,7 @@
         border:0;
         /* border-top-right-radius: 48px; */
         padding: 0rem;
+        z-index: 2;
     }
     
     .left-section-candidato{

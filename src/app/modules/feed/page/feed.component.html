@@ -3,7 +3,7 @@
     style="
     background:url(assets/imagens/fundos/inicio/connections_banner_with_low_poly_design_2305.jpg);
     background-position: right;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 150px;
     border-bottom: 0px none rgb(255, 255, 255);
     background-repeat: no-repeat;
@@ -22,36 +22,20 @@
                             border-style: none;
                             border-width: 7px;">
                 </div>
-                <div class="slogan" style="">
-                    <h1 data-selector="h1" class=""><strong></strong>.<br><br>
-                    </h1>
-                </div>
-                <div class="slogan" style="">
-                    <h2 data-selector="h2" class=""><strong></strong> </h2>
-                    <h2 data-selector="h2" class=""></h2>
-                </div>
-                <div class="columns">
-
-                    <a class="download-btn" href="#"
-                        style="margin-right: 2px; padding-left: 60px; width: 180px; box-shadow: var(--primary-default) 0px 0px 1em;"
-                        data-selector="a.btn, a.download-btn, button.btn, a.goto">
-                        <fa-icon [icon]="FaApple" class="icon icon-apple" style="margin-left: -6px"></fa-icon>
+                <div class="container">
+                    <button class="download-btn"  mat-raised-button>
+                        <img src="assets/imagens/icones/apple.png" class="icon">
                         Disponível <b>App Store</b>
-                    </a>
-                    
-                    <a class="download-btn" href="#"
-                        style="margin-right: 2px; padding-left: 60px; width: 180px; box-shadow: var(--primary-default) 0px 0px 1em;"
-                        data-selector="a.btn, a.download-btn, button.btn, a.goto">
-                        <fa-icon [icon]="FaAndroid" class="icon icon-android" style="margin-left: -6px"></fa-icon>
+                    </button>
+                    <button class="download-btn"  mat-raised-button>
+                        <img src="assets/imagens/icones/google-play-store.png" class="icon">
                         Disponível <b>PlayStore</b>
-                    </a>
-                    
-                    <a class="download-btn" href="#"
-                        style="margin-right: 2px; padding-left: 60px; width: 180px; box-shadow: var(--primary-default) 0px 0px 1em;"
-                        data-selector="a.btn, a.download-btn, button.btn, a.goto">
-                        <fa-icon [icon]="FaDesktop" class="icon icon-screen-smartphone" style="margin-left: -6px"></fa-icon>
+                    </button>
+                    <button class="download-btn"  mat-raised-button>
+                        <fa-icon [icon]="FaDesktop" size="sm" class="icon icon-screen-smartphone" style="margin-left: -6px"></fa-icon>
                         Disponível <b>Este site</b>
-                    </a>
+                    </button>
+                
                 </div>
             </div>
         </div>

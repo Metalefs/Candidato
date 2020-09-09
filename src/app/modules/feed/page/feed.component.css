@@ -66,6 +66,7 @@ header {
 	font-size: 13px;
 	line-height: 1.1;
 	vertical-align: middle;
+	margin-right: 2px; padding-left: 60px; width: 180px; box-shadow: var(--primary-default) 0px 0px 1em;
 }
 
 .download-btn b {

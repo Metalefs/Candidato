@@ -14,13 +14,18 @@
             </nav>
           </div>
           <div class=" w-100">
-            <div class=" portfolio-container text-center">
+            <div class=" portfolio-container text-center mb-6">
 
               <div class=" w-100 custompadding " [ngClass]="proposta.Categoria? proposta.Categoria.replace(' ',''): ''"
                 *ngFor="let proposta of Propostas;let i = index">
                   <app-proposta-card [Proposta]="proposta" [Delay]="800*i"></app-proposta-card>
               </div>
 
+              <div class="contato-container">
+                  <button class="w-100 btn-sugestao" mat-raised-button color="primary">
+                      ENVIAR SUGESTÃO
+                  </button>
+              </div>
             </div>
           </div>
         </div>
@@ -59,7 +64,11 @@
                       *ngFor="let proposta of Propostas;let i = index">
                         <app-proposta-card [Proposta]="proposta" [Delay]="800*i"></app-proposta-card>
                     </div>
-      
+                    <div class="contato-container">
+                      <button class="w-100 btn-sugestao" mat-raised-button color="primary">
+                          ENVIAR SUGESTÃO
+                      </button>
+                  </div>
                   </div>
                 </div>
               </div>

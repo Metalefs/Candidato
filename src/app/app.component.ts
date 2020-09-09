@@ -76,7 +76,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     // 2. Merge two separate array values at the same index to 
     // be the same value in new array.
     const mergeArrays = (arrOne, arrTwo) => arrOne.
-    map((item, i) => `${item} ${arrTwo[i]}`).
+    map((item, i) => `${item} ${arrTwo[randNumInRange(5)]}`).
     join(', ');
 
     // 3. Curried function to add a background to array of elms
