@@ -13,7 +13,9 @@ export class RedesSociaisComponent implements OnInit {
   redes: RedeSocial[] = [];
   constructor(private ServicoRedesSociais:ServicoRedesSociais) {
   }
-  
+  open(link:string){
+    window.open(link,"_blank");
+  }
   ngOnInit(): void {
     console.log(this.redes);
     // this.ServicoRedesSociais.GetAllRedesSociais();

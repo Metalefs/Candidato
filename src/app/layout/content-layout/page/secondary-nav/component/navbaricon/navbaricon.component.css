@@ -32,7 +32,7 @@ a{
 .active, .Active{
     color: #333;
     background: #fff;
-    color: var(--primary-default);
+    color: var(--primario-default);
 }
 .icon.is-red{
     color: red;

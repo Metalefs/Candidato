@@ -3,14 +3,14 @@ import { MensagensService } from 'src/app/data/service/domain/MensagensService';
 import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
 import { PropostaService,CandidatoService } from 'src/app/data/service/domain/';
 
-import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
-import { Lightbox } from 'ngx-lightbox';
+import { MatDialog } from '@angular/material/dialog';
 
 import { fade } from 'src/app/animations';
 import { Proposta,Candidato } from 'src/app/data/schema/domain/';
 import { Album } from 'src/app/data/schema/Album';
 import { LightboxEvent, LIGHTBOX_EVENT } from 'ngx-lightbox';
 import { Router } from '@angular/router';
+import { CaixaSugestaoComponent } from 'src/app/modules/propostas/page/DialogComponents/caixa-sugestao/caixa-sugestao.component';
 
 @Component({
   selector: 'propostas',
@@ -29,24 +29,20 @@ export class PropostasComponent implements OnInit {
   constructor(private MensagensService: MensagensService,
      private CandidatoService:CandidatoService,
      private PropostaService:PropostaService, 
-     private Lightbox:Lightbox,
+     private dialog: MatDialog,
      private Router:Router) {
-	    this.PropostaService.Ler().subscribe(x => {
-          this.Propostas = x;
-          // x.forEach(p=>{
-
-          //     const album = {
-          //       src: p.FotoSrc,
-          //       caption: p.Nome,
-          //       thumb: p.Descricao
-          //     };
-          
-          //   this._albums.push(album);
-          //   console.log(this._albums);
-            
-          // })
-    });
     
+  }
+
+  AbrirCaixaSugestao(){
+
+    const dialogRef = this.dialog.open(CaixaSugestaoComponent,  {
+      
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      
+    });
   }
 
   navigateToProject(id: string): void {

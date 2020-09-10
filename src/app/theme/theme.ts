@@ -17,7 +17,7 @@ export interface Theme {
       "--background-tertiary": "#5C7D99",
       "--background-light": "#FFFFFF",
   
-      "--primary-default": "#5DFDCB",
+      "--primario-default": "#5DFDCB",
       "--primary-dark": "#24B286",
       "--primary-light": "#B2FFE7",
   
@@ -43,7 +43,7 @@ export interface Theme {
       "--background-tertiary": "#08090A",
       "--background-light": "#41474D",
   
-      "--primary-default": "#5DFDCB",
+      "--primario-default": "#5DFDCB",
       "--primary-dark": "#24B286",
       "--primary-light": "#B2FFE7",
   

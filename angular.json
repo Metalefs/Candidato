@@ -27,6 +27,7 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/tema.css",
               "node_modules/bulma/css/bulma.css",
               "node_modules/aos/dist/aos.css",
               "./node_modules/ngx-lightbox/lightbox.css"

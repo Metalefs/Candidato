@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentLayoutComponent } from './content-layout/content-layout.component';
-import { LandingLayoutComponent } from './landing-layout/landing-layout.component';
 import { NavbarComponent } from './nav/horizontal/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SideNavComponent } from './content-layout/page/side-nav/side-nav.component';
@@ -21,7 +20,6 @@ import { VerticalNavComponent } from './nav/vertical/vertical-nav.component';
     NavbariconComponent,
     SecondaryNavComponent,
     ContentLayoutComponent,
-    LandingLayoutComponent,
     NavbarComponent,
     FooterComponent,
     VerticalNavComponent
@@ -33,7 +31,6 @@ import { VerticalNavComponent } from './nav/vertical/vertical-nav.component';
   ],
   exports:[
     ContentLayoutComponent,
-    LandingLayoutComponent,
     SideNavComponent,
     ScrollTopComponent,
     ScrollDownComponent,

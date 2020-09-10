@@ -29,7 +29,7 @@
     min-width: 50%;
 }
 .btn-sugestao{
-    background: var(--primary-default);
+    background: var(--primario-default);
     color: white;
     font-size: medium;
     padding: .5rem;
@@ -67,3 +67,11 @@ a:not([href]):not([tabindex]) {
     text-transform: capitalize;
     border-bottom: 4px solid transparent;
 }
+
+:host ::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+:host ::ng-deep .mat-expansion-panel-header {
+    height: auto;
+ }

@@ -24,6 +24,8 @@ import { FeedbackComponent } from 'src/app/layout/content-layout/page//feedback/
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { NavStateService } from 'src/app/core/service/state/_NavStateService';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: Document },
     { provide: NavStateService },
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
     {
       provide: RouteReuseStrategy,
       useClass: RouteReuseService

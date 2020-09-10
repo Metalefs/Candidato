@@ -63,14 +63,14 @@
     background: white;
     font-family: Roboto;
     line-height: 25px;
-    color:var(--primary-default);
+    color:var(--primario-default);
     font-size: 20px;
     text-align: center;
     transition: .5s all ease-out;
     opacity: 1;
   }
   :host ::ng-deep .mat-tab-label-active{
-    background: var(--primary-default);
+    background: var(--primario-default);
     box-shadow:  10px 10px 60px #d9d9d9, 
              -10px -10px 60px #ffffff;
     color:white;

@@ -20,11 +20,9 @@
     margin:0;
     padding: 0rem;
     position: fixed;
-    animation-name: fade-in;
     top: 0;
     z-index: 2;
 }
-
 .typing-animation{
     bottom: 115px;
     z-index: 3;
@@ -60,7 +58,7 @@
     position: RELATIVE;
     color: var(--background-default);
     color: var(--cor-texto-partido);
-    /* background: var(--primary-default); */
+    /* background: var(--primario-default); */
     padding: 0.5REM;
     text-shadow: 2px 2px 30px rgba(37, 35, 35, 0.99);
     border-radius: 50%;
@@ -131,7 +129,7 @@
         height: auto;
         background-position: center !important;
         background: linear-gradient(#004092, #020202, transparent);
-        box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8); 
+        box-shadow: none; 
         border-top-right-radius: 0;
     }
     .left-section-candidato{

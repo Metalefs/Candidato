@@ -1,5 +1,5 @@
 <div class="is-hidden-desktop no-y-scroll">
-    <app-exibicao-candidato-full [Candidato]="Candidato"></app-exibicao-candidato-full>
+    <app-exibicao-candidato-full class="is-hidden-desktop" [Candidato]="Candidato"></app-exibicao-candidato-full>
     
     <div class="informacao-candidato">
         <div >
@@ -20,11 +20,7 @@
 
 <div class="columns is-mobile is-gapless is-hidden-touch">
     <div class="column is-6">
-        <h1 class="title is-1 logo-campanha">
-            <figure class="image">
-                <img src="assets/imagens/icones/Gleisson_all_white.png" alt="">
-            </figure>
-        </h1>
+        
         <app-exibicao-candidato [Candidato]="Candidato" [isBg] = "true" ></app-exibicao-candidato>
     </div>
     <div class="column is-6">

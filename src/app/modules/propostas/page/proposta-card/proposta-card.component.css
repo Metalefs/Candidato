@@ -11,7 +11,7 @@
     font-family: Roboto;
     border-left:5px solid;
     border-radius: 5px;
-    border-left-color: var(--primary-default);
+    border-left-color: var(--primario-default);
     -webkit-transition: all .3s ease-in-out 0s;
     -moz-transition: all .3s ease-in-out 0s;
     -ms-transition: all .3s ease-in-out 0s;
@@ -19,7 +19,7 @@
     transition: all .3s ease-in-out 0s;
 }
 .lke-btn{
-    color: var(--primary-default);
+    color: var(--primario-default);
     transition: 1s all;
     cursor: pointer;
 }

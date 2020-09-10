@@ -9,16 +9,12 @@
 .section-head{
     padding: 0 2rem;
     text-align: justify;
+    font-size: medium;
 }
 .section-about-wrap {
     padding: 2REM;
     box-shadow:  20px 20px 60px #d9d9d9, 
              -20px -20px 60px #ffffff;
-}
-.about-social a.downloadCV {
-    width: auto;
-    line-height: 47px;
-    padding: 0 10px;
 }
 @media (max-width: 768px){
 .about-social a.downloadCV {
@@ -33,7 +29,6 @@
     display: block;
     border-radius: 15px;
     background: #62677e;
-    font-size: 20px;
     line-height: 52px;
     color: #fff;
 }
@@ -42,7 +37,6 @@
     height: 40px;
     width: 40px;
     line-height: 40px;
-    font-size: 16px;
 }
 }
 .about-desc-info {
@@ -50,7 +44,6 @@
 }
 .about-desc-info b {
     padding-right: 10px;
-    font-size: 18px;
 }
 b, strong {
     font-weight: 500;
@@ -68,7 +61,7 @@ b, strong {
              font-family: Roboto;
              border-left:5px solid;
              border-radius: 5px;
-             border-left-color: var(--primary-default);
+             border-left-color: var(--primario-default);
              -webkit-transition: all .3s ease-in-out 0s;
              -moz-transition: all .3s ease-in-out 0s;
              -ms-transition: all .3s ease-in-out 0s;

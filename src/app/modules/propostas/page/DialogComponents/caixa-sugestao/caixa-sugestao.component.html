@@ -1,0 +1,22 @@
+<h1 mat-dialog-title class="tem-cor-primaria">Deixe a sua sugestão</h1>
+<div mat-dialog-content>
+  <p>Qual é a sua sugestão</p>
+  
+  <mat-form-field>
+    
+    <textarea matInput class="tem-borda-primaria"  #sugestao class="textarea" style="width: 100%" placeholder="Digite a sugestão"
+    cols="30" rows="10" title="Enviar sugestão" aria-label="Caixa de sugestão"
+    required></textarea>
+    
+
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button class="w-100 tem-background-primario has-text-white btn-sugestao" [mat-dialog-close]="sugestao.value" mat-button color="secondary">
+      Enviar
+  </button>
+  <button class="w-100 tem-borda-primaria tem-cor-primaria ml-0" (click)="onNoClick()" cdkFocusInitial mat-button color="primary">
+      Cancelar
+  </button>
+</div>

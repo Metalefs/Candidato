@@ -14,23 +14,34 @@
     margin-left: 40%;
     margin: 0 auto;
     border-bottom:8px solid;
-    border-color:  var(--primary-default);
+    border-color:  var(--primario-default);
 }
 .btn-contact{
-    background: var(--primary-default);
+    background: var(--primario-default);
     color:white;
 }
 
 
+
+.intro {
+	padding-top: 50px;
+	text-align: center;
+}
+
+
 .intro .intro-text h4 {
+	font-family: Poppins;
+	font-size: 14px;
 	font-weight: 600;
+	color: #A1A1A1;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	line-height: 1.2;
 	margin: 0 0 20px 0;
 }
 
 .intro .intro-text h1 {
-	font-family: Roboto;
+	font-family: Poppins;
 	font-size: 42px;
 	font-weight: 600;
 	letter-spacing: -2px;
@@ -39,8 +50,10 @@
 }
 
 .intro .intro-text p {
+	font-family: Poppins;
+	font-size: 16px;
 	font-weight: 400;
-	/* color: #A1A1A1; */
+	color: #A1A1A1;
 	letter-spacing: 0px;
 	line-height: 1.5;
 	margin: 0 0 20px 0;
@@ -48,7 +61,7 @@
 
 
 .intro .intro-text h3 {
-	font-family: Roboto;
+	font-family: Poppins;
 	font-size: 16px;
 	font-weight: 600;
 	color: #434343;
@@ -62,6 +75,7 @@
 	display: inline-block;
 	margin-right: 15px;
 }
+
 
 @media (min-width: 320px) and (max-width: 1023px) {
     .intro{

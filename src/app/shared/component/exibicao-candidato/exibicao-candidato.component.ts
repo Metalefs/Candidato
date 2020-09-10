@@ -11,9 +11,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
   isBg:boolean = false;
   constructor( private CandidatoService: CandidatoService) { 
-    // this.Candidato = CandidatoService.ObterTeste();
     this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.jpg`;
-    // this.candidato_bg=`${this.Candidato.FotoCapa}`;
   }
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
@@ -23,12 +21,15 @@ export class ExibicaoCandidatoComponent implements OnInit {
   candidato_bg:string;
   @Input()
   Candidato:Candidato;
- 
+  nome = "";
+
   ngOnInit(): void {
     this.CandidatoService.Ler().subscribe(x=>{
       this.Candidato=x;
+      this.nome = this.Candidato.nome;
     })
   }
+
   ngAfterViewInit() {
     this.canvasDot();
     this.startCanvasAnimation();
@@ -280,4 +281,5 @@ export class ExibicaoCandidatoComponent implements OnInit {
 
     tick();
   }
+
 }

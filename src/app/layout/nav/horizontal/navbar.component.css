@@ -9,8 +9,8 @@
 }
 .nav-active{
     /* background: #9e9e9e2e; */
-    /* background:var(--primary-default) !important; */
-    color:var(--primary-default) !important;
+    /* background:var(--primario-default) !important; */
+    color:var(--primario-default) !important;
     opacity: 1;
     font-weight: bolder;
 }
@@ -47,7 +47,7 @@
     font-size: x-large;
     border-radius: 5%;
     /* font-weight: 500; */
-    color:var(--primary-default) !important;
+    color:var(--primario-default) !important;
 }
 .navbar-start{
     background-color:var(--background-primary) !important;
