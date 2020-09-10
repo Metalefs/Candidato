@@ -4,6 +4,8 @@
 
 #nav-menu{
     transition: all 0.5s;
+    border-bottom-left-radius: 20px;
+    
     font-family: Roboto,sans-serif;
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }

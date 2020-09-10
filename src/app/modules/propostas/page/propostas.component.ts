@@ -10,6 +10,8 @@ import { Proposta,Candidato } from 'src/app/data/schema/domain/';
 import { Album } from 'src/app/data/schema/Album';
 import { LightboxEvent, LIGHTBOX_EVENT } from 'ngx-lightbox';
 import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 import { CaixaSugestaoComponent } from 'src/app/modules/propostas/page/DialogComponents/caixa-sugestao/caixa-sugestao.component';
 
 @Component({
@@ -30,6 +32,7 @@ export class PropostasComponent implements OnInit {
      private CandidatoService:CandidatoService,
      private PropostaService:PropostaService, 
      private dialog: MatDialog,
+     private _snackBar: MatSnackBar,
      private Router:Router) {
     
   }
@@ -41,12 +44,21 @@ export class PropostasComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      
+      if(result && result != ""){
+        this.CandidatoService.EnviarSugestao(result).subscribe(x=>{
+          this.openSnackBar(`Sua sugestão ${result}, foi enviada com sucesso`);
+        });
+      }
+      else{
+          this.openSnackBar(`Houve um problema com sua sugestão`);
+      }
     });
   }
 
-  navigateToProject(id: string): void {
-    this.Router.navigateByUrl(`/proposta/${id}`);
+  openSnackBar(message: string) {
+    this._snackBar.open(message, 'Fechar', {
+      duration: 3000
+    });
   }
 
   ngOnInit(): void {

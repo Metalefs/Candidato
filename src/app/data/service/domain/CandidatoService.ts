@@ -67,7 +67,14 @@ export class CandidatoService extends ServicoBase{
     }
 	
     Incluir(item: Candidato): Observable<any> {
-        return this.http.post<Candidato>(environment.endpoint + routes.Gerenciamento + routes.Sobre, item).pipe(
+        return this.http.post<Candidato>(environment.endpoint + routes.Candidato, item).pipe(
+            retry(3),
+            catchError(this.handleError)
+        );
+    }
+
+    EnviarSugestao(item: string): Observable<any> {
+        return this.http.post<string>(environment.endpoint + routes.Sugestoes, {descricao:item}).pipe(
             retry(3),
             catchError(this.handleError)
         );

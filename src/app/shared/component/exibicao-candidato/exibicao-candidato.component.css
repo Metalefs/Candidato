@@ -24,7 +24,7 @@
     z-index: 2;
 }
 .typing-animation{
-    bottom: 115px;
+    bottom: 145px;
     z-index: 3;
     margin-left: .5rem;
     font-size: 3rem !important;
@@ -86,9 +86,6 @@
         margin: 0;
         padding:0;
     }
-
-   .conecta-candidato-logo{
-   }
    .typing-animation{
         top: -90px;
         bottom:170px;
