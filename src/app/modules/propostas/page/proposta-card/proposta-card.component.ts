@@ -23,9 +23,9 @@ export class PropostaCardComponent implements OnInit {
 
    }
   like(){
-    if(this.Gostou)
+    if(this.Gostou ||
+      localStorage.getItem("proposta"+this.Proposta.identificador))
       return;
-    console.log(this.Proposta);
     this.PropostaService.CurtirProposta(this.Proposta.identificador).subscribe(x=>{
       this.Proposta.qtdCurtidas++;
       this.Gostou = true;
