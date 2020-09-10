@@ -50,9 +50,6 @@
     border-color: #5493f7;
     color: #333;
 }
-.text-black {
-    color: #0000!important;
-}
 .mb-2, .my-2 {
     margin-bottom: .5rem!important;
 }
@@ -74,4 +71,4 @@ a:not([href]):not([tabindex]) {
 
 :host ::ng-deep .mat-expansion-panel-header {
     height: auto;
- }
+}

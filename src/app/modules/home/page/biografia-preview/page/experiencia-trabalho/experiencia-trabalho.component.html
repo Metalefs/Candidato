@@ -1,0 +1,36 @@
+
+<div class="about px-4">
+    <div class="col-md-12">
+      <div class="about-details">
+
+          <div class="experience">
+            <p class="normal"> {{Candidato?.realizacao}}</p>
+            <ul>
+
+                <li *ngFor="let experiencia of ExperienciasTrabalho">
+                    <h6>{{experiencia?.Cargo}} - {{experiencia?.Local}}</h6>
+                    <p>
+                        {{experiencia?.Descricao}}
+                    </p>
+                    <h6>{{experiencia?.Inicio}} - {{experiencia?.Fim}}</h6>
+                </li>
+
+            </ul>
+            <div class="cta">
+              <p>
+                  
+              </p>
+              <a class="btn btn-contact" [routerLink]="['/propostas']"
+              routerLinkActive="Active"> Minhas propostas</a>
+          </div>
+          </div>
+        
+      </div>
+      <div class="cta">
+        <p>
+            {{Mensagens?.ChamadaParaContato}}
+        </p>
+        <a class="btn btn-contact" href="#">Contate-me</a>
+      </div>
+    </div>
+  </div>

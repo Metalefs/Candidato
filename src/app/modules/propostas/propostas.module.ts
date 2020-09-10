@@ -15,6 +15,11 @@ import { CaixaSugestaoComponent } from './page/DialogComponents/caixa-sugestao/c
   imports: [
     SharedModule,
     PropostasRoutingModule
+  ],
+  exports: [
+    PropostasComponent,
+    PropostaCardComponent,
+    CaixaSugestaoComponent
   ]
 })
 export class PropostasModule {}

@@ -8,7 +8,7 @@ import { Candidato,Pensamento } from 'src/app/data/schema/domain';
 import { CandidatoService, PensamentoService } from 'src/app/data/service/domain';
 
 @Component({
-  selector: 'app-biograf',
+  selector: 'biografia',
   templateUrl: './biografia.component.html',
   styleUrls: ['./biografia.component.css'],
   host: {

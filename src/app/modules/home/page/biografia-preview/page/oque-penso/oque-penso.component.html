@@ -1,0 +1,24 @@
+<section class="section section-about in" >
+    <div class="section-head" >
+        <p>{{Candidato?.pensamento}}</p>
+    </div>
+    <div class="section-about-wrap">
+        <ol class="">
+            
+            <li class="box"  *ngFor="let Pensamento of Ideais">
+                <p class="subtitle">{{Pensamento?.Titulo}}</p>
+            </li>
+
+        </ol>
+        <div class="cta">
+            <p>
+                
+            </p>
+            <a class="btn btn-contact" [routerLink]="['/propostas']"
+            routerLinkActive="Active"> Minhas propostas</a>
+        </div>
+    </div>
+
+</section>
+
+      

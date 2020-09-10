@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './page/home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeRoutingModule } from './home.routing';
-import { BiografiaPreviewComponent } from './page/biografia-preview/biografia-preview.component';
+import { BiografiaPreviewModule } from './page/biografia-preview/biografia-preview.module';
 import { PropostasPreviewComponent } from './page/propostas-preview/propostas-preview.component';
 import { FeedPreviewComponent } from './page/feed-preview/feed-preview.component';
 import { ApresentacaoCandidatoComponent } from './page/apresentacao-candidato/apresentacao-candidato.component';
@@ -11,14 +11,14 @@ import { ApresentacaoCandidatoComponent } from './page/apresentacao-candidato/ap
 @NgModule({
   declarations: [
     HomeComponent,
-    BiografiaPreviewComponent,
-    PropostasPreviewComponent,
     FeedPreviewComponent,
+    PropostasPreviewComponent,
     ApresentacaoCandidatoComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    BiografiaPreviewModule,
     HomeRoutingModule
   ]
 })

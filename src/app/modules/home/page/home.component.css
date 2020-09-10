@@ -6,15 +6,16 @@
 .column .is-8{
     padding-top:140px;
 }
+.scroller{
+    max-height: 100vh;
+    overflow-y: scroll;
+}
 .container {
     flex-grow: 1;
     margin: 0 auto;
     position: relative;
     width: 80%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
 }
 .redes-sociais{
     max-width: 50%;

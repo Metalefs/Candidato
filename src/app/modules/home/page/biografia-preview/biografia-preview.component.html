@@ -1,0 +1,31 @@
+<div class="is-hidden-touch">
+    <mat-tab-group>
+        <mat-tab class="my-mat-tab">
+            <ng-template mat-tab-label class="my-mat-tab">
+                Quem <wbr> Sou
+            </ng-template>
+            
+            <div class="container"id="inicio">
+                <quem-sou [Candidato]="Candidato"></quem-sou>    
+            </div>
+        </mat-tab>
+        <mat-tab class="my-mat-tab">
+            <ng-template mat-tab-label class="my-mat-tab">
+                O que <wbr> penso
+            </ng-template>
+            
+            <div class="" id="sobre">
+                <oque-penso [Candidato]="Candidato" [Ideais]="Ideais"></oque-penso>
+            </div>
+        </mat-tab>
+        <mat-tab class="my-mat-tab">
+            <ng-template mat-tab-label class="my-mat-tab">
+                O que <wbr> realizei
+            </ng-template>
+            <div class="">
+                <experiencia-trabalho [Candidato]="Candidato"></experiencia-trabalho>
+            </div>
+        </mat-tab>
+        <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
+    </mat-tab-group>
+</div>

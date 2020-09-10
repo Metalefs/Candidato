@@ -18,9 +18,8 @@
 </div>
 
 
-<div class="columns is-mobile is-gapless is-hidden-touch">
+<div class="columns scroller is-mobile is-gapless is-hidden-touch">
     <div class="column is-6">
-        
         <app-exibicao-candidato [Candidato]="Candidato" [isBg] = "true" ></app-exibicao-candidato>
     </div>
     <div class="column is-6">
@@ -28,13 +27,13 @@
             <apresentacao-candidato [Candidato]="Candidato"></apresentacao-candidato>
         </div>
 
-        <div class="container" data-aos="zoom-in-down" uniScrollSpy="sobre" id="sobre">
-            <app-biografia-preview></app-biografia-preview>
+        <div class="container" uniScrollSpy="biografia" id="biografia">
+            <biografia-preview></biografia-preview>
         </div>
 
         <div class="container" data-aos="zoom-in-down" uniScrollSpy="projetos" id="projetos">
-            <app-propostas-preview></app-propostas-preview>
+            <propostas-preview></propostas-preview>
         </div>
-        <app-redes-sociais [redes]="redes"></app-redes-sociais>
+        <!-- <app-redes-sociais [redes]="redes"></app-redes-sociais> -->
     </div>
 </div>
