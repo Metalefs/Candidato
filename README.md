@@ -1,5 +1,20 @@
 # Candidato
 
+
+##Para alterar o candidado do projeto:
+
+    1. Alterar imagens.
+
+        As imagens do candidato e de fundo estão localizadas em
+
+        `assets/imagens/inicio`
+
+        Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
+
+        `assets/imagens/icones`
+
+    2. Alterar icones de redes sociais
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development server

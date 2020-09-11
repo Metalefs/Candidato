@@ -43,8 +43,8 @@ export class CandidatoService extends ServicoBase{
         "",
         "",
         "0023",
-        "/assets/imagens/fundos/inicio/Candidato.jpg",
-        "/assets/imagens/fundos/inicio/Candidato-perfil.jpg",
+        "/assets/imagens/inicio/Candidato.jpg",
+        "/assets/imagens/inicio/Candidato-perfil.jpg",
         true
     )];
 

@@ -11,7 +11,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
   isBg:boolean = false;
   constructor( private CandidatoService: CandidatoService) { 
-    this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.jpg`;
+    this.candidato_bg=`/assets/imagens/inicio/Candidato.jpg`;
   }
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
