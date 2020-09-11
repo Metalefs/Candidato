@@ -40,7 +40,7 @@ export class PropostasComponent implements OnInit {
   AbrirCaixaSugestao(){
 
     const dialogRef = this.dialog.open(CaixaSugestaoComponent,  {
-      
+      width:"50%"
     });
 
     dialogRef.afterClosed().subscribe((result) => {

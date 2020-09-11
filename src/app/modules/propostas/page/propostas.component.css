@@ -23,7 +23,6 @@
 .projetos-desktop{
     max-height: 100vh;
     overflow: scroll;
-    width: 70%;
 }
 .container-projeto{
     min-width: 50%;

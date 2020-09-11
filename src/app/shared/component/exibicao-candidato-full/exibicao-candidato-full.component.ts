@@ -28,7 +28,13 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
   ObterCaminhoIconeConectaCandidato(){
     return CaminhoHelper.ObterCaminhoIconeConectaCandidato();
   }
+  ObterNomeCandidato(){
+    return this.Candidato.nome;
+  }
   ngOnInit(): void {
+    this.CandidatoService.Ler().subscribe(x=>{
+      this.Candidato=x;
+    })
   }
   ngAfterViewInit() {
     // this.canvasDot();

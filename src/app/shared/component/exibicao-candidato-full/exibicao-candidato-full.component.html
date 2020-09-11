@@ -5,7 +5,7 @@
 <section @slideInOut #canvasContainer class="center-section">
     
     <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
-        [typeSpeed]="30" [strings]="[Candidato.nome]" class="typing-animation is-hidden-touch">
+        [typeSpeed]="30" [strings]="[ObterNomeCandidato()]" class="typing-animation is-hidden-touch">
         <span class="typing"></span>
     </ngx-typed-js>
 
@@ -22,12 +22,13 @@
                     <img width="50" src="{{ObterCaminhoIconeConectaCandidato()}}"
                         class="conecta-candidato-logo rounded-full is-hidden-touch">
                 </div>
-                <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
-                    <div data-aos-offset="-200" data-aos-anchor-placement=".center-section-candidato"
+                <div class="column z-top">
+                    <a [routerLink]="['/inicio']" href="#inicio" routerLinkActive="Active"
+                        data-aos-offset="-200" data-aos-anchor-placement=".center-section-candidato"
                         data-aos="zoom-in-right">
-                            <img width="100" src="{{ObterCaminhoIconePartido()}}" class="partido-logo">
-                    </div>
-                </a>
+                        <img width="100" src="{{ObterCaminhoIconePartido()}}" class="partido-logo">
+                    </a>
+                </div>
             </figure>
         </div>
     </div>

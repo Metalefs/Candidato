@@ -24,7 +24,9 @@ export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
   Candidato:Candidato;
   nome = "";
-  
+  ObterNomeCandidato(){
+    return this.Candidato.nome;
+  }
   ObterCaminhoIconePartido(){
     return CaminhoHelper.ObterCaminhoIconePartido();
   }

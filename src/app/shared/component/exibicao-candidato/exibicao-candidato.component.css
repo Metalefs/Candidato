@@ -49,7 +49,6 @@
 .partido-logo{
     z-index: 3;
     position: relative;
-    bottom:20px;
     width: 100%;
     padding-right: 0px;
     right: 0;
@@ -76,7 +75,7 @@
 }
 
 
-@media only screen and (max-width : 801px) {
+@media only screen and (max-width : 1024px) {
     
     #logo-canvas{
         position: absolute;
@@ -145,7 +144,10 @@
         height: 150px;
         width: 100%;
         content: '';
-      }
+    }
+    .partido-logo{
+      bottom:20px;
+    }
     .partido-text{
         font-size: xx-large;
     }
