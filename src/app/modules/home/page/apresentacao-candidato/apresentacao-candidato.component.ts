@@ -5,10 +5,11 @@ import { Candidato } from 'src/app/data/schema/domain/Candidato';
 import { InformacoesContatoService } from 'src/app/data/service/domain/InformacoesContatoService';
 import { MensagensService } from 'src/app/data/service/domain/MensagensService';
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
-
+import { CaminhoImagemCandidato } from 'src/app/_helpers/caminho_helper';
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
 import { fade } from 'src/app/animations';
 import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
+import { TipoImagem } from 'src/app/data/schema/TipoImagem';
 
 @Component({
   selector: 'apresentacao-candidato',
@@ -38,6 +39,11 @@ export class ApresentacaoCandidatoComponent implements OnInit {
 
   @Input()
   Candidato: Candidato;
+
+
+  ObterImagemPerfilMobile(){
+    CaminhoImagemCandidato(TipoImagem.PerfilMobile);
+  }
 
   ngOnInit(): void {
     this.loading = true;

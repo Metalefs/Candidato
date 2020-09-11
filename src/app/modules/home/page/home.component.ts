@@ -3,7 +3,7 @@ import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 import { Candidato } from 'src/app/data/schema/domain';
 import { CandidatoService } from 'src/app/data/service/domain';
 import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais';
-import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
+import { CaminhoLogo,ObterImagemLogoCampanhaCandidato } from 'src/app/_helpers/caminho_helper';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
   constructor(private CandidatoService:CandidatoService, private ServicoRedesSociais:ServicoRedesSociais) {
   //  this.Candidato = CandidatoService.ObterTeste();
   }
-
+  ObterImagemLogoCampanhaCandidato(){
+    ObterImagemLogoCampanhaCandidato();
+  }
   ngOnInit(): void {
     this.CandidatoService.Ler().subscribe(x=>{
       this.Candidato = x;
