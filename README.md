@@ -42,28 +42,28 @@
     }
     `
 
-    2. Alterar imagens.
+  ## 2. Alterar imagens.
 
-        As imagens do candidato e de fundo estão localizadas em
+      As imagens do candidato e de fundo estão localizadas em
 
-        `assets/imagens/inicio`
+      `assets/imagens/inicio`
 
-        Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
+      Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
 
-        `assets/imagens/icones`
+      `assets/imagens/icones`
 
 
-        ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
+      ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
 
-        `src/app/_helpers/caminho_helper.ts`
+      `src/app/_helpers/caminho_helper.ts`
 
-    
 
-    3. Alterar icones de redes sociais.
 
-        Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
+  ## 3. Alterar icones de redes sociais.
 
-        `\src\app\data\service\ServicoRedesSociais.ts`
+      Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
+
+      `\src\app\data\service\ServicoRedesSociais.ts`
 
 
 # Arquitetura
