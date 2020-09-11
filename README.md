@@ -17,26 +17,23 @@
   
     --logo-campanha-size: 30px;
     --logo-campanha-margin: 10px auto;
-  
+    --cor-texto-partido:yellow;
     --numero-campanha-color: yellow;
     --numero-campanha-size: 30px ;
     --numero-campanha-margin: 0 0 10px 0;
-  
-    
     --primario-default: orange;
   
-    /* Colors */
     --foreground-default: #08090a;
-  
     --background-default: #f4faff;
-  
-    --cor-texto-partido:yellow;
+    
     .tem-background-primario{
       background:var(--primario-default) !important;
     }
+    
     .tem-cor-primaria{
       color:var(--primario-default) !important;
     }
+    
     .tem-borda-primaria{
       border-color: 1px solid var(--primario-default) !important;
     }
