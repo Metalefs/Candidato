@@ -2,8 +2,47 @@
 
 
 ## Para alterar o candidado do projeto:
+  
+    
+  ### Alterando o tema
 
-    1. Alterar imagens.
+    As váriaveis CSS e classes de tema estão localizadas em:
+
+    `src/tema.css`
+
+    Opções
+
+    `
+    /* Dominio */
+  
+    --logo-campanha-size: 30px;
+    --logo-campanha-margin: 10px auto;
+  
+    --numero-campanha-color: yellow;
+    --numero-campanha-size: 30px ;
+    --numero-campanha-margin: 0 0 10px 0;
+  
+    
+    --primario-default: orange;
+  
+    /* Colors */
+    --foreground-default: #08090a;
+  
+    --background-default: #f4faff;
+  
+    --cor-texto-partido:yellow;
+    .tem-background-primario{
+      background:var(--primario-default) !important;
+    }
+    .tem-cor-primaria{
+      color:var(--primario-default) !important;
+    }
+    .tem-borda-primaria{
+      border-color: 1px solid var(--primario-default) !important;
+    }
+    `
+
+    2. Alterar imagens.
 
         As imagens do candidato e de fundo estão localizadas em
 
@@ -20,7 +59,7 @@
 
     
 
-    2. Alterar icones de redes sociais.
+    3. Alterar icones de redes sociais.
 
         Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
 
@@ -77,35 +116,6 @@
     `src/app/animations.ts`
 
 
-# Alterando o tema
-
-    As váriaveis CSS e classes de tema estão localizadas em:
-
-    `src/tema.css`
-
-    Opções
-
-    `
-    /* Dominio */
-  
-    --logo-campanha-size: 30px;
-    --logo-campanha-margin: 10px auto;
-  
-    --numero-campanha-color: yellow;
-    --numero-campanha-size: 30px ;
-    --numero-campanha-margin: 0 0 10px 0;
-  
-    
-    --primario-default: orange;
-  
-    /* Colors */
-    --foreground-default: #08090a;
-  
-    --background-default: #f4faff;
-  
-    --cor-texto-partido:yellow;
-    
-    `
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
