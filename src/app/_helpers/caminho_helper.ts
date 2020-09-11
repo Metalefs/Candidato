@@ -18,8 +18,12 @@ export function ObterImagemLogoCampanhaCandidato() : string {
 } 
 
 export function CaminhoImagemCandidato(tipoImagem: TipoImagem) : string {
-    return tipoImagem == TipoImagem.Capa ?
-         `/assets/imagens/inicio/Candidato.png`
-         :
-        `/assets/imagens/inicio/Candidato-perfil.png`;
+    switch(tipoImagem){
+        case TipoImagem.Capa:
+            return 'assets/imagens/inicio/Candidato-capa.jpg';
+        case TipoImagem.PerfilDesktop:
+            return 'assets/imagens/inicio/Candidato-perfil-desktop.jpg';
+        case TipoImagem.PerfilMobile:
+            return 'assets/imagens/inicio/Candidato-perfil-mobile.png';
+    }
 } 

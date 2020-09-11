@@ -23,10 +23,10 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
   @Input()
   Candidato:Candidato;
   ObterCaminhoIconePartido(){
-    CaminhoHelper.ObterCaminhoIconePartido();
+    return CaminhoHelper.ObterCaminhoIconePartido();
   }
   ObterCaminhoIconeConectaCandidato(){
-    CaminhoHelper.ObterCaminhoIconeConectaCandidato();
+    return CaminhoHelper.ObterCaminhoIconeConectaCandidato();
   }
   ngOnInit(): void {
   }

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   //  this.Candidato = CandidatoService.ObterTeste();
   }
   ObterImagemLogoCampanhaCandidato(){
-    ObterImagemLogoCampanhaCandidato();
+    return ObterImagemLogoCampanhaCandidato();
   }
   ngOnInit(): void {
     this.CandidatoService.Ler().subscribe(x=>{

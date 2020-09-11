@@ -26,10 +26,10 @@ export class ExibicaoCandidatoComponent implements OnInit {
   nome = "";
   
   ObterCaminhoIconePartido(){
-    CaminhoHelper.ObterCaminhoIconePartido();
+    return CaminhoHelper.ObterCaminhoIconePartido();
   }
   ObterCaminhoIconeConectaCandidato(){
-    CaminhoHelper.ObterCaminhoIconeConectaCandidato();
+    return CaminhoHelper.ObterCaminhoIconeConectaCandidato();
   }
   ngOnInit(): void {
     this.CandidatoService.Ler().subscribe(x=>{

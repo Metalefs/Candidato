@@ -41,8 +41,8 @@ export class ApresentacaoCandidatoComponent implements OnInit {
   Candidato: Candidato;
 
 
-  ObterImagemPerfilMobile(){
-    CaminhoImagemCandidato(TipoImagem.PerfilMobile);
+  ObterImagemPerfilDesktop(){
+    return CaminhoImagemCandidato(TipoImagem.PerfilDesktop);
   }
 
   ngOnInit(): void {
