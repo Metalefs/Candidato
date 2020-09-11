@@ -6,11 +6,11 @@
     
   ### Alterando o tema
 
-    As váriaveis CSS e classes de tema estão localizadas em:
+  As váriaveis CSS e classes de tema estão localizadas em:
 
     `src/tema.css`
 
-    Opções
+  Opções
 
     `
     /* Dominio */
@@ -44,31 +44,40 @@
 
   ## 2. Alterar imagens.
 
-      As imagens do candidato e de fundo estão localizadas em
+  As imagens do candidato e de fundo estão localizadas em
 
       `assets/imagens/inicio`
 
-      Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
+  Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
 
       `assets/imagens/icones`
 
 
-      ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
+  ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
 
       `src/app/_helpers/caminho_helper.ts`
 
-
-
+    Funções>
+      
+    CaminhoLogo(nomeLogo: string)
+    ObterCaminhoIconePartido()
+    ObterCaminhoIconeConectaCandidato() 
+    ObterCaminhoIconeCampanha()
+    ObterImagemLogoCampanhaCandidato()
+    CaminhoImagemCandidato(tipoImagem: TipoImagem)
+    
+    
   ## 3. Alterar icones de redes sociais.
 
       Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
 
       `\src\app\data\service\ServicoRedesSociais.ts`
 
-
+      GetAllRedesSociais(Candidato:Candidato)
+  
 # Arquitetura
 
-    A arquitetura utilizada foi amplamente modular.
+    A arquitetura utilizada foi a seguinte.
 
     _helpers < centralização de funções auxiliares
 
@@ -87,7 +96,7 @@
             - domain < modelos do dominio
 
         - service < serviços para modelos
-            - domain < servicos para modelos do dominio (consumo de API)
+            - domain < servicos para modelos do dominio/consumo de API
 
     layout < componentes da página mestre
 
@@ -102,14 +111,8 @@
 
     shared < componentes e módulos compartilhados
 
-        - component
-        material.module
-        shared.module
-
 
 # Animações.
-
-    O projeto utiliza o AOS para as animações com scroll
     
     As animações próprias do projeto estão localizadas em
 
