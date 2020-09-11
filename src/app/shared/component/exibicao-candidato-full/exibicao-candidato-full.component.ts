@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef,Input } from '@angular/core';
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import { Candidato } from 'src/app/data/schema/domain';
-
+import * as CaminhoHelper from 'src/app/_helpers/caminho_helper';
+import { TipoImagem } from 'src/app/data/schema/TipoImagem';
 @Component({
   selector: 'app-exibicao-candidato-full',
   templateUrl: './exibicao-candidato-full.component.html',
@@ -9,8 +10,9 @@ import { Candidato } from 'src/app/data/schema/domain';
 })
 export class ExibicaoCandidatoFullComponent implements OnInit {
 
-  constructor( private CandidatoService: CandidatoService) { 
-    this.candidato_bg=`/assets/imagens/fundos/inicio/Candidato.png`;
+  constructor( private CandidatoService: CandidatoService,
+  ) { 
+    this.candidato_bg = CaminhoHelper.CaminhoImagemCandidato(TipoImagem.Capa);
   }
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
@@ -20,7 +22,12 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
   candidato_bg:string;
   @Input()
   Candidato:Candidato;
- 
+  ObterCaminhoIconePartido(){
+    return CaminhoHelper.ObterCaminhoIconePartido();
+  }
+  ObterCaminhoIconeConectaCandidato(){
+    return CaminhoHelper.ObterCaminhoIconeConectaCandidato();
+  }
   ngOnInit(): void {
   }
   ngAfterViewInit() {

@@ -293,6 +293,7 @@ export class PropostaService extends ServicoBase {
     }
 
     CurtirProposta(id: number): Observable<any> {
+        localStorage.setItem("proposta"+id,"true");
         return this.http.post<any>(environment.endpoint + routes.Proposta + `/${id}` + routes.CurtirProposta, {}).pipe(
             retry(3), 
             catchError(this.handleError)

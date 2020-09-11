@@ -71,7 +71,7 @@ export class VerticalNavComponent implements OnInit {
 
   ngOnInit(): void {
     this.paginas = this.ServicoPaginas.GetAllPages();
-    this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais();
+    this.redesSociais = this.ServicoRedesSociais.GetAllRedesSociais(this.Candidato);
     this.paginaAtiva = this.Router.url;
     setInterval(()=>{
       this.NavStateService.getActiveNav().then(x=>{

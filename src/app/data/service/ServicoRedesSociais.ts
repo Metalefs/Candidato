@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { throwError, Observable } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { Candidato } from 'src/app/data/schema/domain';
 import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
 
 @Injectable({
@@ -14,14 +15,14 @@ export class ServicoRedesSociais{
 		
 	}
 
-    GetAllRedesSociais(): RedeSocial[] {
+    GetAllRedesSociais(Candidato:Candidato): RedeSocial[] {
       return [
         
-            new RedeSocial(CaminhoLogo("twitter"),"twitter","http://twitter.com/gleissonmbl","ion-social-twitter-outline"),
-            new RedeSocial(CaminhoLogo("instagram"),"instagram","https://www.instagram.com/gleisson.mg/","ion-social-instagram-outline"),
-            new RedeSocial(CaminhoLogo("whatsapp"),"whatsapp","/","ion-social-whatsapp-outline"),
-            new RedeSocial(CaminhoLogo("facebook"),"facebook","https://www.facebook.com/AndradeGleysson","ion-social-facebook-outline"),
-            new RedeSocial(CaminhoLogo("youtube"),"youtube","https://youtu.be/1dUjr3ABs5g","ion-social-youtube-outline"),
+        new RedeSocial(CaminhoLogo("twitter"),"twitter",Candidato.twitter,"ion-social-twitter-outline"),
+        new RedeSocial(CaminhoLogo("instagram"),"instagram",Candidato.instagram,"ion-social-instagram-outline"),
+        new RedeSocial(CaminhoLogo("whatsapp"),"whatsapp",`https://wa.me/5531${Candidato.telefone}?text=`,"ion-social-whatsapp-outline"),
+        new RedeSocial(CaminhoLogo("facebook"),"facebook",Candidato.facebook,"ion-social-facebook-outline"),
+        new RedeSocial(CaminhoLogo("youtube"),"youtube",Candidato.youtube,"ion-social-youtube-outline"),
           
         ]
     }

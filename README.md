@@ -1,5 +1,112 @@
 # Candidato
 
+
+## Para alterar o candidado do projeto:
+
+    1. Alterar imagens.
+
+        As imagens do candidato e de fundo estão localizadas em
+
+        `assets/imagens/inicio`
+
+        Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
+
+        `assets/imagens/icones`
+
+
+        ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
+
+        `src/app/_helpers/caminho_helper.ts`
+
+    
+
+    2. Alterar icones de redes sociais.
+
+        Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
+
+        `\src\app\data\service\ServicoRedesSociais.ts`
+
+
+# Arquitetura
+
+    A arquitetura utilizada foi amplamente modular.
+
+    _helpers < centralização de funções auxiliares
+
+    core < funções de controle de estado, controle de autenticação
+
+        - guard < guarda de rotas 
+        - interceptor < middleware de chamadas
+        - service < controle de estado e autenticação
+        -   authentication < autenticação
+        -   state < controle de estado da aplicação
+
+    data < modelos de dados utilizados na aplicação
+
+
+        - schema < modelos de dados
+            - domain < modelos do dominio
+
+        - service < serviços para modelos
+            - domain < servicos para modelos do dominio (consumo de API)
+
+    layout < componentes da página mestre
+
+    modules < modulos atômicos das páginas da aplicação
+
+        - biografia
+            - page < todos os componentes (ou modulos) que serão adicionados ao .module
+                -*components
+            - biografia.module < junção atômica de todos os componentes da página
+            - biografia.routing < definição dos pârametros de roteamento
+        (...)
+
+    shared < componentes e módulos compartilhados
+
+        - component
+        material.module
+        shared.module
+
+
+# Animações.
+
+    O projeto utiliza o AOS para as animações com scroll
+    
+    As animações próprias do projeto estão localizadas em
+
+    `src/app/animations.ts`
+
+
+# Alterando o tema
+
+    As váriaveis CSS e classes de tema estão localizadas em:
+
+    `src/tema.css`
+
+    Opções
+
+    `
+    /* Dominio */
+  
+    --logo-campanha-size: 30px;
+    --logo-campanha-margin: 10px auto;
+  
+    --numero-campanha-color: yellow;
+    --numero-campanha-size: 30px ;
+    --numero-campanha-margin: 0 0 10px 0;
+  
+    
+    --primario-default: orange;
+  
+    /* Colors */
+    --foreground-default: #08090a;
+  
+    --background-default: #f4faff;
+  
+    --cor-texto-partido:yellow;
+    
+    `
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development server
