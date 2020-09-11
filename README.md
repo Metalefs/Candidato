@@ -77,7 +77,7 @@
   
 # Arquitetura
 
-    A arquitetura utilizada foi a seguinte.
+A arquitetura utilizada foi a seguinte.
 
     _helpers < centralização de funções auxiliares
 
@@ -114,7 +114,7 @@
 
 # Animações.
     
-    As animações próprias do projeto estão localizadas em
+As animações próprias do projeto estão localizadas em
 
     `src/app/animations.ts`
 
