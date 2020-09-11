@@ -1,4 +1,3 @@
-
 .left-section{
     position: fixed;
     width: 50%;
@@ -49,6 +48,7 @@
 .partido-logo{
     z-index: 3;
     position: relative;
+    bottom:20px;
     width: 100%;
     padding-right: 0px;
     right: 0;
@@ -75,7 +75,7 @@
 }
 
 
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width : 801px) {
     
     #logo-canvas{
         position: absolute;
@@ -144,10 +144,7 @@
         height: 150px;
         width: 100%;
         content: '';
-    }
-    .partido-logo{
-      bottom:20px;
-    }
+      }
     .partido-text{
         font-size: xx-large;
     }
@@ -184,4 +181,53 @@
     pointer-events: none;
     top: 0;
     z-index: 2;
+}
+
+
+@media only screen and (max-width : 1024px) {
+    
+    #logo-canvas{
+        position: absolute;
+        z-index: 5;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding:0;
+    }
+
+    .left-section{
+        margin: 0;
+        width: 100%;
+        height: auto;
+        border:0;
+        /* border-top-right-radius: 48px; */
+        padding: 0rem;
+        z-index: initial;
+    }
+    .left-section-candidato-img{
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        height: auto;
+        background-position: center !important;
+        background: linear-gradient(#004092, #020202, transparent);
+        box-shadow: none; 
+        border-top-right-radius: 0;
+    }
+    .left-section-candidato{
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background: linear-gradient(#004092, #020202, transparent);
+        box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8); 
+        border-top-right-radius: 0;
+    }
+    .left-section-candidato::after {
+        display: block;
+        position: relative;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+        margin-top: -150px;
+        height: 150px;
+        width: 100%;
+        content: '';
+      }
 }

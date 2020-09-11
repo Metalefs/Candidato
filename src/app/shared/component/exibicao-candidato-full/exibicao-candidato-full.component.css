@@ -53,10 +53,10 @@
     height: 25%;
 }
 
-  .partido-logo{
+.partido-logo{
     width: 110px;
-  }
-@media only screen and (max-width : 1024px) {
+}
+@media only screen and (max-width : 801px) {
     .typing-animation{
         top: 200px;
         bottom:initial;
