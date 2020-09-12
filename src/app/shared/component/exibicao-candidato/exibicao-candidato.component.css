@@ -1,7 +1,12 @@
+
 .left-section{
-    position: fixed;
-    width: 50%;
+    background-color: var(--primario-default);
     border-top-right-radius: 48px;
+    position: fixed;
+    width:50%;
+    animation: rotate1deg 2s ease-in forwards ; 
+    max-height: 100vh;
+    overflow: hidden;
     background-origin: initial;
     background-position: 100%!important;
     animation: fade-in 5s ease-in-out forwards;
@@ -9,8 +14,12 @@
 }
 
 .left-section-candidato{
-    width: 50%;
-    height: 100%;
+    box-shadow: none;
+    width:100%; 
+    transition:all 1s ease-in;
+    
+    border-top-right-radius: 48px;
+    height: 102%;
     border:0;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -18,9 +27,16 @@
     border-top-right-radius: 48px;
     margin:0;
     padding: 0rem;
-    position: fixed;
     top: 0;
     z-index: 2;
+}
+@keyframes rotate1deg{
+    0%{
+        transform:rotate(0deg)
+    }
+    100%{
+        transform:rotate(-1deg)
+    }
 }
 .typing-animation{
     bottom: 145px;
@@ -48,7 +64,6 @@
 .partido-logo{
     z-index: 3;
     position: relative;
-    bottom:20px;
     width: 100%;
     padding-right: 0px;
     right: 0;
@@ -114,6 +129,7 @@
         margin: 0;
         width: 100%;
         height: auto;
+        background:transparent;
         border:0;
         /* border-top-right-radius: 48px; */
         padding: 0rem;

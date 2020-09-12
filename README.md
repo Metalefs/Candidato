@@ -2,76 +2,41 @@
 
 
 ## Para alterar o candidado do projeto:
-  
+
+1. Alterar imagens.
+
+        As imagens do candidato e de fundo estão localizadas em
+
+        `assets/imagens/inicio`
+
+        Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
+
+        `assets/imagens/icones`
+
+
+        ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
+
+        `src/app/_helpers/caminho_helper.ts`
+        
+        funções:
+        
+          CaminhoLogo(nomeLogo: string)
+          ObterCaminhoIconePartido()
+          ObterCaminhoIconeConectaCandidato()
+          ObterCaminhoIconeCampanha()
+          ObterImagemLogoCampanhaCandidato()
+          CaminhoImagemCandidato(tipoImagem: TipoImagem)
     
-  ### Alterando o tema
 
-  As váriaveis CSS e classes de tema estão localizadas em:
+2. Alterar icones de redes sociais.
 
-    `src/tema.css`
+        Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
 
-  Opções
+        `\src\app\data\service\ServicoRedesSociais.ts`
+        
+        funções:
+          GetAllRedesSociais(Candidato:Candidato)
 
-    `
-    /* Dominio */
-  
-    --logo-campanha-size: 30px;
-    --logo-campanha-margin: 10px auto;
-    --cor-texto-partido:yellow;
-    --numero-campanha-color: yellow;
-    --numero-campanha-size: 30px ;
-    --numero-campanha-margin: 0 0 10px 0;
-    --primario-default: orange;
-  
-    --foreground-default: #08090a;
-    --background-default: #f4faff;
-    
-    .tem-background-primario{
-      background:var(--primario-default) !important;
-    }
-    
-    .tem-cor-primaria{
-      color:var(--primario-default) !important;
-    }
-    
-    .tem-borda-primaria{
-      border-color: 1px solid var(--primario-default) !important;
-    }
-    `
-
-  ## 2. Alterar imagens.
-
-  As imagens do candidato e de fundo estão localizadas em
-
-      `assets/imagens/inicio`
-
-  Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
-
-      `assets/imagens/icones`
-
-
-  ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
-
-      `src/app/_helpers/caminho_helper.ts`
-
-    Funções>
-      
-    CaminhoLogo(nomeLogo: string)
-    ObterCaminhoIconePartido()
-    ObterCaminhoIconeConectaCandidato() 
-    ObterCaminhoIconeCampanha()
-    ObterImagemLogoCampanhaCandidato()
-    CaminhoImagemCandidato(tipoImagem: TipoImagem)
-    
-    
-  ## 3. Alterar icones de redes sociais.
-
-      Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
-
-      `\src\app\data\service\ServicoRedesSociais.ts`
-
-      GetAllRedesSociais(Candidato:Candidato)
-  
 # Arquitetura
 
 A arquitetura utilizada foi a seguinte.
@@ -93,7 +58,7 @@ A arquitetura utilizada foi a seguinte.
             - domain < modelos do dominio
 
         - service < serviços para modelos
-            - domain < servicos para modelos do dominio/consumo de API
+            - domain < servicos para modelos do dominio (consumo de API)
 
     layout < componentes da página mestre
 
@@ -108,14 +73,51 @@ A arquitetura utilizada foi a seguinte.
 
     shared < componentes e módulos compartilhados
 
-
 # Animações.
+
+O projeto utiliza o AOS para as animações com scroll
     
-As animações próprias do projeto estão localizadas em
+    As animações próprias do projeto estão localizadas em
 
     `src/app/animations.ts`
 
 
+# Alterando o tema
+
+As váriaveis CSS e classes de tema estão localizadas em:
+
+    `src/tema.css`
+
+    Opções
+
+    `
+    :root {
+    /* Dominio */
+  
+    --logo-campanha-size: 30px;
+    --logo-campanha-margin: 10px auto;
+  
+    --cor-texto-partido:yellow;
+    --numero-campanha-color: yellow;
+
+    --numero-campanha-size: 30px ;
+    --numero-campanha-margin: 0 0 10px 0;
+  
+    --primario-default: orange;   
+    --foreground-default: #08090a;
+    --background-default: #f4faff;
+    }
+
+    .tem-background-primario{
+      background:var(--primario-default) !important;
+    }
+    .tem-cor-primaria{
+      color:var(--primario-default) !important;
+    }
+    .tem-borda-primaria{
+      border-color: 1px solid var(--primario-default) !important;
+    }
+    `
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 

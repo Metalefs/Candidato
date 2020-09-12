@@ -3,11 +3,13 @@ import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
 import * as CaminhoHelper from 'src/app/_helpers/caminho_helper';
 import { Candidato } from 'src/app/data/schema/domain';
 import { TipoImagem } from 'src/app/data/schema/TipoImagem';
+import { fade, slide } from 'src/app/animations';
 
 @Component({
   selector: 'app-exibicao-candidato',
   templateUrl: './exibicao-candidato.component.html',
-  styleUrls: ['./exibicao-candidato.component.css']
+  styleUrls: ['./exibicao-candidato.component.css'],
+  animations: [fade,slide]
 })
 export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
