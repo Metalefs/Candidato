@@ -1,13 +1,13 @@
 <div class="intro">
   <div class="intro-text" data-aos="zoom-in-down">
     <h1>{{Mensagens?.DescricaoCurta}}</h1>
-    <div class="about-avatar mt-3">
+    <div matRipple class="about-avatar mt-3">
       <figure class="is-128x128">
           <img src="{{ObterImagemPerfilDesktop()}}" alt="" class="image rounded-full">
       </figure>
     </div>
     <p>{{Mensagens?.Descricao}}</p>
-    <a routerLink="/propostas" routerLinkActive="Active"
+    <a matRipple routerLink="/propostas" routerLinkActive="Active"
       class="btn-contact button wow fadeInDown" data-wow-delay=".6s">Veja
       suas propostas</a>
   </div>

@@ -21,9 +21,9 @@
             <p>{{Proposta?.descricao}}</p>
         </mat-expansion-panel>
         <footer class="card-footer">
-            <div class="card-footer-item">
-                <div class="rounded-full" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-                    <span class="px-2 like-number">{{Proposta?.qtdCurtidas}}</span> <span class="lke-btn has-text-weight-medium"> <fa-icon [icon]="faLike"></fa-icon> Gostei</span>
+            <div class="card-footer-item" >
+                <div class="" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
+                    <span class="px-2 like-number">{{Proposta?.qtdCurtidas}}</span> <span matRipple class="lke-btn has-text-weight-medium"> <fa-icon [icon]="faLike"></fa-icon> Gostei</span>
                 </div>
             </div>
         </footer>

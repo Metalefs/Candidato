@@ -16,11 +16,12 @@
         </ng-template>
 
         <div class="bar ">
-
+            
             <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
                 <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1" [typeSpeed]="30"
-                    [strings]="[ObterNomeCandidato()]" class="typing-animation">
-                    <span class="typing"></span>
+                [strings]="[ObterNomeCandidato()]" class="typing-animation">
+                <span class="typing"></span>
+                <app-redes-sociais [redes]="redes"></app-redes-sociais>
                 </ngx-typed-js>
                 <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                     data-aos="zoom-in-left">
@@ -37,9 +38,9 @@
                         <img width="60" src="{{ObterCaminhoIconePartido()}}" class="partido-logo">
                     </div>
                 </a>
+                
             </figure>
         </div>
-
-
+        
     </section>
 </section>

@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef,Input } from '@angular/core';
 import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
+import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais';
 import * as CaminhoHelper from 'src/app/_helpers/caminho_helper';
 import { Candidato } from 'src/app/data/schema/domain';
 import { TipoImagem } from 'src/app/data/schema/TipoImagem';
 import { fade, slide } from 'src/app/animations';
+import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 
 @Component({
   selector: 'app-exibicao-candidato',
@@ -14,7 +16,8 @@ import { fade, slide } from 'src/app/animations';
 export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
   isBg:boolean = false;
-  constructor( private CandidatoService: CandidatoService) { 
+  constructor( private CandidatoService: CandidatoService,
+    private ServicoRedesSociais:ServicoRedesSociais) { 
     this.candidato_bg = CaminhoHelper.CaminhoImagemCandidato(TipoImagem.Capa);
   }
   
@@ -26,6 +29,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
   @Input()
   Candidato:Candidato;
   nome = "";
+  redes: RedeSocial[] = [];
   ObterNomeCandidato(){
     return this.Candidato.nome;
   }
@@ -39,6 +43,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
     this.CandidatoService.Ler().subscribe(x=>{
       this.Candidato=x;
       this.nome = this.Candidato.nome;
+      this.redes = this.ServicoRedesSociais.GetAllRedesSociais(this.Candidato);
     })
   }
 

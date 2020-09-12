@@ -1,8 +1,30 @@
-<nav class="tabs is-boxed is-fullwidth">
-    <div class="w-100" data-aos-offset="-169" data-aos="fade-up">
-        <h2 class="title is-5 has-text-white has-text-centered">Acesse:</h2>
+<nav class="tabs is-boxed is-fullwidth is-hidden-mobile">
+    <div class="w-100">
+        <h2 class="title is-5 has-text-white has-text-centered is-hidden-desktop">Acesse:</h2>
         <div class="icones-redes is-gapless is-centered py-3">
             <a title="Acesse meu {{rede.nome}}" 
+                href="{{rede.link}}"
+                target="_blank"
+                rel="noopener"
+                class="column mx-1 is-gapless" *ngFor="let rede of redes">
+                <figure matRipple @fadeIn class="mx-0 image is-64x64">
+                    <img class="is-rounded" src="{{rede.src}}">
+                </figure>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<nav class="tabs is-boxed is-fullwidth is-hidden-desktop">
+    <div class="w-100">
+        <h2 class="title is-5 has-text-white has-text-centered">Acesse:</h2>
+        <div class="icones-redes is-gapless is-centered py-3">
+            <a  data-aos="zoom-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="300"
+                data-aos-easing="ease-in-out-back"
+                title="Acesse meu {{rede.nome}}" 
                 href="{{rede.link}}"
                 target="_blank"
                 rel="noopener"
