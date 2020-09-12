@@ -3,7 +3,7 @@
 
 ## Para alterar o candidado do projeto:
 
-    1. Alterar imagens.
+1. Alterar imagens.
 
         As imagens do candidato e de fundo estão localizadas em
 
@@ -17,19 +17,29 @@
         ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
 
         `src/app/_helpers/caminho_helper.ts`
-
+        
+        funções:
+        
+          CaminhoLogo(nomeLogo: string)
+          ObterCaminhoIconePartido()
+          ObterCaminhoIconeConectaCandidato()
+          ObterCaminhoIconeCampanha()
+          ObterImagemLogoCampanhaCandidato()
+          CaminhoImagemCandidato(tipoImagem: TipoImagem)
     
 
-    2. Alterar icones de redes sociais.
+2. Alterar icones de redes sociais.
 
         Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
 
         `\src\app\data\service\ServicoRedesSociais.ts`
-
+        
+        funções:
+          GetAllRedesSociais(Candidato:Candidato)
 
 # Arquitetura
 
-    A arquitetura utilizada foi amplamente modular.
+A arquitetura utilizada foi a seguinte.
 
     _helpers < centralização de funções auxiliares
 
@@ -63,14 +73,9 @@
 
     shared < componentes e módulos compartilhados
 
-        - component
-        material.module
-        shared.module
-
-
 # Animações.
 
-    O projeto utiliza o AOS para as animações com scroll
+O projeto utiliza o AOS para as animações com scroll
     
     As animações próprias do projeto estão localizadas em
 
@@ -79,32 +84,39 @@
 
 # Alterando o tema
 
-    As váriaveis CSS e classes de tema estão localizadas em:
+As váriaveis CSS e classes de tema estão localizadas em:
 
     `src/tema.css`
 
     Opções
 
     `
+    :root {
     /* Dominio */
   
     --logo-campanha-size: 30px;
     --logo-campanha-margin: 10px auto;
   
+    --cor-texto-partido:yellow;
     --numero-campanha-color: yellow;
+
     --numero-campanha-size: 30px ;
     --numero-campanha-margin: 0 0 10px 0;
   
-    
-    --primario-default: orange;
-  
-    /* Colors */
+    --primario-default: orange;   
     --foreground-default: #08090a;
-  
     --background-default: #f4faff;
-  
-    --cor-texto-partido:yellow;
-    
+    }
+
+    .tem-background-primario{
+      background:var(--primario-default) !important;
+    }
+    .tem-cor-primaria{
+      color:var(--primario-default) !important;
+    }
+    .tem-borda-primaria{
+      border-color: 1px solid var(--primario-default) !important;
+    }
     `
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
