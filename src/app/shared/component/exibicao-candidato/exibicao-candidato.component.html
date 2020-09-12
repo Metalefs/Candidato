@@ -1,8 +1,8 @@
 <canvas #canvasEl id="logo-canvas" class="is-hidden-touch"></canvas>
 <canvas #MobilecanvasEl id="mobile-logo-canvas" class="is-hidden-desktop"></canvas>
 
-
-    <section @fadeIn #canvasContainer class="left-section">
+<section class="rotation">
+    <section #canvasContainer class="left-section">
 
         <ng-container *ngIf="isBg != undefined && isBg === true; then Background; else Imagem">
         </ng-container>
@@ -12,7 +12,7 @@
         </ng-template>
 
         <ng-template #Imagem>
-            <img @slideInOut class="left-section-candidato-img" src="{{candidato_bg}}">
+            <img class="left-section-candidato-img" src="{{candidato_bg}}">
         </ng-template>
 
         <div class="bar ">
@@ -42,3 +42,4 @@
 
 
     </section>
+</section>

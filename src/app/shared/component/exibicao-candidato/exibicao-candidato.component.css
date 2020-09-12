@@ -1,10 +1,17 @@
+.rotation{
+
+    width: 50%;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
 
 .left-section{
     background-color: var(--primario-default);
     border-top-right-radius: 48px;
     position: fixed;
     width:50%;
-    animation: rotate1deg 2s ease-in forwards ; 
+    height: 100vh;
     max-height: 100vh;
     overflow: hidden;
     background-origin: initial;
@@ -16,8 +23,7 @@
 .left-section-candidato{
     box-shadow: none;
     width:100%; 
-    transition:all 1s ease-in;
-    transform:rotate(-1deg);
+    transform: rotate(-2deg);
     border-top-right-radius: 48px;
     height: 102%;
     border:0;
@@ -30,14 +36,7 @@
     top: 0;
     z-index: 2;
 }
-@keyframes rotate1deg{
-    0%{
-        transform:rotate(0deg)
-    }
-    100%{
-        transform:rotate(-1deg)
-    }
-}
+
 .typing-animation{
     bottom: 145px;
     z-index: 3;
@@ -129,7 +128,6 @@
         margin: 0;
         width: 100%;
         height: auto;
-        background:transparent;
         border:0;
         /* border-top-right-radius: 48px; */
         padding: 0rem;
