@@ -17,7 +17,7 @@
     box-shadow: none;
     width:100%; 
     transition:all 1s ease-in;
-    
+    transform:rotate(-1deg);
     border-top-right-radius: 48px;
     height: 102%;
     border:0;
