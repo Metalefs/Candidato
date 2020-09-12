@@ -37,6 +37,9 @@ export class PropostaCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(localStorage.getItem("proposta"+this.Proposta.identificador))
+      this.Gostou = true
   }
+  
 
 }
