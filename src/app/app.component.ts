@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Router, Data, RoutesRecognized, RouterOutlet } from '@angular/router';
+import { Router, Data, RoutesRecognized, RouterOutlet, NavigationEnd } from '@angular/router';
 declare let gtag: Function;
 
 import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
@@ -32,15 +32,15 @@ export class AppComponent implements OnInit, AfterViewInit {
     private authenticationService: AuthenticationService,
     
   ) {
-      // this.router.events.subscribe(event => {
-         // if(event instanceof NavigationEnd){
-             // gtag('config', 'UA-175817845-1', 
-                   // {
-                     // 'page_path': event.urlAfterRedirects
-                   // }
-                  // );
-          // }
-       // });
+      this.router.events.subscribe(event => {
+         if(event instanceof NavigationEnd){
+             gtag('config', 'UA-177208005-1', 
+                   {
+                     'page_path': event.urlAfterRedirects
+                   }
+                  );
+          }
+       });
       this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
 
