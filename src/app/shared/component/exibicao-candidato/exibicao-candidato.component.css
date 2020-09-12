@@ -23,7 +23,7 @@
 .left-section-candidato{
     box-shadow: none;
     width:100%; 
-    transform: rotate(-2deg);
+    /* transform: rotate(-2deg); */
     border-top-right-radius: 48px;
     height: 102%;
     border:0;

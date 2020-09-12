@@ -19,7 +19,7 @@ export let fade = trigger('fadeIn',[
 ]);
 export let slide = trigger('slideInOut', [
   transition('* => *, :enter', [
-    query(':enter, :leave', style({ position: 'relative', width: '100%' }), { optional: true }),
+    query(':enter, :leave', style({ position: 'FIXED', width: '100%' }), { optional: true }),
     query(':enter', style({ transform: 'translateX(-100vw)' }), { optional: true }),
     query(':leave', style({ transform: 'translateX(0vw)' }), { optional: true }),
 
@@ -31,7 +31,7 @@ export let slide = trigger('slideInOut', [
       ], { optional: true }),
       query(':enter', [
         animate('1000ms ease-in-out', style({
-          transform: 'translateX(1vw)'
+          transform: 'translateX(100vw)'
         }))
       ], { optional: true })
     ])

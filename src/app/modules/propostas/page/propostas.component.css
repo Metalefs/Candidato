@@ -64,6 +64,16 @@ a:not([href]):not([tabindex]) {
     border-bottom: 4px solid transparent;
 }
 
+::ng-deep .mat-snack-bar-container{
+    color: var(--primario-default) !important;
+    font-weight: 500;
+    background-color: var(--background-default) !important;
+    border-color: var(--primario-default) !important;
+}
+::ng-deep .mat-simple-snackbar-action {
+    color: var(--background-default);
+}
+
 :host ::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
     box-shadow: none;
 }

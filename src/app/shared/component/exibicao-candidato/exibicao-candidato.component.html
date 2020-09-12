@@ -19,9 +19,9 @@
             
             <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
                 <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1" [typeSpeed]="30"
-                [strings]="[ObterNomeCandidato()]" class="typing-animation">
-                <span class="typing"></span>
-                <app-redes-sociais [redes]="redes"></app-redes-sociais>
+                    [strings]="[ObterNomeCandidato()]" class="typing-animation">
+                    <span class="typing"></span>
+                    <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
                 </ngx-typed-js>
                 <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                     data-aos="zoom-in-left">
@@ -29,8 +29,8 @@
                 </div>
                 <div class="column" data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
                     data-aos="zoom-in-right">
-                    <img width="50" src="{{ObterCaminhoIconeConectaCandidato()}}"
-                        class="conecta-candidato-logo rounded-full is-hidden-touch">
+                    <!-- <img width="50" src="{{ObterCaminhoIconeConectaCandidato()}}"
+                        class="conecta-candidato-logo rounded-full is-hidden-touch"> -->
                 </div>
                 <a class="column z-top" [routerLink]="['inicio']" href="#inicio" routerLinkActive="Active">
                     <div data-aos-offset="-200" data-aos-anchor-placement=".left-section-candidato"
