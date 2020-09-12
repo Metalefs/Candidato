@@ -70,10 +70,6 @@ a:not([href]):not([tabindex]) {
     background-color: var(--background-default) !important;
     border-color: var(--primario-default) !important;
 }
-::ng-deep .mat-simple-snackbar-action {
-    color: var(--background-default);
-}
-
 :host ::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
     box-shadow: none;
 }

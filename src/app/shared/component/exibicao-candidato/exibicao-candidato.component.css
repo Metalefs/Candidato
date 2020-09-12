@@ -23,10 +23,11 @@
 .left-section-candidato{
     box-shadow: none;
     width:100%; 
-    /* transform: rotate(-2deg); */
+    transform: rotate(-2deg);
     border-top-right-radius: 48px;
     height: 102%;
     border:0;
+    transition: all 1s ease-in-out;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center !important;
