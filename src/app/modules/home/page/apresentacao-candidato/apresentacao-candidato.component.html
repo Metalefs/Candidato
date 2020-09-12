@@ -1,13 +1,13 @@
 <div class="intro">
   <div class="intro-text" data-aos="zoom-in-down">
     <h1>{{Mensagens?.DescricaoCurta}}</h1>
-    <div matRipple class="about-avatar mt-3 mb-4">
+    <div data-aos="zoom-in-down" matRipple class="about-avatar mt-3 mb-4">
       <figure class="is-128x128">
           <img src="{{ObterImagemPerfilDesktop()}}" alt="" class="image rounded-full">
       </figure>
     </div>
-    <p>{{Mensagens?.Descricao}}</p>
-    <a matRipple routerLink="/biografia" routerLinkActive="Active"
+    <p data-aos="zoom-in-down">{{Mensagens?.Descricao}}</p>
+    <a data-aos="zoom-in-down" matRipple routerLink="/biografia" routerLinkActive="Active"
       class="btn-contact button wow fadeInDown" data-wow-delay=".6s">Veja
       sua biografia</a>
   </div>
