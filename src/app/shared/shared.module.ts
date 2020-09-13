@@ -11,8 +11,6 @@ import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 
-import { FeedCardComponent } from './component/card/component/feed-card.component';
-import { FeedCardItemComponent } from './component/card/component/feed-card-item/feed-card-item.component';
 import { IconeWhatsappComponent } from './component/icone-whatsapp/icone-whatsapp.component';
 import { CountUpComponent } from './component/count-up/count-up.component';
 import { AuthModule } from './component/auth/auth.module';
@@ -43,8 +41,6 @@ import { ExibicaoCandidatoFullComponent } from './component/exibicao-candidato-f
     NgxMaskModule.forRoot(),
   ],
   declarations: [
-    FeedCardComponent,
-    FeedCardItemComponent,
     IconeWhatsappComponent,
     CountUpComponent,
     ContatoComponent,
@@ -66,8 +62,6 @@ import { ExibicaoCandidatoFullComponent } from './component/exibicao-candidato-f
     NgxPageScrollCoreModule,
     NgxPageScrollModule,
     NgxScrollspyModule,
-    FeedCardComponent,
-    FeedCardItemComponent, 
     IconeWhatsappComponent,
     ContatoComponent,
     RedesSociaisComponent,
