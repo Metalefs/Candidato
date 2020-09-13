@@ -1,3 +1,7 @@
+.portfolio-container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 .portifolio-filter{
     margin-top: -22px;
 }
@@ -23,6 +27,9 @@
 .projetos-desktop{
     max-height: 100vh;
     overflow: scroll;
+    /* -webkit-box-shadow: 0px -23px 23px -8px rgba(138,123,138,0.66);
+    -moz-box-shadow: 0px -23px 23px -8px rgba(138,123,138,0.66);
+    box-shadow: 0px -23px 23px -8px rgba(138,123,138,0.66); */
 }
 .container-projeto{
     min-width: 50%;
@@ -37,7 +44,6 @@
 }
 .portfolio-container-desktop{
     max-height: 80vh;
-    overflow: scroll; 
 }
 .list-inline-item:not(:last-child) {
     margin-right: .5rem;
@@ -65,11 +71,15 @@ a:not([href]):not([tabindex]) {
 }
 
 ::ng-deep .mat-snack-bar-container{
-    color: var(--primario-default) !important;
+    color: var(--background-default) !important;
     font-weight: 500;
-    background-color: var(--background-default) !important;
-    border-color: var(--primario-default) !important;
+    background-color: var(--foreground-default) !important;
+    border-color: var(--foreground-default) !important;
 }
+::ng-deep .mat-simple-snackbar-action{
+    color: var(--background-default) !important;
+}
+
 :host ::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
     box-shadow: none;
 }

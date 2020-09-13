@@ -57,7 +57,7 @@ export class PropostasComponent implements OnInit {
 
   openSnackBar(message: string) {
     this._snackBar.open(message, 'Fechar', {
-      duration: 3000
+      duration: 5000
     });
   }
 
