@@ -1,8 +1,4 @@
 import { NgModule } from '@angular/core';
-import { NgxScrollspyModule } from '@uniprank/ngx-scrollspy';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { NgxPageScrollModule  } from 'ngx-page-scroll';
-
 import { QuemSouComponent } from './page/quem-sou/quem-sou.component';
 import { BiografiaComponent } from './page/biografia.component';
 import { BiografiaRoutingModule } from './biografia.routing';

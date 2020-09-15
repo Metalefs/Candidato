@@ -17,8 +17,6 @@ export class RedesSociaisComponent implements OnInit {
     window.open(link,"_blank");
   }
   ngOnInit(): void {
-    console.log(this.redes);
-    // this.ServicoRedesSociais.GetAllRedesSociais();
   }
 
 }

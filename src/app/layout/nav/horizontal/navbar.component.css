@@ -43,6 +43,7 @@
     color: var(--primario-default);
     box-shadow: inset 0 -4px 0 -1px var(--primario-default);
 }
+
 .nav-logo{
     height: auto;
     font-family: Roboto;

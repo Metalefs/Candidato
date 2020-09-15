@@ -131,7 +131,7 @@
         height: auto;
         border:0;
         background-color: transparent;
-        /* border-top-right-radius: 48px; */
+        border-top-right-radius: 0px;
         padding: 0rem;
         z-index: initial;
     }

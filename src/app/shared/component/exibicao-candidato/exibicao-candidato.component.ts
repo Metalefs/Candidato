@@ -128,6 +128,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
                 if (this.y < 0 || this.y > c.height) this.vy *= -this.vy;
 
                 this.alpha -= 0.0015;
+                if(r< 50)
                 this.r += growth;
                 this.draw();
             }
@@ -187,7 +188,7 @@ export class ExibicaoCandidatoComponent implements OnInit {
                 if (
                     circles[i].alpha < 0 ||
                     circles[i].r < 3 ||
-                    circles.length > 100
+                    circles.length > 50
                    ) {
                     circles.splice(i, 1);
                 }

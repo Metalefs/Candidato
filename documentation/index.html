@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>candidato documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">candidato documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="candidato">Candidato</h1>
+<h2 id="para-alterar-o-candidado-do-projeto">Para alterar o candidado do projeto:</h2>
+<ol>
+<li><p>Alterar imagens.</p>
+<div><pre class="line-numbers"><code class="language-none"> As imagens do candidato e de fundo estão localizadas em
+
+ `assets/imagens/inicio`
+
+ Enquanto os ícones (redes sociais e lojas de aplicativos) estão localizados em
+
+ `assets/imagens/icones`</code></pre></div></li>
+</ol>
+<div><pre class="line-numbers"><code class="language-none">    ## Para alterar as imagens, utilizar ajudante (CaminhoHelper.ts)
+
+    `src/app/_helpers/caminho_helper.ts`
+
+    funções:
+
+      CaminhoLogo(nomeLogo: string)
+      ObterCaminhoIconePartido()
+      ObterCaminhoIconeConectaCandidato()
+      ObterCaminhoIconeCampanha()
+      ObterImagemLogoCampanhaCandidato()
+      CaminhoImagemCandidato(tipoImagem: TipoImagem)</code></pre></div><ol start="2">
+<li><p>Alterar icones de redes sociais.</p>
+<div><pre class="line-numbers"><code class="language-none"> Os icones de redes sociais são servidos pela classe ServicoRedesSociais.ts
+
+ `\src\app\data\service\ServicoRedesSociais.ts`
+
+ funções:
+   GetAllRedesSociais(Candidato:Candidato)</code></pre></div></li>
+</ol>
+<h1 id="arquitetura">Arquitetura</h1>
+<p>A arquitetura utilizada foi a seguinte.</p>
+<div><pre class="line-numbers"><code class="language-none">_helpers &lt; centralização de funções auxiliares
+
+core &lt; funções de controle de estado, controle de autenticação
+
+    - guard &lt; guarda de rotas 
+    - interceptor &lt; middleware de chamadas
+    - service &lt; controle de estado e autenticação
+    -   authentication &lt; autenticação
+    -   state &lt; controle de estado da aplicação
+
+data &lt; modelos de dados utilizados na aplicação
+
+
+    - schema &lt; modelos de dados
+        - domain &lt; modelos do dominio
+
+    - service &lt; serviços para modelos
+        - domain &lt; servicos para modelos do dominio (consumo de API)
+
+layout &lt; componentes da página mestre
+
+modules &lt; modulos atômicos das páginas da aplicação
+
+    - biografia
+        - page &lt; todos os componentes (ou modulos) que serão adicionados ao .module
+            -*components
+        - biografia.module &lt; junção atômica de todos os componentes da página
+        - biografia.routing &lt; definição dos pârametros de roteamento
+    (...)
+
+shared &lt; componentes e módulos compartilhados</code></pre></div><h1 id="animações">Animações.</h1>
+<p>O projeto utiliza o AOS para as animações com scroll</p>
+<div><pre class="line-numbers"><code class="language-none">As animações próprias do projeto estão localizadas em
+
+`src/app/animations.ts`</code></pre></div><h1 id="alterando-o-tema">Alterando o tema</h1>
+<p>As váriaveis CSS e classes de tema estão localizadas em:</p>
+<div><pre class="line-numbers"><code class="language-none">`src/tema.css`
+
+Opções
+
+`
+:root {
+/* Dominio */
+
+--logo-campanha-size: 30px;
+--logo-campanha-margin: 10px auto;
+
+--cor-texto-partido:yellow;
+--numero-campanha-color: yellow;
+
+--numero-campanha-size: 30px ;
+--numero-campanha-margin: 0 0 10px 0;
+
+--primario-default: orange;   
+--foreground-default: #08090a;
+--background-default: #f4faff;
+}
+
+.tem-background-primario{
+  background:var(--primario-default) !important;
+}
+.tem-cor-primaria{
+  color:var(--primario-default) !important;
+}
+.tem-borda-primaria{
+  border-color: 1px solid var(--primario-default) !important;
+}
+`</code></pre></div><p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 10.0.2.</p>
+<h2 id="development-server">Development server</h2>
+<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+<h2 id="code-scaffolding">Code scaffolding</h2>
+<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
+<h2 id="build">Build</h2>
+<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
+<h2 id="running-unit-tests">Running unit tests</h2>
+<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
+<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
+<h2 id="further-help">Further help</h2>
+<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

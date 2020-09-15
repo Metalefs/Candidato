@@ -6,13 +6,16 @@ import { TipoImagem } from 'src/app/data/schema/TipoImagem';
 @Component({
   selector: 'app-exibicao-candidato-full',
   templateUrl: './exibicao-candidato-full.component.html',
-  styleUrls: ['./exibicao-candidato-full.component.css']
+  styleUrls: ['./exibicao-candidato-full.component.css'],
+  host: {
+    "(window:resize)":"onWindowResize($event)"
+  }
 })
 export class ExibicaoCandidatoFullComponent implements OnInit {
 
   constructor( private CandidatoService: CandidatoService,
   ) { 
-    this.candidato_bg = CaminhoHelper.CaminhoImagemCandidato(TipoImagem.Capa);
+    this.candidato_bg = CaminhoHelper.CaminhoImagemCandidato(this.isMobile? TipoImagem.Capa : TipoImagem.PerfilMobile);
   }
   
   @ViewChild('canvasEl') canvasEl: ElementRef;
@@ -20,6 +23,11 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
   @ViewChild('canvasContainer') container: ElementRef;
   private c: CanvasRenderingContext2D;
   candidato_bg:string;
+  isMobile:boolean = false;
+  width:number = window.innerWidth;
+  height:number = window.innerHeight;
+  mobileWidth:number  = 760;
+
   @Input()
   Candidato:Candidato;
   ObterCaminhoIconePartido(){
@@ -35,6 +43,11 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
     this.CandidatoService.Ler().subscribe(x=>{
       this.Candidato=x;
     })
+  }
+  onWindowResize(event) {
+    this.width = event.target.innerWidth;
+    this.height = event.target.innerHeight;
+    this.isMobile = this.width < this.mobileWidth;
   }
   ngAfterViewInit() {
     // this.canvasDot();
@@ -160,7 +173,7 @@ export class ExibicaoCandidatoFullComponent implements OnInit {
             var vx = (Math.random() - 0.5) * 5 + (Math.random() < 0.5 ? -2 : 2);
             var vy = (Math.random() - 0.5) * 5 + (Math.random() < 0.5 ? -2 : 2);
             var r = Math.random() * 20 + 30;
-            //circles.push(new Circle(mouse.x, mouse.y, vx, vy, r, -0.5));
+            //circles.push(new Circle(mouse.x, mouse.y, vx, vy, r, -0.5,c));
 
             for (let i = 0; i < circles.length; ++i) {
                 circles[i].update();
