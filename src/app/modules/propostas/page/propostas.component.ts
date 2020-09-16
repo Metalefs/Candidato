@@ -50,7 +50,7 @@ export class PropostasComponent implements OnInit {
         });
       }
       else{
-          this.openSnackBar(`Houve um problema com sua sugestão`);
+          return;
       }
     });
   }

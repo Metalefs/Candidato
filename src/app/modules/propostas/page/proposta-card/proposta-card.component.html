@@ -23,7 +23,10 @@
         <footer class="card-footer">
             <div class="card-footer-item" >
                 <div class="" [ngClass]="Gostou ? 'gostou' : ''" (click)="like()">
-                    <span class="px-2 like-number">{{Proposta?.qtdCurtidas}}</span> <span matRipple class="lke-btn has-text-weight-medium"> <fa-icon [icon]="faLike"></fa-icon> Gostei</span>
+                    <span class="px-2 like-number">{{Proposta?.qtdCurtidas}}</span> <span matRipple class="lke-btn has-text-weight-medium">
+                         <fa-icon [icon]="faLike"></fa-icon>
+                       
+                          Gostei</span>
                 </div>
             </div>
         </footer>
