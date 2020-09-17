@@ -38,7 +38,7 @@
     z-index: 2;
 }
 
-.typing-animation{
+.nome-candidato-e-redes-sociais{
     bottom: 145px;
     z-index: 3;
     margin-left: .5rem;
@@ -52,7 +52,7 @@
 :host ::ng-deep .typed-cursor.typed-cursor--blink {
     display: none !important;
 }
-.bar{
+.barra-numero-campanha{
     bottom: 50px;
     z-index: 2;
     position: fixed;
@@ -112,7 +112,7 @@
         border-radius: 1.5rem;
     }
 
-   .bar{
+   .barra-numero-campanha{
         top: -16px;
         bottom:170px;
         margin-top: 85%;

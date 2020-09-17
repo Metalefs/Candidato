@@ -15,11 +15,11 @@
             <img class="left-section-candidato-img" src="{{candidato_bg}}">
         </ng-template>
 
-        <div class="bar ">
+        <div class=" barra-numero-campanha ">
             
             <figure class="columns is-gapless is-mobile is-vcentered partido-section ">
                 <ngx-typed-js *ngIf="Candidato?.nome" data-aos="flip-up" [startDelay]="1000" [backSpeed]="1" [typeSpeed]="30"
-                    [strings]="[Candidato.nome]" class="typing-animation">
+                    [strings]="[Candidato.nome]" class="typing-animation nome-candidato-e-redes-sociais">
                     <span class="typing"></span>
                     <app-redes-sociais class="is-hidden-touch" [redes]="redes"></app-redes-sociais>
                 </ngx-typed-js>
