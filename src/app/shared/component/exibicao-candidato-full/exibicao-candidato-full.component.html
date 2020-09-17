@@ -4,7 +4,7 @@
 
 <section @slideInOut #canvasContainer class="center-section">
     
-    <ngx-typed-js data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
+    <ngx-typed-js *ngIf="Candidato?.nome" data-aos="flip-up" [startDelay]="1000" [backSpeed]="1"
         [typeSpeed]="30" [strings]="[ObterNomeCandidato()]" class="typing-animation is-hidden-touch">
         <span class="typing"></span>
     </ngx-typed-js>

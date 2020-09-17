@@ -17,7 +17,8 @@
 
               <div class=" w-100 custompadding " [ngClass]="proposta.Categoria? proposta.Categoria.replace(' ',''): ''"
                 *ngFor="let proposta of Propostas;let i = index">
-                  <app-proposta-card [Proposta]="proposta" [Delay]="800*i"></app-proposta-card>
+                  <app-proposta-card 
+                  [Proposta]="proposta" [Delay]="1.5*i"></app-proposta-card>
               </div>
 
               <div class="contato-container">

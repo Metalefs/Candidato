@@ -22,8 +22,8 @@
                     <ul>
                         <li *ngFor="let pagina of paginas"><a [routerLink]="pagina.Link" routerLinkActive="Active"
                             routerLinkActive="Active">{{pagina.Nome}}</a></li>
-                        </ul>
-                    </div>
+                    </ul>
+                </div>
                     <!-- [ngClass]="NavState.open? 'main is-active': ''" -->
                 <div [@routeAnimations]="prepareRoute(outlet)"  class="main">
                     <div id="nav-menu" [ngClass]="NavState.open? 'is-active': ''" class="is-hidden-touch">

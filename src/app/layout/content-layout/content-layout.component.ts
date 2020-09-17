@@ -51,7 +51,12 @@ export class ContentLayoutComponent implements OnInit {
 
   
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    try{
+      return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    }
+    catch(ex){
+      
+    }
   }
 
 }

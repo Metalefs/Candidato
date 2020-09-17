@@ -1,0 +1,1 @@
+export let mobileWidth:number  = 760;

@@ -13,14 +13,18 @@ import { Router } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { CaixaSugestaoComponent } from 'src/app/modules/propostas/page/DialogComponents/caixa-sugestao/caixa-sugestao.component';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'propostas',
   templateUrl: './propostas.component.html',
-  styleUrls: ['./propostas.component.css']
+  styleUrls: ['./propostas.component.css'],
 })
 export class PropostasComponent implements OnInit {
-  private window: Window;
+  isMobile:boolean = false;
+  width:number = window.innerWidth;
+  height:number = window.innerHeight;
+
   Propostas:Proposta[] = [];
   categorias:Array<string> = [];
   _albums:Array<Album> = [];
@@ -33,14 +37,14 @@ export class PropostasComponent implements OnInit {
      private PropostaService:PropostaService, 
      private dialog: MatDialog,
      private _snackBar: MatSnackBar,
-     private Router:Router) {
+     private deviceService: DeviceDetectorService) {
     
   }
 
   AbrirCaixaSugestao(){
-
+    let width = this.isMobile? "90%" : "50%";
     const dialogRef = this.dialog.open(CaixaSugestaoComponent,  {
-      width:"50%"
+      width:width
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -60,8 +64,9 @@ export class PropostasComponent implements OnInit {
       duration: 5000
     });
   }
-
+  
   ngOnInit(): void {
+    this.isMobile = this.deviceService.isMobile();
     this.PropostaService.Ler().subscribe(x => {
       this.Propostas = x;
       // x.forEach(p=>{

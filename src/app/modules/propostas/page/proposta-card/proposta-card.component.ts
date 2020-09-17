@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Proposta } from 'src/app/data/schema/domain';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { PropostaService } from 'src/app/data/service/domain';
-import { fade } from 'src/app/animations';
+import { bounceIn, fade } from 'src/app/animations';
 
 @Component({
   selector: 'app-proposta-card',

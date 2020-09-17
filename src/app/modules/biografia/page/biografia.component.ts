@@ -4,6 +4,7 @@ import { ScrollSpyService } from '@uniprank/ngx-scrollspy';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { BehaviorSubject, Subscription, Subject } from 'rxjs';
 import { WindowSize, WindowSizeService } from 'src/app/core/service/windowSize.service';
+import { mobileWidth } from 'src/app/_helpers/constants';
 import { Candidato,Pensamento } from 'src/app/data/schema/domain';
 import { CandidatoService, PensamentoService } from 'src/app/data/service/domain';
 
@@ -18,11 +19,9 @@ import { CandidatoService, PensamentoService } from 'src/app/data/service/domain
 export class BiografiaComponent implements OnInit {
   public ActiveSection$: BehaviorSubject<{ id?: string; elementId?: string; nativeElement?: HTMLElement }> = new BehaviorSubject({});
   private _scroll_subscription: Subscription;
-
   isMobile:boolean = false;
   width:number = window.innerWidth;
   height:number = window.innerHeight;
-  mobileWidth:number  = 760;
   title = "Partido";
   desktop = "is-hidden-touch";
   mobile = "is-hidden-desktop";
@@ -63,8 +62,7 @@ export class BiografiaComponent implements OnInit {
   onWindowResize(event) {
     this.width = event.target.innerWidth;
     this.height = event.target.innerHeight;
-    this.isMobile = this.width < this.mobileWidth;
-    console.log(this.isMobile);
+    this.isMobile = this.width < mobileWidth;
   }
 
   ngOnInit():void{
