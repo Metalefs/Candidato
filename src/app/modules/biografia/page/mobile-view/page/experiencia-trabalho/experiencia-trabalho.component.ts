@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {RealizacaoService,MensagensService} from 'src/app/data/service/domain/index';
-import {Realizacao,Mensagens,Candidato} from 'src/app/data/schema/domain/index';
+import {RealizacaoService,MensagensService} from '../../../../../../data/service/domain/index';
+import {Realizacao,Mensagens,Candidato} from '../../../../../../data/schema/domain/index';
 
 @Component({
   selector: 'experiencia-trabalho',
@@ -21,7 +21,6 @@ export class RealizacaoComponent implements OnInit {
   ngOnInit(): void {
     this.Mensagens = this.MensagensService.ObterTeste()
     //this.MensagensService.ObterTeste().subscribe(x=>this.Mensagens = x);
-     //this.RealizacaoService.Ler().subscribe(x=>this.ExperienciasTrabalho = x);
   }
 
 }

@@ -1,17 +1,17 @@
 import { Component, OnInit, NgModule, Input } from '@angular/core';
 
-import { Collections } from 'src/app/data/schema/Collections';
-import { RedeSocial } from 'src/app/data/schema/RedeSocial';
-import { Candidato } from 'src/app/data/schema/domain/Candidato';
-import { CaminhoLogo } from 'src/app/_helpers/caminho_helper';
-import { SobreService } from 'src/app/data/service/domain/SobreService';
-import { InformacoesContatoService } from 'src/app/data/service/domain/InformacoesContatoService';
-import { MensagensService } from 'src/app/data/service/domain/MensagensService';
-import { CandidatoService } from 'src/app/data/service/domain/CandidatoService';
+import { Collections } from '../../../../../../data/schema/Collections';
+import { RedeSocial } from '../../../../../../data/schema/RedeSocial';
+import { Candidato } from '../../../../../../data/schema/domain/Candidato';
+import { CaminhoLogo } from '../../../../../../_helpers/caminho_helper';
+import { SobreService } from '../../../../../../data/service/domain/SobreService';
+import { InformacoesContatoService } from '../../../../../../data/service/domain/InformacoesContatoService';
+import { MensagensService } from '../../../../../../data/service/domain/MensagensService';
+import { CandidatoService } from '../../../../../../data/service/domain/CandidatoService';
 
-import { AuthenticationService } from 'src/app/core/service/authentication/authentication.service';
-import { fade } from 'src/app/animations';
-import { Mensagens } from 'src/app/data/schema/domain/Mensagens';
+import { AuthenticationService } from '../../../../../../core/service/authentication/authentication.service';
+import { fade } from '../../../../../../animations';
+import { Mensagens } from '../../../../../../data/schema/domain/Mensagens';
 
 @Component({
   selector: 'quem-sou',

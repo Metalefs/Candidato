@@ -1,16 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import { PensamentoService,CandidatoService } from 'src/app/data/service/domain';
-import { Candidato, Pensamento } from 'src/app/data/schema/domain';
-import { ServicoRedesSociais } from 'src/app/data/service/ServicoRedesSociais'; 
-import { RedeSocial } from 'src/app/data/schema/RedeSocial';
+import { PensamentoService,CandidatoService } from '../../../../../../data/service/domain';
+import { Candidato, Pensamento } from '../../../../../../data/schema/domain';
+import { ServicoRedesSociais } from '../../../../../../data/service/ServicoRedesSociais'; 
+import { RedeSocial } from '../../../../../../data/schema/RedeSocial';
 
 @Component({
   selector: 'oque-penso',
   templateUrl: './oque-penso.component.html',
   styleUrls: ['./oque-penso.component.css']
 })
-export class pensamentoComponent implements OnInit {
+export class PensamentoComponent implements OnInit {
   FaDownload = faDownload;
   
   @Input() Ideais:Pensamento[];

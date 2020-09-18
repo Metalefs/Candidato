@@ -1,0 +1,26 @@
+
+<div class="about px-4">
+    <div class="col-md-12">
+      <div class="about-details">
+
+          <div class="experience">
+            <p class="normal"> {{Candidato?.realizacao}}</p>
+
+            <div class="cta">
+              <p>
+                  
+              </p>
+              <a class="btn btn-contact" [routerLink]="['/propostas']"
+              routerLinkActive="Active"> Minhas propostas</a>
+          </div>
+          </div>
+        
+      </div>
+      <div class="cta">
+        <p>
+            {{Mensagens?.ChamadaParaContato}}
+        </p>
+        <a class="btn btn-contact"  href="https://wa.me/5531{{Candidato?.telefone}}?text=" target="_blank" rel="noopener">Contate-me</a>
+      </div>
+    </div>
+  </div>

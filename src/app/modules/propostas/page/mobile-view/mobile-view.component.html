@@ -1,0 +1,36 @@
+<section class="section section-light section-work pt-6 is-hidden-desktop" id="projetos">
+    <div class="">
+      <h1 class="subtitle has-text-centered tem-cor-primaria">PROPOSTAS</h1>
+      <div class="mt-4">
+        <div class="portfolio wow fadeInDown">
+          <div class="">
+            <div class="w-100">
+              <nav class="categories">
+                <ul class="portfolio-filter">
+                  <li><a class="active" data-filter="*">Todos</a></li>
+                  <!-- <li><a [attr.data-filter]="'.'+categoria.replace(' ','')" *ngFor="let categoria of categorias">{{categoria}}</a></li> -->
+                </ul>
+              </nav>
+            </div>
+            <div class=" w-100">
+              <div class=" portfolio-container text-center mb-6">
+  
+                <div class=" w-100 custompadding " [ngClass]="proposta.Categoria? proposta.Categoria.replace(' ',''): ''"
+                  *ngFor="let proposta of Propostas;let i = index">
+                    <app-proposta-card 
+                    [Proposta]="proposta" [Delay]="1.5*i"></app-proposta-card>
+                </div>
+  
+                <div class="contato-container">
+                  <button class="w-100 btn-sugestao" (click)="AbrirCaixaSugestao()" mat-raised-button color="primary">
+                      ENVIAR SUGESTÃO
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>

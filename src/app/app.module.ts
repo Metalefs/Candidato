@@ -26,6 +26,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { ResizeService } from './core/service/windowSize.service';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: Document },
     { provide: NavStateService },
+    { provide: ResizeService },
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
     {
       provide: RouteReuseStrategy,

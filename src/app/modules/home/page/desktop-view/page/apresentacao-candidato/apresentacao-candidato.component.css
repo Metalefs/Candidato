@@ -75,22 +75,3 @@
 	display: inline-block;
 	margin-right: 15px;
 }
-
-
-@media (min-width: 320px) and (max-width: 1023px) {
-    .intro{
-        padding-left:0px;
-    }
-    .right-column{
-        padding: inherit;
-    }
-    .hero-head{
-        background: none;
-        width: 100%;
-        background-size: cover;
-    }
-    .hero-bg{
-        margin: 2rem auto;
-        /* background:#141828; */
-    }
-}

@@ -3,7 +3,6 @@ import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 import { ScrollSpyService } from '@uniprank/ngx-scrollspy';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { BehaviorSubject, Subscription, Subject } from 'rxjs';
-import { WindowSize, WindowSizeService } from 'src/app/core/service/windowSize.service';
 import { Candidato,Pensamento } from 'src/app/data/schema/domain';
 import { CandidatoService, PensamentoService } from 'src/app/data/service/domain';
 
@@ -11,9 +10,6 @@ import { CandidatoService, PensamentoService } from 'src/app/data/service/domain
   selector: 'biografia-preview',
   templateUrl: './biografia-preview.component.html',
   styleUrls: ['./biografia-preview.component.css'],
-  host: {
-    "(window:resize)":"onWindowResize($event)"
-  }
 })
 export class BiografiaPreviewComponent implements OnInit {
   public ActiveSection$: BehaviorSubject<{ id?: string; elementId?: string; nativeElement?: HTMLElement }> = new BehaviorSubject({});
@@ -58,13 +54,6 @@ export class BiografiaPreviewComponent implements OnInit {
       this.NavStateService.update(y);
 
     }) 
-  }
-
-  onWindowResize(event) {
-    this.width = event.target.innerWidth;
-    this.height = event.target.innerHeight;
-    this.isMobile = this.width < this.mobileWidth;
-    console.log(this.isMobile);
   }
 
   ngOnInit():void{

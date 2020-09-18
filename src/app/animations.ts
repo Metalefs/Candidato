@@ -60,14 +60,14 @@ function slideTo(direction) {
     ], optional),
     query(':enter', [
       style({ [direction]: '-100%'})
-    ]),
+    ],optional),
     group([
       query(':leave', [
         animate('1350ms ease-in', style({ [direction]: '100%'}))
       ], optional),
       query(':enter', [
         animate('1350ms ease-out', style({ [direction]: '0%'}))
-      ])
+      ],optional)
     ]),
     // Normalize the page style... Might not be necessary
 
@@ -79,10 +79,10 @@ function slideTo(direction) {
 
 export function bounceIn(delay){
   return  trigger('bounceIn', [
-      transition(':enter', [
-        style({ transform: 'scale(0.5)', opacity: 0 }),
-        animate(`${delay}s cubic-bezier(.8, -0.6, 0.2, 1.5)`,
-        style({ transform: 'scale(1)', opacity: 1 }))
-      ])
-    ])
+            transition(':enter', [
+              style({ transform: 'scale(0.5)', opacity: 0 }),
+              animate(`${delay}s cubic-bezier(.8, -0.6, 0.2, 1.5)`,
+              style({ transform: 'scale(1)', opacity: 1 }))
+            ])
+          ])
 } 

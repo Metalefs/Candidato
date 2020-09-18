@@ -3,7 +3,6 @@ import { RedeSocial } from 'src/app/data/schema/RedeSocial';
 import { ScrollSpyService } from '@uniprank/ngx-scrollspy';
 import { NavStateService } from 'src/app/core/service/state/_NavStateService';
 import { BehaviorSubject, Subscription, Subject } from 'rxjs';
-import { WindowSize, WindowSizeService } from 'src/app/core/service/windowSize.service';
 import { mobileWidth } from 'src/app/_helpers/constants';
 import { Candidato,Pensamento } from 'src/app/data/schema/domain';
 import { CandidatoService, PensamentoService } from 'src/app/data/service/domain';

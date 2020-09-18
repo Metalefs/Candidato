@@ -1,0 +1,20 @@
+
+<div class="columns scroller is-mobile is-gapless is-hidden-touch">
+    <div class="column is-6">
+        <app-exibicao-candidato [Candidato]="Candidato" [isBg] = "true" ></app-exibicao-candidato>
+    </div>
+    <div @slideInOut class="column is-6">
+        <div class="container px-5" data-aos="zoom-in-down" uniScrollSpy="inicio" id="inicio">
+            <apresentacao-candidato [Candidato]="Candidato"></apresentacao-candidato>
+        </div>
+
+        <div class="container" uniScrollSpy="biografia" id="biografia">
+            <biografia-preview></biografia-preview>
+        </div>
+
+        <div class="container" data-aos="zoom-in-down" uniScrollSpy="projetos" id="projetos">
+            <propostas-preview></propostas-preview>
+        </div>
+
+    </div>
+</div>

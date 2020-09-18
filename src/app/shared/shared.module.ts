@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountUpModule } from 'ngx-countup';
 import { MaterialModule } from './material.module';
 import { ExibicaoCandidatoFullComponent } from './component/exibicao-candidato-full/exibicao-candidato-full.component';
+import { SizeDetectorComponent } from './component/size-detector/size-detector.component';
 
 @NgModule({
   imports: [
@@ -47,6 +48,7 @@ import { ExibicaoCandidatoFullComponent } from './component/exibicao-candidato-f
     RedesSociaisComponent,
     ExibicaoCandidatoComponent,
     ExibicaoCandidatoFullComponent,
+    SizeDetectorComponent,
   ],
   exports: [
     CommonModule,
@@ -69,7 +71,8 @@ import { ExibicaoCandidatoFullComponent } from './component/exibicao-candidato-f
     ExibicaoCandidatoFullComponent,
     CountUpComponent,
     CountUpModule,
-    LightboxModule
+    LightboxModule,
+    SizeDetectorComponent,
   ]
 })
 export class SharedModule {

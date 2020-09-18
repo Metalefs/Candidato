@@ -1,0 +1,18 @@
+<div class="is-hidden-desktop no-y-scroll">
+    <app-exibicao-candidato-full class="is-hidden-desktop" [Candidato]="Candidato"></app-exibicao-candidato-full>
+    
+    <div class="informacao-candidato">
+        <div >
+            <h1 class="title is-1 logo-campanha">
+                <figure class="image">
+                    <img src="{{ImagemLogo}}" alt="">
+                </figure>
+            </h1>
+        </div>
+        <div >
+            <h1 class="title is-1 numero-campanha">{{Candidato?.numeroCampanha}}</h1>
+        </div>
+        <app-redes-sociais [redes]="redes"></app-redes-sociais>
+    </div>
+
+</div>
